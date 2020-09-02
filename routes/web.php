@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,7 +23,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/createwebsite', 'HomeController@createwebsite');
 Route::post('/checkIsUser', 'HomeController@checkIsUser');
-Route::post('/register', 'HomeController@register2')->name('register');
+/*Route::post('/register', 'HomeController@register2');*/
+Route::post('register', 'Auth\RegisterController@register')->name('register');
 Route::post('/addUser', 'HomeController@addUser');
 Route::get('/login2', 'HomeController@login2');
 Route::get('/home2', 'HomeController@home2');

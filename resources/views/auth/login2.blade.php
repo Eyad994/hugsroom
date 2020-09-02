@@ -29,7 +29,7 @@
                                     <div class="content">
 
                                         <form action="{{asset("/checkIsUser")}}" method="post" name="email-landing" id="email-landing"  enctype="multipart/form-data">
-                                            {{ csrf_field() }}
+                                            @csrf
                                             <div class="form-group ">
                                                 <label for="email">Enter Email</label>
                                                 <input type="email" name="email" data-ga-action="Click - field" data-ga-label="Email" data-qa-id="sign-in-email" data-value-missing="You must enter your email address." id="email" required="required" autofocus="autofocus" placeholder="Enter Email" class="form-control" value="">

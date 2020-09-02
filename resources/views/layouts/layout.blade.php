@@ -171,6 +171,7 @@
 
         <div class="bottom-tier collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav" role="menubar" style="    margin-top: 65px;width: 100%;">
+                @if (Auth::check())
                 <li role="menuitem">
                     <div class="" style="color:#ffffff;float: left;">
                         <i class="fa fa-user-circle" aria-hidden="true" style="font-size:30px;"></i>
@@ -178,7 +179,7 @@
                     <i class="fa fa-angle-down" aria-hidden="true" style="color: #ffffff;padding-top:10px;margin-left: 2px;" data-toggle="account" onclick="open_sub_menu(this)"></i>
                     <ul class="header_sub_menu" id="account" style="display: none">
 
-                        @if (Auth::check())
+
                         <li>Profile</li>
                         <li>
                             <form method="POST" action="{{ route('logout') }}" style="margin: 0px;">
@@ -186,12 +187,12 @@
                                 <input type="submit" value="logout" class="logout_btn">
                             </form>
                         </li>
-                        @else
-                            <li> <a href="{{asset('login2')}}" >login</a></li>
-                        @endif
 
                     </ul>
                 </li>
+                @else
+                    <li style="font-size: 10px"> <a href="{{asset('login2')}}" >login or signup</a></li>
+                @endif
                 <li role="menuitem" style="    border-left: 1px solid #ffffff;padding-top: 5px;">
                     <i class="fa fa-search" aria-hidden="true" style="color:#ffffff"></i>
                 </li>
@@ -222,7 +223,7 @@
                     </ul>
                 </li>
                 <li role="menuitem">
-                    <div class="" style="color:#ffffff;padding-bottom: 10px;float: left;">Rooms</div>
+                    <div class="" style="color:#ffffff;padding-bottom: 10px;float: left;"><a style="color: white" href="{{ asset('rooms') }}">Rooms</a></div>
                     <i class="fa fa-angle-down" aria-hidden="true" style="color: #ffffff;padding-top:7px;margin-left: 15px;"></i>
                     <ul class="header_sub_menu" style="display: none">
                         <li>asdf</li>
@@ -233,7 +234,7 @@
                     </ul>
                 </li>
                 <li role="menuitem">
-                    <div class="" style="color:#ffffff;padding-bottom: 10px;float: left;">Home</div>
+                    <div class="" style="color:#ffffff;padding-bottom: 10px;float: left;"><a href="{{ asset('/') }}" style="color: white">Home</a></div>
                     <i class="fa fa-angle-down" aria-hidden="true" style="color: #ffffff;padding-top:7px;margin-left: 15px;"></i>
                     <ul class="header_sub_menu" style="display: none">
                         <li>asdf</li>

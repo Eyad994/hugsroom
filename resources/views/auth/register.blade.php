@@ -6,8 +6,9 @@
             <a href="{{asset('register')}}" class="form-back back" data-ga-label="Back" aria-label="Back">
                 <i class="cbicon-left-chevron" role="presentation" aria-hidden="true"></i>
             </a>
-            <form method="POST"  action="{{ route('register') }}">
+            <form method="POST" action="{{ route('register') }}">
                 @csrf
+
                 <fieldset class="form-step current-step" id="step-name" data-button-ga-label="register-name-continue" data-button-qa-id="register-name-continue">
                     <h1>Looks Like You’re New Here!</h1>
                     <p class="subheading">Let’s get you registered.</p>
@@ -67,7 +68,7 @@
                     </div>
                     <div class="checkbox"><input type="hidden" name="ecomm" value="0">
                         <label>
-                            <input type="checkbox" required name="ecomm" data-ga-action="Click - box" data-ga-label="Ecomm Opt In" data-qa-id="profile-signup-ecomm" id="login-ecomm" value="1">Send me emails on supporting a friend in tough times through stories, articles, videos and more.</label></div>
+                            <input type="checkbox" name="ecomm" data-ga-action="Click - box" data-ga-label="Ecomm Opt In" data-qa-id="profile-signup-ecomm" id="login-ecomm" value="1">Send me emails on supporting a friend in tough times through stories, articles, videos and more.</label></div>
 
                     <input type="submit" class="btn btn-primary btn-lg main_background_color" value="Continue" style="margin-top: 20px">
                 </fieldset>
