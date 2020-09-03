@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-    <div style="padding: 70px 0px;height: 570px">
+    <div style="height: 570px">
         <section class="simple-container create-profile progressive-form started">
             <a href="{{asset('login2')}}" class="form-back back" data-ga-label="Back" aria-label="Back">
                 <i class="cbicon-left-chevron" role="presentation" aria-hidden="true"></i>
@@ -72,9 +72,13 @@
                     <input type="submit" class="btn btn-primary btn-lg main_background_color" value="Continue" style="margin-top: 20px">
                 </fieldset>
                 @if ($errors->any())
-                    @foreach ($errors->all() as $error)
-                        <div>{{$error}}</div>
-                    @endforeach
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                 <li>{{$error}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
                 @endif
             </form>
         </section>

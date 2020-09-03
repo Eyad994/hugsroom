@@ -132,7 +132,7 @@
 
                     <section class="site-create-step" id="sc-patient-name-me" data-ga-label-prefix="Patient Name - ">
                         <div class="col-sm-10 col-sm-offset-1 section-top-margin">
-                            <button class="btn btn-default btn-default-border btn-sm" type="button" data-ga-label="Previous" data-ga-action="Click - button" data-role="previous" data-qa-id="site-create-flow-back" onclick="goNext('sc-patient-name-me','sc-who')">
+                            <button class="btn btn-default btn-default-border btn-sm" type="button" data-ga-label="Previous" data-ga-action="Click - button" data-role="previous" data-qa-id="site-create-flow-back" onclick="goNext('sc-patient-name-me-prev','sc-who')">
                                 <i class="cbicon-left-chevron" role="presentation" aria-hidden="true"></i>&nbsp;
                                 Back
                             </button>
@@ -188,7 +188,7 @@
                     </section>
                     <section class="site-create-step" id="sc-patient-name-else" data-ga-label-prefix="Patient Name - ">
                         <div class="col-sm-10 col-sm-offset-1 section-top-margin">
-                            <button class="btn btn-default btn-default-border btn-sm" type="button" data-ga-label="Previous" data-ga-action="Click - button" data-role="previous" data-qa-id="site-create-flow-back" onclick="goNext('sc-patient-name-else','sc-who')">
+                            <button class="btn btn-default btn-default-border btn-sm" type="button" data-ga-label="Previous" data-ga-action="Click - button" data-role="previous" data-qa-id="site-create-flow-back" onclick="goNext('sc-patient-name-else-prev','sc-who')">
                                 <i class="cbicon-left-chevron" role="presentation" aria-hidden="true"></i>&nbsp;
                                 Back
                             </button>

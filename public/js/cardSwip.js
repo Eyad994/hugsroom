@@ -1,6 +1,6 @@
 $('.owl-carousel').owlCarousel({
     loop:false,
-  stagePadding: 15,
+  stagePadding: 35,
     margin:10,
     nav:true,
   navText : ['<span class="uk-margin-small-right uk-icon" uk-icon="icon: chevron-left"></span>','<span class="uk-margin-small-left uk-icon" uk-icon="icon: chevron-right"></span>'],

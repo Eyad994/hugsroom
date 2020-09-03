@@ -8,6 +8,7 @@ function toggleAlert(ele) {
 
 function goNext(prev,next) {
 
+    debugger;
     if(prev == "sc-terms")
     {
 
@@ -38,6 +39,7 @@ function goNext(prev,next) {
             next =    "sc-patient-name-me";
         }
     }
+
 
     if(prev == "sc-patient-name-me")
     {
@@ -92,6 +94,14 @@ function goNext(prev,next) {
 
     }
 
+    if(prev == "sc-patient-name-else-prev")
+    {
+        prev = "sc-patient-name-else";
+    }
+    if(prev == "sc-patient-name-me-prev")
+    {
+        prev = "sc-patient-name-me";
+    }
 
 
    $("#"+prev).removeClass("active");
