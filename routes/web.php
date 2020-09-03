@@ -23,6 +23,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/createwebsite', 'HomeController@createwebsite');
 Route::post('/checkIsUser', 'HomeController@checkIsUser');
+
 /*Route::post('/register', 'HomeController@register2');*/
 Route::post('register', 'Auth\RegisterController@register')->name('register');
 Route::post('/addUser', 'HomeController@addUser');

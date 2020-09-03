@@ -257,12 +257,13 @@
                             <div class="start-a-site-box">
                                 <div class="content">
                                     <p><strong>1. What would you like <span class="create-self" style="display: none;">your</span><span class="create-other">the</span> Room title to be?</strong></p>
-                                    <div class="form-group "><label for="title"><span class="required"><span aria-hidden="true" role="presentation" title="Required">*</span><span class="sr-only">Required</span></span> Room Title</label><input type="text" name="title" class="input-block-level form-control" data-ga-action="Click - field" data-ga-label="Title" data-qa-id="site-create-flow-site-title" id="title" maxlength="25" required="required" value=""></div>
+                                    <div class="form-group "><label for="title"><span class="required"><span aria-hidden="true" role="presentation" title="Required">*</span><span class="sr-only">Required</span></span> Room Title</label>
+                                        <input type="text" name="title" class="input-block-level form-control" id="title" maxlength="25" required="required" value="{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}"></div>
 
                                     <p><strong>2. <span class="create-self" style="display: none;">Your</span><span class="create-other">The</span> recommended room address below cannot be changed after <span class="create-self" style="display: none;">your</span><span class="create-other create-other-possessive-name">their</span> room is created.</strong></p>
                                     <div class="form-group has-warning"><label for="name"><span class="required"><span aria-hidden="true" role="presentation" title="Required">*</span><span class="sr-only">Required</span></span> Room Address</label><div class="input-group ">
                                         <span class="input-group-addon"><span class="hidden-sm hidden-xs">Hugs Room.org/</span>visit/</span>
-                                        <input type="text" name="name" class="input form-control" data-ga-action="Click - field" data-ga-label="URL Address" data-qa-id="site-create-flow-site-url" id="room-link" maxlength="100" autocomplete="off" required="required" value=""></div>
+                                        <input type="text" name="name" class="input form-control" data-ga-action="Click - field" data-ga-label="URL Address" data-qa-id="site-create-flow-site-url" id="room-link" maxlength="100" autocomplete="off" required="required" value="{{ auth()->user()->first_name }}{{ auth()->user()->last_name }}"></div>
                                         <ul class="help-inline list-unstyled">
                                             <li>Please enter a Room address</li>
                                         </ul>
@@ -310,13 +311,12 @@
                                     <div class="row site-create-flex-container">
                                         <div class="site-create-flex-item site-create-3-cols-flex-item">
                                             <div style="display: none !important;">
-                                                <input data-ga-action="Click - radio" data-ga-label="Medium Privacy" id="privacy-medium" default-class="btn-tertiary" additional-class="btn-privacy" name="privacy" type="radio" value="medium" checked="checked">    </div>
+                                                <input id="privacy-medium" name="privacy" type="radio" value="medium" checked="checked">    </div>
 
-                                                <button class="btn btn-block btn-tertiary btn-lg btn-privacy" data-activate="#privacy-medium" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Medium Privacy" data-qa-id="site-create-flow-privacy-medium" type="button"  onclick="goNext('sc-custom-privacy','sc-custom-cb-search')">
+                                                <button style="background-color: transparent;border-color: #555;" class="btn btn-block btn-tertiary btn-lg btn-privacy" data-activate="#privacy-medium" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Medium Privacy" data-qa-id="site-create-flow-privacy-medium" type="button"  onclick="goNext('sc-custom-privacy','sc-custom-cb-search')">
                                                     <div class="privacy-block">
-                                                        <div class="privacy-title">REGISTERED USERS</div>
-                                                        <span class="privacy-text">All registered Hugs Room users may see and respond to what you share.
-                                                            <div class="recommendation-block">
+                                                        <div class="privacy-title">PUBLIC USERS</div>
+                                                        <span class="privacy-text"><div class="recommendation-block">
                                                                 <div class="svg-icon svg-recommended svg-icon-sm">
                                                                     <svg id="RecommendedBadge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.747 22.875">
                                                                         <g id="CaringBridge_ListItem_Search-Card_Closest-Match" data-name="CaringBridge/ListItem/Search-Card/Closest-Match" transform="translate(0)">
@@ -337,8 +337,8 @@
                                                 <input data-ga-action="Click - radio" data-ga-label="Low Privacy" id="privacy-low" default-class="btn-tertiary" additional-class="btn-privacy not-recommended" name="privacy" type="radio" value="low">    </div>
 
                                             <button class="btn btn-block btn-tertiary btn-lg btn-privacy not-recommended" data-activate="#privacy-low" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Low Privacy" data-qa-id="site-create-flow-privacy-low" type="button" onclick="goNext('sc-custom-privacy','sc-public-search-listing')">
-                                                <div class="privacy-block"><div class="privacy-title">ANYONE</div>
-                                                    <span class="privacy-text">What you share may be viewed publicly. Only registered users can comment.</span>
+                                                <div class="privacy-block"><div class="privacy-title">LIMITED</div>
+                                                    <span class="privacy-text"></span>
                                                 </div>
                                             </button>
                                         </div>
@@ -347,8 +347,8 @@
                                                 <input data-ga-action="Click - radio" data-ga-label="High Privacy" id="privacy-high" default-class="btn-tertiary" additional-class="btn-privacy not-recommended" name="privacy" type="radio" value="high">    </div>
 
                                             <button class="btn btn-block btn-tertiary btn-lg btn-privacy not-recommended" data-activate="#privacy-high" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate High Privacy" data-qa-id="site-create-flow-privacy-high" type="button"  onclick="goNext('sc-custom-privacy','sc-custom-cb-search')">
-                                                <div class="privacy-block"><div class="privacy-title">APPROVED VISITORS ONLY</div>
-                                                    <span class="privacy-text">Limit access to only the people you add to the Approved Visitors List.</span>
+                                                <div class="privacy-block"><div class="privacy-title">PRIVATE</div>
+                                                    <span class="privacy-text"></span>
                                                 </div>
                                             </button>
                                         </div>

@@ -74,6 +74,7 @@
 @extends('layouts.layout')
 
 @section('content')
+
     <div class="user-signin-page">
         <center>
             <div class="layout-corporate prevent-bleed">
@@ -96,21 +97,33 @@
                             <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
                                 <div id="flash-messages">
                                 </div>
-                                <form method="POST" action="{{ route('login') }}">
+                                <form method="POST" action="{{ route('login') }}" id="loginForm">
                                     @csrf
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <p class="form-control-static">{{$email}}</p>
+                                        <p class="form-control-static">{{ $email = request()->email }}</p>
                                     </div>
                                     <div class="visuallyhidden">
-                                        <input type="email" name="email" value="abo.ateleh@gmail.com">
+                                        <input type="email" name="email" value="{{$email}}">
                                     </div>
                                     <div class="form-group "><label for="password">Password</label><div class="input-group"><input type="password" name="password" data-ga-action="Click - field" data-ga-label="Password" data-qa-id="profile-signin-password" data-value-missing="You must enter your password." required="required" id="password" autofocus="autofocus" class="js-unmaskable form-control" placeholder="Enter Your Password" value=""><input type="text" class="js-unmaskable form-control hidden"><div class="input-group-btn"><button type="button" class="btn btn-link">Show password</button></div></div></div>
-                                    <div class="form-group "><input type="submit" name="submit-btn" class="btn btn-primary btn-lg main_background_color" data-qa-id="profile-signin-submit" id="submit-login-modal" value="Sign In"></div>
+                                    <div class="form-group ">
+                                        <input type="submit" name="submit-btn" class="btn btn-primary btn-lg main_background_color" data-qa-id="profile-signin-submit" id="submit-login-modal" value="Sign In"></div>
                                     <div class="text-center">
                                         <div class="checkbox"><input type="hidden" name="remember-me" value="0"><label><input type="checkbox" name="remember-me" data-ga-action="Click - box" data-ga-label="Remember Me" data-qa-id="profile-signin-remember-me" id="remember-me" value="1" checked="checked">Stay signed in on this device and browser</label></div>            </div>
-                                    <input type="hidden" name="csrf" value=""></form>            <div class="help-block text-center">
-                                    <small><a href="https://www.caringbridge.org/auth/forgot-password" class="forgot-password">Need password help?</a></small>
+                                    <input type="hidden" name="csrf" value="">
+                                </form>
+                                @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+                                <div class="help-block text-center">
+                                    <small><a href="#" class="forgot-password">Need password help?</a></small>
                                 </div>
                             </div>
                         </div>
@@ -120,3 +133,28 @@
         </center>
     </div>
 @endsection
+{{--
+
+@section('script')
+    <script>
+
+        $('#loginForm').submit(function (e) {
+            e.preventDefault();
+            var form = $(this);
+            var url = form.attr('action');
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: new FormData(this),
+                dataType: "json",
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function (data) {
+                    console.log('asdasdasdas')
+                }
+            });
+
+        });
+    </script>
+@endsection--}}

@@ -425,8 +425,8 @@
         </div>
     </footer>
 </div>
-<div class="mobileFooter" style="display: none">
-    <div class="navbar" style="width: 100%;background: #ffffff">
+<div class="mobileFooter" style="display: none;">
+    <div class="navbar" style="width: 100%;background: #ffffff;  z-index: 30000">
         <a href="#home" class="active" style="width: 25%"><i class="fa fa-home" style="font-size: 20px"></i><br />Home </a>
         <a href="#news" style="width: 25%"> <i class="fa fa-search" style="font-size: 20px"></i><br />Rooms</a>
         <a href="#contact" style="width: 25%"> <i class="fa fa-bell-o" style="font-size: 20px"></i><br />Notifications</a>
@@ -439,5 +439,6 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js'></script>
 
 <script  src="{{asset('js/cardSwip.js')}}"></script>
+@yield('script')
 </body>
 </html>

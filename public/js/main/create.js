@@ -7,7 +7,7 @@ function toggleAlert(ele) {
 }
 
 function goNext(prev,next) {
-debugger;
+
     if(prev == "sc-terms")
     {
 
@@ -39,7 +39,6 @@ debugger;
         }
     }
 
-debugger;
     if(prev == "sc-patient-name-me")
     {
         if($("#firstName-me").val().trim()  == "")

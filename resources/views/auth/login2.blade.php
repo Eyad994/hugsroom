@@ -3,7 +3,7 @@
 @section('content')
     <div class="user-signin-page">
         <center>
-            <div class="layout-corporate prevent-bleed">
+            <div class="layout-corporate prevent-bleed" id="register">
                 <div class="content clear">
                     <div class="signin-form">
                         <div class="row">
@@ -28,17 +28,17 @@
                                 <div class="active" id="sign-in-email" data-step="email" data-ga-label-prefix="Email - ">
                                     <div class="content">
 
-                                        <form action="{{asset("/checkIsUser")}}" method="post" name="email-landing" id="email-landing"  enctype="multipart/form-data">
+                                        <form action="checkIsUser" method="post" id="checkIsUser">
                                             @csrf
                                             <div class="form-group ">
                                                 <label for="email">Enter Email</label>
-                                                <input type="email" name="email" data-ga-action="Click - field" data-ga-label="Email" data-qa-id="sign-in-email" data-value-missing="You must enter your email address." id="email" required="required" autofocus="autofocus" placeholder="Enter Email" class="form-control" value="">
+                                                <input type="email" name="email" id="email" required="required" autofocus="autofocus" placeholder="Enter Email" class="form-control" value="{{ old('email') }}">
                                             </div>
                                             <div class="visuallyhidden">
                                                 <input type="password" name="password_placeholder" placeholder="*">
                                             </div>
                                             <div class="form-group ">
-                                                <input type="submit" name="submit-btn" class="btn btn-primary btn-lg btn-block btn-lg main_background_color" data-qa-id="sign-in-continue" id="submit-email-landing" value="Continue">
+                                                <input type="submit" name="submit-btn" class="btn btn-primary btn-lg btn-block btn-lg main_background_color" value="Continue">
                                             </div>
                                         </form>
                                     </div>
@@ -90,4 +90,33 @@
             </div>
         </center>
     </div>
+@endsection
+
+@section('script')
+    <script>
+        $('#checkIsUser').submit(function (e) {
+            e.preventDefault();
+            var form = $(this);
+            var url = form.attr('action');
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: new FormData(this),
+                dataType: "json",
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function (data) {
+                    var email = $('#email').val();
+                    if (data > 0)
+                    {
+                        window.location = "{{ env('APP_URL') }}login?email=" + email
+                    } else  {
+                        window.location = "{{ env('APP_URL') }}register?email=" + email
+                    }
+                }
+            });
+
+        });
+    </script>
 @endsection

@@ -27,6 +27,7 @@ class HomeController extends Controller
     {
         return view('main.createwebsite');
     }
+
     public function home2()
     {
         return view('welcome');
@@ -34,18 +35,20 @@ class HomeController extends Controller
 
     public function createwebsite()
     {
-        if(Auth::check()){
+        if (Auth::check()) {
             return view('main.createwebsite');
-        }else{
+        } else {
             return view('auth.login2');
         }
 
     }
+
     public function login2()
     {
 
         return view('auth.login2');
     }
+
     public function rooms()
     {
 
@@ -55,7 +58,7 @@ class HomeController extends Controller
     public function register2(Request $request)
     {
         $email = $request->email;
-        return view('auth.register') ->with('email', $email);
+        return view('auth.register')->with('email', $email);
     }
 
     public function checkIsUser(Request $request)
@@ -63,30 +66,35 @@ class HomeController extends Controller
         $email = $request->email;
         $users = New User();
         $data = $users->checkIsUserByEmail($email);
-
-        if(count($data) > 0)
-        {
-            return view('auth.login') ->with('email', $email);
-        }else{
-            return view('auth.register') ->with('email', $email);
+        return response()->json(count($data));
+        if (count($data) > 0) {
+            return view('auth.login')->with('email', $email);
+        } else {
+            return view('auth.register')->with('email', $email);
         }
     }
 
-    public function addUser(Request $request){
+    public function addUser(Request $request)
+    {
         $this->validate($request, [
-            'email'      => 'required|email|unique:users',
-            'password'   =>  'required|min:6',
-            'firstName'  => 'required',
-            'lastName'   => 'required'
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6',
+            'firstName' => 'required',
+            'lastName' => 'required'
         ]);
 
-        $data   =   array();
-        $data['email']         =   $request->email;
-        $data['password']      =   $request->password;
-        $data['firstName']     =   $request->firstName;
-        $data['lastName']      =   $request->lastName;
+        $data = array();
+        $data['email'] = $request->email;
+        $data['password'] = $request->password;
+        $data['firstName'] = $request->firstName;
+        $data['lastName'] = $request->lastName;
 
         $users = new User();
         $users->addNewUser($data);
+    }
+
+    public function getCheckIsUser()
+    {
+        return view('auth.login')->with('email', '');
     }
 }
