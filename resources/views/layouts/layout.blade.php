@@ -63,7 +63,7 @@
     }
     @media (max-width: 768px) {
        .navbar-nav{
-            margin-top: 120px !important;
+            margin-top: 130px !important;
             width: 100%;
         }
         .mobileFooter .navbar {
@@ -116,6 +116,7 @@
         text-align: left;
         position: absolute;
         border: 1px solid #bcbcbc;
+        z-index: 1;
 
     }
     body{
