@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="https://swiperjs.com/package/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css'>
@@ -57,11 +57,27 @@
 </head>
 <style type="text/css">
 
+    p{
+        color: gray !important;
+    }
+
     .navbar-nav{
         margin-top: 65px !important;;
         width: 100%;
     }
     @media (max-width: 768px) {
+
+        .uk-margin{
+            margin-top: -50px!important;
+        }
+
+        .navbar-global{
+            display: none;
+        }
+        .fat-footer{
+            display: none;
+        }
+
        .navbar-nav{
             margin-top: 130px !important;
             width: 100%;
@@ -121,8 +137,12 @@
     }
     body{
         background-color: #ebe5e0;
+        font-family: 'Quicksand';;
     }
 
+    h3{
+        font-family: 'Quicksand';font-size: 22px;
+    }
     .main_background_color{
         background: #E84B7B !important;
         border: 1px solid #E84B7B !important;
@@ -263,7 +283,7 @@
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-12" style="background: #ffffff;padding-bottom: 100px">
+        <div class="col-xs-12" style="background: #ffffff; padding-bottom: 100px">
             <div class="container-bloody">
                 @yield('content')
 
@@ -440,9 +460,9 @@
 </div>
 <div class="mobileFooter" style="display: none;">
     <div class="navbar" style="width: 100%;background: #ffffff;  z-index: 30000">
-        <a href="#home" class="active" style="width: 25%"><i class="fa fa-home" style="font-size: 20px"></i><br />Home </a>
+        <a href="{{ asset('/') }}" class="active" style="width: 25%"><i class="fa fa-home" style="font-size: 20px"></i><br />Home </a>
         <a href="#news" style="width: 25%"> <i class="fa fa-search" style="font-size: 20px"></i><br />Rooms</a>
-        <a href="#contact" style="width: 25%"> <i class="fa fa-bell-o" style="font-size: 20px"></i><br />Notifications</a>
+        <a href="#contact" style="width: 25%"> <i class="fa fa-bell-o" style="font-size: 20px; padding-left: 20px;"></i><br />Notifications</a>
         <a href="#contact" style="width: 25%"> <i class="fa fa-user" style="font-size: 20px"></i><br />Profile</a>
     </div>
 </div>

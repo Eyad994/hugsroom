@@ -64,7 +64,7 @@
                 </div>
             </div>
         </div>
-       <span style="text-align: center;font-size: 40px;height: 100%px;color:#707070;padding: 50px;float: left">Moved the patient room online to help you in difficult times</span>
+       {{--<span style="text-align: center;font-size: 40px;height: 100%px;color:#707070;padding: 50px;float: left">Moved the patient room online to help you in difficult times</span>--}}
         <div class="uk-margin"></div>
         <div class="uk-section">
             <div class="owl-carousel owl-theme">
@@ -73,7 +73,7 @@
                         <div style="width: 100%;float: left;">
                             <div  style="padding: 0px;border-radius: 15px;overflow: hidden;box-shadow: 2px 2px 10px 1px #e4e1e1;background: #FFFFFF;border: 1px solid #c5bdbd;">
 
-                                <img src="{{asset("imgs/homeGroup2.png")}}" style="height: 250px" data-toggle="modal" data-target="#centralModalSm">
+                                <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" {{--style="height: 250px"--}} data-toggle="modal" data-target="#centralModalSm">
                                 <div>
                                     <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Moved the patient room online to help you in difficult times</h3>
                                     <div class="pad-top_12" style="padding: 0px 20px">
@@ -101,7 +101,7 @@
                         <div style="width: 100%;float: left;">
                             <div  style="padding: 0px;border-radius: 15px;overflow: hidden;box-shadow: 2px 2px 10px 1px #e4e1e1;background: #FFFFFF;border: 1px solid #c5bdbd;">
 
-                                <img src="{{asset("imgs/homeGroup2.png")}}" style="height: 250px" data-toggle="modal" data-target="#centralModalSm">
+                                <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" data-toggle="modal" data-target="#centralModalSm">
                                 <div>
                                     <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Moved the patient room online to help you in difficult times</h3>
                                     <div class="pad-top_12" style="padding: 0px 20px">
@@ -129,7 +129,7 @@
                         <div style="width: 100%;float: left;">
                             <div  style="padding: 0px;border-radius: 15px;overflow: hidden;box-shadow: 2px 2px 10px 1px #e4e1e1;background: #FFFFFF;border: 1px solid #c5bdbd;">
 
-                                <img src="{{asset("imgs/homeGroup2.png")}}" style="height: 250px" data-toggle="modal" data-target="#centralModalSm">
+                                <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" data-toggle="modal" data-target="#centralModalSm">
                                 <div>
                                     <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Moved the patient room online to help you in difficult times</h3>
                                     <div class="pad-top_12" style="padding: 0px 20px">
@@ -157,7 +157,7 @@
                         <div style="width: 100%;float: left;">
                             <div  style="padding: 0px;border-radius: 15px;overflow: hidden;box-shadow: 2px 2px 10px 1px #e4e1e1;background: #FFFFFF;border: 1px solid #c5bdbd;">
 
-                                <img src="{{asset("imgs/homeGroup2.png")}}" style="height: 250px" data-toggle="modal" data-target="#centralModalSm">
+                                <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" data-toggle="modal" data-target="#centralModalSm">
                                 <div>
                                     <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Moved the patient room online to help you in difficult times</h3>
                                     <div class="pad-top_12" style="padding: 0px 20px">
@@ -185,7 +185,7 @@
                         <div style="width: 100%;float: left;">
                             <div  style="padding: 0px;border-radius: 15px;overflow: hidden;box-shadow: 2px 2px 10px 1px #e4e1e1;background: #FFFFFF;border: 1px solid #c5bdbd;">
 
-                                <img src="{{asset("imgs/homeGroup2.png")}}" style="height: 250px" data-toggle="modal" data-target="#centralModalSm">
+                                <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" data-toggle="modal" data-target="#centralModalSm">
                                 <div>
                                     <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Moved the patient room online to help you in difficult times</h3>
                                     <div class="pad-top_12" style="padding: 0px 20px">
