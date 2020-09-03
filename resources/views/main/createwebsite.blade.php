@@ -9,7 +9,7 @@
                     <section class="site-create-step active" id="sc-terms" data-ga-label-prefix="Terms of Use - c - ' : ''; ?>">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <div class="text-center"><h1>Start a Site</h1></div>
+                                <div class="text-center"><h1>Start a Room</h1></div>
                                 <div class="progress show-when-loaded">
                                     <div class="progress-bar main_background_color main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 14.2857%;">
                                         <span class="sr-only"><span class="progress-bar-value">14.285714285714285</span>% Complete</span>
@@ -75,7 +75,7 @@
 
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <div class="text-center"><h1>Start a Site</h1></div>
+                                <div class="text-center"><h1>Start a Room</h1></div>
                                 <div class="progress show-when-loaded">
                                     <div class="progress-bar main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 28.5714%;">
                                         <span class="sr-only"><span class="progress-bar-value">0</span>% Complete</span>
@@ -140,7 +140,7 @@
 
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <div class="text-center"><h1>Start a Site</h1></div>
+                                <div class="text-center"><h1>Start a Room</h1></div>
                                 <div class="progress show-when-loaded">
                                     <div class="progress-bar main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 42.8571%;">
                                         <span class="sr-only"><span class="progress-bar-value">0</span>% Complete</span>

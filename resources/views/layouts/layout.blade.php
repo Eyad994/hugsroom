@@ -62,7 +62,7 @@
             overflow: hidden;
             background-color: #333;
             position: fixed;
-            bottom: 0;
+            bottom: -2;
             width: 100%;
             margin-bottom: 0px;
         }
@@ -92,6 +92,10 @@
             margin-bottom: 30px;
         }
         .mobileFooter{display: block !important;}
+        .nav li{
+            width: 100%;
+           text-align: end;
+        }
 
     }
     .header_sub_menu{

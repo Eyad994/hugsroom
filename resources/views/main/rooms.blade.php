@@ -19,7 +19,7 @@
         <div class="site-create-steps" style="padding-right: 30px;padding-left: 30px">
             <div class="row">
                 <section class="site-create-step active" id="sc-terms" >
-                    <div class="row" style="padding: 30px 100px">
+                    <div class="row" style="padding: 30px 50px">
                         <div class="col-md-3"></div>
                         <div class="col-md-6"><input type="button" class="btn form-control" style="background: #E84B7B;color:#ffffff;height: 50px" value="+ Open New Room" ></div>
                         <div class="col-md-3"></div>

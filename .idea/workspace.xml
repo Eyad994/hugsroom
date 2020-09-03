@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b20fa647-7561-40c5-a8da-b70f03e2c784" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/personalHealth.iml" afterPath="$PROJECT_DIR$/.idea/personalHealth.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/cardSwip.js" afterPath="$PROJECT_DIR$/public/js/cardSwip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/main/create.js" afterPath="$PROJECT_DIR$/public/js/main/create.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/v5.3222908342.css" afterPath="$PROJECT_DIR$/public/css/v5.3222908342.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/main/createwebsite.blade.php" afterPath="$PROJECT_DIR$/resources/views/main/createwebsite.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/main/rooms.blade.php" afterPath="$PROJECT_DIR$/resources/views/main/rooms.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,11 +20,15 @@
       <file leaf-file-name="createwebsite.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/main/createwebsite.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="134" column="253" lean-forward="false" selection-start-line="134" selection-start-column="253" selection-end-line="134" selection-end-column="253" />
+            <state relative-caret-position="68">
+              <caret line="65" column="30" lean-forward="true" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
               <folding>
-                <marker date="1599145193156" expanded="true" signature="12938:13264" ph="..." />
-                <marker date="1599145193156" expanded="true" signature="13064:13263" ph="..." />
+                <element signature="e#984#1008#0#HTML" expanded="true" />
+                <element signature="e#1936#2076#0#HTML" expanded="true" />
+                <element signature="e#3631#3662#0#HTML" expanded="true" />
+                <element signature="e#5931#5937#0#HTML" expanded="true" />
+                <marker date="1599148222380" expanded="true" signature="12938:13264" ph="..." />
+                <marker date="1599148222380" expanded="true" signature="13064:13263" ph="..." />
               </folding>
             </state>
           </provider>
@@ -44,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cardSwip.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cardSwip.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/cardSwip.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -64,6 +66,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="rooms.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/main/rooms.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="21" column="59" lean-forward="false" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,8 +89,18 @@
       <file leaf-file-name="layout.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/layout.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="129" column="18" lean-forward="false" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="18" />
+            <state relative-caret-position="127">
+              <caret line="64" column="21" lean-forward="false" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="v5.3222908342.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/css/v5.3222908342.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="8168" column="23" lean-forward="true" selection-start-line="8168" selection-start-column="23" selection-end-line="8168" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -98,12 +120,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&lt;i</find>
-      <find>submit</find>
-      <find>rooms</find>
-      <find>Home</find>
-      <find>ecomm</find>
-      <find>checkIs</find>
       <find>Back</find>
       <find>checkIsUser</find>
       <find>Sign In</find>
@@ -127,7 +143,13 @@
       <find>sc-patient-name-else&quot;</find>
       <find>sc-patient-name-me&quot;</find>
       <find>container-bloody</find>
+      <find>100</find>
       <find>.owl-stage-outer</find>
+      <find>.mobileFooter .navbar</find>
+      <find>.container-bloody &gt; *:not(.prevent-bleed)</find>
+      <find>Site</find>
+      <find>start a Site</find>
+      <find>start a Room</find>
     </findStrings>
     <replaceStrings>
       <replace>e64d7b</replace>
@@ -139,6 +161,8 @@
       <replace>E84B7B</replace>
       <replace>99a6ad</replace>
       <replace>btn btn-primary main_background_color</replace>
+      <replace>Room</replace>
+      <replace>Start a Room</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Eyad\Documents\Laravel Projects\hugsroom\public</dir>
@@ -169,12 +193,10 @@
         <option value="$PROJECT_DIR$/../slick-master/index.html" />
         <option value="$PROJECT_DIR$/../jQuery-Based-General-Content-Slider-Plugin-slider/index.html" />
         <option value="$PROJECT_DIR$/../jQuery-Based-General-Content-Slider-Plugin-slider/miqdad.html" />
-        <option value="$PROJECT_DIR$/public/css/v5.3222908342.css" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/public/js/main/main.js" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/public/css/cardSwip.css" />
-        <option value="$PROJECT_DIR$/resources/views/main/rooms.blade.php" />
         <option value="$PROJECT_DIR$/public/js/register/main.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/ui/auth-backend/RegistersUsers.php" />
@@ -185,10 +207,12 @@
         <option value="$PROJECT_DIR$/resources/views/auth/login2.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/public/js/main/create.js" />
-        <option value="$PROJECT_DIR$/resources/views/main/createwebsite.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" />
         <option value="$PROJECT_DIR$/public/js/cardSwip.js" />
+        <option value="$PROJECT_DIR$/resources/views/main/rooms.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/main/createwebsite.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/v5.3222908342.css" />
       </list>
     </option>
   </component>
@@ -265,6 +289,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="personalHealth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="personalHealth" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -420,6 +466,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="personalHealth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="personalHealth" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -539,12 +603,12 @@
       <workItem from="1598679463991" duration="1840000" />
       <workItem from="1598683816825" duration="47901000" />
       <workItem from="1599081326510" duration="13976000" />
-      <workItem from="1599144106994" duration="2148000" />
+      <workItem from="1599144106994" duration="4046000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126605000" />
+    <option name="totallyTimeSpent" value="128503000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -669,13 +733,6 @@
     <entry file="file://$PROJECT_DIR$/../jQuery-Based-General-Content-Slider-Plugin-slider/index.html" />
     <entry file="file://$PROJECT_DIR$/../panet/form_samples.html" />
     <entry file="file://$PROJECT_DIR$/../jQuery-Based-General-Content-Slider-Plugin-slider/miqdad.html" />
-    <entry file="file://$PROJECT_DIR$/public/css/v5.3222908342.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="83" column="1" lean-forward="true" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/main/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -694,13 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/main/rooms.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -819,25 +869,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/storage/framework/views/8eaa8b7737e4ba44fc99a74388ff8d01e231cdf0.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/main/createwebsite.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="134" column="253" lean-forward="false" selection-start-line="134" selection-start-column="253" selection-end-line="134" selection-end-column="253" />
-          <folding>
-            <marker date="1599145193156" expanded="true" signature="12938:13264" ph="..." />
-            <marker date="1599145193156" expanded="true" signature="13064:13263" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="136" column="33" lean-forward="false" selection-start-line="136" selection-start-column="33" selection-end-line="136" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -864,18 +895,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/layout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="129" column="18" lean-forward="false" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/cardSwip.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="32" lean-forward="true" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="136" column="33" lean-forward="false" selection-start-line="136" selection-start-column="33" selection-end-line="136" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/main/rooms.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="21" column="59" lean-forward="false" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="64" column="21" lean-forward="false" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/main/createwebsite.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="65" column="30" lean-forward="true" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+          <folding>
+            <element signature="e#984#1008#0#HTML" expanded="true" />
+            <element signature="e#1936#2076#0#HTML" expanded="true" />
+            <element signature="e#3631#3662#0#HTML" expanded="true" />
+            <element signature="e#5931#5937#0#HTML" expanded="true" />
+            <marker date="1599148222380" expanded="true" signature="12938:13264" ph="..." />
+            <marker date="1599148222380" expanded="true" signature="13064:13263" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/v5.3222908342.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="8168" column="23" lean-forward="true" selection-start-line="8168" selection-start-column="23" selection-end-line="8168" selection-end-column="23" />
           <folding />
         </state>
       </provider>
