@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="apple-itunes-app" content="app-id=365726944">
 
-    <title>Personal Health Journals for Any Condition | CaringBridge</title>
+    <title>Hugs Room</title>
     <link href="imgs/favicon.ico" rel="icon" type="image/x-icon">
     <link href="imgs/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="css/v4.3222908342.css" rel="stylesheet" type="text/css">
@@ -57,7 +57,15 @@
 </head>
 <style type="text/css">
 
+    .navbar-nav{
+        margin-top: 65px !important;;
+        width: 100%;
+    }
     @media (max-width: 768px) {
+       .navbar-nav{
+            margin-top: 120px !important;
+            width: 100%;
+        }
         .mobileFooter .navbar {
             overflow: hidden;
             background-color: #333;
@@ -174,7 +182,7 @@
         </div>
 
         <div class="bottom-tier collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav" role="menubar" style="    margin-top: 65px;width: 100%;">
+            <ul class="nav navbar-nav" role="menubar">
                 @if (Auth::check())
                 <li role="menuitem">
                     <div class="" style="color:#ffffff;float: left;">
