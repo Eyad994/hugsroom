@@ -26,9 +26,13 @@
             font-size: 18px;
             background: #fff;
         }
+
+        .uk-section{
+            padding-bottom: 0px !important;
+        }
     </style>
 
-    <div class="row">
+    <div class="row xxx">
     <div class="col-md-12">
         <!-- Button trigger modal -->
    {{--     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#centralModalSm">
@@ -41,8 +45,6 @@
 
             <!-- Change class .modal-sm to change the size of the modal -->
             <div class="modal-dialog modal-lg" role="document">
-
-
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="float: left">
@@ -68,16 +70,16 @@
         <div class="uk-margin"></div>
         <div class="uk-section">
             <div class="owl-carousel owl-theme">
-                <div class="item">
+                <div class="item" data-toggle="slide1">
                     <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
-                        <div style="width: 100%;float: left;">
-                            <div  style="padding: 0px;border-radius: 15px;overflow: hidden;box-shadow: 2px 2px 10px 1px #e4e1e1;background: #FFFFFF;border: 1px solid #c5bdbd;">
+                        <div class="uk-card-box">
+                            <div  class="uk-card-sub-box">
 
-                                <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" {{--style="height: 250px"--}} data-toggle="modal" data-target="#centralModalSm">
+                                <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" {{--style="height: 250px"--}}  onclick="openmodel('1')">
                                 <div>
                                     <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Moved the patient room online to help you in difficult times</h3>
                                     <div class="pad-top_12" style="padding: 0px 20px">
-                                        <p style="height: 200px;font-size: 16px;overflow: hidden;text-align: left;color:#000000">
+                                        <p class="card_text">
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem <Ipsum class=""></Ipsum>
                                         </p>
@@ -96,16 +98,16 @@
                     </div>
 
                 </div>
-                <div class="item">
+                <div class="item" data-toggle="slide2">
                     <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
-                        <div style="width: 100%;float: left;">
-                            <div  style="padding: 0px;border-radius: 15px;overflow: hidden;box-shadow: 2px 2px 10px 1px #e4e1e1;background: #FFFFFF;border: 1px solid #c5bdbd;">
+                        <div class="uk-card-box">
+                            <div  class="uk-card-sub-box">
 
                                 <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" data-toggle="modal" data-target="#centralModalSm">
                                 <div>
                                     <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Moved the patient room online to help you in difficult times</h3>
                                     <div class="pad-top_12" style="padding: 0px 20px">
-                                        <p style="height: 200px;font-size: 16px;overflow: hidden;text-align: left;color:#000000">
+                                        <p class="card_text">
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem <Ipsum class=""></Ipsum>
                                         </p>
@@ -124,16 +126,16 @@
                     </div>
 
                 </div>
-                <div class="item">
+                <div class="item" data-toggle="slide3">
                     <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
-                        <div style="width: 100%;float: left;">
-                            <div  style="padding: 0px;border-radius: 15px;overflow: hidden;box-shadow: 2px 2px 10px 1px #e4e1e1;background: #FFFFFF;border: 1px solid #c5bdbd;">
+                        <div class="uk-card-box">
+                            <div  class="uk-card-sub-box">
 
                                 <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" data-toggle="modal" data-target="#centralModalSm">
                                 <div>
                                     <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Moved the patient room online to help you in difficult times</h3>
                                     <div class="pad-top_12" style="padding: 0px 20px">
-                                        <p style="height: 200px;font-size: 16px;overflow: hidden;text-align: left;color:#000000">
+                                        <p class="card_text">
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem <Ipsum class=""></Ipsum>
                                         </p>
@@ -152,16 +154,16 @@
                     </div>
 
                 </div>
-                <div class="item">
+                <div class="item" data-toggle="slide4">
                     <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
-                        <div style="width: 100%;float: left;">
-                            <div  style="padding: 0px;border-radius: 15px;overflow: hidden;box-shadow: 2px 2px 10px 1px #e4e1e1;background: #FFFFFF;border: 1px solid #c5bdbd;">
+                        <div class="uk-card-box">
+                            <div  class="uk-card-sub-box">
 
                                 <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" data-toggle="modal" data-target="#centralModalSm">
                                 <div>
                                     <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Moved the patient room online to help you in difficult times</h3>
                                     <div class="pad-top_12" style="padding: 0px 20px">
-                                        <p style="height: 200px;font-size: 16px;overflow: hidden;text-align: left;color:#000000">
+                                        <p class="card_text">
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem <Ipsum class=""></Ipsum>
                                         </p>
@@ -180,16 +182,16 @@
                     </div>
 
                 </div>
-                <div class="item">
+                <div class="item" data-toggle="slide5">
                     <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
-                        <div style="width: 100%;float: left;">
-                            <div  style="padding: 0px;border-radius: 15px;overflow: hidden;box-shadow: 2px 2px 10px 1px #e4e1e1;background: #FFFFFF;border: 1px solid #c5bdbd;">
+                        <div class="uk-card-box">
+                            <div  class="uk-card-sub-box">
 
                                 <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" data-toggle="modal" data-target="#centralModalSm">
                                 <div>
                                     <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Moved the patient room online to help you in difficult times</h3>
                                     <div class="pad-top_12" style="padding: 0px 20px">
-                                        <p style="height: 200px;font-size: 16px;overflow: hidden;text-align: left;color:#000000">
+                                        <p class="card_text">
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem <Ipsum class=""></Ipsum>
                                         </p>
@@ -214,43 +216,4 @@
 
 
 
-
-    {{--<script>
-        if($(window).width() < 700)
-        {
-            var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-            });
-        }else if($(window).width() > 700 &&  $(window).width() < 900){
-            var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 2,
-                spaceBetween: 30,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-            });
-        }else{
-            var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 3,
-                spaceBetween: 30,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-            });
-        }
-
-        $(function () {
-            $("#xxxxxx").click(function () {
-               debugger;
-            });
-        })
-
-    </script>--}}
 @endsection

@@ -30,4 +30,5 @@ Route::post('/addUser', 'HomeController@addUser');
 Route::get('/login2', 'HomeController@login2');
 Route::get('/home2', 'HomeController@home2');
 Route::get('/rooms', 'HomeController@rooms');
+Route::get('/page2', 'HomeController@page2');
 /*Route::get('/xx', 'HomeController@xx');*/

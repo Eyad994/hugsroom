@@ -134,5 +134,4 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="{{asset('js/main/create.js')}}"></script>
 @endsection

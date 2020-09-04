@@ -1,5 +1,7 @@
 $(function(){
-
+    window.onbeforeunload = function(e) {
+        return 'Please press the Logout button to logout.';
+    };
 });
 
 function toggleAlert(ele) {
@@ -8,7 +10,6 @@ function toggleAlert(ele) {
 
 function goNext(prev,next) {
 
-    debugger;
     if(prev == "sc-terms")
     {
 
@@ -23,10 +24,12 @@ function goNext(prev,next) {
     if(next == "sc-patient-name-else")
     {
         $("#me-or-else").val("1");
+        next = "sc-public-help";
     }
     if(next == "sc-patient-name-me")
     {
         $("#me-or-else").val("0");
+        next = "sc-public-help";
     }
     if(next == "sc-patient-name")
     {
@@ -40,6 +43,14 @@ function goNext(prev,next) {
         }
     }
 
+    if(prev == "sc-public-help-yes"){
+        $("#pubic_help").val("1");
+        prev = "sc-public-help";
+    }
+    if(prev == "sc-public-help-no"){
+        $("#pubic_help").val("0");
+        prev = "sc-public-help";
+    }
 
     if(prev == "sc-patient-name-me")
     {
@@ -77,8 +88,11 @@ function goNext(prev,next) {
         }
     }
 
-    if(prev == "sc-title-and-address")
+    if(next == "sc-custom-privacy")
     {
+        if($("#pubic_help").val() == "1"){
+            return;
+        }
         if($("#title").val().trim() == ""){
             $("#title").css("border","1px solid red");
             return;
@@ -101,6 +115,29 @@ function goNext(prev,next) {
     if(prev == "sc-patient-name-me-prev")
     {
         prev = "sc-patient-name-me";
+    }
+debugger;
+    if(next =="sc-title-and-address")
+    {
+        var firstname;
+        var lastname;
+        if(  $("#me-or-else").val() == "1")
+        {
+            firstname =  $("#firstName-else").val();
+            lastname  =  $("#lastName-else").val();
+        }else{
+            firstname =  $("#firstName-me").val();
+            lastname  =  $("#lastName-me").val();
+        }
+
+        $("#title").val(firstname+' '+lastname);
+        $("#room-link").val(firstname+lastname);
+
+        if($("#pubic_help").val() == "1"){
+            $(".progress-bar-room-name").css("width","100%");
+        }else{
+            $(".progress-bar-room-name").css("width","42%");
+        }
     }
 
 

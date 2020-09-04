@@ -6,13 +6,15 @@
             <div class="row">
                 <form action="" method="post" name="create" class="js-create-site-steps js-supress-bubbles" id="create">
                     <input type="hidden" name="csrf" value="">
+
+                    <!------------------------------------------ section1-------------------------------->
                     <section class="site-create-step active" id="sc-terms" data-ga-label-prefix="Terms of Use - c - ' : ''; ?>">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <div class="text-center"><h1>Start a Room</h1></div>
+                                <div class="text-center"><h1>Open a Room</h1></div>
                                 <div class="progress show-when-loaded">
                                     <div class="progress-bar main_background_color main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 14.2857%;">
-                                        <span class="sr-only"><span class="progress-bar-value">14.285714285714285</span>% Complete</span>
+                                        <span class="sr-only"><span class="progress-bar-value"></span>% Complete</span>
                                     </div>
                                 </div>
                             </div>
@@ -22,7 +24,7 @@
                                 <i class="cbicon-share-updates start-a-site-icons" aria-hidden="true" role="presentation"></i>
                             </div>
                             <div class="col-md-5 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-7 vertical-top">
-                                <p class="small-text">Let’s start your free Hugs Room website in three minutes or less.</p>
+                                <p class="small-text">Let’s open a totally free room for you in few minutes .</p>
                                 <div aria-hidden="true" style="clip-path:inset(100%); clip:rect(1px, 1px, 1px, 1px); height:1px; overflow:hidden; position:absolute; white-space:nowrap; width:1px;">
                                     <div class="form-group ">
                                         <label class="control-label" for="lookingForBees">Looking for Bees</label>
@@ -62,8 +64,9 @@
                                 </div>
                             </div>
                         </div>
-
                     </section>
+
+                        <!--------------------------------------------- section2 ----------------------------------------------->
 
                     <section class="site-create-step" id="sc-who" data-ga-label-prefix="Myself vs Someone Else a - ">
                         <div class="col-sm-10 col-sm-offset-1 section-top-margin">
@@ -75,7 +78,7 @@
 
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <div class="text-center"><h1>Start a Room</h1></div>
+                                <div class="text-center"><h1>Room Resident</h1></div>
                                 <div class="progress show-when-loaded">
                                     <div class="progress-bar main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 28.5714%;">
                                         <span class="sr-only"><span class="progress-bar-value">0</span>% Complete</span>
@@ -88,7 +91,7 @@
                                 <i class="cbicon-sett-roles start-a-site-icons" aria-hidden="true" role="presentation"></i>
                             </div>
                             <div class="col-md-6 col-sm-7 col-xs-7 vertical-center">
-                                <p class="medium-text"><strong>Who is this website for?</strong></p>
+                                <p class="medium-text"><strong>Who is the Room for?</strong></p>
                             </div>
                         </div>
 
@@ -129,10 +132,82 @@
                             </div>
                         </div>
                     </section>
+                    <!----------------------------------------- section3 help ---------------------------------->
+
+                    <section class="site-create-step" id="sc-public-help" data-ga-label-prefix="Public Search Listing - ">
+                        <div class="col-sm-10 col-sm-offset-1 section-top-margin">
+                            <button class="btn btn-default btn-default-border btn-sm" type="button" data-ga-label="Previous" data-ga-action="Click - button" data-role="previous" data-qa-id="site-create-flow-back" onclick="goNext('sc-public-help','sc-who')">
+                                <i class="cbicon-left-chevron" role="presentation" aria-hidden="true"></i>&nbsp;
+                                Back
+                            </button>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                                <div class="text-center"><h1>Public Hugs</h1></div>
+                                <div class="progress show-when-loaded">
+                                    <div class="progress-bar main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                                        <span class="sr-only"><span class="progress-bar-value">0</span>% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row copy-margin">
+                            <div class="col-md-1 col-md-offset-3 col-sm-2 col-sm-offset-2 col-xs-3 col-xs-offset-1 vertical-top">
+                                <input type="hidden" id="pubic_help" value="0">
+                                <i class="cbicon-site-start-search start-a-site-icons" aria-hidden="true" role="presentation"></i>
+                            </div>
+                            <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-7 vertical-top">
+                                <div class="start-a-site-text">
+                                    Anyone can Search, View & Interact with your Room. The Room
+                                    will be publicly displayed for public hugs
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-10 col-sm-offset-1  col-xs-12">
+                            <div class="content">
+                                <fieldset class="form-group">
+                                    <legend class="control-label">
+                                    </legend>
+
+                                    <div class="row site-create-flex-container">
+                                        <div class="site-create-flex-item site-create-2-cols-flex-item">
+                                            <div style="display: none !important;">
+                                                <input data-ga-action="Click - radio" data-ga-label="Googleable" id="googleable-yes" name="isGoogleable" type="radio" value="1" required="required">    </div>
+
+                                            <button class="btn btn-block btn-primary btn-lg main_background_color" data-activate="#googleable-yes" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Googleable" data-qa-id="site-create-flow-googleable" type="button" onclick="goNext('sc-public-help-yes','sc-patient-name')">
+                                                Yes
+                                            </button>
+                                        </div>
+                                        <div class="site-create-flex-item site-create-2-cols-flex-item">
+                                            <div style="display: none !important;">
+                                                <input data-ga-action="Click - radio" data-ga-label="Not Googleable" id="googleable-no" name="isGoogleable" type="radio" value="0" required="required" checked="checked">
+                                            </div>
+
+                                            <button class="btn btn-block btn-primary btn-lg main_background_color" data-activate="#googleable-no" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Not Googleable" data-qa-id="site-create-flow-not-googleable" type="button" onclick="goNext('sc-public-help-no','sc-patient-name')">
+                                                No
+                                            </button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <p class="center">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-ga-label="Help Me Decide" data-ga-action="Click - link" data-target="#create-site-public-search-listing-decide-help" aria-expanded="false" aria-controls="create-site-public-search-listing-decide-help" data-qa-id="site-create-flow-help-link">Help Me Decide</button>
+                                </p>
+
+                                <div class="collapse alert alert-info" id="create-site-public-search-listing-decide-help">
+                                    <p>Clicking <strong>Yes</strong> means that search engines will display basic information about your Hugs Room site, including your name, a summary of your story, and a link to your site. If you don’t want to be included in search engine results, click  <strong>No</strong>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!---------------------------------------------- section3 --------------------------------------------->
 
                     <section class="site-create-step" id="sc-patient-name-me" data-ga-label-prefix="Patient Name - ">
                         <div class="col-sm-10 col-sm-offset-1 section-top-margin">
-                            <button class="btn btn-default btn-default-border btn-sm" type="button" data-ga-label="Previous" data-ga-action="Click - button" data-role="previous" data-qa-id="site-create-flow-back" onclick="goNext('sc-patient-name-me-prev','sc-who')">
+                            <button class="btn btn-default btn-default-border btn-sm" type="button" data-ga-label="Previous" data-ga-action="Click - button" data-role="previous" data-qa-id="site-create-flow-back" onclick="goNext('sc-patient-name-me-prev','sc-public-help')">
                                 <i class="cbicon-left-chevron" role="presentation" aria-hidden="true"></i>&nbsp;
                                 Back
                             </button>
@@ -140,9 +215,9 @@
 
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <div class="text-center"><h1>Start a Room</h1></div>
+                                <div class="text-center"><h1>Room Resident</h1></div>
                                 <div class="progress show-when-loaded">
-                                    <div class="progress-bar main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 42.8571%;">
+                                    <div class="progress-bar main_background_color " role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 42.8571%;">
                                         <span class="sr-only"><span class="progress-bar-value">0</span>% Complete</span>
                                     </div>
                                 </div>
@@ -186,9 +261,12 @@
                         </div>
 
                     </section>
+
+                    <!------------------------------------------------ section4 --------------------------------------------->
+
                     <section class="site-create-step" id="sc-patient-name-else" data-ga-label-prefix="Patient Name - ">
                         <div class="col-sm-10 col-sm-offset-1 section-top-margin">
-                            <button class="btn btn-default btn-default-border btn-sm" type="button" data-ga-label="Previous" data-ga-action="Click - button" data-role="previous" data-qa-id="site-create-flow-back" onclick="goNext('sc-patient-name-else-prev','sc-who')">
+                            <button class="btn btn-default btn-default-border btn-sm" type="button" data-ga-label="Previous" data-ga-action="Click - button" data-role="previous" data-qa-id="site-create-flow-back" onclick="goNext('sc-patient-name-else-prev','sc-public-help')">
                                 <i class="cbicon-left-chevron" role="presentation" aria-hidden="true"></i>&nbsp;
                                 Back
                             </button>
@@ -196,7 +274,7 @@
 
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <div class="text-center"><h1>Start a Room</h1></div>
+                                <div class="text-center"><h1>Resident Name</h1></div>
                                 <div class="progress show-when-loaded">
                                     <div class="progress-bar main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 42.8571%;">
                                         <span class="sr-only"><span class="progress-bar-value">0</span>% Complete</span>
@@ -233,21 +311,22 @@
 
                     </section>
 
+
+                    <!------------------------------------------------ section5 -------------------------------------------->
+
                     <section class="site-create-step" id="sc-title-and-address" data-ga-label-prefix="Site Title and Address - ">
                         <div class="col-sm-10 col-sm-offset-1 section-top-margin">
                             <button class="btn btn-default btn-default-border btn-sm" type="button" data-ga-label="Previous" data-ga-action="Click - button" data-role="previous" data-qa-id="site-create-flow-back" onclick="goNext('sc-title-and-address','sc-patient-name')">
                                 <i class="cbicon-left-chevron" role="presentation" aria-hidden="true"></i>&nbsp;
-                                Back    </button>
+                                Back
+                            </button>
                         </div>
                         <input type="hidden" id="me-or-else" value="0">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <div class="text-center"><h1>Start a Room</h1></div>
-
-
-
+                                <div class="text-center"><h1>Room Details</h1></div>
                                 <div class="progress show-when-loaded">
-                                    <div class="progress-bar main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 57.1429%;">
+                                    <div class="progress-bar main_background_color  progress-bar-room-name" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 57.1429%;">
                                         <span class="sr-only"><span class="progress-bar-value">0</span>% Complete</span>
                                     </div>
                                 </div>
@@ -256,8 +335,14 @@
                         <div class="col-sm-10 col-sm-offset-1">
                             <div class="start-a-site-box">
                                 <div class="content">
-                                    <p><strong>1. What would you like <span class="create-self" style="display: none;">your</span><span class="create-other">the</span> Room title to be?</strong></p>
-                                    <div class="form-group "><label for="title"><span class="required"><span aria-hidden="true" role="presentation" title="Required">*</span><span class="sr-only">Required</span></span> Room Title</label>
+                                    <p>
+                                        <strong>1. What would you like <span class="create-self" style="display: none;">your</span><span class="create-other">the</span> Room title to be?</strong></p>
+                                    <div class="form-group ">
+                                        <label for="title">
+                                            <span class="required"><span aria-hidden="true" role="presentation" title="Required">*</span>
+                                                <span class="sr-only">Required</span>
+                                            </span> Room Title
+                                        </label>
                                         <input type="text" name="title" class="input-block-level form-control" id="title" maxlength="25" required="required" value="{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}"></div>
 
                                     <p><strong>2. <span class="create-self" style="display: none;">Your</span><span class="create-other">The</span> recommended room address below cannot be changed after <span class="create-self" style="display: none;">your</span><span class="create-other create-other-possessive-name">their</span> room is created.</strong></p>
@@ -284,6 +369,7 @@
 
                     </section>
 
+                    <!------------------------------------- section6 --------------------------------->
 
                     <section class="site-create-step" id="sc-custom-privacy" data-ga-label-prefix="Custom Privacy - ">
                         <div class="col-sm-10 col-sm-offset-1 section-top-margin">
@@ -294,7 +380,7 @@
 
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <div class="text-center"><h1>Room a Site</h1></div>
+                                <div class="text-center"><h1>Room Privacy</h1></div>
                                 <div class="progress show-when-loaded">
                                     <div class="progress-bar main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 71.4286%">
                                         <span class="sr-only"><span class="progress-bar-value">0</span>% Complete</span>
@@ -316,6 +402,9 @@
                                                 <button style="background-color: transparent;border-color: #555;" class="btn btn-block btn-tertiary btn-lg btn-privacy" data-activate="#privacy-medium" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Medium Privacy" data-qa-id="site-create-flow-privacy-medium" type="button"  onclick="goNext('sc-custom-privacy','sc-custom-cb-search')">
                                                     <div class="privacy-block">
                                                         <div class="privacy-title">PUBLIC USERS</div>
+                                                        <div class="privecy_text">
+                                                            Anyone can Search, View & Interact with your Room
+                                                        </div>
                                                         <span class="privacy-text"><div class="recommendation-block">
                                                                 <div class="svg-icon svg-recommended svg-icon-sm">
                                                                     <svg id="RecommendedBadge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.747 22.875">
@@ -326,6 +415,7 @@
                                                                         </g>
                                                                     </svg>
                                                                 </div>
+
                                                                 <span class="recommended-text"> Most popular</span>
                                                             </div>
                                                         </span>
@@ -338,7 +428,9 @@
 
                                             <button class="btn btn-block btn-tertiary btn-lg btn-privacy not-recommended" data-activate="#privacy-low" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Low Privacy" data-qa-id="site-create-flow-privacy-low" type="button" onclick="goNext('sc-custom-privacy','sc-public-search-listing')">
                                                 <div class="privacy-block"><div class="privacy-title">LIMITED</div>
-                                                    <span class="privacy-text"></span>
+                                                    <div class="privecy_text">
+                                                        Anyone can Search your Room. But they need to first Register to View the Room. They also need to request to Follow you before they can Interact
+                                                    </div>
                                                 </div>
                                             </button>
                                         </div>
@@ -348,7 +440,9 @@
 
                                             <button class="btn btn-block btn-tertiary btn-lg btn-privacy not-recommended" data-activate="#privacy-high" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate High Privacy" data-qa-id="site-create-flow-privacy-high" type="button"  onclick="goNext('sc-custom-privacy','sc-custom-cb-search')">
                                                 <div class="privacy-block"><div class="privacy-title">PRIVATE</div>
-                                                    <span class="privacy-text"></span>
+                                                    <div class="privecy_text">
+                                                        Nobody can Search your Room. Your Room is only accessible by sharing a direct link. Everyone need to Register & request to Follow you before they can View or Interact.
+                                                    </div>
                                                 </div>
                                             </button>
                                         </div>
@@ -357,20 +451,19 @@
                             </div>
                         </div>
                     </section>
+                    <!------------------------------ section7 ------------------------------>
 
                     <section class="site-create-step" id="sc-custom-cb-search" data-ga-label-prefix="Custom CB Searchability - ">
                         <div class="col-sm-10 col-sm-offset-1 section-top-margin">
                             <button class="btn btn-default btn-default-border btn-sm" type="button" data-ga-label="Previous" data-ga-action="Click - button" data-role="previous" data-qa-id="site-create-flow-back"  onclick="goNext('sc-custom-cb-search','sc-custom-privacy')">
                                 <i class="cbicon-left-chevron" role="presentation" aria-hidden="true"></i>&nbsp;
-                                Back    </button>
+                                Back
+                            </button>
                         </div>
 
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <div class="text-center"><h1>Start a Room</h1></div>
-
-
-
+                                <div class="text-center"><h1>Room on Google</h1></div>
                                 <div class="progress show-when-loaded">
                                     <div class="progress-bar main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
                                         <span class="sr-only"><span class="progress-bar-value">0</span>% Complete</span>
@@ -384,7 +477,7 @@
                                 <i class="cbicon-heart start-a-site-icons" aria-hidden="true" role="presentation"></i>
                             </div>
                             <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-7 vertical-top">
-                                <div class="start-a-site-text">Allow family and friends to be able to find this room using Hugs Room search?</div>
+                                <div class="start-a-site-text">Would you like Search Engines like Google to also be able to search for your Room?</div>
                             </div>
                         </div>
 
@@ -419,7 +512,10 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
                     </section>
+
+                    <!------------------------------- section7 b---------------------------->
 
                     <section class="site-create-step" id="sc-public-search-listing" data-ga-label-prefix="Public Search Listing - ">
                         <div class="col-sm-10 col-sm-offset-1 section-top-margin">
@@ -446,7 +542,7 @@
                             </div>
                             <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-7 vertical-top">
                                 <div class="start-a-site-text">
-                                    Do you want search engines like Google to link to <span class="create-self" style="display: none;"> your </span><span class="create-other"> the </span> Hugs Room website?                        </div>
+                                    Would you like Search Engines like Google to also be able to search for your Room?</div>
                             </div>
                         </div>
 
@@ -461,13 +557,13 @@
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="Googleable" id="googleable-yes" name="isGoogleable" type="radio" value="1" required="required">    </div>
 
-                                            <button class="btn btn-block btn-primary btn-lg " data-activate="#googleable-yes" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Googleable" data-qa-id="site-create-flow-googleable" type="button">                        Yes                </button>
+                                            <button class="btn btn-block btn-primary btn-lg main_background_color" data-activate="#googleable-yes" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Googleable" data-qa-id="site-create-flow-googleable" type="button">                        Yes                </button>
                                         </div>
                                         <div class="site-create-flex-item site-create-2-cols-flex-item">
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="Not Googleable" id="googleable-no" name="isGoogleable" type="radio" value="0" required="required" checked="checked">    </div>
 
-                                            <button class="btn btn-block btn-primary btn-lg " data-activate="#googleable-no" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Not Googleable" data-qa-id="site-create-flow-not-googleable" type="button">                        No                </button>
+                                            <button class="btn btn-block btn-primary btn-lg main_background_color" data-activate="#googleable-no" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Not Googleable" data-qa-id="site-create-flow-not-googleable" type="button">                        No                </button>
                                         </div>
                                     </div>
                                 </fieldset>

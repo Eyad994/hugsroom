@@ -55,6 +55,10 @@ class HomeController extends Controller
         return view('main.rooms');
     }
 
+    public function page2()
+    {
+        return view('page2');
+    }
     public function register2(Request $request)
     {
         $email = $request->email;

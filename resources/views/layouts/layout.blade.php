@@ -120,7 +120,38 @@
             width: 100%;
            text-align: end;
         }
+        .main_content{
+            padding-bottom:0px !important;;
+        }
+        .page2_main_img{
+            margin-top: 0px !important;
+            height: 350px;
+            width: 100%;
+        }
+        .card_text{
+            height: 110px !important;
+        }
+        .uk-card-box{
+            width: 100%;
+            float: left;
+            padding-top: 10px;
+        }
 
+        .active .card_text{
+            height: 130px !important;
+        }
+        .active .uk-card-sub-box{
+            margin-top: -5px !important;
+        }
+    }
+    .page2_main_img{
+        margin-top: 100px;
+        height: 350px;
+        width: 100%;
+    }
+    .main_content{
+        background: #ffffff;
+        padding-bottom:100px
     }
     .header_sub_menu{
         background: #ffffff;
@@ -135,6 +166,7 @@
         z-index: 1;
 
     }
+
     body{
         background-color: #ebe5e0;
         font-family: 'Quicksand';;
@@ -174,6 +206,27 @@
         float: left;
         height: 38px;
         padding-top: 10px;
+    }
+    .card_text{
+        height: 220px;
+        font-size: 16px;
+        overflow: hidden;
+        text-align: left;
+        color:#000000;
+    }
+    .uk-card-sub-box{
+        padding: 0px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 2px 2px 10px 1px #e4e1e1;
+        background: #FFFFFF;
+        border: 1px solid #c5bdbd;
+        margin-top: 0px;
+    }
+    .privecy_text{
+        width:100%;
+        white-space: break-spaces;
+        text-align: center;
     }
 </style>
 <body class="homepage-16Q1" data-ga-category="Brooklyn">
@@ -283,7 +336,7 @@
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-12" style="background: #ffffff; padding-bottom: 100px">
+        <div class="col-xs-12 main_content" >
             <div class="container-bloody">
                 @yield('content')
 
@@ -460,10 +513,18 @@
 </div>
 <div class="mobileFooter" style="display: none;">
     <div class="navbar" style="width: 100%;background: #ffffff;  z-index: 30000">
-        <a href="{{ asset('/') }}" class="active" style="width: 25%"><i class="fa fa-home" style="font-size: 20px"></i><br />Home </a>
-        <a href="#news" style="width: 25%"> <i class="fa fa-search" style="font-size: 20px"></i><br />Rooms</a>
-        <a href="#contact" style="width: 25%"> <i class="fa fa-bell-o" style="font-size: 20px; padding-left: 20px;"></i><br />Notifications</a>
-        <a href="#contact" style="width: 25%"> <i class="fa fa-user" style="font-size: 20px"></i><br />Profile</a>
+        <a href="{{ asset('/') }}" class="active" style="width: 25%">
+            <img src="{{asset("imgs/footer_icons/home.png")}}" /><br />Home
+        </a>
+        <a href="#news" style="width: 25%">
+            <img src="{{asset("imgs/footer_icons/search.png")}}" />
+            <br />Rooms
+        </a>
+        <a href="#contact" style="width: 25%">
+            <img src="{{asset("imgs/footer_icons/notifications.png")}}" style="filter: opacity(0.5) drop-shadow(0 0 0 blue);" />
+            <br>Notifications</a>
+        <a href="#contact" style="width: 25%">
+            <img src="{{asset("imgs/footer_icons/user.png")}}" /><br />Profile</a>
     </div>
 </div>
 
