@@ -96,18 +96,18 @@
             display: block;
             color: #a2a2a2;
             text-align: center;
-            padding: 5px 16px;
+            padding: 5px 5px;
             text-decoration: none;
             font-size: 14px;
         }
 
         .mobileFooter .navbar a:hover {
-            background: #f1f1f1;
+            filter: opacity(0.5) drop-shadow(0 0 0 #e64d7b);
             color: #e64d7b;
         }
 
         .mobileFooter .navbar a.active {
-            background-color: #ffffff;
+            filter: opacity(0.5) drop-shadow(0 0 0 #e64d7b);
             color: #e64d7b;
         }
 
@@ -138,10 +138,13 @@
         }
 
         .active .card_text{
-            height: 130px !important;
+            height: 150px !important;
         }
         .active .uk-card-sub-box{
-            margin-top: -5px !important;
+            margin-top: -15px !important;
+        }
+        .card_title{
+            font-size: 18px !important;
         }
     }
     .page2_main_img{
@@ -227,6 +230,31 @@
         width:100%;
         white-space: break-spaces;
         text-align: center;
+    }
+
+    .card_title{
+        padding: 5px 20px;
+        color: #E84B7B !important;
+        font-size: 21px;
+        text-align: left
+    }
+    .uk-section{
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+    }
+    .owl-stage-outer{
+        padding-top: 30px !important;
+    }
+    .cards_create_room_btn{
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        background: #E84B7B;
+        border: 0px;
+        border-radius:10px;
+        color: #ffffff;
+        float: left;
+        line-height: 50px
     }
 </style>
 <body class="homepage-16Q1" data-ga-category="Brooklyn">
@@ -521,7 +549,7 @@
             <br />Rooms
         </a>
         <a href="#contact" style="width: 25%">
-            <img src="{{asset("imgs/footer_icons/notifications.png")}}" style="filter: opacity(0.5) drop-shadow(0 0 0 blue);" />
+            <img src="{{asset("imgs/footer_icons/notifications.png")}}" {{--style="filter: opacity(0.5) drop-shadow(0 0 0 blue);"--}} />
             <br>Notifications</a>
         <a href="#contact" style="width: 25%">
             <img src="{{asset("imgs/footer_icons/user.png")}}" /><br />Profile</a>
