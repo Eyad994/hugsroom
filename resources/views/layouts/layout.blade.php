@@ -18,21 +18,19 @@
     <link href="imgs/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="css/v4.3222908342.css" rel="stylesheet" type="text/css">
     <link href="css/v5.3222908342.css" rel="stylesheet" type="text/css">
-
+{{--
     <link href="css/cbcomponents.752154146.css" rel="stylesheet" type="text/css">
     <link href="css/main.482494395.css" rel="stylesheet" type="text/css">
     <link href="css/main.2868986225.css" rel="stylesheet" type="text/css">
     <link href="css/main.4086732098.css" rel="stylesheet" type="text/css">
     <link href="css/main.3775130132.css" rel="stylesheet" type="text/css">
-    <link href="css/print.2137607392.css" media="print" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://swiperjs.com/package/swiper-bundle.min.css">
+    <link href="css/print.2137607392.css" media="print" rel="stylesheet" type="text/css">--}}{{--
+    <link rel="stylesheet" href="https://swiperjs.com/package/swiper-bundle.min.css">--}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.css'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css'>
-    <link rel="stylesheet" href="{{asset('css/cardSwip.css')}}">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css'>{{--
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.css'>--}}
 
 
     {{--<script src='js/core/main.js'></script>
@@ -48,7 +46,7 @@
     <link href="css/mainEN.css" media="print" rel="stylesheet" type="text/css">
 
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">--}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -67,9 +65,9 @@
     }
     @media (max-width: 768px) {
 
-        .uk-margin{
+      /*  .uk-margin{
             margin-top: -50px!important;
-        }
+        }*/
 
         .navbar-global{
             display: none;
@@ -86,7 +84,7 @@
             overflow: hidden;
             background-color: #333;
             position: fixed;
-            bottom: -2;
+            bottom: -2px;
             width: 100%;
             margin-bottom: 0px;
         }
@@ -128,7 +126,7 @@
             height: 350px;
             width: 100%;
         }
-        .card_text{
+      /*  .card_text{
             height: 110px !important;
         }
         .uk-card-box{
@@ -142,10 +140,10 @@
         }
         .active .uk-card-sub-box{
             margin-top: -15px !important;
-        }
-        .card_title{
+        }*/
+      /*  .card_title{
             font-size: 18px !important;
-        }
+        }*/
     }
     .page2_main_img{
         margin-top: 100px;
