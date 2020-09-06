@@ -71,6 +71,13 @@
             color:#000000;
         }
 </style>
+    <script type="text/javascript">
+        $(function () {
+            if(screen.width < "768") {
+                window.location.href = "/mbhome";
+            }
+        });
+    </script>
     <div class="container-bloody">
     <div class="row xxx">
         <div class="col-md-12">

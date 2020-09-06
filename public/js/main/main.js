@@ -1,6 +1,5 @@
 $(function(){
 
-    768
 });
 
 function open_sub_menu(field) {

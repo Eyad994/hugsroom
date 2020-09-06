@@ -1,7 +1,7 @@
 
 
 $(function () {
-    if(screen.width < "640") {
+    if(screen.width < "768") {
 
         //  debugger;
         var active = $(".owl-stage .active .item .item").data().toggle;
@@ -82,7 +82,7 @@ $('.owl-carousel').owlCarousel({
 
 $('.owl-carousel').on('changed.owl.carousel', function (e) {
 
-    if(screen.width < "640") {
+    if(screen.width < "768") {
 
         //  debugger;
         var active = $(".owl-stage .active .item .item").data().toggle;

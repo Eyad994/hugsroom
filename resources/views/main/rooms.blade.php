@@ -1,5 +1,16 @@
 @extends('layouts.layout')
 @section('content')
+    <style>
+        @media (max-width: 768px) {
+            body {
+                background: #ffffff !important;
+            }
+
+            .container-fluid {
+                background: #ffffff !important;
+            }
+        }
+    </style>
     <div class="room_header" style="height: 100px;background: #E84B7B;margin-top: -5px">
         <div style="color: #ffffff;width: 100%;font-size: 30px;text-align: center;padding-top: 20px">My Room</div>
         <div style="color: #ffffff;width: 100%;">

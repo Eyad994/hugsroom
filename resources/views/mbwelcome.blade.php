@@ -58,10 +58,13 @@
             text-align: left;
             color:#000000;
         }
+        .owl-controls{
+            display: none !important;
+        }
     </style>
 <script type="text/javascript">
     $(function () {
-        if(screen.width > "640") {
+        if(screen.width > "768") {
             window.location.href = "/";
         }
     });
@@ -85,7 +88,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 30px 20px">
+                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
                                         <div style="height: 50px">
                                             <a href="{{asset("createwebsite")}}" type="btn"  class="cards_create_room_btn">
                                                 Create Room
@@ -114,7 +117,7 @@
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="wp-block-button is-style-tertiary-lg" style="padding: 30px 20px">
+                                        <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
                                             <div style="height: 50px">
                                                 <a href="{{asset("createwebsite")}}" type="btn"  class="cards_create_room_btn">
                                                     Create Room
@@ -143,7 +146,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 30px 20px">
+                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
                                         <div style="height: 50px">
                                             <a href="{{asset("createwebsite")}}" type="btn"  class="cards_create_room_btn">
                                                 Create Room
@@ -171,7 +174,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 30px 20px">
+                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
                                         <div style="height: 50px">
                                             <a href="{{asset("createwebsite")}}" type="btn"  class="cards_create_room_btn">
                                                 Create Room
@@ -199,7 +202,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 30px 20px">
+                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
                                         <div style="height: 50px">
                                             <a href="{{asset("createwebsite")}}" type="btn"  class="cards_create_room_btn">
                                                 Create Room
