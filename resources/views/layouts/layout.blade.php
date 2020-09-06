@@ -25,7 +25,7 @@
     <link href="css/main.4086732098.css" rel="stylesheet" type="text/css">
     <link href="css/main.3775130132.css" rel="stylesheet" type="text/css">
     <link href="css/print.2137607392.css" media="print" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://swiperjs.com/package/swiper-bundle.min.css">
+{{--    <link rel="stylesheet" href="https://swiperjs.com/package/swiper-bundle.min.css">--}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
@@ -34,16 +34,18 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css'>
 
 
+{{--
 
-    {{--<script src='js/core/main.js'></script>
-    <script src='js/daygrid/main.js'></script>
-    <script src='js/timegrid/main.js'></script>
-    <script src='js/list/main.js'></script>
-    <script src='js/interaction/main.js'></script>
-     <script type="text/javascript" src="js/cbcomponents.js"></script>--}}
+        <script src='js/core/main.js'></script>
+        <script src='js/daygrid/main.js'></script>
+        <script src='js/timegrid/main.js'></script>
+        <script src='js/list/main.js'></script>
+        <script src='js/interaction/main.js'></script>
+         <script type="text/javascript" src="js/cbcomponents.js"></script>
+    --}}
 
-    <script type="text/javascript" src="js/app.js"></script>{{--
-    <script type="text/javascript" src="js/jquery.min.js"></script>--}}
+    <script type="text/javascript" src="js/app.js"></script>
+   {{-- <script type="text/javascript" src="js/jquery.min.js"></script>--}}
 
     <link href="css/mainEN.css" media="print" rel="stylesheet" type="text/css">
 
@@ -138,7 +140,7 @@
         }
 
         .active .card_text{
-            height: 130px !important;
+            height: 125px !important;
         }
         .active .uk-card-sub-box{
             margin-top: -5px !important;
@@ -207,13 +209,7 @@
         height: 38px;
         padding-top: 10px;
     }
-    .card_text{
-        height: 220px;
-        font-size: 16px;
-        overflow: hidden;
-        text-align: left;
-        color:#000000;
-    }
+
     .uk-card-sub-box{
         padding: 0px;
         border-radius: 15px;
@@ -225,7 +221,7 @@
     }
     .privecy_text{
         width:100%;
-        white-space: break-spaces;
+        white-space: normal;
         text-align: center;
     }
 </style>
@@ -528,11 +524,6 @@
     </div>
 </div>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js'></script>
-
-<script  src="{{asset('js/mbcardSwip.js')}}"></script>
 @yield('script')
 </body>
 </html>

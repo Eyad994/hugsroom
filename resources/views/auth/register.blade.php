@@ -1,7 +1,26 @@
 @extends('layouts.layout')
 
 @section('content')
-    <div style="height: 570px">
+    <style>
+        @media (max-width: 768px) {
+            .container-bloody
+            {
+                background: #f5f2ef !important;
+                height: auto !important;
+            }
+
+            body {
+                background-color: #f5f2ef !important;
+            }
+            .container-bloody > *:not(.prevent-bleed){
+                height: auto !important;
+            }
+            .main_content{
+                background: #f5f2ef !important ;
+            }
+        }
+    </style>
+    <div style="height: 570px;padding-top: 50px">
         <section class="simple-container create-profile progressive-form started">
             <a href="{{asset('login2')}}" class="form-back back" data-ga-label="Back" aria-label="Back">
                 <i class="cbicon-left-chevron" role="presentation" aria-hidden="true"></i>

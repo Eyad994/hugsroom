@@ -58,6 +58,8 @@ $('.owl-carousel').on('changed.owl.carousel', function (e) {
         var active = $(".uk-section .active .item").data().toggle;
         if (active == "slide1") {
             $(".owl-stage-outer").css("background", "orange")
+
+
         }
         if (active == "slide2") {
             $(".owl-stage-outer").css("background", "red")

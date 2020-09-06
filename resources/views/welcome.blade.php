@@ -46,6 +46,30 @@
         .active .uk-card-sub-box{
             margin-top: -15px !important;
         }
+        .card_title{
+            padding: 5px 20px;
+            color: #E84B7B;
+            font-size: 21px;
+            text-align: left
+        }
+        .cards_create_room_btn{
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            background: #E84B7B;
+            border: 0px;
+            border-radius:10px;
+            color: #ffffff;
+            float: left;
+            line-height: 50px
+        }
+        .card_text{
+            height: 220px;
+            font-size: 15px;
+            overflow: hidden;
+            text-align: left;
+            color:#000000;
+        }
 </style>
     <div class="container-bloody">
     <div class="row xxx">
@@ -87,7 +111,7 @@
             <div class="uk-section">
                 <div class="owl-carousel owl-theme">
                     <div class="item" data-toggle="slide1">
-                        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
+                        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light" style="margin-top: 15px;">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
 
@@ -115,7 +139,7 @@
 
                     </div>
                     <div class="item" data-toggle="slide2">
-                        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
+                        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light" style="margin-top: 15px;">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
 
@@ -143,7 +167,7 @@
 
                     </div>
                     <div class="item" data-toggle="slide3">
-                        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
+                        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light" style="margin-top: 15px;">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
 
@@ -171,7 +195,7 @@
 
                     </div>
                     <div class="item" data-toggle="slide4">
-                        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
+                        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light" style="margin-top: 15px;">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
 
@@ -199,7 +223,7 @@
 
                     </div>
                     <div class="item" data-toggle="slide5">
-                        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
+                        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light" style="margin-top: 15px;">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
 

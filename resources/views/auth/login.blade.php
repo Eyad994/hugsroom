@@ -74,7 +74,17 @@
 @extends('layouts.layout')
 
 @section('content')
+    <style>
+        @media (max-width: 768px) {
+            .container-bloody {
+                background: #f5f2ef !important;
+            }
 
+            body {
+                background-color: #f5f2ef !important;
+            }
+        }
+    </style>
     <div class="user-signin-page">
         <center>
             <div class="layout-corporate prevent-bleed">

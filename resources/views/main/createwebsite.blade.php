@@ -1,9 +1,41 @@
 @extends('layouts.layout')
 @section('content')
+<style>
+    .h-200{
+        height: 200px;
+    }
+    .site-content{
+        padding-top: 100px;
+        padding-bottom: 100px
+    }
+    @media (max-width: 768px) {
+        .container-bloody {
+            background: #f5f2ef !important;
+        }
+        .h-200{
+            height: 0px !important;
+        }
+        #create-site-why-terms{
+            float: left !important;
+        }
+        .create-box{
+            background: #f5f2ef;
+        }
+        body {
+            background-color: #f5f2ef !important;
+        }
+        .container-bloody > *:not(.prevent-bleed){
+            height: 600px !important;
+        }
+        .site-content{
+            padding-top: 50px !important;
+        }
+    }
 
-    <div class="site-content" style="padding-top: 100px;padding-bottom: 100px">
+</style>
+    <div class="site-content">
         <div class="site-create-steps">
-            <div class="row">
+            <div class="row create-box">
                 <form action="" method="post" name="create" class="js-create-site-steps js-supress-bubbles" id="create">
                     <input type="hidden" name="csrf" value="">
 
@@ -591,7 +623,7 @@
                         </div>
                     </section>
                 </form>
-                <div style="height: 200px"></div>
+                <div class="h-200" ></div>
             </div>
         </div>
     </div>

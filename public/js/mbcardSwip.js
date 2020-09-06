@@ -1,7 +1,48 @@
+
+
+$(function () {
+    if(screen.width < "640") {
+
+        //  debugger;
+        var active = $(".owl-stage .active .item .item").data().toggle;
+        if (active == "slide1") {
+            $(".owl-stage-outer").css("background", "orange");
+            $(".xxx").css("background", "orange");
+            $("body").css("background", "orange");
+        }
+        if (active == "slide2") {
+            $(".owl-stage-outer").css("background", "#00bcd4")
+            $(".xxx").css("background", "#00bcd4");
+            $("body").css("background", "#00bcd4");
+        }
+        if (active == "slide3") {
+            $(".owl-stage-outer").css("background", "#2196f3")
+            $(".xxx").css("background", "#2196f3");
+            $("body").css("background", "#2196f3");
+
+        }
+        if (active == "slide4") {
+            $(".owl-stage-outer").css("background", "#673ab7")
+            $(".xxx").css("background", "#673ab7");
+            $("body").css("background", "#673ab7");
+
+        }
+        if (active == "slide5") {
+            $(".owl-stage-outer").css("background", "#607d8b")
+            $(".xxx").css("background", "#607d8b");
+            $("body").css("background", "#607d8b");
+
+        }
+
+    }else{
+
+    }
+});
+
 $('.owl-carousel').owlCarousel({
-    stagePadding: 200,
+    stagePadding: 100,
     loop:true,
-    margin:10,
+    margin:0,
     nav:false,
     items:1,
     lazyLoad: true,
@@ -36,88 +77,48 @@ $('.owl-carousel').owlCarousel({
             stagePadding: 400
         }
     }
-})
-
-
-/*
-$(function () {
-    if(screen.width < "640") {
-
-        var active = $(".uk-section .active .item").data().toggle;
-
-        if (active == "slide1") {
-            $(".owl-stage-outer").css("background", "orange")
-        }
-        if (active == "slide2") {
-            $(".owl-stage-outer").css("background", "red")
-        }
-        if (active == "slide3") {
-            $(".owl-stage-outer").css("background", "green")
-
-        }
-        if (active == "slide4") {
-            $(".owl-stage-outer").css("background", "blue")
-
-        }
-        if (active == "slide5") {
-            $(".owl-stage-outer").css("background", "silver")
-
-        }
-
-    }else{
-        $(".owl-stage-outer").css("background", "#edebeb")
-    }
 });
 
-$('.owl-carousel').owlCarousel({
-    loop:true,
-  stagePadding: 35,
-    margin:10,
-    nav:true,
-  navText : ['<span class="uk-margin-small-right uk-icon" uk-icon="icon: chevron-left"></span>','<span class="uk-margin-small-left uk-icon" uk-icon="icon: chevron-right"></span>'],
-    responsive:{
-        0:{
-            items:1
-        },
-        640:{
-            items:2
-        },
-      960:{
-            items:3
-        },
-        1200:{
-            items:3
-        }
-    }
-});
 
 $('.owl-carousel').on('changed.owl.carousel', function (e) {
 
     if(screen.width < "640") {
 
-
-        var active = $(".uk-section .active .item").data().toggle;
+        //  debugger;
+        var active = $(".owl-stage .active .item .item").data().toggle;
         if (active == "slide1") {
-            $(".owl-stage-outer").css("background", "orange")
+            $(".owl-stage-outer").css("background", "orange");
+            $(".xxx").css("background", "orange");
+            $("body").css("background", "orange");
         }
         if (active == "slide2") {
-            $(".owl-stage-outer").css("background", "red")
+            $(".owl-stage-outer").css("background", "#00bcd4")
+            $(".xxx").css("background", "#00bcd4");
+            $("body").css("background", "#00bcd4");
         }
         if (active == "slide3") {
-            $(".owl-stage-outer").css("background", "green")
+            $(".owl-stage-outer").css("background", "#2196f3")
+            $(".xxx").css("background", "#2196f3");
+            $("body").css("background", "#2196f3");
 
         }
         if (active == "slide4") {
-            $(".owl-stage-outer").css("background", "blue")
+            $(".owl-stage-outer").css("background", "#673ab7")
+            $(".xxx").css("background", "#673ab7");
+            $("body").css("background", "#673ab7");
 
         }
         if (active == "slide5") {
-            $(".owl-stage-outer").css("background", "silver")
+            $(".owl-stage-outer").css("background", "#607d8b")
+            $(".xxx").css("background", "#607d8b");
+            $("body").css("background", "#607d8b");
 
         }
 
     }else{
-        $(".owl-stage-outer").css("background", "#edebeb")
+        $(".owl-stage-outer").css("background", "##009688")
+        $(".xxx").css("background", "#009688");
+        $("body").css("background", "#009688");
     }
 
-});*/
+});
