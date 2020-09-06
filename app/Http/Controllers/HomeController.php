@@ -32,6 +32,10 @@ class HomeController extends Controller
     {
         return view('welcome');
     }
+    public function mbhome()
+    {
+        return view('mbwelcome');
+    }
 
     public function createwebsite()
     {

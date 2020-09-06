@@ -1,56 +1,3 @@
-.uk-section {
-  background-color: #ffffff;
-
-}
-.owl-carousel {
-  position: relative;
-  margin-top: 30px;
-}
-.owl-nav {
-  position: absolute;
-  top: -60px;
-  left: 10px;
-}
-.uk-card-primary {
-  border-radius: 8px;
-}
-h3 {
-  margin-top: 10px
-}
-.uk-card > :last-child {
-  margin-top:0;
-  margin-bottom: 10px
-}
-p {
-  margin-top: 30px;
-  margin-bottom: 0;
-}
-.owl-next {
-  background: #3286f0;
-}
-.owl-theme .owl-nav [class*='owl-'] {
-  background: #ffffff;
-  display: none;
-}
-.owl-dots {
-  margin-top: 30px;
-  display: none;
-}
-.uk-card-title {
-  padding-bottom: 20px
-}
-.uk-card-body{
-  padding: 0 !important;
-}
-.uk-card-primary{
-  background: none !important;
-}
-.owl-stage-outer{
-  float:left
-}
-
-
-/*
 .item{
   opacity:0.4;
   transition:.4s ease all;
@@ -85,4 +32,17 @@ body{
 .owl-carousel:after{content:""; display:block; position:absolute; width:8%; top:0; bottom:0; left:50%; margin-left:-4%; pointer-events: none; background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/aett_logo_slider.png) no-repeat center 50%; background-size:100% auto;
 }
 
-.owl-controls{position:absolute; margin-top:300px;}*/
+.owl-controls{position:absolute; margin-top:300px;}
+.owl-prev{display: none}
+.owl-next{display: none}
+
+.uk-card-primary{
+  background: none !important;
+  color: #fff;
+  box-shadow: none !important;
+
+}
+
+.uk-card-body{
+  padding: 30px 0px !important;
+}

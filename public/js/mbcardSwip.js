@@ -1,4 +1,45 @@
+$('.owl-carousel').owlCarousel({
+    stagePadding: 200,
+    loop:true,
+    margin:10,
+    nav:false,
+    items:1,
+    lazyLoad: true,
+    nav:true,
+    responsive:{
+        0:{
+            items:1,
+            stagePadding: 60
+        },
+        600:{
+            items:1,
+            stagePadding: 100
+        },
+        1000:{
+            items:1,
+            stagePadding: 200
+        },
+        1200:{
+            items:1,
+            stagePadding: 250
+        },
+        1400:{
+            items:1,
+            stagePadding: 300
+        },
+        1600:{
+            items:1,
+            stagePadding: 350
+        },
+        1800:{
+            items:3,
+            stagePadding: 400
+        }
+    }
+})
 
+
+/*
 $(function () {
     if(screen.width < "640") {
 
@@ -30,7 +71,7 @@ $(function () {
 
 $('.owl-carousel').owlCarousel({
     loop:true,
-  stagePadding: 55,
+  stagePadding: 35,
     margin:10,
     nav:true,
   navText : ['<span class="uk-margin-small-right uk-icon" uk-icon="icon: chevron-left"></span>','<span class="uk-margin-small-left uk-icon" uk-icon="icon: chevron-right"></span>'],
@@ -79,4 +120,4 @@ $('.owl-carousel').on('changed.owl.carousel', function (e) {
         $(".owl-stage-outer").css("background", "#edebeb")
     }
 
-});
+});*/
