@@ -40,7 +40,7 @@ $(function () {
 });
 
 $('.owl-carousel').owlCarousel({
-    stagePadding: 100,
+    stagePadding: 30,
     loop:true,
     margin:0,
     nav:false,
@@ -50,7 +50,7 @@ $('.owl-carousel').owlCarousel({
     responsive:{
         0:{
             items:1,
-            stagePadding: 60
+            stagePadding: 50
         },
         600:{
             items:1,

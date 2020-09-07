@@ -140,7 +140,7 @@
         }
 
         .active .card_text{
-            height: 125px !important;
+            height: 100px !important;
         }
         .active .uk-card-sub-box{
             margin-top: -5px !important;

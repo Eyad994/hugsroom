@@ -124,20 +124,20 @@
 
                                     <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" {{--style="height: 250px"--}}  onclick="openmodel('1')">
                                     <div>
-                                        <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Moved the patient room online to help you in difficult times</h3>
+                                        <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Patients Room Online </h3>
                                         <div class="pad-top_12" style="padding: 0px 20px">
                                             <p class="card_text">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem <Ipsum class=""></Ipsum>
+                                                A health journey is difficult to undergo alone so we are connecting loved ones  without distractions anywhere & anytime
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 30px 20px">
+                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
                                         <div style="height: 50px">
                                             <a href="{{asset("createwebsite")}}" type="btn"  style="width: 100%;height: 50px;text-align: center;background: #E84B7B;border: 0px;border-radius:10px;color: #ffffff;float: left;line-height: 50px">
-                                                Create Room
+                                                Open Room
                                             </a>
                                         </div>
+                                        <div style="text-align: center;padding-top: 15px;"><a href="#" style="color: #a3a3a3;font-size: 16px;">More Info</a></div>
                                     </div>
 
                                 </div>
@@ -152,21 +152,22 @@
 
                                     <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" data-toggle="modal" data-target="#centralModalSm">
                                     <div>
-                                        <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Moved the patient room online to help you in difficult times</h3>
+                                        <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left"> Search & Follow</h3>
                                         <div class="pad-top_12" style="padding: 0px 20px">
                                             <p class="card_text">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem <Ipsum class=""></Ipsum>
+                                                Virtual Rooms of beautiful memories to keep you strong while your patient recover
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 30px 20px">
+                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
                                         <div style="height: 50px">
                                             <a href="{{asset("createwebsite")}}" type="btn"  style="width: 100%;height: 50px;text-align: center;background: #E84B7B;border: 0px;border-radius:10px;color: #ffffff;float: left;line-height: 50px">
-                                                Create Room
+                                                Search Rooms
                                             </a>
                                         </div>
+                                        <div style="text-align: center;padding-top: 15px;"><a href="#" style="color: #a3a3a3;font-size: 16px;">More Info</a></div>
                                     </div>
+
 
                                 </div>
                             </div>
@@ -180,20 +181,20 @@
 
                                     <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" data-toggle="modal" data-target="#centralModalSm">
                                     <div>
-                                        <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Moved the patient room online to help you in difficult times</h3>
+                                        <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Even as Strangers</h3>
                                         <div class="pad-top_12" style="padding: 0px 20px">
                                             <p class="card_text">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem <Ipsum class=""></Ipsum>
+                                                Patients without their loved ones around have public rooms to receive support from all over the world
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 30px 20px">
+                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
                                         <div style="height: 50px">
                                             <a href="{{asset("createwebsite")}}" type="btn"  style="width: 100%;height: 50px;text-align: center;background: #E84B7B;border: 0px;border-radius:10px;color: #ffffff;float: left;line-height: 50px">
-                                                Create Room
+                                                Unite in Care
                                             </a>
                                         </div>
+                                        <div style="text-align: center;padding-top: 15px;"><a href="#" style="color: #a3a3a3;font-size: 16px;">More Info</a></div>
                                     </div>
 
                                 </div>
@@ -208,20 +209,20 @@
 
                                     <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" data-toggle="modal" data-target="#centralModalSm">
                                     <div>
-                                        <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Moved the patient room online to help you in difficult times</h3>
+                                        <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Helping Hospitals</h3>
                                         <div class="pad-top_12" style="padding: 0px 20px">
                                             <p class="card_text">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem <Ipsum class=""></Ipsum>
+                                                Less visitations means less contamination & smoother operations
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 30px 20px">
+                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
                                         <div style="height: 50px">
                                             <a href="{{asset("createwebsite")}}" type="btn"  style="width: 100%;height: 50px;text-align: center;background: #E84B7B;border: 0px;border-radius:10px;color: #ffffff;float: left;line-height: 50px">
-                                                Create Room
+                                                Our Partners
                                             </a>
                                         </div>
+                                        <div style="text-align: center;padding-top: 15px;"><a href="#" style="color: #a3a3a3;font-size: 16px;">More Info</a></div>
                                     </div>
 
                                 </div>
@@ -236,20 +237,20 @@
 
                                     <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" data-toggle="modal" data-target="#centralModalSm">
                                     <div>
-                                        <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Moved the patient room online to help you in difficult times</h3>
+                                        <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left"> Immortalise Your Care Journey  </h3>
                                         <div class="pad-top_12" style="padding: 0px 20px">
                                             <p class="card_text">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem <Ipsum class=""></Ipsum>
+                                                Your kind deeds & lovely words will remain forever
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 30px 20px">
+                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
                                         <div style="height: 50px">
                                             <a href="{{asset("createwebsite")}}" type="btn"  style="width: 100%;height: 50px;text-align: center;background: #E84B7B;border: 0px;border-radius:10px;color: #ffffff;float: left;line-height: 50px">
-                                                Create Room
+                                                Resources
                                             </a>
                                         </div>
+                                        <div style="text-align: center;padding-top: 15px;"><a href="#" style="color: #a3a3a3;font-size: 16px;">More Info</a></div>
                                     </div>
 
                                 </div>
