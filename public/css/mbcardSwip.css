@@ -1,5 +1,5 @@
 .item{
-  opacity:0.4;
+  /*opacity:0.4;*/
   transition:.4s ease all;
   margin:0 20px;
   transform:scale(.8);

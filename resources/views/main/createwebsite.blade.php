@@ -38,7 +38,7 @@
             <div class="row create-box">
                 <form action="" method="post" name="create" class="js-create-site-steps js-supress-bubbles" id="create">
                     <input type="hidden" name="csrf" value="">
-
+                    <meta name="csrf-token" content="{{ csrf_token() }}">
                     <!------------------------------------------ section1-------------------------------->
                     <section class="site-create-step active" id="sc-terms" data-ga-label-prefix="Terms of Use - c - ' : ''; ?>">
                         <div class="row">
@@ -353,7 +353,7 @@
                                 Back
                             </button>
                         </div>
-                        <input type="hidden" id="me-or-else" value="0">
+                        <input type="hidden" id="me-or-else" value="1">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
                                 <div class="text-center"><h1>Room Details</h1></div>
@@ -470,7 +470,7 @@
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="High Privacy" id="privacy-high" default-class="btn-tertiary" additional-class="btn-privacy not-recommended" name="privacy" type="radio" value="high">    </div>
 
-                                            <button class="btn btn-block btn-tertiary btn-lg btn-privacy not-recommended" data-activate="#privacy-high" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate High Privacy" data-qa-id="site-create-flow-privacy-high" type="button"  onclick="goNext('sc-custom-privacy','sc-custom-cb-search')">
+                                            <button class="btn btn-block btn-tertiary btn-lg btn-privacy not-recommended" data-activate="#privacy-high" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate High Privacy" data-qa-id="site-create-flow-privacy-high" type="button"  onclick="goNext('sc-custom-privacy','sc-praivet-cb-search')">
                                                 <div class="privacy-block"><div class="privacy-title">PRIVATE</div>
                                                     <div class="privecy_text">
                                                         Nobody can Search your Room. Your Room is only accessible by sharing a direct link. Everyone need to Register & request to Follow you before they can View or Interact.
@@ -524,13 +524,13 @@
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="Searchable" id="searchable-yes" additional-class="cb-search-button" name="isSearchable" type="radio" value="1" required="required" checked="checked">    </div>
 
-                                            <button class="btn btn-block btn-primary btn-lg cb-search-button main_background_color" data-activate="#searchable-yes" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Searchable" data-qa-id="site-create-flow-searchable" type="button">                        Yes                </button>
+                                            <button class="btn btn-block btn-primary btn-lg cb-search-button main_background_color" onclick="submitCreateRoomForm('1')"  data-activate="#searchable-yes" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Searchable" data-qa-id="site-create-flow-searchable" type="button">                        Yes                </button>
                                         </div>
                                         <div class="site-create-flex-item site-create-2-cols-flex-item">
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="Not Searchable" id="searchable-no" additional-class="cb-search-button" name="isSearchable" type="radio" value="0" required="required">    </div>
 
-                                            <button class="btn btn-block btn-primary btn-lg cb-search-button main_background_color" data-activate="#searchable-no" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Not Searchable" data-qa-id="site-create-flow-not-searchable" type="button">                        No                </button>
+                                            <button class="btn btn-block btn-primary btn-lg cb-search-button main_background_color"  onclick="submitCreateRoomForm('0')" data-activate="#searchable-no" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Not Searchable" data-qa-id="site-create-flow-not-searchable" type="button">                        No                </button>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -589,13 +589,13 @@
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="Googleable" id="googleable-yes" name="isGoogleable" type="radio" value="1" required="required">    </div>
 
-                                            <button class="btn btn-block btn-primary btn-lg main_background_color" data-activate="#googleable-yes" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Googleable" data-qa-id="site-create-flow-googleable" type="button">                        Yes                </button>
+                                            <button class="btn btn-block btn-primary btn-lg main_background_color" onclick="submitCreateRoomForm('1')" data-activate="#googleable-yes" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Googleable" data-qa-id="site-create-flow-googleable" type="button">                        Yes                </button>
                                         </div>
                                         <div class="site-create-flex-item site-create-2-cols-flex-item">
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="Not Googleable" id="googleable-no" name="isGoogleable" type="radio" value="0" required="required" checked="checked">    </div>
 
-                                            <button class="btn btn-block btn-primary btn-lg main_background_color" data-activate="#googleable-no" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Not Googleable" data-qa-id="site-create-flow-not-googleable" type="button">                        No                </button>
+                                            <button class="btn btn-block btn-primary btn-lg main_background_color" onclick="submitCreateRoomForm('0')" data-activate="#googleable-no" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Not Googleable" data-qa-id="site-create-flow-not-googleable" type="button">                        No                </button>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -609,6 +609,72 @@
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" id="howCanSeeYourRoomStatus" value="1">
+                    </section>
+
+                    <!------------------------------- section7 c---------------------------->
+
+                    <section class="site-create-step" id="sc-praivet-cb-search" data-ga-label-prefix="Public Search Listing - ">
+                        <div class="col-sm-10 col-sm-offset-1 section-top-margin">
+                            <button class="btn btn-default btn-default-border btn-sm" type="button" data-ga-label="Previous" data-ga-action="Click - button" data-role="previous" data-qa-id="site-create-flow-back" onclick="goNext('sc-praivet-cb-search','sc-custom-privacy')">
+                                <i class="cbicon-left-chevron" role="presentation" aria-hidden="true"></i>&nbsp;
+                                Back
+                            </button>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                                <div class="text-center"><h1>Start a Room</h1></div>
+                                <div class="progress show-when-loaded">
+                                    <div class="progress-bar main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                        <span class="sr-only"><span class="progress-bar-value">0</span>% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row copy-margin">
+                            <div class="col-md-1 col-md-offset-3 col-sm-2 col-sm-offset-2 col-xs-3 col-xs-offset-1 vertical-top">
+
+                                <i class="cbicon-site-start-search start-a-site-icons" aria-hidden="true" role="presentation"></i>
+                            </div>
+                            <div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-7 vertical-top">
+                                <div class="start-a-site-text">
+                                    Would you like Search Engines like Google to also be able to search for your Room?</div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-10 col-sm-offset-1  col-xs-12">
+                            <div class="content">
+                                <fieldset class="form-group">
+                                    <legend class="control-label">
+                                    </legend>
+
+                                    <div class="row site-create-flex-container">
+                                        <div class="site-create-flex-item site-create-2-cols-flex-item">
+                                            <div style="display: none !important;">
+                                                <input data-ga-action="Click - radio" data-ga-label="Googleable" id="googleable-yes" name="isGoogleable" type="radio" value="1" required="required">    </div>
+
+                                            <button class="btn btn-block btn-primary btn-lg main_background_color" onclick="submitCreateRoomForm('1')" data-activate="#googleable-yes" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Googleable" data-qa-id="site-create-flow-googleable" type="button">                        Yes                </button>
+                                        </div>
+                                        <div class="site-create-flex-item site-create-2-cols-flex-item">
+                                            <div style="display: none !important;">
+                                                <input data-ga-action="Click - radio" data-ga-label="Not Googleable" id="googleable-no" name="isGoogleable" type="radio" value="0" required="required" checked="checked">    </div>
+
+                                            <button class="btn btn-block btn-primary btn-lg main_background_color" onclick="submitCreateRoomForm('0')" data-activate="#googleable-no" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Not Googleable" data-qa-id="site-create-flow-not-googleable" type="button">                        No                </button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <p class="center">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-ga-label="Help Me Decide" data-ga-action="Click - link" data-target="#create-site-public-search-listing-decide-help" aria-expanded="false" aria-controls="create-site-public-search-listing-decide-help" data-qa-id="site-create-flow-help-link">Help Me Decide</button>
+                                </p>
+
+                                <div class="collapse alert alert-info" id="create-site-public-search-listing-decide-help">
+                                    <p>Clicking <strong>Yes</strong> means that search engines will display basic information about your Hugs Room site, including your name, a summary of your story, and a link to your site. If you don’t want to be included in search engine results, click  <strong>No</strong>.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" id="howCanSeeYourRoomStatus" value="1">
                     </section>
 
 

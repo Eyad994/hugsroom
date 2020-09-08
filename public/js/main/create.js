@@ -23,12 +23,12 @@ function goNext(prev,next) {
     }
     if(next == "sc-patient-name-else")
     {
-        $("#me-or-else").val("1");
+        $("#me-or-else").val("0");
         next = "sc-public-help";
     }
     if(next == "sc-patient-name-me")
     {
-        $("#me-or-else").val("0");
+        $("#me-or-else").val("1");
         next = "sc-public-help";
     }
     if(next == "sc-patient-name")
@@ -91,6 +91,7 @@ function goNext(prev,next) {
     if(next == "sc-custom-privacy")
     {
         if($("#pubic_help").val() == "1"){
+            submitCreateRoomForm(1);
             return;
         }
         if($("#title").val().trim() == ""){
@@ -116,7 +117,7 @@ function goNext(prev,next) {
     {
         prev = "sc-patient-name-me";
     }
-debugger;
+
     if(next =="sc-title-and-address")
     {
         var firstname;
@@ -139,9 +140,63 @@ debugger;
             $(".progress-bar-room-name").css("width","42%");
         }
     }
+    if(next == "sc-public-cb-search")
+    {
+        $("#howCanSeeYourRoomStatus").val("1");
+    }
+    if(next == "sc-public-search-listing")
+    {
+        $("#howCanSeeYourRoomStatus").val("2");
+    }
+    if(next == "sc-praivet-cb-search")
+    {
+        $("#howCanSeeYourRoomStatus").val("3");
+    }
 
 
    $("#"+prev).removeClass("active");
    $("#"+next).addClass("active");
+
+}
+
+function submitCreateRoomForm(searchable) {
+debugger;
+    var meOrSomeoneElse = $("#me-or-else").val();
+    var roomForMe = 1;
+    var firstName = $("#firstName-me").val();
+    var lastName  = $("#lastName-me").val();
+    var title     = $("#title").val();
+    var roomLink  = $("#room-link").val();
+    var howSeeMyRoom  = $("#howCanSeeYourRoomStatus").val();
+
+
+    if(meOrSomeoneElse == 1)
+    {
+        roomForMe = 0;
+        firstName = $("#firstName-else").val();
+        lastName  = $("#lastName-else").val();
+
+    }
+return false;
+    var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+    $.ajax({
+        url: "/addNewRoom",
+        method: "POST",
+        data: {
+            '_token': CSRF_TOKEN,
+            'roomForMe': roomForMe,
+            'firstName': firstName,
+            'lastName': lastName,
+            'title': title,
+            'roomLink': roomLink,
+            'howSeeMyRoom':howSeeMyRoom ,
+            'searchable': searchable
+        },
+        success: function (result) {
+            window.onbeforeunload = null;
+            window.location.href = "./rooms";
+        }
+    });
+
 
 }
