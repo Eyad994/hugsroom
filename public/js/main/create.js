@@ -160,7 +160,7 @@ function goNext(prev,next) {
 }
 
 function submitCreateRoomForm(searchable) {
-debugger;
+
     var meOrSomeoneElse = $("#me-or-else").val();
     var roomForMe = 1;
     var firstName = $("#firstName-me").val();
@@ -177,7 +177,7 @@ debugger;
         lastName  = $("#lastName-else").val();
 
     }
-return false;
+//return false;
     var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
     $.ajax({
         url: "/addNewRoom",
