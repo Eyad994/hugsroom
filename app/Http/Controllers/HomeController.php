@@ -53,12 +53,6 @@ class HomeController extends Controller
         return view('auth.login2');
     }
 
-    public function rooms()
-    {
-
-        return view('main.rooms');
-    }
-
     public function page2()
     {
         return view('page2');

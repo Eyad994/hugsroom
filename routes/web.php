@@ -29,8 +29,10 @@ Route::post('register', 'Auth\RegisterController@register')->name('register');
 Route::post('/addUser', 'HomeController@addUser');
 Route::get('/login2', 'HomeController@login2');
 Route::get('/home2', 'HomeController@home2');
-Route::get('/rooms', 'HomeController@rooms');
 Route::get('/page2', 'HomeController@page2');
 Route::get('/mbhome', 'HomeController@mbhome');
 Route::post('/addNewRoom', 'RoomsController@addNewRoom');
+Route::get('/rooms', 'RoomsController@rooms');
+Route::get('/rooms/room/{id}', 'RoomsController@room');
+
 /*Route::get('/xx', 'HomeController@xx');*/

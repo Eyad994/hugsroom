@@ -50,7 +50,7 @@ $('.owl-carousel').owlCarousel({
     responsive:{
         0:{
             items:1,
-            stagePadding: 50
+            stagePadding: 45
         },
         600:{
             items:1,

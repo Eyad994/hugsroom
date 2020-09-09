@@ -24,4 +24,11 @@ class RoomsController extends Controller
         die();
 
     }
+    public function rooms()
+    {
+        return view('main.rooms');
+    }
+    public function room(){
+        return view('main.room');
+    }
 }

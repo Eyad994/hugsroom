@@ -14,17 +14,17 @@
     <meta name="apple-itunes-app" content="app-id=365726944">
 
     <title>Hugs Room</title>
-    <link href="imgs/favicon.ico" rel="icon" type="image/x-icon">
-    <link href="imgs/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <link href="css/v4.3222908342.css" rel="stylesheet" type="text/css">
-    <link href="css/v5.3222908342.css" rel="stylesheet" type="text/css">
+    <link href="{{asset('imgs/favicon.ico')}}" rel="icon" type="image/x-icon">
+    <link href="{{asset('imgs/favicon.ico')}}" rel="shortcut icon" type="image/x-icon">
+    <link href="{{asset('css/v4.3222908342.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/v5.3222908342.css')}}" rel="stylesheet" type="text/css">
 
-    <link href="css/cbcomponents.752154146.css" rel="stylesheet" type="text/css">
-    <link href="css/main.482494395.css" rel="stylesheet" type="text/css">
-    <link href="css/main.2868986225.css" rel="stylesheet" type="text/css">
-    <link href="css/main.4086732098.css" rel="stylesheet" type="text/css">
-    <link href="css/main.3775130132.css" rel="stylesheet" type="text/css">
-    <link href="css/print.2137607392.css" media="print" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/cbcomponents.752154146.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/main.482494395.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/main.2868986225.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/main.4086732098.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/main.3775130132.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/print.2137607392.css')}}" media="print" rel="stylesheet" type="text/css">
 {{--    <link rel="stylesheet" href="https://swiperjs.com/package/swiper-bundle.min.css">--}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -44,10 +44,10 @@
          <script type="text/javascript" src="js/cbcomponents.js"></script>
     --}}
 
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
    {{-- <script type="text/javascript" src="js/jquery.min.js"></script>--}}
 
-    <link href="css/mainEN.css" media="print" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/mainEN.css')}}" media="print" rel="stylesheet" type="text/css">
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -98,7 +98,7 @@
             display: block;
             color: #a2a2a2;
             text-align: center;
-            padding: 5px 16px;
+            padding: 5px 0px;
             text-decoration: none;
             font-size: 14px;
         }
@@ -347,7 +347,7 @@
 
                 <div class="col-lg-3 col-sm-6 footer-col-1">
                     <a href="" >
-                        <img src="imgs/logo.png" alt="CaringBridge logo. Go to home page." width="200" />
+                        <img src="{{asset('imgs/logo.png')}}" alt="CaringBridge logo. Go to home page." width="200" />
                     </a>
                     <p class="mission-statement">Our Vision reflects how patients, caregivers, family and friends like you see CaringBridge: A world where no one goes through a health journey alone.</p>
                     <nav class="social-media">
