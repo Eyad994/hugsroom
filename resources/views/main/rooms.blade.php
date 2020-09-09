@@ -40,7 +40,7 @@
                         @if($i == 0)
                         <div class="row">
                             @else
-                                <div class="row" style="padding-top: 100px">
+                                <div class="row" style="padding-top: 30px">
                             @endif
                                     <?php $i++ ?>
                             <div class="col-md-12">

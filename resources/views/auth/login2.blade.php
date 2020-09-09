@@ -78,7 +78,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{ env('APP_URL') }}/login/google" data-qa-id="profile-signin-google" class="google-signin">
+                                        <a href="{{ env('APP_URL') }}login/google" data-qa-id="profile-signin-google" class="google-signin">
                                             <div class="svg-icon svg-icon-md svg-social-icon">
 
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 26 26" version="1.1">
