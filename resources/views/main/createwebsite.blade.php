@@ -375,7 +375,7 @@
                                                 <span class="sr-only">Required</span>
                                             </span> Room Title
                                         </label>
-                                        <input type="text" name="title" class="input-block-level form-control" id="title" maxlength="25" required="required" value="{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}"></div>
+                                        <input type="text" name="title" class="input-block-level form-control" id="title" maxlength="25" required="required" value="{{ auth()->user()->first_name  }} {{ auth()->user()->last_name }}"></div>
 
                                     <p><strong>2. <span class="create-self" style="display: none;">Your</span><span class="create-other">The</span> recommended room address below cannot be changed after <span class="create-self" style="display: none;">your</span><span class="create-other create-other-possessive-name">their</span> room is created.</strong></p>
                                     <div class="form-group has-warning"><label for="name"><span class="required"><span aria-hidden="true" role="presentation" title="Required">*</span><span class="sr-only">Required</span></span> Room Address</label><div class="input-group ">

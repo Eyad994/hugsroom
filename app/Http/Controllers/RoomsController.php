@@ -31,4 +31,7 @@ class RoomsController extends Controller
     public function room(){
         return view('main.room');
     }
+    public function mbroom(){
+        return view('main.mbroom');
+    }
 }

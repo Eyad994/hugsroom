@@ -1,5 +1,10 @@
 @extends('layouts.layout')
 @section('content')
+    <script src="{{asset('css/ckeditor/samples.css')}}"></script>
+    <script src="{{asset('js/ckeditor/ckeditor.js')}}"></script>
+    <script src="{{asset('js/ckeditor/sample.js')}}"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Try the latest sample of CKEditor 4 and learn more about customizing your WYSIWYG editor with endless possibilities.">
     <style>
         .sub_menu_icons{
             width: 100px;
@@ -7,84 +12,299 @@
             font-size: 40px;
             padding: 20px;
         }
+        .profile_header{
+            width: 100%;
+            background: #4ba2b5;
+            height: 350px;
+            margin-top: 10px;
+            position: relative;
+        }
+        .settings_btn{
+            float: right;
+            margin-right: 20px;
+        }
+        .change_pic_btn{
+            border-radius: 100px;
+            width: 30px;
+            height: 30px;
+            padding: 0px;
+            float: left;
+            margin-left: 20px;
+            color: #ffffff;
+            background: #8e8e8e;
+        }
+        .profile_info{
+            height: 70px;
+            background: #efefef61;
+            width: 100%;
+            bottom: 0px;
+            position: absolute;
+        }
+        .profile_visitor_info{
+            background: #ffffff;
+            height: 70px;
+            width: 100%;
+            padding-top: 20px;
+        }
+        .profile_menu{
+            background: #E84B7B;
+            height: 100px;
+            width: 100%;
+        }
+        .profile_photo{
+            width: 250px;
+            height: 250px;
+            background: silver;
+            border-radius: 250px;
+            position: absolute;
+            top: 160px;
+            left: 30px;
+            overflow: hidden;
+        }
+        .post_form{
+            width: 100%;
+            background: #f4f4f4;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            padding: 20px 20px;
+        }
+        .upload_post_photo_btn{
+            background: #f4f4f4;
+            color: #e84b7c;
+        }
+        .upload_post_photo_btn:hover{
+            background: #ebe5e0;
+            color: #e84b7c;
+        }
+        .section_title{
+            font-size: 35px;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+        .section_container{
+            background: #ebe5e0;
+            float: left;
+            width: 100% !important;
+            margin-top: 50px !important;
+            padding-top: 50px;
+
+        }
+        .posts_section{
+            background: #ffffff;
+            padding: 50px 30px;
+        }
+        .post_title{
+            font-size: 27px;
+            font-weight: bold;
+        }
+        .post_text{
+            padding: 20px 0px;
+        }
+        .like_btn{
+            background: #ffffff;
+            font-size: 30px;
+            color: #e84b7c;
+            float: left;
+        }
+        .like_btn:hover{
+            color:#ab3c5e;
+        }
+        .how_liked{
+            width: 80px;
+            float: left;
+            padding: 14px 0px;
+            color: #bb0840;
+            cursor: pointer;
+        }
+        .post_comments{
+            width: 120px;
+            float: left;
+            padding: 14px 0px;
+            cursor: pointer;
+        }
+        .post_comments:hover{
+            color:#bb0840
+        }
+        .share_post{
+            width: 80px;
+            float: right;
+            padding: 14px 0px;
+            color: #bb0840;
+            cursor: pointer;
+        }
+        .comments_section{
+            height: 70px;
+            background: #f4f4f4;
+            border-bottom: 1px solid #cccccc;
+            font-size: 20px;
+            padding: 20px 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .post_comment_title{
+            padding: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        .post_comment_name{
+            padding-left: 30px;
+            font-weight: bold;
+            padding-bottom: 10px;
+
+        }
+        .post_comment_text{
+            padding: 0px 30px;
+        }
+        .post_comment_submit{
+            background: #e84b7c;
+            font-size: 17px;
+            padding: 7px 20px;
+            color: #ffffff;
+        }
+        .post_comment_form{
+            background: #f4f4f4;
+            display: none;
+        }
+        .read_more_posts_section{
+            padding: 30px;
+            text-align: center;
+        }
+        .main_content{
+            background: #f5f2ef !important;
+        }
+        .main_header{
+            height: 451px !important;
+        }
+        .profile_menu_items{
+            padding-top: 25px;
+            text-align: center;
+            font-size: 30px;
+            color: #ffffff;
+            cursor: pointer;
+        }
     </style>
-    <div class="taskbar__content">
-        <div class="room_submenu" style="height: 100px;background: red;width: 1200px">
-            <div style="width: 200px;text-align: center">
-                <i class="fa fa-home sub_menu_icons"></i><br /><span>Home </span>
+    <script type="text/javascript">
+        $(function () {
+            if(screen.width < "768") {
+                window.location.href = "/rooms/mbroom/1";
+            }
+        });
+    </script>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="profile_header">
+                    <div style="height: 20px"></div>
+                    <button type="button" class="btn change_pic_btn" >
+                        <i class="fa fa-camera" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn settings_btn" >
+                        <i class="fa fa-cog" style="    font-size: 17px;color: #8e8d8d;padding: 0px 3px;"></i> Settings
+                    </button>
+                    <div class="profile_info">
+
+                    </div>
+                </div>
+                <div class="profile_photo">
+                    <img src="{{asset('imgs/homeGroup2.png')}}" style="width: 250px;height: 250px">
+                </div>
+                <button type="button" class="btn change_pic_btn" style="position: absolute;left: 210px;top: 360px;" >
+                    <i class="fa fa-camera" aria-hidden="true"></i>
+                </button>
+                <div class="profile_visitor_info">
+                    <button type="button" class="btn settings_btn" style="float: left;margin-left: 300px;background: #E84B7B;color: #ffffff;">
+                        <i class="fa fa-cog" style="font-size: 17px;color: #ffffff;padding: 0px 3px;"></i> Settings
+                    </button>
+                    <div style="float: left;width: 50px;padding: 8px 0px;border-right: 1px solid #bcbcbc">
+                        <span>5 </span> Visits
+                    </div>
+                    <div style="padding:8px 10px;width: 100px;float: left;">
+                        Share
+                        <i class="fa fa-share"></i>
+                    </div>
+                </div>
+                <div class="profile_menu">
+                    <div class="col-md-2 profile_menu_items"><i class="fa fa-home"></i><div style="font-size: 15px">Home</div> </div>
+                    <div class="col-md-2 profile_menu_items"><i class="fa fa-pencil"></i><div style="font-size: 15px">Journal</div> </div>
+                    <div class="col-md-2 profile_menu_items"><i class="fa fa-picture-o"></i><div style="font-size: 15px">Gallery</div> </div>
+                    <div class="col-md-2 profile_menu_items"><i class="fa fa-gift"></i><div style="font-size: 15px">Gift</div> </div>
+                    <div class="col-md-2 profile_menu_items"><i class="fa fa-snowflake-o"></i><div style="font-size: 15px">Planner</div> </div>
+                    <div class="col-md-2 profile_menu_items"><i class="fa fa-heart"></i><div style="font-size: 15px">Well Wishes</div> </div>
+                </div>
             </div>
         </div>
 
-        <div class="taskbar__item--spacer"></div>
-        <a class="taskbar__item taskbar__active" tabindex="0" data-ga-label="Home"
-           data-qa-id="site-navigation-menu-item-index">
-            <div class="taskbar__button-icon">
-                <i class="fa fa-home"></i>
-            </div>
-            <div class="taskbar__button-text" data-optimize-label="site-nav-home">Home</div>
-        </a>
-        <a class="taskbar__item" tabindex="0" data-ga-label="Journal" data-qa-id="site-navigation-menu-item-journal">
-            <div class="taskbar__button-icon">
-                <i class="fa fa-pencil" aria-hidden="true"></i>
-            </div>
-            <div class="taskbar__button-text" data-optimize-label="site-nav-journal">Journal</div>
-        </a>
-        <a class="taskbar__item" tabindex="0" data-ga-label="Gallery" data-qa-id="site-navigation-menu-item-gallery">
-            <div class="taskbar__button-icon">
-                <svg aria-hidden="true" data-prefix="fal" data-icon="cbicon-gallery"
-                     class="svg-inline--fa fa-cbicon-gallery fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                          d="M466.39,0H158.58C113.69,0,77.21,35.58,75.17,80,33,84.53,0,119.55,0,162.47V428.61C0,474.59,37.78,512,84.21,512H391.14c45.26,0,82-35.62,83.87-80,42.11-4.38,75.17-39.67,75.17-82.91V83.79A83.89,83.89,0,0,0,466.39,0ZM391.14,484.49H84.21c-31.26,0-56.7-25.07-56.7-55.88V162.47c0-27.64,20.5-50.49,47.28-54.93V349.11a83.88,83.88,0,0,0,83.79,83.79H447.41A56.26,56.26,0,0,1,391.14,484.49ZM102.88,355,227.26,239.09a15.36,15.36,0,0,1,20.87,0l178.55,166.3H158.58A56.17,56.17,0,0,1,102.88,355Zm419.79-5.85A56.3,56.3,0,0,1,467,405.34L266.88,219a43,43,0,0,0-58.4,0L102.3,317.9V83.79a56.35,56.35,0,0,1,56.28-56.28H466.39a56.35,56.35,0,0,1,56.28,56.28Zm-120-270.24c-41.82,0-75.86,33.69-75.86,75.1s34,75.12,75.86,75.12S478.48,195.4,478.48,154s-34-75.1-75.85-75.1m0,122.71c-26.65,0-48.35-21.37-48.35-47.61s21.7-47.59,48.35-47.59S451,127.73,451,154s-21.7,47.61-48.34,47.61"></path>
-                </svg>
-            </div>
-            <div class="taskbar__button-text" data-optimize-label="site-nav-gallery">Gallery</div>
-        </a>
-        <a class="taskbar__item" tabindex="0" data-ga-label="Ways To Help"
-           data-qa-id="site-navigation-menu-item-support">
-            <div class="taskbar__button-icon">
-                <svg aria-hidden="true" data-prefix="fal" data-icon="cbicon-support-hand"
-                     class="svg-inline--fa fa-cbicon-support-hand fa-w-16 " role="img"
-                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                          d="M560,240.19c0-16.56-7.27-29.43-21-37.23a56.91,56.91,0,0,0-17.64-6.24c4-6.35,7-14.92,7-26.4,0-16.57-7.28-29.43-21-37.23-11.74-6.64-24.47-7.37-29.38-7.37H217.34c21.68-19.29,49.83-50.29,51.28-82C269.76,19.09,259,8.43,249.79,3.83c-18.38-9.2-45-.21-57.23,9.82-2.34,1.94-4.46,3.73-6.51,5.47-10.3,8.71-18.46,15.6-47.33,33C104.05,66.72,70,86.91,42.81,109,7.43,137.77,0,155.77,0,165.79V346.14c0,35.8,17.92,55.86,33,66.4A88.68,88.68,0,0,0,65.69,426.7l1.83.15H173.8c25.53,21.31,49.43,33.45,66.93,33.45,17.79,0,42.29-12.16,68.5-33.45H451.44c23.93,0,48.09-14.5,48.09-46.93,0-9.37-2.33-17.55-6.85-24.31,19.18-4.28,35.6-18.82,35.6-45.55,0-9.13-2.23-17.14-6.52-23.79C542,282.76,560,268.14,560,240.19Zm-538.33,106V165.79c0-3,6.39-16.86,34.79-39.94,25.84-21,58.29-40.22,91.36-54.09l.71-.31.67-.4c30.92-18.55,40.15-26.36,50.85-35.41,2-1.66,4-3.41,6.28-5.27,7.32-6,24.74-11.71,33.77-7.18,5.05,2.54,7.36,9.07,6.88,19.48-1.51,33.28-48.71,72.61-66.73,84.93l-29,19.77H477.87c5.14,0,12.77,1.21,18.7,4.57,6.86,3.88,10.05,9.73,10.05,18.38,0,9.45-3.44,25.27-26.44,25.27h-92a90.79,90.79,0,0,0-8-6C367.66,181.22,354.27,177,340.33,177c-25.52,0-48.67,14.17-66,26.52-4.05,2.89-7.83,5.7-11.48,8.44-7.72,5.76-18.29,13.65-21.84,14-3.39-.55-12.77-8-19.63-13.49-18.85-15-44.66-35.62-76.34-35.62-15,0-29.86,4.73-44,14.1C71,210.73,62,243.94,75,287.05c10.82,36.14,38.08,79.31,72.9,115.5.86.89,1.72,1.77,2.59,2.65H68.61C62.34,403.87,21.67,393.38,21.67,346.14Zm141.8,41.4c-32.54-33.84-57.89-73.72-67.77-106.7-10-33.48-4.24-57.62,17.23-71.75,10.74-7.08,21.25-10.52,32.14-10.52,24.1,0,45.58,17.12,62.84,30.88,13.15,10.48,22.62,18,32.7,18.25H241c10.23,0,20.56-7.71,34.86-18.39,3.56-2.66,7.24-5.41,11.09-8.15,14.69-10.49,34-22.51,53.4-22.51,9.72,0,18.81,2.91,27.78,8.9,23.67,15.84,30.37,41.38,19.89,75.86-9.94,32.77-35.73,72.15-69,105.38-34.47,34.44-64.17,49.86-78.3,49.86C223.94,438.65,192.89,418.09,163.47,387.54Zm288,17.66H333.23l1.1-1.08A363.48,363.48,0,0,0,374.2,357h74.91c5.15,0,12.77,1.2,18.71,4.56,6.85,3.88,10,9.72,10,18.37C477.86,389.36,474.43,405.2,451.44,405.2Zm28.74-69.87h-92c9.12-15.57,16.12-31,20.56-45.63.26-.87.5-1.72.75-2.58h68.38c5.16,0,12.79,1.2,18.71,4.56,6.87,3.88,10.06,9.72,10.06,18.38C506.63,332.05,490.06,335.33,480.18,335.33Zm31.73-69.87H413.85c2-18.27-.66-34.46-8-48.21H509.58c5.16,0,12.77,1.2,18.71,4.56,6.85,3.88,10,9.72,10,18.38C538.33,249.62,534.91,265.46,511.91,265.46Z"></path>
-                </svg>
-            </div>
-            <div class="taskbar__button-text" data-optimize-label="site-nav-waystohelp">Ways to Help</div>
-        </a><a class="taskbar__item" tabindex="0" data-ga-label="Planner"
-               data-qa-id="site-navigation-menu-item-planner">
-            <div class="taskbar__button-icon">
-                <svg aria-hidden="true" data-prefix="fal" data-icon="cbicon-task-planner"
-                     class="svg-inline--fa fa-cbicon-task-planner fa-w-16 " role="img"
-                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-                    <path fill="currentColor"
-                          d="M29,32.1c-2.1-1.9-3.7-2.9-5-2.9h0c-1.3-0.1-3,0.9-5.3,2.8c-2,1.8-3.9,4-5.1,6.2c-1.1,1.9-1.6,3.7-1.5,5.2 c0.1,1.5,0.8,2.7,2,3.5c0.9,0.6,2,0.9,3,0.8c1.4-0.2,2.5-0.9,3.6-1.6c0.3-0.2,0.5-0.4,0.8-0.6c1.5-1.1,2-1.1,2.1-1.1 c0,0,0.5,0,2,1.2c0.2,0.2,0.5,0.4,0.8,0.6c1.1,0.8,2.2,1.5,3.6,1.8c0.2,0,0.4,0.1,0.6,0.1c0.9,0,1.8-0.3,2.8-1 c1.1-0.8,1.8-2.1,1.8-3.5c0.1-1.5-0.4-3.3-1.5-5.2C32.7,36.2,30.9,33.9,29,32.1z M32.1,45.1c-0.8,0.5-1.3,0.6-1.7,0.5 c-0.9-0.1-1.7-0.7-2.5-1.3c-0.3-0.2-0.5-0.4-0.7-0.6c-1.5-1.2-2.6-1.7-3.4-1.7c0,0,0,0,0,0c-0.9,0-1.9,0.5-3.5,1.6 c-0.2,0.2-0.5,0.3-0.7,0.5c-0.8,0.6-1.7,1.1-2.6,1.2c-0.5,0.1-0.9-0.1-1.4-0.4c-0.6-0.4-1-1-1-1.7c-0.1-1,0.3-2.3,1.2-3.9 c1.1-1.9,2.7-3.9,4.6-5.5c2.4-2.1,3.5-2.2,3.7-2.2c0,0,0,0,0,0c0.2,0,1.1,0.1,3.5,2.3c1.8,1.6,3.3,3.6,4.4,5.5 c0.8,1.6,1.2,2.9,1.2,4C32.9,44.2,32.6,44.7,32.1,45.1z M19.1,15.8c2.1,1.9,3.8,2.9,5.3,2.9c3.1-0.2,7.8-4.9,10-8.9c1-1.9,1.5-3.6,1.4-5.1C35.7,3.2,35.1,2,33.9,1 c-0.9-0.6-1.9-0.9-3-0.7c-1.4,0.2-2.5,0.9-3.6,1.6l-0.7,0.5c-0.8,0.6-1.8,1.2-2.3,1.2c-0.1,0-0.6-0.2-1.9-1.2 c-0.2-0.2-0.5-0.4-0.7-0.6h0C20.5,1,19.3,0.3,18,0.1c-1.1-0.2-2.1,0-3.1,0.7c-1.3,0.8-2,2-2.1,3.5c-0.1,1.5,0.3,3.3,1.3,5.2 C15.2,11.6,17,13.9,19.1,15.8z M16.2,2.7c0.4-0.2,0.7-0.3,1.1-0.3c0.1,0,0.2,0,0.3,0c0.9,0.1,1.7,0.7,2.5,1.3 c0.2,0.2,0.5,0.4,0.8,0.6c1.3,1,2.2,1.5,3,1.7C25.3,6,26.7,5.2,28,4.3l0.5-0.4c0.8-0.6,1.7-1.1,2.6-1.2c0.5-0.1,0.9,0,1.3,0.3 c0.6,0.5,0.9,1.1,1,1.9c0.1,1.1-0.3,2.4-1.2,3.9c-2.1,3.9-6.3,7.6-8,7.7c-0.3,0-1.3-0.2-3.6-2.3c-1.8-1.7-3.4-3.7-4.4-5.7 c-0.8-1.6-1.2-2.9-1.1-3.9C15.2,3.7,15.5,3.1,16.2,2.7z M46.2,21.5c0.7-1,1.5-2.2,1.7-3.6c0.1-1.1-0.1-2.2-0.8-3.3l-0.1-0.1c-0.8-1.1-2.1-1.8-3.5-1.8c-1.5-0.1-3.3,0.4-5.2,1.5 c-2.1,1.1-4.4,2.9-6.2,4.9c-1.9,2.1-2.9,3.7-2.9,5c0,1.3,0.9,3,2.8,5.3c1.8,2,4,3.9,6.2,5.1c1.8,1,3.4,1.5,4.8,1.5 c0.1,0,0.2,0,0.4,0c1.5-0.1,2.7-0.8,3.5-2c0.7-0.9,0.9-2,0.8-3c-0.2-1.4-0.9-2.5-1.6-3.6c-0.2-0.3-0.4-0.5-0.6-0.8 c-1.1-1.6-1.1-2.1-1.1-2.1c0,0,0-0.5,1.2-2.1C45.9,22,46.1,21.8,46.2,21.5z M45.6,17.6c-0.1,0.9-0.7,1.8-1.3,2.5 c-0.2,0.2-0.4,0.5-0.6,0.7c-1.2,1.5-1.7,2.5-1.7,3.4c0,0.9,0.5,2,1.6,3.5c0.2,0.2,0.4,0.5,0.5,0.8c0.6,0.8,1.1,1.7,1.2,2.6 c0.1,0.5-0.1,0.9-0.4,1.4c-0.4,0.6-1,1-1.7,1c-1,0.1-2.3-0.3-3.9-1.2c-1.9-1.1-3.9-2.7-5.5-4.6c-2.2-2.5-2.2-3.5-2.2-3.7 c0-0.2,0.1-1.1,2.3-3.5c1.6-1.8,3.6-3.3,5.5-4.4c1.5-0.8,2.8-1.2,3.8-1.2c0.1,0,0.1,0,0.2,0c0.7,0,1.3,0.3,1.7,0.8 C45.5,16.5,45.7,17.1,45.6,17.6z M15.8,29c1.9-2.1,2.9-3.8,3-5.1l0-0.1l0-0.1c-0.2-3.1-4.9-7.8-8.9-10c-1.9-1-3.6-1.5-5.1-1.4C3.2,12.3,2,12.9,1,14.2 c-0.6,0.9-0.9,1.9-0.7,3c0.2,1.4,0.9,2.5,1.6,3.6l0.5,0.7c0.6,0.8,1.2,1.8,1.2,2.3c0,0.1-0.2,0.6-1.2,1.9c-0.2,0.3-0.4,0.5-0.6,0.8 C1,27.5,0.3,28.7,0.1,30c-0.2,1.1,0,2.1,0.7,3.1c0.8,1.3,2,2,3.5,2.1c0.2,0,0.4,0,0.5,0c1.4,0,3-0.5,4.7-1.4 C11.6,32.8,13.9,31,15.8,29z M8.4,31.8c-1.6,0.8-2.9,1.2-3.9,1.1c-0.7-0.1-1.3-0.4-1.7-1.1c-0.3-0.5-0.4-0.9-0.3-1.4 c0.1-0.9,0.7-1.7,1.3-2.5c0.2-0.3,0.4-0.5,0.6-0.8c1-1.3,1.5-2.2,1.6-3c0.1-1.4-0.7-2.7-1.6-4l-0.5-0.7c-0.6-0.8-1.1-1.7-1.2-2.6 c-0.1-0.5,0-0.9,0.3-1.3c0.5-0.6,1.1-0.9,1.9-1c0.1,0,0.1,0,0.2,0c1,0,2.3,0.4,3.7,1.2c3.9,2.1,7.5,6.2,7.7,8 c0,0.3-0.3,1.4-2.3,3.6C12.4,29.2,10.3,30.8,8.4,31.8z"></path>
-                </svg>
-            </div>
-            <div class="taskbar__button-text" data-optimize-label="site-nav-planner">Planner</div>
-        </a><a class="taskbar__item" tabindex="0" data-ga-label="Tributes"
-               data-qa-id="site-navigation-menu-item-tributes">
-            <div class="taskbar__button-icon">
-                <svg aria-hidden="true" data-prefix="fal" data-icon="cbicon-flower"
-                     class="svg-inline--fa fa-cbicon-flower fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                          d="M295.48,299.1c48.79-15.21,115.07-99.8,137.46-166.77,17.37-51.94,9.65-93.57-21.74-117.19C397,4.48,382.07-.93,366.73-.93c-31.67,0-56.09,22.28-73.93,38.55-3.92,3.55-8.93,8.11-12.25,10.59-3.71-2.55-9.51-7.49-14-11.31-3.3-2.85-6.72-5.74-10.4-8.75-16.53-13.49-38.79-29-64.33-29-14.41,0-28.11,4.89-40.74,14.54-33.26,25.45-41.79,68.42-24,121,12.45,36.81,37.4,77.46,68.44,111.63,30.29,33.26,53.33,46.92,69,52.17V431.89C202,367.42,166,385,166,385c-18.89,8.31-6.94,26.27-6.94,26.27,25.6,35.47,83.26,33.53,105.43,31.31V496.1c0,19.94,31,20,31,0V401.46c90-14.54,96.08-54.61,96.08-54.61,3.94-20.26-17.64-20.65-17.64-20.65C337.65,327,310,360.45,295.48,383V299.1ZM159.64,123.69C146.58,85.08,150.72,57.27,172,41c6.58-5,13.07-7.45,19.85-7.45,14.68,0,30.46,11.34,42.59,21.24,3.39,2.75,6.67,5.55,9.81,8.24,14.11,12,24.31,20.73,36.76,20.73h.36c12.18-.27,22.08-9.31,34.65-20.73,14.43-13.18,32.43-29.57,50.76-29.57,7.83,0,15.61,3,23.78,9.13,13.18,9.92,25.59,31.64,9.81,78.8-10.79,32.32-33.34,70-60.32,100.81-28.81,32.91-51.05,44.89-59,44.89C258.27,267.11,184.72,197.77,159.64,123.69Z"></path>
-                </svg>
-            </div>
-            <div class="taskbar__button-text" data-optimize-label="site-nav-tributes">Tributes</div>
-        </a><a class="taskbar__item" tabindex="0" data-ga-label="WellWishes"
-               data-qa-id="site-navigation-menu-item-wellwishes">
-            <div class="taskbar__button-icon">
-                <svg aria-hidden="true" data-prefix="fal" data-icon="cbicon-well-wish"
-                     class="svg-inline--fa fa-cbicon-well-wish fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                          d="M281.87,458.88c-37.65,0-94.28-34.12-151.46-91.24C71.46,308.73,27.3,240.85,9.26,181.39c-10-32.82-11.9-62.69-5.75-88.78,7-29.83,24.37-54.16,51.55-72.35C75.06,6.91,96.51.13,118.85.13c41,0,78.48,23,106.53,43,6.59,4.7,12.76,9.3,18.73,13.76,12.5,9.35,31.41,23.44,37.34,23.53h0C287,80.07,303.88,66.63,315,57.75,345.61,33.35,387.47,0,438.44,0c24.14,0,47.93,7.61,70.77,22.63,25.39,16.74,41.49,39.8,47.8,68.6,5.49,25,3.41,53.86-6.18,85.85-17.63,58.76-62,129-118.74,188-56.52,58.72-112.67,93.78-150.22,93.78m-163-428.31c-16.43,0-31.77,4.92-46.87,15-39.8,26.61-51.08,69.33-33.59,127,16.41,54,58.86,118.89,113.55,173.54,49.29,49.26,101.5,82.34,129.92,82.34S360.76,395.3,410.13,344c53.56-55.65,95.25-121.3,111.53-175.66,16.77-56,6.94-96.46-29.19-120.27-18-11.84-35.69-17.62-54-17.62-40.31,0-75.85,28.32-104.41,51.1-21.13,16.85-36.39,29-52,29.3h-.57c-15.93,0-32.56-12.39-55.56-29.57C220.05,76.9,214,72.39,207.7,67.88c-46.35-33.08-71.84-37.31-88.85-37.31"></path>
-                </svg>
-            </div>
-            <div class="taskbar__button-text" data-optimize-label="site-nav-wellwishes">Well Wishes</div>
-        </a>
-        <div class="taskbar__item--spacer"></div>
     </div>
+    <div class="container section_container" style="height: 600px;">
+        <div class="container-fluid">
+            <div class="section_title">Update Your Visitors</div>
+            <div class="post_form">
+                <div style="font-size: 17px;font-weight: bold">Title</div>
+                <div style="padding-bottom: 20px">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="adjoined-bottom">
+                    <div class="grid-container">
+                        <div class="grid-width-100">
+                            <div id="editor">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 20px 0px">
+                    <button class="btn upload_post_photo_btn" ><i class="fa fa-image"></i> Upload Photos</button>
+                    <button class="btn upload_post_photo_btn" ><i class="fa fa-film"></i></button>
+                </div>
+                <div style="width: 100%;text-align: center">
+                    <button class="btn" style="border: 1px solid #e84b7c;font-size: 17px;padding: 7px 20px;color:#e84b7c;">Save as Draft</button>
+                    <button class="btn" style="background:#e84b7c;font-size: 17px;padding: 7px 20px;color:#ffffff">Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container section_container" style="margin-top: 0 !important;background: #f5f2ef;display: table">
+        <div class="container-fluid">
+            <div class="section_title">Newest Update</div>
+            <div class="posts_section">
+                <div class="post_title">September 11, 2020</div>
+                <div class="post_info">Journal entry by Meqdad Abu-Ateleh <span class="post_time"> — 4 hours ago</span></div>
+                <div class="post_text">fdg sdf sdfg fds</div>
+                <div class="post_likes">
+                    <button class="btn like_btn" ><i class="fa fa-heart"></i></button>
+                    <div class="how_liked">1 Hearts</div>
+                    <div class="post_comments" onclick="openCommentsSection()">Post comment</div>
+                    <div class="share_post">
+                        share
+                        <i class="fa fa-share"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="comments_section" onclick="openCommentsSection()">
+                <span>COMMENTS</span>
+                <i class="fa fa-angle-down" aria-hidden="true" style="float: right;font-size:30px"></i>
+            </div>
+            <div class="post_comment_form">
+                <div class="post_comment_title">Post a Comment</div>
+                <div class="post_comment_name">{{-->{{auth()->user()->name}}--}} Mekdad Mohammad</div>
+                <div class="post_comment_text">
+                        <textarea class="form-control">
+                        </textarea>
+                </div>
+                <div style="padding: 15px 30px"><button class="btn post_comment_submit">Post a Comment</button></div>
+            </div>
+            <div class="read_more_posts_section">
+                <button class="btn post_comment_submit"> Read More Journal Entries</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        initSample();
+        function openCommentsSection() {
+            $(".post_comment_form").toggle();
+        }
+    </script>
 @endsection

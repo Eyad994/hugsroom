@@ -16,7 +16,8 @@ class rooms extends Model
                 'first_name'    => $data['firstName'],
                 'last_name'     => $data['lastName'],
                 'searchable'    => $data['searchable'],
-                'user_id'       => auth()->user()->id
+                'user_id'       => auth()->user()->id,
+                'created_at' => now()
             ]
         );
         return;

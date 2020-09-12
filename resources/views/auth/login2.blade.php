@@ -59,7 +59,7 @@
 
                                 <ul class="social-btns list-unstyled">
                                     <li>
-                                        <a href="https://www.caringbridge.org/oauth/facebook/login" data-qa-id="profile-signin-facebook" class="facebook-signin">
+                                        <a href="{{ env('APP_URL') }}/login/facebook" data-qa-id="profile-signin-facebook" class="facebook-signin">
                                             <div class="svg-icon svg-icon-md svg-social-icon">
 
                                                 <svg width="167px" height="167px" viewBox="0 0 167 167" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -78,7 +78,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.caringbridge.org/oauth/google/login" data-qa-id="profile-signin-google" class="google-signin">
+                                        <a href="{{ env('APP_URL') }}login/google" data-qa-id="profile-signin-google" class="google-signin">
                                             <div class="svg-icon svg-icon-md svg-social-icon">
 
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 26 26" version="1.1">
@@ -121,9 +121,9 @@
                     var email = $('#email').val();
                     if (data > 0)
                     {
-                        window.location = "{{ env('APP_URL') }}login?email=" + email
+                        window.location = "{{ env('APP_URL') }}/login?email=" + email
                     } else  {
-                        window.location = "{{ env('APP_URL') }}register?email=" + email
+                        window.location = "{{ env('APP_URL') }}/register?email=" + email
                     }
                 }
             });

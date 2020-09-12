@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\rooms;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,7 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        //$this->middleware('auth');
+        $this->middleware('auth')->only('rooms');
     }
 
     /**
@@ -49,8 +50,13 @@ class HomeController extends Controller
 
     public function login2()
     {
-
         return view('auth.login2');
+    }
+
+    public function rooms()
+    {
+        $userRooms = rooms::where('user_id', auth()->user()->id)->get();
+        return view('main.rooms', compact('userRooms'));
     }
 
     public function page2()
