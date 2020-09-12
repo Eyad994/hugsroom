@@ -39,6 +39,11 @@
             width: 100%;
             bottom: 0px;
             position: absolute;
+            padding-left: 300px;
+            padding-top: 20px;
+            font-size: 23px;
+            font-weight: bold;
+            color: #ffffff;
         }
         .profile_visitor_info{
             background: #ffffff;
@@ -205,7 +210,7 @@
                         <i class="fa fa-cog" style="    font-size: 17px;color: #8e8d8d;padding: 0px 3px;"></i> Settings
                     </button>
                     <div class="profile_info">
-
+                        Miqdad Abu-Etailah
                     </div>
                 </div>
                 <div class="profile_photo">

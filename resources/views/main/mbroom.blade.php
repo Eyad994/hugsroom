@@ -44,14 +44,19 @@
             padding-top: 20px;
         }
         .profile_photo{
-            width: 200px;
-            height: 200px;
+            width: 170px;
+            height: 170px;
             background: silver;
             border-radius: 250px;
             position: absolute;
             top: 70px;
-            left: 25%;
             overflow: hidden;
+            background-position: center;
+            vertical-align: middle;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
         }
         .post_form{
             width: 100%;
@@ -181,6 +186,15 @@
             margin-right: auto;
             margin-left: auto;
         }
+        .post_profile_name{
+            position: absolute;
+            top: 260px;
+            width: 94%;
+            font-size: 18px;
+            text-align: center;
+            font-weight: bold;
+            color: #ffffff;
+        }
     </style>
     <link rel="stylesheet" href="{{asset('css/mbcardSwip.css')}}">
     <style>
@@ -261,13 +275,19 @@
                     <button type="button" class="btn change_pic_btn" >
                         <i class="fa fa-camera" aria-hidden="true"></i>
                     </button>
+                    <div class="share_icon" style="padding: 2px 20px;float: right;">
+                        <i class="fa fa-share-alt" style="font-size: 25px;color:#ffffff"></i>
+                    </div>
                 </div>
                 <div class="profile_photo">
-                    <img src="{{asset('imgs/homeGroup2.png')}}" style="width: 200px;height: 200px">
+                    <img src="{{asset('imgs/homeGroup2.png')}}" style="width: 170px;height: 170px">
                 </div>
-                <button type="button" class="btn change_pic_btn" style="position: absolute;left: 210px;top: 250px;" >
+                <button type="button" class="btn change_pic_btn" style="position: absolute;left: 250px;top: 200px;" >
                     <i class="fa fa-camera" aria-hidden="true"></i>
                 </button>
+                <div class="post_profile_name">
+                    Miqdad Abu-Etailah
+                </div>
                 {{--<div class="profile_visitor_info">
                     <button type="button" class="btn settings_btn" style="float: left;margin-left: 300px;background: #E84B7B;color: #ffffff;">
                         <i class="fa fa-cog" style="font-size: 17px;color: #ffffff;padding: 0px 3px;"></i> Settings
