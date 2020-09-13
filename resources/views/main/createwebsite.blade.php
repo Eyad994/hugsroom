@@ -30,7 +30,7 @@
             background-color: #f5f2ef !important;
         }
         .container-bloody > *:not(.prevent-bleed){
-            height: 600px !important;
+            height: 650px !important;
         }
         .site-content{
             padding-top: 50px !important;
@@ -54,6 +54,7 @@
     }
     .last_step_value{
         font-size: 16px;color: black;
+        overflow: hidden;
     }
 
 </style>
@@ -445,7 +446,7 @@
                             </div>
                         </div>
                         <div class="col-sm-10 col-sm-offset-1">
-                            <div class="text-center"><h2>Who Can See Your Room?</h2></div>
+                            <div class="text-center"><h3>Who Can See Your Room?</h3></div>
                             <div class="content">
 
                                 <fieldset class="form-group">
@@ -745,9 +746,9 @@
                                         <li>
                                             <div class="last_step_icon" ><i class="fa fa-user"></i></div>
                                             <div class="last_step_for">Room Address</div>
-                                            <div >
+                                            <div style="overflow: hidden" >
                                                 <label>
-                                                    <label class="last_step_value" id="last_address">ME</label>
+                                                    <label class="last_step_value" id="last_address" >ME</label>
                                                 </label>
                                             </div>
                                         </li>
@@ -779,7 +780,7 @@
                                             </div>
                                         </li>
                                     </ul>
-                                    <h4 style="text-align: center;padding: 20px">You can adjust these later under your site settings</h4>
+                                    <h4 style="text-align: center;padding: 5px">You can adjust these later under your site settings</h4>
                                     <div class="copy-margin center">
                                         <div class="col-md-8 col-md-offset-2 col-sm-12">
                                             <button class="btn btn-primary main_background_color btn-lg btn-continue" id="last-step" type="button"  data-qa-id="site-create-flow-forward-sc-terms" onclick="submitCreateRoomForm()"> Get Started</button>

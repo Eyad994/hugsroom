@@ -223,6 +223,7 @@
         width:100%;
         white-space: normal;
         text-align: center;
+        font-size: 15px;
     }
 </style>
 <body class="homepage-16Q1" data-ga-category="Brooklyn">
