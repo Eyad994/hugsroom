@@ -513,7 +513,7 @@
         <a href="{{ asset('/') }}" class="active" style="width: 25%">
             <img src="{{asset("imgs/footer_icons/home.png")}}" /><br />Home
         </a>
-        <a href="#news" style="width: 25%">
+        <a href="{{ asset('/rooms') }}" style="width: 25%">
             <img src="{{asset("imgs/footer_icons/search.png")}}" />
             <br />Rooms
         </a>

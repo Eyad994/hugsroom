@@ -41,4 +41,10 @@ Route::get('/rooms', 'RoomsController@rooms');
 Route::get('/rooms/room/{id}', 'RoomsController@room');
 Route::get('/rooms/mbroom/{id}', 'RoomsController@mbroom');
 
+/*******************************************************************************/
+Route::post('storePost', 'RoomsController@storePost')->name('storePost');
+Route::post('storeComment', 'PostController@storeComment')->name('storeComment');
+Route::post('post/{post}/like', 'LikeController@store');
+Route::post('post/{post}/destroy', 'LikeController@destroy');
+
 /*Route::get('/xx', 'HomeController@xx');*/

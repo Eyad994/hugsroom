@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class rooms extends Model
 {
+    protected $guarded = [];
     public function addRome($data){
         DB::table('rooms')->insert(
             [
@@ -21,5 +22,10 @@ class rooms extends Model
             ]
         );
         return;
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }
