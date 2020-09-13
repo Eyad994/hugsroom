@@ -8,6 +8,11 @@
         padding-top: 100px;
         padding-bottom: 100px
     }
+    .last_list{
+        list-style: none;
+        padding-left: 140px;
+        padding-top: 20px;
+    }
     @media (max-width: 768px) {
         .container-bloody {
             background: #f5f2ef !important;
@@ -30,6 +35,25 @@
         .site-content{
             padding-top: 50px !important;
         }
+        .last_list{
+            list-style: none;
+            padding-left: 0;
+            padding-top: 0;
+        }
+    }
+
+    .last_step_icon{
+        font-size: 25px;
+        width: 40px;
+        float: left;
+        padding-top: 8px;
+        color: #a09f9f;
+    }
+    .last_step_for{
+        font-size: 14px;
+    }
+    .last_step_value{
+        font-size: 16px;color: black;
     }
 
 </style>
@@ -146,7 +170,7 @@
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="Me" id="is-for-self-myself" name="isForSelf" type="radio" value="1" required="required">
                                             </div>
-                                            <button class="btn btn-block btn-primary btn-lg main_background_color" data-activate="#is-for-self-myself" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Me" data-qa-id="site-create-flow-for-me" type="button" onclick="goNext('sc-who','sc-patient-name-me')">
+                                            <button class="btn btn-block btn-primary btn-lg main_background_color" data-activate="#is-for-self-myself" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Me" data-qa-id="site-create-flow-for-me" type="button" onclick="goNext('sc-who','sc-patient-name-me')">{{----}}
                                                 <span class="sr-only">This site is for </span>Me
                                             </button>
                                         </div>
@@ -431,7 +455,7 @@
                                             <div style="display: none !important;">
                                                 <input id="privacy-medium" name="privacy" type="radio" value="medium" checked="checked">    </div>
 
-                                                <button style="background-color: transparent;border-color: #555;" class="btn btn-block btn-tertiary btn-lg btn-privacy" data-activate="#privacy-medium" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Medium Privacy" data-qa-id="site-create-flow-privacy-medium" type="button"  onclick="goNext('sc-custom-privacy','sc-custom-cb-search')">
+                                                <button style="background-color: transparent;border-color: #555;" class="btn btn-block btn-tertiary btn-lg btn-privacy" data-activate="#privacy-medium" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Medium Privacy" data-qa-id="site-create-flow-privacy-medium" type="button"  onclick="goNext('sc-custom-privacy','last_step_public')">
                                                     <div class="privacy-block">
                                                         <div class="privacy-title">PUBLIC USERS</div>
                                                         <div class="privecy_text">
@@ -470,7 +494,7 @@
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="High Privacy" id="privacy-high" default-class="btn-tertiary" additional-class="btn-privacy not-recommended" name="privacy" type="radio" value="high">    </div>
 
-                                            <button class="btn btn-block btn-tertiary btn-lg btn-privacy not-recommended" data-activate="#privacy-high" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate High Privacy" data-qa-id="site-create-flow-privacy-high" type="button"  onclick="goNext('sc-custom-privacy','sc-praivet-cb-search')">
+                                            <button class="btn btn-block btn-tertiary btn-lg btn-privacy not-recommended" data-activate="#privacy-high" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate High Privacy" data-qa-id="site-create-flow-privacy-high" type="button"  onclick="goNext('sc-custom-privacy','last_step_praivet')">
                                                 <div class="privacy-block"><div class="privacy-title">PRIVATE</div>
                                                     <div class="privecy_text">
                                                         Nobody can Search your Room. Your Room is only accessible by sharing a direct link. Everyone need to Register & request to Follow you before they can View or Interact.
@@ -524,13 +548,13 @@
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="Searchable" id="searchable-yes" additional-class="cb-search-button" name="isSearchable" type="radio" value="1" required="required" checked="checked">    </div>
 
-                                            <button class="btn btn-block btn-primary btn-lg cb-search-button main_background_color" onclick="submitCreateRoomForm('1')"  data-activate="#searchable-yes" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Searchable" data-qa-id="site-create-flow-searchable" type="button">                        Yes                </button>
+                                            <button class="btn btn-block btn-primary btn-lg cb-search-button main_background_color" onclick="goNext('sc-public-search-listing','last_step_searchable')"   data-activate="#searchable-yes" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Searchable" data-qa-id="site-create-flow-searchable" type="button">                        Yes                </button>
                                         </div>
                                         <div class="site-create-flex-item site-create-2-cols-flex-item">
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="Not Searchable" id="searchable-no" additional-class="cb-search-button" name="isSearchable" type="radio" value="0" required="required">    </div>
 
-                                            <button class="btn btn-block btn-primary btn-lg cb-search-button main_background_color"  onclick="submitCreateRoomForm('0')" data-activate="#searchable-no" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Not Searchable" data-qa-id="site-create-flow-not-searchable" type="button">                        No                </button>
+                                            <button class="btn btn-block btn-primary btn-lg cb-search-button main_background_color"  onclick="goNext('sc-public-search-listing','last_step_notsearchable')"  data-activate="#searchable-no" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Not Searchable" data-qa-id="site-create-flow-not-searchable" type="button">                        No                </button>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -543,6 +567,7 @@
                                     <p>Clicking <strong>Yes</strong> means your room appears in the Hugs Room search results. If you prefer more privacy, click <strong>No</strong>.</p>
                                 </div>
                             </div>
+                            <input type="hidden" id="issearchable" value="1">
                         </div>
                         </div>
                     </section>
@@ -560,7 +585,7 @@
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
                                 <div class="text-center"><h1>Start a Room</h1></div>
                                 <div class="progress show-when-loaded">
-                                    <div class="progress-bar main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                    <div class="progress-bar main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
                                         <span class="sr-only"><span class="progress-bar-value">0</span>% Complete</span>
                                     </div>
                                 </div>
@@ -589,13 +614,13 @@
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="Googleable" id="googleable-yes" name="isGoogleable" type="radio" value="1" required="required">    </div>
 
-                                            <button class="btn btn-block btn-primary btn-lg main_background_color" onclick="submitCreateRoomForm('1')" data-activate="#googleable-yes" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Googleable" data-qa-id="site-create-flow-googleable" type="button">                        Yes                </button>
+                                            <button class="btn btn-block btn-primary btn-lg main_background_color" onclick="goNext('sc-public-search-listing','last_step_searchable')" data-activate="#googleable-yes" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Googleable" data-qa-id="site-create-flow-googleable" type="button">                        Yes                </button>
                                         </div>
                                         <div class="site-create-flex-item site-create-2-cols-flex-item">
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="Not Googleable" id="googleable-no" name="isGoogleable" type="radio" value="0" required="required" checked="checked">    </div>
 
-                                            <button class="btn btn-block btn-primary btn-lg main_background_color" onclick="submitCreateRoomForm('0')" data-activate="#googleable-no" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Not Googleable" data-qa-id="site-create-flow-not-googleable" type="button">                        No                </button>
+                                            <button class="btn btn-block btn-primary btn-lg main_background_color" onclick="goNext('sc-public-search-listing','last_step_notsearchable')" data-activate="#googleable-no" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Not Googleable" data-qa-id="site-create-flow-not-googleable" type="button">                        No                </button>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -654,13 +679,13 @@
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="Googleable" id="googleable-yes" name="isGoogleable" type="radio" value="1" required="required">    </div>
 
-                                            <button class="btn btn-block btn-primary btn-lg main_background_color" onclick="submitCreateRoomForm('1')" data-activate="#googleable-yes" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Googleable" data-qa-id="site-create-flow-googleable" type="button">                        Yes                </button>
+                                            <button class="btn btn-block btn-primary btn-lg main_background_color"  onclick="goNext('sc-praivet-cb-search','last_step')" data-activate="#googleable-yes" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Googleable" data-qa-id="site-create-flow-googleable" type="button">                        Yes                </button>
                                         </div>
                                         <div class="site-create-flex-item site-create-2-cols-flex-item">
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="Not Googleable" id="googleable-no" name="isGoogleable" type="radio" value="0" required="required" checked="checked">    </div>
 
-                                            <button class="btn btn-block btn-primary btn-lg main_background_color" onclick="submitCreateRoomForm('0')" data-activate="#googleable-no" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Not Googleable" data-qa-id="site-create-flow-not-googleable" type="button">                        No                </button>
+                                            <button class="btn btn-block btn-primary btn-lg main_background_color" onclick="goNext('sc-praivet-cb-search','last_step')" data-activate="#googleable-no" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Not Googleable" data-qa-id="site-create-flow-not-googleable" type="button">                        No                </button>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -677,7 +702,93 @@
                         <input type="hidden" id="howCanSeeYourRoomStatus" value="1">
                     </section>
 
+                    <section class="site-create-step" id="last_step">
+                       {{-- <div class="col-sm-10 col-sm-offset-1 section-top-margin">
+                            <button class="btn btn-default btn-default-border btn-sm" type="button" data-ga-label="Previous" data-ga-action="Click - button" data-role="previous" data-qa-id="site-create-flow-back" onclick="goNext('sc-custom-privacy','sc-title-and-address')">
+                                <i class="cbicon-left-chevron" role="presentation" aria-hidden="true"></i>&nbsp;
+                                Back    </button>
+                        </div>--}}
 
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                                <div class="text-center"><h1>Last Step</h1></div>
+                                <div class="progress show-when-loaded">
+                                    <div class="progress-bar main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                        <span class="sr-only"><span class="progress-bar-value">0</span>% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <div class="text-center"><h4 style="padding: 10px">Verify everything looks good, then we'll take you to your site to get settled in </h4></div>
+                            <div class="content">
+                                <div>
+                                    <ul class="last_list" style="list-style: none">
+                                        <li>
+                                            <div class="last_step_icon" ><i class="fa fa-user"></i></div>
+                                            <div class="last_step_for">Site For</div>
+                                            <div >
+                                                <label>
+                                                    <label class="last_step_value" id="last_site_for">ME</label>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="last_step_icon" ><i class="fa fa-user"></i></div>
+                                            <div class="last_step_for">Name</div>
+                                            <div >
+                                                <label>
+                                                    <label class="last_step_value" id="last_name">ME</label>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="last_step_icon" ><i class="fa fa-user"></i></div>
+                                            <div class="last_step_for">Room Address</div>
+                                            <div >
+                                                <label>
+                                                    <label class="last_step_value" id="last_address">ME</label>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="last_step_icon" ><i class="fa fa-user"></i></div>
+                                            <div class="last_step_for">Room Title</div>
+                                            <div >
+                                                <label>
+                                                    <label class="last_step_value" id="last_title">ME</label>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="last_step_icon" ><i class="fa fa-user"></i></div>
+                                            <div class="last_step_for">Privacy</div>
+                                            <div >
+                                                <label>
+                                                    <label class="last_step_privecy" id="last_Privacy">ME</label>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="last_step_icon" ><i class="fa fa-user"></i></div>
+                                            <div class="last_step_for">Google Search Settings </div>
+                                            <div >
+                                                <label>
+                                                    <label class="last_step_privecy" id="last_google">ME</label>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <h4 style="text-align: center;padding: 20px">You can adjust these later under your site settings</h4>
+                                    <div class="copy-margin center">
+                                        <div class="col-md-8 col-md-offset-2 col-sm-12">
+                                            <button class="btn btn-primary main_background_color btn-lg btn-continue" id="last-step" type="button"  data-qa-id="site-create-flow-forward-sc-terms" onclick="submitCreateRoomForm()"> Get Started</button>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        </div>
+                    </section>
 
 
                     <section>

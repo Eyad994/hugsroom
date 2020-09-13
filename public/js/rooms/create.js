@@ -9,7 +9,7 @@ function toggleAlert(ele) {
 }
 
 function goNext(prev,next) {
-
+    debugger;
     if(prev == "sc-terms")
     {
 
@@ -33,6 +33,7 @@ function goNext(prev,next) {
     }
     if(next == "sc-patient-name")
     {
+
         var checkmeorelse = $("#me-or-else").val();
 
         if(checkmeorelse == 1)
@@ -61,7 +62,7 @@ function goNext(prev,next) {
         }else{
             $("#firstName-me").css("border","1px solid #ccc");
         }
-            if($("#lastName-me").val().trim()  == "")
+        if($("#lastName-me").val().trim()  == "")
         {
             $("#lastName-me").css("border","1px solid red");
             return;
@@ -154,8 +155,8 @@ function goNext(prev,next) {
     }
 
 
-   $("#"+prev).removeClass("active");
-   $("#"+next).addClass("active");
+    $("#"+prev).removeClass("active");
+    $("#"+next).addClass("active");
 
 }
 

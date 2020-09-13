@@ -23,12 +23,12 @@ function goNext(prev,next) {
     }
     if(next == "sc-patient-name-else")
     {
-        $("#me-or-else").val("0");
+        $("#me-or-else").val("1");
         next = "sc-public-help";
     }
     if(next == "sc-patient-name-me")
     {
-        $("#me-or-else").val("1");
+        $("#me-or-else").val("0");
         next = "sc-public-help";
     }
     if(next == "sc-patient-name")
@@ -91,8 +91,7 @@ function goNext(prev,next) {
     if(next == "sc-custom-privacy")
     {
         if($("#pubic_help").val() == "1"){
-            submitCreateRoomForm(1);
-            return;
+            next = "last_step";
         }
         if($("#title").val().trim() == ""){
             $("#title").css("border","1px solid red");
@@ -140,17 +139,61 @@ function goNext(prev,next) {
             $(".progress-bar-room-name").css("width","42%");
         }
     }
-    if(next == "sc-public-cb-search")
+    if(next == "last_step_public")
     {
+        next = "last_step";
         $("#howCanSeeYourRoomStatus").val("1");
     }
     if(next == "sc-public-search-listing")
     {
         $("#howCanSeeYourRoomStatus").val("2");
     }
-    if(next == "sc-praivet-cb-search")
+    if(next == "last_step_praivet")
     {
+        next = "last_step";
         $("#howCanSeeYourRoomStatus").val("3");
+        $("#issearchable").val(0);
+    }
+    if(next == "last_step_searchable"){
+        next = "last_step";
+        $("#issearchable").val(1);
+    }
+    if(next == "last_step_notsearchable"){
+        next = "last_step";
+        $("#issearchable").val(0);
+    }
+
+    if(next == "last_step"){
+
+        var checkmeorelse = $("#me-or-else").val();
+        if(checkmeorelse == 1)
+        {
+            $("#last_site_for").text("Someone Else");
+            $("#last_name").text($("#firstName-else").val()+' '+$("#lastName-else").val());
+
+        }else{
+            $("#last_site_for").text("Me");
+            $("#last_name").text($("#firstName-me").val()+' '+$("#lastName-me").val());
+        }
+        $("#last_title").text($("#title").val());
+        $("#last_address").text("www.hugsroom.com/"+$("#room-link").val());
+
+        var privecy = $("#howCanSeeYourRoomStatus").val();
+        if(privecy == 3){
+            $("#last_Privacy").text("Me Only");
+        }else if(privecy == 2){
+            $("#last_Privacy").text("Some People");
+        }else{
+            $("#last_Privacy").text("Anyone");
+        }
+
+        var searchable = $("#issearchable").val();
+        if(searchable == 0){
+            $("#last_google").text("Not Searchable");
+        }else{
+            $("#last_google").text("Searchable on Google");
+        }
+
     }
 
 
@@ -159,7 +202,7 @@ function goNext(prev,next) {
 
 }
 
-function submitCreateRoomForm(searchable) {
+function submitCreateRoomForm() {
 
     var meOrSomeoneElse = $("#me-or-else").val();
     var roomForMe = 1;
@@ -176,6 +219,12 @@ function submitCreateRoomForm(searchable) {
         firstName = $("#firstName-else").val();
         lastName  = $("#lastName-else").val();
 
+    }
+    var searchable = $("#issearchable").val();
+    if(searchable == 0){
+        searchable =0;
+    }else{
+        searchable =1;
     }
 //return false;
     var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
