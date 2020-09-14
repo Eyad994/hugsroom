@@ -1,6 +1,23 @@
 @extends('layouts.layout')
 @section('content')
     <style>
+
+        .post_person_name{
+            font-size: 20px;
+            color: #E84B7B;
+            padding-left: 120px;
+            width: 70%;
+            font-weight: bold;
+            overflow: hidden;
+        }
+        .sub_tab_active{
+            border-bottom: 2px solid #ffffff
+        }
+        .sub_header_menu{
+            cursor: pointer;
+        }
+
+
         @media (max-width: 768px) {
             body {
                 background: #ffffff !important;
@@ -9,12 +26,24 @@
             .container-fluid {
                 background: #ffffff !important;
             }
-        }
-        .sub_tab_active{
-            border-bottom: 2px solid #ffffff
-        }
-        .sub_header_menu{
-            cursor: pointer;
+            .post_person_name{
+                width: 320px;
+                overflow: hidden;
+                height: 30px;
+            }
+            .post_time{
+                font-size: 10px;
+                padding-left: 120px;
+                color: #E84B7B;
+            }
+            .post_likes{
+                width: 60px;
+                float: right;
+                position: absolute;
+                right: 15px;
+                top: 16px;
+                height: 40px;
+            }
         }
     </style>
     <div class="room_header" style="height: 100px;background: #E84B7B;margin-top: -5px">
@@ -56,10 +85,10 @@
                                             <img src="imgs/homeGroup2.png" style="position: absolute;height: 100px;width: 100px;border-radius: 100px;left: 30px;top:10px;border: 2px solid #ffffff">
                                         </div>
                                         <a href="/rooms/room/{{ $room->id }}">
-                                            <div class="post_person_name" style="font-size: 20px;color:#E84B7B;padding-left: 120px;font-weight: bold;">{{ $room->title }} </div>
+                                            <div class="post_person_name" >{{ $room->title }} </div>
                                         </a>
-                                        <div class="post_time" style="font-size: 10px;padding-left: 120px;color:#E84B7B">{{ $room->created_at->diffForHumans() }}</div>
-                                        <div class="post_likes" style="width: 90px;float: right;position: absolute;right: 15px;top: 16px;height: 40px;}">
+                                        <div class="post_time" >{{ $room->created_at->diffForHumans() }}</div>
+                                        <div class="post_likes" >
                                             <i class="fa fa-heart-o" aria-hidden="true" style="color: #E84B7B;padding-top:7px;margin-left: 15px;font-size: 20px;"></i>
                                             {{ $room->non_unique_visitor }}
                                         </div>

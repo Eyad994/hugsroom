@@ -1,0 +1,263 @@
+.sub_menu_icons {
+    width: 100px;
+    color: #ffffff;
+    font-size: 40px;
+    padding: 20px;
+}
+
+.profile_header {
+    width: 100%;
+    background: #4ba2b5;
+    height: 350px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.settings_btn {
+    float: right;
+    margin-right: 20px;
+}
+
+.change_pic_btn {
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    float: left;
+    margin-left: 20px;
+    color: #ffffff;
+    background: #8e8e8e;
+}
+
+.profile_info {
+    height: 70px;
+    background: #efefef61;
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+    padding-left: 300px;
+    padding-top: 20px;
+    font-size: 23px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.profile_visitor_info {
+    background: #ffffff;
+    height: 70px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.profile_menu {
+    background: #E84B7B;
+    height: 100px;
+    width: 100%;
+}
+
+.profile_photo {
+    width: 250px;
+    height: 250px;
+    background: silver;
+    border-radius: 250px;
+    position: absolute;
+    top: 160px;
+    left: 30px;
+    overflow: hidden;
+}
+
+.post_form {
+    width: 100%;
+    background: #f4f4f4;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 20px 20px;
+}
+
+.upload_post_photo_btn {
+    background: #f4f4f4;
+    color: #e84b7c;
+}
+
+.upload_post_photo_btn:hover {
+    background: #ebe5e0;
+    color: #e84b7c;
+}
+
+.section_title {
+    font-size: 35px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.section_container {
+    background: #ebe5e0;
+    float: left;
+    width: 100% !important;
+    margin-top: 50px !important;
+    padding-top: 50px;
+
+}
+
+.posts_section {
+    background: #ffffff;
+    padding: 50px 30px;
+}
+
+.post_title {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.post_text {
+    padding: 20px 0px;
+}
+
+.like_btn {
+    background: #ffffff;
+    font-size: 30px;
+    color: #e84b7c;
+    float: left;
+}
+
+.like_btn:hover {
+    color: #ab3c5e;
+}
+
+.how_liked {
+    width: 80px;
+    float: left;
+    padding: 14px 0px;
+    color: #bb0840;
+    cursor: pointer;
+}
+
+.post_comments {
+    width: 120px;
+    float: left;
+    padding: 14px 0px;
+    cursor: pointer;
+}
+
+.post_comments:hover {
+    color: #bb0840
+}
+
+.share_post {
+    width: 80px;
+    float: right;
+    padding: 14px 0px;
+    color: #bb0840;
+    cursor: pointer;
+}
+
+.comments_section {
+    height: 70px;
+    background: #f4f4f4;
+    border-bottom: 1px solid #cccccc;
+    font-size: 20px;
+    padding: 20px 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.post_comment_title {
+    padding: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.post_comment_name {
+    padding-left: 30px;
+    font-weight: bold;
+    padding-bottom: 10px;
+
+}
+
+.post_comment_text {
+    padding: 0px 30px;
+}
+
+.post_comment_submit {
+    background: #e84b7c;
+    font-size: 17px;
+    padding: 7px 20px;
+    color: #ffffff;
+}
+
+.post_comment_form {
+    background: #f4f4f4;
+    display: none;
+}
+
+.read_more_posts_section {
+    padding: 30px;
+    text-align: center;
+}
+
+.main_content {
+    background: #ffffff !important;
+}
+
+.main_header {
+    height: 451px !important;
+}
+
+.profile_menu_items {
+    padding-top: 25px;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.comment_img{
+    width: 40px !important;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50px;
+    float: left;
+}
+.comment_name{
+    float: left;
+    width: 75%;
+    padding-left: 10px;
+    font-size: 17px;
+}
+.comment-date{
+    float: left;
+    padding-left: 10px;
+    font-size: 11px;
+    width: 75%;
+}
+.comment-body{
+    width: 100%;
+    font-size: 18px;
+    padding: 20px;
+}
+.comment_like{
+    width: 40px;
+    cursor: pointer;
+    margin-top: 3px;
+}
+.comment_edit{
+    cursor: pointer;
+    width: 40px;
+}
+.comment_delete{
+    cursor: pointer;
+    width: 40px;
+}
+.comment_like:hover , .comment_edit:hover , .comment_delete:hover{
+    color:#e84b7c !important
+}
+.comment-footer{
+    display: flex;
+    padding: 10px;
+}
+
+.gallery_photos{
+    padding-bottom: 35px;
+}

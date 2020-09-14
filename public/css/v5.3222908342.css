@@ -17894,9 +17894,10 @@ div.layout-profile nav[role="navigation"] > a.list-group-item:hover:not(.active)
 
 .comment-item {
     background-color: #fff;
-    border-radius: 15px;
+    border-radius: 7px;
     padding: 1em 1em 0.2em 1em;
-    margin: 1em 1em 0 1em
+    margin: 5px 20px;
+    box-shadow: 5px 5px 5px #bcbcbc;
 }
 
 @media (min-width: 768px) {

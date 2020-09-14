@@ -1,228 +1,11 @@
 @extends('layouts.layout')
 @section('content')
-    <script src="{{asset('css/ckeditor/samples.css')}}"></script>
+    <link href="{{asset('css/roomsweb.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/ckeditor/samples.css')}}" rel="stylesheet" type="text/css">
     <script src="{{asset('js/ckeditor/ckeditor.js')}}"></script>
     <script src="{{asset('js/ckeditor/sample.js')}}"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description"
-          content="Try the latest sample of CKEditor 4 and learn more about customizing your WYSIWYG editor with endless possibilities.">
-    <style>
-        .sub_menu_icons {
-            width: 100px;
-            color: #ffffff;
-            font-size: 40px;
-            padding: 20px;
-        }
-
-        .profile_header {
-            width: 100%;
-            background: #4ba2b5;
-            height: 350px;
-            margin-top: 10px;
-            position: relative;
-        }
-
-        .settings_btn {
-            float: right;
-            margin-right: 20px;
-        }
-
-        .change_pic_btn {
-            border-radius: 100px;
-            width: 30px;
-            height: 30px;
-            padding: 0px;
-            float: left;
-            margin-left: 20px;
-            color: #ffffff;
-            background: #8e8e8e;
-        }
-
-        .profile_info {
-            height: 70px;
-            background: #efefef61;
-            width: 100%;
-            bottom: 0px;
-            position: absolute;
-            padding-left: 300px;
-            padding-top: 20px;
-            font-size: 23px;
-            font-weight: bold;
-            color: #ffffff;
-        }
-
-        .profile_visitor_info {
-            background: #ffffff;
-            height: 70px;
-            width: 100%;
-            padding-top: 20px;
-        }
-
-        .profile_menu {
-            background: #E84B7B;
-            height: 100px;
-            width: 100%;
-        }
-
-        .profile_photo {
-            width: 250px;
-            height: 250px;
-            background: silver;
-            border-radius: 250px;
-            position: absolute;
-            top: 160px;
-            left: 30px;
-            overflow: hidden;
-        }
-
-        .post_form {
-            width: 100%;
-            background: #f4f4f4;
-            border: 1px solid #dddddd;
-            border-radius: 5px;
-            padding: 20px 20px;
-        }
-
-        .upload_post_photo_btn {
-            background: #f4f4f4;
-            color: #e84b7c;
-        }
-
-        .upload_post_photo_btn:hover {
-            background: #ebe5e0;
-            color: #e84b7c;
-        }
-
-        .section_title {
-            font-size: 35px;
-            font-weight: bold;
-            width: 100%;
-            text-align: center;
-            padding-bottom: 30px;
-        }
-
-        .section_container {
-            background: #ebe5e0;
-            float: left;
-            width: 100% !important;
-            margin-top: 50px !important;
-            padding-top: 50px;
-
-        }
-
-        .posts_section {
-            background: #ffffff;
-            padding: 50px 30px;
-        }
-
-        .post_title {
-            font-size: 27px;
-            font-weight: bold;
-        }
-
-        .post_text {
-            padding: 20px 0px;
-        }
-
-        .like_btn {
-            background: #ffffff;
-            font-size: 30px;
-            color: #e84b7c;
-            float: left;
-        }
-
-        .like_btn:hover {
-            color: #ab3c5e;
-        }
-
-        .how_liked {
-            width: 80px;
-            float: left;
-            padding: 14px 0px;
-            color: #bb0840;
-            cursor: pointer;
-        }
-
-        .post_comments {
-            width: 120px;
-            float: left;
-            padding: 14px 0px;
-            cursor: pointer;
-        }
-
-        .post_comments:hover {
-            color: #bb0840
-        }
-
-        .share_post {
-            width: 80px;
-            float: right;
-            padding: 14px 0px;
-            color: #bb0840;
-            cursor: pointer;
-        }
-
-        .comments_section {
-            height: 70px;
-            background: #f4f4f4;
-            border-bottom: 1px solid #cccccc;
-            font-size: 20px;
-            padding: 20px 30px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .post_comment_title {
-            padding: 30px;
-            font-size: 20px;
-            font-weight: bold;
-            padding-bottom: 10px;
-        }
-
-        .post_comment_name {
-            padding-left: 30px;
-            font-weight: bold;
-            padding-bottom: 10px;
-
-        }
-
-        .post_comment_text {
-            padding: 0px 30px;
-        }
-
-        .post_comment_submit {
-            background: #e84b7c;
-            font-size: 17px;
-            padding: 7px 20px;
-            color: #ffffff;
-        }
-
-        .post_comment_form {
-            background: #f4f4f4;
-            display: none;
-        }
-
-        .read_more_posts_section {
-            padding: 30px;
-            text-align: center;
-        }
-
-        .main_content {
-            background: #f5f2ef !important;
-        }
-
-        .main_header {
-            height: 451px !important;
-        }
-
-        .profile_menu_items {
-            padding-top: 25px;
-            text-align: center;
-            font-size: 30px;
-            color: #ffffff;
-            cursor: pointer;
-        }
-    </style>
+    <meta name="description" content="Try the latest sample of CKEditor 4 and learn more about customizing your WYSIWYG editor with endless possibilities.">
     <script type="text/javascript">
         $(function () {
             if (screen.width < "768") {
@@ -256,7 +39,7 @@
                             style="float: left;margin-left: 300px;background: #E84B7B;color: #ffffff;">
                         <i class="fa fa-cog" style="font-size: 17px;color: #ffffff;padding: 0px 3px;"></i> Settings
                     </button>
-                    <div style="float: left;width: 50px;padding: 8px 0px;border-right: 1px solid #bcbcbc">
+                    <div style="float: left;width: 70px;padding: 8px 0px;border-right: 1px solid #bcbcbc">
                         <span>{{ $room->unique_visitor }}</span> Visits
                     </div>
                     <div style="padding:8px 10px;width: 100px;float: left;">
@@ -372,16 +155,20 @@
                         <div class="col-xs-12">
                             <div class="comment-item">
                                 <div class="info-line">
-                                    <span class="comment-signature">{{ $comment->user->first_name }} {{ $comment->user->last_name }}</span>
-                                    | <span class="comment-date">{{ $comment->created_at->diffForHumans() }}</span>
+                                    <img src="{{asset('imgs/homeGroup2.png')}}" class="comment_img">
+                                    <div class="comment-signature comment_name" >{{ $comment->user->first_name }} {{ $comment->user->last_name }}</div>
+                                    <div class="comment-date">{{ $comment->created_at->diffForHumans() }}</div>
                                 </div>
-                                <div class="fade-out fade-out-medium hide-read-more">
+                                <div class="fade-out fade-out-medium hide-read-more" style="width: 100%">
                                     <div class="user-generated comment-body"
                                          data-qa-id="comment-body-5f5e3001bdc412053a6ee1b8">{{ $comment->body }}</div>
                                 </div>
-                                <span class="toolbar">
-                                <button><i class="cbicon-heart" aria-hidden="true"></i></button>
-                            </span>
+                                <span class="toolbar">{{--<button><i class="cbicon-heart" aria-hidden="true"></i></button>--}}</span>
+                                <div class="comment-footer">
+                                    <div class="comment_like"><i class="fa fa-heart"></i></div>
+                                    <div class="comment_edit">edit</div>
+                                    <div class="comment_delete">delete</div>
+                                </div>
                             </div>
 
                         </div>

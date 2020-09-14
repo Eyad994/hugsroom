@@ -30,7 +30,7 @@ class RoomsController extends Controller
         $data["roomTitle"] = $request->title;
         $data["roomLink"] = $request->roomLink;
         $data["howSeeMyRoom"] = $request->howSeeMyRoom;
-        $data["searchable"] = $request->searchable;//1-yes 2-no*/
+        $data["searchable"] = $request->searchable;//1-yes 0-no*/
 
         $room = new rooms();
         $room->addRome($data);
@@ -102,6 +102,67 @@ class RoomsController extends Controller
         $postLikes = Like::where('post_id', $post->id)->count();
 
         return view('main.mbroom', compact('room', 'post', 'postLikes'));
+    }
+
+public function gallery($id)
+    {/*
+        $room = rooms::where('id', $id)->first();
+        $nonUniqueVisitor = $room->non_unique_visitor;
+        $visitor = Visitor::where('ip', request()->ip())->where('room_id', $id)->first();
+
+        if (is_null($visitor))
+        {
+            Visitor::create([
+                'ip' => request()->ip(),
+                'room_id' => $id
+            ]);
+        }
+
+        $uniqueVisitorCount = Visitor::where('room_id', $id)->count();
+
+
+        $room->update([
+            'non_unique_visitor' => ++$nonUniqueVisitor,
+            'unique_visitor' => $uniqueVisitorCount
+        ]);
+
+        $post = Post::where('room_id', $id)
+            ->withLikes()
+            ->latest()
+            ->first();
+        $postLikes = Like::where('post_id', $post->id)->count();*/
+        return view('main.gallery');
+    }
+
+    public function mbgallery($id)
+    {
+        /*
+        $room = rooms::where('id', $id)->first();
+        $nonUniqueVisitor = $room->non_unique_visitor;
+        $visitor = Visitor::where('ip', request()->ip())->where('room_id', $id)->first();
+
+        if (is_null($visitor))
+        {
+            Visitor::create([
+                'ip' => request()->ip(),
+                'room_id' => $id
+            ]);
+        }
+
+        $uniqueVisitorCount = Visitor::where('room_id', $id)->count();
+
+        $room->update([
+            'non_unique_visitor' => ++$nonUniqueVisitor,
+            'unique_visitor' => $uniqueVisitorCount
+        ]);
+
+        $post = Post::where('room_id', $id)
+            ->withLikes()
+            ->latest()
+            ->first();
+        $postLikes = Like::where('post_id', $post->id)->count();*/
+
+        return view('main.mbgallery');
     }
 
 

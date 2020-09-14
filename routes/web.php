@@ -40,7 +40,8 @@ Route::post('/addNewRoom', 'RoomsController@addNewRoom');
 Route::get('/rooms', 'RoomsController@rooms');
 Route::get('/rooms/room/{id}', 'RoomsController@room');
 Route::get('/rooms/mbroom/{id}', 'RoomsController@mbroom');
-
+Route::get('/rooms/gallery/{id}', 'RoomsController@gallery');
+Route::get('/rooms/mbgallery/{id}', 'RoomsController@mbgallery');
 /*******************************************************************************/
 Route::post('storePost', 'RoomsController@storePost')->name('storePost');
 Route::post('storeComment', 'PostController@storeComment')->name('storeComment');
