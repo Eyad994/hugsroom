@@ -26,12 +26,16 @@
     <link href="{{asset('css/main.3775130132.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('css/print.2137607392.css')}}" media="print" rel="stylesheet" type="text/css">
 {{--    <link rel="stylesheet" href="https://swiperjs.com/package/swiper-bundle.min.css">--}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">--}}
+    <link rel="stylesheet" href="{{asset("css/cdn/font-awesome.min.css")}}">
 
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css'>
+ {{--   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.css'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css'>--}}
+    <link rel='stylesheet' href='{{asset("css/cdn/owl.carousel.css")}}'>
+    <link rel='stylesheet' href='{{asset("css/cdn/owl.theme.default.css")}}'>
+    <link rel='stylesheet' href='{{asset("css/cdn/uikit.min.css")}} '>
 
 
 {{--
@@ -50,10 +54,12 @@
     <link href="{{asset('css/mainEN.css')}}" media="print" rel="stylesheet" type="text/css">
 
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+{{--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>--}}
+    <link rel="stylesheet" href='{{asset("css/cdn/bootstrap.min.css")}}' >
+    <script src='{{asset("js/cdn/3.5.1/jquery.min.js")}}'></script>
+    <script src='{{asset("js/cdn/3.4.1/bootstrap.min.js")}}'></script>
 
     <script src="{{asset('js/main/main.js')}}"></script>
 </head>

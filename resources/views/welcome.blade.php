@@ -263,9 +263,12 @@
     </div>
     </div>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js'></script>
+    {{--<script src='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js'></script>--}}
+    <script src='{{asset("js/cdn/uikit.min.js")}}'></script>
+    <script src='{{asset("js/cdn/uikit-icons.min.js")}}'></script>
+    <script src='{{asset("js/cdn/owl.carousel.js")}}'></script>
 
     <script  src="{{asset('js/cardSwip.js')}}"></script>
 @endsection

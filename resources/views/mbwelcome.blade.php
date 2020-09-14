@@ -218,8 +218,8 @@
     </div>
 
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/owl.carousel.min.js'></script>
+    <script src='{{asset("js/cdn/2.1.3/jquery.min.js")}}'></script>
+    <script src='{{asset("js/cdn/owl.carousel.min.js")}}'></script>
     <script  src="{{asset('js/mbcardSwip.js')}}"></script>
 
 @endsection
