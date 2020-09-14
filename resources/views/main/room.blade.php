@@ -325,6 +325,7 @@
     <div class="container section_container" style="margin-top: 0 !important;background: #f5f2ef;display: table">
         <div class="container-fluid">
             <div class="section_title">Newest Update</div>
+            @if(isset($post))
             <div class="posts_section">
                 <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
                 <div class="post_info">{{ $post->title }} by {{ $room->user->first_name }} {{ $room->user->last_name }}
@@ -339,7 +340,7 @@
                         <button class="btn like_btn" style="color: unset"><i class="fa fa-heart"></i></button>
                     @endif
                     </form>
-                    <div class="how_liked">{{ $post->likes ?: 0 }} Hearts</div>
+                    <div class="how_liked">{{ $postLikes }} Hearts</div>
                     <div class="post_comments" onclick="openCommentsSection()">Post comment</div>
                     <div class="share_post">
                         share
@@ -347,6 +348,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="comments_section" onclick="openCommentsSection()">
                 <span>COMMENTS</span>
                 <i class="fa fa-angle-down" aria-hidden="true" style="float: right;font-size:30px"></i>
@@ -386,7 +388,7 @@
                     @endforeach
                 </div>
             </div>
-
+            @endif
             <div class="read_more_posts_section">
                 <button class="btn post_comment_submit"> Read More Journal Entries</button>
             </div>

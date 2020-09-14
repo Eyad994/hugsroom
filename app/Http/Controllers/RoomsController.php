@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Comment;
+use App\Like;
 use App\Post;
 use App\rooms;
 use App\Visitor;
@@ -12,9 +13,16 @@ use Stevebauman\Location\Facades\Location;
 class RoomsController extends Controller
 {
 
+    /**
+     * RoomsController constructor.
+     */
+    public function __construct()
+    {
+        return $this->middleware('auth');
+    }
+
     public function addNewRoom(Request $request)
     {
-
         $data = [];
         $data["roomForMe"] = $request->roomForMe; // 1- for me 0- for someone else
         $data["firstName"] = $request->firstName;
@@ -62,7 +70,8 @@ class RoomsController extends Controller
             ->withLikes()
             ->latest()
             ->first();
-        return view('main.room', compact('room', 'post'));
+        $postLikes = Like::where('post_id', $post->id)->count();
+        return view('main.room', compact('room', 'post', 'postLikes'));
     }
 
     public function mbroom($id)
@@ -90,7 +99,9 @@ class RoomsController extends Controller
             ->withLikes()
             ->latest()
             ->first();
-        return view('main.mbroom', compact('room', 'post'));
+        $postLikes = Like::where('post_id', $post->id)->count();
+
+        return view('main.mbroom', compact('room', 'post', 'postLikes'));
     }
 
 
