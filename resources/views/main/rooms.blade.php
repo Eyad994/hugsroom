@@ -104,8 +104,8 @@
                                         </a>
                                         <div class="post_time" >{{ $room->created_at->diffForHumans() }}</div>
                                         <div class="post_likes" style="width: 90px;float: right;position: absolute;right: 15px;top: 16px;height: 40px;}">
-                                            <i class="fa fa-heart-o" aria-hidden="true" style="color: #E84B7B;padding-top:7px;margin-left: 15px;font-size: 20px;"></i>
-                                            {{ $room->non_unique_visitor }} 200
+                                            &nbsp; <i class="fa fa-heart-o" aria-hidden="true" style="color: #E84B7B;padding-top:7px;margin-left: 15px;font-size: 20px;"></i>
+                                            &nbsp;&nbsp; {{ $room->non_unique_visitor }}
                                         </div>
                                     </div>
                                     <div style="width: 100%;height: 200px;">
@@ -162,8 +162,8 @@
                                                     </a>
                                                     <div class="post_time" style="font-size: 10px;padding-left: 120px;color:#E84B7B">{{ $room->created_at->diffForHumans() }}</div>
                                                     <div class="post_likes" style="width: 90px;float: right;position: absolute;right: 15px;top: 16px;height: 40px;}">
-                                                        <i class="fa fa-heart-o" aria-hidden="true" style="color: #E84B7B;padding-top:7px;margin-left: 15px;font-size: 20px;"></i>
-                                                        {{ $room->non_unique_visitor }} 200
+                                                        &nbsp; <i class="fa fa-heart-o" aria-hidden="true" style="color: #E84B7B;padding-top:7px;margin-left: 15px;font-size: 20px;"></i>
+                                                        &nbsp;&nbsp; {{ $room->non_unique_visitor }}
                                                     </div>
                                                 </div>
                                                 <div style="width: 100%;height: 200px;">
@@ -225,8 +225,8 @@
                                                     </a>
                                                     <div class="post_time" style="font-size: 10px;padding-left: 120px;color:#E84B7B">{{ $room->created_at->diffForHumans() }}</div>
                                                     <div class="post_likes" style="width: 90px;float: right;position: absolute;right: 15px;top: 16px;height: 40px;}">
-                                                        <i class="fa fa-heart-o" aria-hidden="true" style="color: #E84B7B;padding-top:7px;margin-left: 15px;font-size: 20px;"></i>
-                                                        {{ $room->non_unique_visitor }} 200
+                                                        &nbsp; <i class="fa fa-heart-o" aria-hidden="true" style="color: #E84B7B;padding-top:7px;margin-left: 15px;font-size: 20px;"></i>
+                                                        &nbsp;&nbsp; {{ $room->non_unique_visitor }}
                                                     </div>
                                                 </div>
                                                 <div style="width: 100%;height: 200px;">
