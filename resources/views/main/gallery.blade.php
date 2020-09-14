@@ -85,13 +85,14 @@
                     <img src="{{asset('imgs/homeGroup2.png')}}" style="width: 100%;height: 300px; object-fit: cover;box-shadow: 5px 5px 5px #bcbcbc;">
                 </div>
                 <div class="col-md-6 gallery_photos">
-                    <img src="{{asset('imgs/homeGroup2.png')}}" style="width: 100%;height: 300px; object-fit: cover;box-shadow: 5px 5px 5px #bcbcbc;">
-                </div>
-                <div class="col-md-6 gallery_photos">
-                    <img src="{{asset('imgs/homeGroup2.png')}}" style="width: 100%;height: 300px; object-fit: cover;box-shadow: 5px 5px 5px #bcbcbc;">
-                </div>
-                <div class="col-md-6 gallery_photos">
-                    <img src="{{asset('imgs/homeGroup2.png')}}" style="width: 100%;height: 300px; object-fit: cover;box-shadow: 5px 5px 5px #bcbcbc;">
+                    <label style="width: 100%">
+                        <div class="gallery_upload_image">
+                            <i class="fa fa-photo"></i>
+                            <span style=" font-size: 20px;width: 100%;float: left;"> add more photos</span>
+                        </div>
+
+                        <input type="file" style="visibility: hidden;"/>
+                    </label>
                 </div>
             </div>
         </div>

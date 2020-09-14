@@ -16,7 +16,21 @@
         .sub_header_menu{
             cursor: pointer;
         }
-
+        .room_img_btn{
+            width: 100px;
+            height: 25px;
+            position: absolute;
+            background: white;
+            /* top: 0px; */
+            bottom: 60px;
+            border-radius: 5px;
+            right: 25px;
+            padding: 2px 10px;
+        }
+        .post_time{
+            padding-left: 120px;
+            color: #E84B7B;
+        }
 
         @media (max-width: 768px) {
             body {
@@ -27,7 +41,7 @@
                 background: #ffffff !important;
             }
             .post_person_name{
-                width: 320px;
+                width: 280px;
                 overflow: hidden;
                 height: 30px;
             }
@@ -44,6 +58,7 @@
                 top: 16px;
                 height: 40px;
             }
+
         }
     </style>
     <div class="room_header" style="height: 100px;background: #E84B7B;margin-top: -5px">
@@ -82,15 +97,15 @@
                                 <div style="width: 100%;height: 310px;border-radius: 20px 20px 0px 0px;box-shadow: 2px 2px 10px 1px #e4e1e1 ">
                                     <div class="post-header" style="height:60px;">
                                         <div style="padding-top: 12px">
-                                            <img src="imgs/homeGroup2.png" style="position: absolute;height: 100px;width: 100px;border-radius: 100px;left: 30px;top:10px;border: 2px solid #ffffff">
+                                            <img src="imgs/homeGroup2.png" style="position: absolute;height: 100px;width: 100px;border-radius: 100px;left: 30px;top:10px;border: 2px solid #ffffff;object-fit: cover">
                                         </div>
                                         <a href="/rooms/room/{{ $room->id }}">
                                             <div class="post_person_name" >{{ $room->title }} </div>
                                         </a>
                                         <div class="post_time" >{{ $room->created_at->diffForHumans() }}</div>
-                                        <div class="post_likes" >
+                                        <div class="post_likes" style="width: 90px;float: right;position: absolute;right: 15px;top: 16px;height: 40px;}">
                                             <i class="fa fa-heart-o" aria-hidden="true" style="color: #E84B7B;padding-top:7px;margin-left: 15px;font-size: 20px;"></i>
-                                            {{ $room->non_unique_visitor }}
+                                            {{ $room->non_unique_visitor }} 200
                                         </div>
                                     </div>
                                     <div style="width: 100%;height: 200px;">
@@ -140,7 +155,7 @@
                                             <div style="width: 100%;height: 310px;border-radius: 20px 20px 0px 0px;box-shadow: 2px 2px 10px 1px #e4e1e1 ">
                                                 <div class="post-header" style="height:60px;">
                                                     <div style="padding-top: 12px">
-                                                        <img src="imgs/homeGroup2.png" style="position: absolute;height: 100px;width: 100px;border-radius: 100px;left: 30px;top:10px;border: 2px solid #ffffff">
+                                                        <img src="imgs/homeGroup2.png" style="position: absolute;height: 100px;width: 100px;border-radius: 100px;left: 30px;top:10px;border: 2px solid #ffffff;object-fit: cover">
                                                     </div>
                                                     <a href="/rooms/room/{{ $room->id }}">
                                                         <div class="post_person_name" style="font-size: 20px;color:#E84B7B;padding-left: 120px;font-weight: bold;">{{ $room->title }} </div>
@@ -148,11 +163,15 @@
                                                     <div class="post_time" style="font-size: 10px;padding-left: 120px;color:#E84B7B">{{ $room->created_at->diffForHumans() }}</div>
                                                     <div class="post_likes" style="width: 90px;float: right;position: absolute;right: 15px;top: 16px;height: 40px;}">
                                                         <i class="fa fa-heart-o" aria-hidden="true" style="color: #E84B7B;padding-top:7px;margin-left: 15px;font-size: 20px;"></i>
-                                                        {{ $room->non_unique_visitor }}
+                                                        {{ $room->non_unique_visitor }} 200
                                                     </div>
                                                 </div>
                                                 <div style="width: 100%;height: 200px;">
                                                     <img src="imgs/homeGroup2.png" style="height: 200px;width: 100%;">
+                                                    <div class="room_img_btn" style="color: #e84b7c;">
+                                                        <i class="fa fa-user"></i>
+                                                        <span>Following</span>
+                                                    </div>
                                                 </div>
                                                 <div style="height: 100px;width: 100%" class="post_footer_icons">
                                                     <div style="width: 25%;float: left;text-align: center">
@@ -198,19 +217,24 @@
                                             <div style="width: 100%;height: 310px;border-radius: 20px 20px 0px 0px;box-shadow: 2px 2px 10px 1px #e4e1e1 ">
                                                 <div class="post-header" style="height:60px;">
                                                     <div style="padding-top: 12px">
-                                                        <img src="imgs/homeGroup2.png" style="position: absolute;height: 100px;width: 100px;border-radius: 100px;left: 30px;top:10px;border: 2px solid #ffffff">
+                                                        <img src="imgs/homeGroup2.png" style="position: absolute;height: 100px;width: 100px;border-radius: 100px;left: 30px;top:10px;border: 2px solid #ffffff;object-fit: cover">
                                                     </div>
                                                     <a href="/rooms/room/{{ $room->id }}">
                                                         <div class="post_person_name" style="font-size: 20px;color:#E84B7B;padding-left: 120px;font-weight: bold;">{{ $room->title }} </div>
+
                                                     </a>
                                                     <div class="post_time" style="font-size: 10px;padding-left: 120px;color:#E84B7B">{{ $room->created_at->diffForHumans() }}</div>
                                                     <div class="post_likes" style="width: 90px;float: right;position: absolute;right: 15px;top: 16px;height: 40px;}">
                                                         <i class="fa fa-heart-o" aria-hidden="true" style="color: #E84B7B;padding-top:7px;margin-left: 15px;font-size: 20px;"></i>
-                                                        {{ $room->non_unique_visitor }}
+                                                        {{ $room->non_unique_visitor }} 200
                                                     </div>
                                                 </div>
                                                 <div style="width: 100%;height: 200px;">
                                                     <img src="imgs/homeGroup2.png" style="height: 200px;width: 100%;">
+                                                    <div class="room_img_btn" style="color: #818080;">
+                                                        <img src="imgs/homeGroup2.png" style="width: 17px;height: 17px;border-radius: 20px;margin-top: -2px;object-fit: cover;}">
+                                                        <span>Country</span>
+                                                    </div>
                                                 </div>
                                                 <div style="height: 100px;width: 100%" class="post_footer_icons">
                                                     <div style="width: 25%;float: left;text-align: center">
