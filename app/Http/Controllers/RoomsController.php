@@ -40,7 +40,7 @@ class RoomsController extends Controller
 
     public function rooms()
     {
-        $userRooms = rooms::where('user_id', auth()->user()->id)->get();
+        $userRooms = rooms::where('user_id', auth()->user()->id)->latest()->get();
         return view('main.rooms', compact('userRooms'));
     }
 
@@ -91,7 +91,7 @@ class RoomsController extends Controller
         $uniqueVisitorCount = Visitor::where('room_id', $id)->count();
 
         $room->update([
-            'non_unique_visitor' => ++$nonUniqueVisitor,
+            'non_unique_visitor' => $nonUniqueVisitor,
             'unique_visitor' => $uniqueVisitorCount
         ]);
 

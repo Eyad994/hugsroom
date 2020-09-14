@@ -233,7 +233,7 @@
                                                     <img src="imgs/homeGroup2.png" style="height: 200px;width: 100%;">
                                                     <div class="room_img_btn" style="color: #818080;">
                                                         <img src="imgs/homeGroup2.png" style="width: 17px;height: 17px;border-radius: 20px;margin-top: -2px;object-fit: cover;}">
-                                                        <span>Country</span>
+                                                        <span>{{ $room->user->country }}</span>
                                                     </div>
                                                 </div>
                                                 <div style="height: 100px;width: 100%" class="post_footer_icons">
