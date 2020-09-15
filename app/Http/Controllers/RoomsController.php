@@ -60,7 +60,6 @@ class RoomsController extends Controller
 
         $uniqueVisitorCount = Visitor::where('room_id', $id)->count();
 
-
         $room->update([
             'non_unique_visitor' => ++$nonUniqueVisitor,
             'unique_visitor' => $uniqueVisitorCount
@@ -70,8 +69,12 @@ class RoomsController extends Controller
             ->withLikes()
             ->latest()
             ->first();
-        $postLikes = Like::where('post_id', $post->id)->count();
-        return view('main.room', compact('room', 'post', 'postLikes'));
+        if (!is_null($post))
+        {
+            $postLikes = Like::where('post_id', $post->id)->count();
+            return view('main.room', compact('room', 'post', 'postLikes'));
+        }
+        return view('main.room', compact('room', 'post'));
     }
 
     public function mbroom($id)
@@ -99,9 +102,13 @@ class RoomsController extends Controller
             ->withLikes()
             ->latest()
             ->first();
-        $postLikes = Like::where('post_id', $post->id)->count();
 
-        return view('main.mbroom', compact('room', 'post', 'postLikes'));
+        if (!is_null($post))
+        {
+            $postLikes = Like::where('post_id', $post->id)->count();
+            return view('main.room', compact('room', 'post', 'postLikes'));
+        }
+        return view('main.room', compact('room', 'post'));
     }
 
 public function gallery($id)

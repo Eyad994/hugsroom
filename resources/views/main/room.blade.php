@@ -123,7 +123,7 @@
                         <button class="btn like_btn" style="color: unset"><i class="fa fa-heart"></i></button>
                     @endif
                     </form>
-                    <div class="how_liked">{{ $postLikes }} Hearts</div>
+                    <div class="how_liked">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>
                     <div class="post_comments" onclick="openCommentsSection()">Post comment</div>
                     <div class="share_post">
                         share
