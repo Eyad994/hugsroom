@@ -108,7 +108,7 @@ class RoomsController extends Controller
             $postLikes = Like::where('post_id', $post->id)->count();
             return view('main.room', compact('room', 'post', 'postLikes'));
         }
-        return view('main.room', compact('room', 'post'));
+        return view('main.mbroom', compact('room', 'post'));
     }
 
 public function gallery($id)
