@@ -6,31 +6,31 @@ $(function () {
         //  debugger;
         var active = $(".owl-stage .active .item .item").data().toggle;
         if (active == "slide1") {
-            $(".owl-stage-outer").css("background", "orange");
-            $(".xxx").css("background", "orange");
-            $("body").css("background", "orange");
+            $(".owl-stage-outer").css("background", "#fdccd1");
+            $(".xxx").css("background", "#fdccd1");
+            $("body").css("background", "#fdccd1");
         }
         if (active == "slide2") {
-            $(".owl-stage-outer").css("background", "#00bcd4")
-            $(".xxx").css("background", "#00bcd4");
-            $("body").css("background", "#00bcd4");
+            $(".owl-stage-outer").css("background", "#ff5686")
+            $(".xxx").css("background", "#ff5686");
+            $("body").css("background", "#ff5686");
         }
         if (active == "slide3") {
-            $(".owl-stage-outer").css("background", "#2196f3")
-            $(".xxx").css("background", "#2196f3");
-            $("body").css("background", "#2196f3");
+            $(".owl-stage-outer").css("background", "#fed155")
+            $(".xxx").css("background", "#fed155");
+            $("body").css("background", "#fed155");
 
         }
         if (active == "slide4") {
-            $(".owl-stage-outer").css("background", "#673ab7")
-            $(".xxx").css("background", "#673ab7");
-            $("body").css("background", "#673ab7");
+            $(".owl-stage-outer").css("background", "#feb25e")
+            $(".xxx").css("background", "#feb25e");
+            $("body").css("background", "#feb25e");
 
         }
         if (active == "slide5") {
-            $(".owl-stage-outer").css("background", "#607d8b")
-            $(".xxx").css("background", "#607d8b");
-            $("body").css("background", "#607d8b");
+            $(".owl-stage-outer").css("background", "#6ac7e8")
+            $(".xxx").css("background", "#6ac7e8");
+            $("body").css("background", "#6ac7e8");
 
         }
 
@@ -87,38 +87,38 @@ $('.owl-carousel').on('changed.owl.carousel', function (e) {
         //  debugger;
         var active = $(".owl-stage .active .item .item").data().toggle;
         if (active == "slide1") {
-            $(".owl-stage-outer").css("background", "orange");
-            $(".xxx").css("background", "orange");
-            $("body").css("background", "orange");
+            $(".owl-stage-outer").css("background", "#fdccd1");
+            $(".xxx").css("background", "#fdccd1");
+            $("body").css("background", "#fdccd1");
         }
         if (active == "slide2") {
-            $(".owl-stage-outer").css("background", "#00bcd4")
-            $(".xxx").css("background", "#00bcd4");
-            $("body").css("background", "#00bcd4");
+            $(".owl-stage-outer").css("background", "#ff5686")
+            $(".xxx").css("background", "#ff5686");
+            $("body").css("background", "#ff5686");
         }
         if (active == "slide3") {
-            $(".owl-stage-outer").css("background", "#2196f3")
-            $(".xxx").css("background", "#2196f3");
-            $("body").css("background", "#2196f3");
+            $(".owl-stage-outer").css("background", "#fed155")
+            $(".xxx").css("background", "#fed155");
+            $("body").css("background", "#fed155");
 
         }
         if (active == "slide4") {
-            $(".owl-stage-outer").css("background", "#673ab7")
-            $(".xxx").css("background", "#673ab7");
-            $("body").css("background", "#673ab7");
+            $(".owl-stage-outer").css("background", "#feb25e")
+            $(".xxx").css("background", "#feb25e");
+            $("body").css("background", "#feb25e");
 
         }
         if (active == "slide5") {
-            $(".owl-stage-outer").css("background", "#607d8b")
-            $(".xxx").css("background", "#607d8b");
-            $("body").css("background", "#607d8b");
+            $(".owl-stage-outer").css("background", "#6ac7e8")
+            $(".xxx").css("background", "#6ac7e8");
+            $("body").css("background", "#6ac7e8");
 
         }
 
     }else{
-        $(".owl-stage-outer").css("background", "##009688")
-        $(".xxx").css("background", "#009688");
-        $("body").css("background", "#009688");
+        $(".owl-stage-outer").css("background", "#6ac7e8")
+        $(".xxx").css("background", "#6ac7e8");
+        $("body").css("background", "#6ac7e8");
     }
 
 });

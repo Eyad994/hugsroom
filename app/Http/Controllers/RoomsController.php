@@ -112,7 +112,7 @@ class RoomsController extends Controller
     }
 
 public function gallery($id)
-    {/*
+    {
         $room = rooms::where('id', $id)->first();
         $nonUniqueVisitor = $room->non_unique_visitor;
         $visitor = Visitor::where('ip', request()->ip())->where('room_id', $id)->first();
@@ -133,17 +133,12 @@ public function gallery($id)
             'unique_visitor' => $uniqueVisitorCount
         ]);
 
-        $post = Post::where('room_id', $id)
-            ->withLikes()
-            ->latest()
-            ->first();
-        $postLikes = Like::where('post_id', $post->id)->count();*/
-        return view('main.gallery');
+        return view('main.gallery', compact('room'));
     }
 
     public function mbgallery($id)
     {
-        /*
+
         $room = rooms::where('id', $id)->first();
         $nonUniqueVisitor = $room->non_unique_visitor;
         $visitor = Visitor::where('ip', request()->ip())->where('room_id', $id)->first();
@@ -163,13 +158,7 @@ public function gallery($id)
             'unique_visitor' => $uniqueVisitorCount
         ]);
 
-        $post = Post::where('room_id', $id)
-            ->withLikes()
-            ->latest()
-            ->first();
-        $postLikes = Like::where('post_id', $post->id)->count();*/
-
-        return view('main.mbgallery');
+        return view('main.mbgallery', compact('room'));
     }
 
 

@@ -55,11 +55,39 @@
             height: 220px;
             font-size: 13px;
             overflow: hidden;
-            text-align: left;
+            text-align: center;
             color:#000000;
         }
         .owl-controls{
             display: none !important;
+        }
+        .slider_main_btn{
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            background: #E84B7B;
+            border: 0px;
+            border-radius:10px;
+            color: #ffffff;
+            float: left;
+            line-height: 50px;
+            font-weight: bold;
+
+        }
+        .slider_title_1{
+            padding: 5px 20px;
+            color: #E84B7B;
+            font-size: 21px;
+            text-align: center;
+            color: #e84b7c !important;
+        }
+        .slider_title_2{
+            padding: 0px 20px;
+            color: #E84B7B;
+            font-size: 21px;
+            text-align: center;
+            margin-top: -10px;
+            color: #e84b7c !important;
         }
     </style>
 <script type="text/javascript">
@@ -78,9 +106,10 @@
                         <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
-                                    <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" onclick="openmodel('1')">
+                                    <img src="{{asset("imgs/slider/1.jpg")}}" style=" width: 100%;height: 250px;" onclick="openmodel('1')">
                                     <div>
-                                        <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Patients Room Online </h3>
+                                        <h3 class="h4 pad-top_20-24 slider_title_1">Patients</h3>
+                                        <h3 class="h4 pad-top_20-24 slider_title_2 ">Room Online </h3>
                                         <div class="pad-top_12" style="padding: 0px 20px">
                                             <p class="card_text">
                                                 A health journey is difficult to undergo alone so we are connecting loved ones  without distractions anywhere & anytime
@@ -89,7 +118,7 @@
                                     </div>
                                     <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
                                         <div style="height: 50px">
-                                            <a href="{{asset("createwebsite")}}" type="btn"  style="width: 100%;height: 50px;text-align: center;background: #E84B7B;border: 0px;border-radius:10px;color: #ffffff;float: left;line-height: 50px">
+                                            <a href="{{asset("createwebsite")}}" type="btn"  class="slider_main_btn">
                                                 Open Room
                                             </a>
                                         </div>
@@ -107,9 +136,10 @@
                             <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                                 <div class="uk-card-box">
                                     <div  class="uk-card-sub-box">
-                                        <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" onclick="openmodel('1')">
+                                        <img src="{{asset("imgs/slider/2.jpg")}}" style=" width: 100%;height: 250px;" onclick="openmodel('1')">
                                         <div>
-                                            <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left"> Search & Follow</h3>
+                                            <h3 class="h4 pad-top_20-24 slider_title_1"> Search</h3>
+                                            <h3 class="h4 pad-top_20-24 slider_title_2">and Follow</h3>
                                             <div class="pad-top_12" style="padding: 0px 20px">
                                                 <p class="card_text">
                                                     Virtual Rooms of beautiful memories to keep you strong while your patient recover
@@ -118,7 +148,7 @@
                                         </div>
                                         <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
                                             <div style="height: 50px">
-                                                <a href="{{asset("createwebsite")}}" type="btn"  style="width: 100%;height: 50px;text-align: center;background: #E84B7B;border: 0px;border-radius:10px;color: #ffffff;float: left;line-height: 50px">
+                                                <a href="{{asset("createwebsite")}}" type="btn"  class="slider_main_btn">
                                                     Search Rooms
                                                 </a>
                                             </div>
@@ -136,9 +166,10 @@
                         <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
-                                    <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" onclick="openmodel('1')">
+                                    <img src="{{asset("imgs/slider/3.jpg")}}" style=" width: 100%;height: 250px;" onclick="openmodel('1')">
                                     <div>
-                                        <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Even as Strangers</h3>
+                                        <h3 class="h4 pad-top_20-24 slider_title_1" >Even</h3>
+                                        <h3 class="h4 pad-top_20-24 slider_title_2" >as Strangers</h3>
                                         <div class="pad-top_12" style="padding: 0px 20px">
                                             <p class="card_text">
                                                 Patients without their loved ones around have public rooms to receive support from all over the world
@@ -147,7 +178,7 @@
                                     </div>
                                     <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
                                         <div style="height: 50px">
-                                            <a href="{{asset("createwebsite")}}" type="btn"  style="width: 100%;height: 50px;text-align: center;background: #E84B7B;border: 0px;border-radius:10px;color: #ffffff;float: left;line-height: 50px">
+                                            <a href="{{asset("createwebsite")}}" type="btn"  class="slider_main_btn">
                                                 Unite in Care
                                             </a>
                                         </div>
@@ -163,9 +194,10 @@
                         <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
-                                    <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" onclick="openmodel('1')">
+                                    <img src="{{asset("imgs/slider/4.jpg")}}" style=" width: 100%;height: 250px;" onclick="openmodel('1')">
                                     <div>
-                                        <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left">Helping Hospitals</h3>
+                                        <h3 class="h4 pad-top_20-24 slider_title_1" >Helping </h3>
+                                        <h3 class="h4 pad-top_20-24 slider_title_2" >Hospitals</h3>
                                         <div class="pad-top_12" style="padding: 0px 20px">
                                             <p class="card_text">
                                                 Less visitations means less contamination & smoother operations
@@ -174,7 +206,7 @@
                                     </div>
                                     <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
                                         <div style="height: 50px">
-                                            <a href="{{asset("createwebsite")}}" type="btn"  style="width: 100%;height: 50px;text-align: center;background: #E84B7B;border: 0px;border-radius:10px;color: #ffffff;float: left;line-height: 50px">
+                                            <a href="{{asset("createwebsite")}}" type="btn"  class="slider_main_btn">
                                                 Our Partners
                                             </a>
                                         </div>
@@ -190,9 +222,10 @@
                         <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
-                                    <img src="{{asset("imgs/homeGroup2.png")}}" style="object-fit: cover; width: 100%;height: 250px;" onclick="openmodel('1')">
+                                    <img src="{{asset("imgs/slider/5.jpg")}}" style=" width: 100%;height: 250px;" onclick="openmodel('1')">
                                     <div>
-                                        <h3 class="h4 pad-top_20-24" style="padding: 5px 20px;color: #E84B7B;font-size: 21px;text-align: left"> Immortalise Your Care Journey  </h3>
+                                        <h3 class="h4 pad-top_20-24 slider_title_1"> Find more</h3>
+                                        <h3 class="h4 pad-top_20-24 slider_title_2">Help</h3>
                                         <div class="pad-top_12" style="padding: 0px 20px">
                                             <p class="card_text">
                                                 Your kind deeds & lovely words will remain forever
@@ -201,7 +234,7 @@
                                     </div>
                                     <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
                                         <div style="height: 50px">
-                                            <a href="{{asset("createwebsite")}}" type="btn"  style="width: 100%;height: 50px;text-align: center;background: #E84B7B;border: 0px;border-radius:10px;color: #ffffff;float: left;line-height: 50px">
+                                            <a href="{{asset("createwebsite")}}" type="btn"  class="slider_main_btn">
                                                 Resources
                                             </a>
                                         </div>

@@ -180,11 +180,11 @@ function goNext(prev,next) {
 
         var privecy = $("#howCanSeeYourRoomStatus").val();
         if(privecy == 3){
-            $("#last_Privacy").text("Me Only");
+            $("#last_Privacy").text("Private");
         }else if(privecy == 2){
-            $("#last_Privacy").text("Some People");
+            $("#last_Privacy").text("Limited");
         }else{
-            $("#last_Privacy").text("Anyone");
+            $("#last_Privacy").text("Public");
         }
 
         var searchable = $("#issearchable").val();

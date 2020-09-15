@@ -9,7 +9,6 @@ function toggleAlert(ele) {
 }
 
 function goNext(prev,next) {
-    debugger;
     if(prev == "sc-terms")
     {
 

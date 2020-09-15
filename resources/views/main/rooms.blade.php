@@ -26,6 +26,8 @@
             border-radius: 5px;
             right: 25px;
             padding: 2px 10px;
+            overflow: hidden;
+            display: list-item;
         }
         .post_time{
             padding-left: 120px;

@@ -56,7 +56,9 @@
         font-size: 16px;color: black;
         overflow: hidden;
     }
-
+    .main_content, .site-content{
+        background: #f7f7f7;
+    }
 </style>
     <div class="site-content">
         <div class="site-create-steps">
@@ -726,7 +728,9 @@
                                 <div>
                                     <ul class="last_list" style="list-style: none">
                                         <li>
-                                            <div class="last_step_icon" ><i class="fa fa-user"></i></div>
+                                            <div class="last_step_icon" >
+                                                <img src="{{asset('imgs/user_info/1.jpg')}}" style="padding-right: 10px;">
+                                            </div>
                                             <div class="last_step_for">Site For</div>
                                             <div >
                                                 <label>
@@ -735,7 +739,9 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="last_step_icon" ><i class="fa fa-user"></i></div>
+                                            <div class="last_step_icon" >
+                                                <img src="{{asset('imgs/user_info/2.jpg')}}" style="padding-right: 10px;width: 35px">
+                                            </div>
                                             <div class="last_step_for">Name</div>
                                             <div >
                                                 <label>
@@ -744,7 +750,9 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="last_step_icon" ><i class="fa fa-user"></i></div>
+                                            <div class="last_step_icon" >
+                                                <img src="{{asset('imgs/user_info/3.jpg')}}" style="padding-right: 10px;width: 35px">
+                                            </div>
                                             <div class="last_step_for">Room Address</div>
                                             <div style="overflow: hidden" >
                                                 <label>
@@ -753,7 +761,9 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="last_step_icon" ><i class="fa fa-user"></i></div>
+                                            <div class="last_step_icon" >
+                                                <img src="{{asset('imgs/user_info/4.jpg')}}" style="padding-right: 10px;width: 35px">
+                                            </div>
                                             <div class="last_step_for">Room Title</div>
                                             <div >
                                                 <label>
@@ -762,7 +772,9 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="last_step_icon" ><i class="fa fa-user"></i></div>
+                                            <div class="last_step_icon" >
+                                                <img src="{{asset('imgs/user_info/5.jpg')}}" style="padding-right: 10px;width: 35px">
+                                            </div>
                                             <div class="last_step_for">Privacy</div>
                                             <div >
                                                 <label>
@@ -771,7 +783,9 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="last_step_icon" ><i class="fa fa-user"></i></div>
+                                            <div class="last_step_icon" >
+                                                <img src="{{asset('imgs/user_info/6.jpg')}}" style="padding-right: 10px;width: 35px">
+                                            </div>
                                             <div class="last_step_for">Google Search Settings </div>
                                             <div >
                                                 <label>
