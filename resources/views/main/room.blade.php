@@ -111,7 +111,7 @@
             @if(isset($post))
             <div class="posts_section">
                 <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
-                <div class="post_info">{{ $post->title }} by {{ $room->user->first_name }} {{ $room->user->last_name }}
+                <div class="post_info">{{ $post->title }} by {{ auth()->user()->first_name }} {{ auth()->user()->last_name }}
                     <span class="post_time"> — {{ $post->created_at->diffForHumans() }}</span></div>
                 <div class="post_text">{!! $post->body !!}</div>
                 <div class="post_likes">

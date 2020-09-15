@@ -97,7 +97,9 @@
                                 <div style="width: 100%;height: 310px;border-radius: 20px 20px 0px 0px;box-shadow: 2px 2px 10px 1px #e4e1e1 ">
                                     <div class="post-header" style="height:60px;">
                                         <div style="padding-top: 12px">
-                                            <img src="imgs/homeGroup2.png" style="position: absolute;height: 100px;width: 100px;border-radius: 100px;left: 30px;top:10px;border: 2px solid #ffffff;object-fit: cover">
+                                            <a href="/rooms/room/{{ $room->id }}">
+                                                <img src="imgs/homeGroup2.png" style="position: absolute;height: 100px;width: 100px;border-radius: 100px;left: 30px;top:10px;border: 2px solid #ffffff;object-fit: cover">
+                                            </a>
                                         </div>
                                         <a href="/rooms/room/{{ $room->id }}">
                                             <div class="post_person_name" >{{ $room->title }} </div>
@@ -109,7 +111,9 @@
                                         </div>
                                     </div>
                                     <div style="width: 100%;height: 200px;">
-                                        <img src="imgs/homeGroup2.png" style="height: 200px;width: 100%;">
+                                        <a href="/rooms/room/{{ $room->id }}">
+                                            <img src="imgs/homeGroup2.png" style="height: 200px;width: 100%;">
+                                        </a>
                                     </div>
                                     <div style="height: 100px;width: 100%" class="post_footer_icons">
                                         <div style="width: 25%;float: left;text-align: center">
@@ -221,7 +225,6 @@
                                                     </div>
                                                     <a href="/rooms/room/{{ $room->id }}">
                                                         <div class="post_person_name" style="font-size: 20px;color:#E84B7B;padding-left: 120px;font-weight: bold;">{{ $room->title }} </div>
-
                                                     </a>
                                                     <div class="post_time" style="font-size: 10px;padding-left: 120px;color:#E84B7B">{{ $room->created_at->diffForHumans() }}</div>
                                                     <div class="post_likes" style="width: 90px;float: right;position: absolute;right: 15px;top: 16px;height: 40px;}">
