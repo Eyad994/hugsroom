@@ -4,12 +4,19 @@
   text-align: left;
 }
 
+@font-face {
+  font-family:'PoppinsLight';
+  src: url('/fonts/Poppins-Light.otf') format('otf');
+  font-style: normal;
+  font-weight: normal;
+}
+
 .fc-rtl {
   text-align: right;
 }
 html *
 {
-  font-family: 'Poppins' !important;
+  font-family: PoppinsLight !important;
   /*font-family: 'DINPro-Medium', serif !important;*/
 }
 body .fc {
