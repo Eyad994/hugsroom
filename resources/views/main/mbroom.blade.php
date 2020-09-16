@@ -13,7 +13,7 @@
     <script type="text/javascript">
         $(function () {
             if(screen.width > "768") {
-                window.location.href = "/rooms/room/1";
+                window.location.href = "/rooms/room/{{ $room->id }}";
             }
         });
     </script>
