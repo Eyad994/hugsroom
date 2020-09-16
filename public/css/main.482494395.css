@@ -6,7 +6,7 @@
 
 @font-face {
   font-family:'PoppinsLight';
-  src: url('/fonts/Poppins-Light.otf') format('otf');
+  src: url("/fonts/Poppins-Light.otf") ;
   font-style: normal;
   font-weight: normal;
 }
