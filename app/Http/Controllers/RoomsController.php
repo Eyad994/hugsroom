@@ -189,4 +189,29 @@ public function gallery($id)
 
         return back();
     }
+
+    public function uploadBackground($id, Request $request)
+    {
+        $file = request()->file('background-image');
+        $fileName = md5($file->getClientOriginalName() . time()) . "." . $file->getClientOriginalExtension();
+        $file->move('./uploads/background/', $fileName);
+        rooms::where('id', $id)->update([
+            'cover_image' => $fileName
+        ]);
+
+        return $request->all();
+    }
+
+    public function uploadProfileImage($id, Request $request)
+    {
+        $file = request()->file('file');
+        $fileName = md5($file->getClientOriginalName() . time()) . "." . $file->getClientOriginalExtension();
+        $file->move('./uploads/profile/', $fileName);
+        rooms::where('id', $id)->update([
+            'profile_image' => $fileName
+        ]);
+
+        return $request->all();
+    }
+
 }

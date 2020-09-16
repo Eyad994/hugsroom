@@ -1,26 +1,32 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="profile_header">
+            <div class="profile_header" style="background-image: url({{ asset("uploads/background/$room->cover_image") }})">
                 <div style="height: 20px"></div>
                 <label class="btn change_pic_btn" >
                     <div style="padding-top: 7px">
                         <i class="fa fa-camera" aria-hidden="true"></i>
                     </div>
-                    <input type="file" style="visibility: hidden;"/>
+                    <form action="" id="background-image-form" method="POST">
+                        @csrf
+                        <input type="file" name="background-image" id="background-image" style="visibility: hidden;"/>
+                    </form>
                 </label>
                 <div class="share_icon" style="padding: 2px 20px;float: right;">
                     <i class="fa fa-share-alt" style="font-size: 25px;color:#ffffff"></i>
                 </div>
             </div>
             <div class="profile_photo">
-                <img src="{{asset('imgs/homeGroup2.png')}}" style="object-fit: cover; width: 170px;height: 170px">
+                <img @if($room->profile_image == null) src="{{asset('imgs/homeGroup2.png')}}" @endif style="object-fit: cover; width: 170px;height: 170px; background-size: cover; background-image: url({{ asset("uploads/profile/$room->profile_image") }})">
             </div>
             <label class="btn change_pic_btn"  style="position: absolute;left: 250px;top: 200px;" >
                 <div style="padding-top: 7px">
                     <i class="fa fa-camera" aria-hidden="true"></i>
                 </div>
-                <input type="file" style="visibility: hidden;"/>
+                <form action="" id="profile-image-form" method="POST">
+                    @csrf
+                    <input type="file" id="profile_image_upload" name="profile_image_upload" style="visibility: hidden;"/>
+                </form>
             </label>
             <div class="post_profile_name">
                 {{ $room->first_name }} {{ $room->last_name }}
@@ -120,3 +126,46 @@
         </div>
     </div>
 </div>
+
+<script>
+
+
+    $('#background-image').change(function () {
+        let formData = new FormData($('#background-image-form')[0]);
+        let file = $('input[type=file]')[0].files[0];
+        formData.append('file', file, file.name);
+        $.ajax({
+            url: '{{ url("/room/$room->id/uploadBackgroundImage") }}',
+            headers: {'X-CSRF-TOKEN': "{{ csrf_token() }}"},
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            cache: false,
+            data: formData,
+            success: function(data) {
+                location.reload();
+            }
+        });
+    });
+
+    $('#profile_image_upload').change(function () {
+
+        let formData = new FormData($('#background-image-form')[0]);
+        let file = $('input[name=profile_image_upload]')[0].files[0];
+        formData.append('file', file, file.name);
+        $.ajax({
+            headers: {'X-CSRF-TOKEN': "{{ csrf_token() }}"},
+            url: '/room/{{ $room->id }}/uploadProfileImage',
+            type: 'POST',
+            data: formData,
+            //Options to tell JQuery not to process data or worry about content-type
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (data) {
+                location.reload();
+            }
+        });
+    })
+
+</script>
