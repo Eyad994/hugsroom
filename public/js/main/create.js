@@ -249,3 +249,21 @@ function submitCreateRoomForm() {
 
 
 }
+
+function goToSection(section) {
+    if(section == "sc-patient-name")
+    {
+        var checkmeorelse = $("#me-or-else").val();
+
+        if(checkmeorelse == 1)
+        {
+            section =    "sc-patient-name-else";
+        }else{
+            section =    "sc-patient-name-me";
+        }
+    }
+
+    $("#last_step").removeClass("active");
+    $("#"+section).addClass("active");
+    
+}

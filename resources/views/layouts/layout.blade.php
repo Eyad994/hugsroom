@@ -1,17 +1,16 @@
 <html>
 <head>
 
-    <script type="text/javascript">// Foresee All Pages*****************************************
+  {{--  <script type="text/javascript">// Foresee All Pages*****************************************
         var d = new Date();
         d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000));
         var expires = "expires="+d.toUTCString();
         document.cookie = "showSurvey=true;" + expires + ";path=/";
     </script>
-
+--}}
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="apple-itunes-app" content="app-id=365726944">
 
     <title>Hugs Room</title>
     <link href="{{asset('imgs/favicon.ico')}}" rel="icon" type="image/x-icon">
@@ -20,7 +19,7 @@
     <link href="{{asset('css/v5.3222908342.css')}}" rel="stylesheet" type="text/css">
 
     <link href="{{asset('css/cbcomponents.752154146.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{asset('css/main.482494395.css')}}" rel="stylesheet" type="text/css">
+   {{-- <link href="{{asset('css/main.482494395.css')}}" rel="stylesheet" type="text/css">--}}
     <link href="{{asset('css/main.2868986225.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('css/main.4086732098.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('css/main.3775130132.css')}}" rel="stylesheet" type="text/css">
@@ -28,7 +27,7 @@
 {{--    <link rel="stylesheet" href="https://swiperjs.com/package/swiper-bundle.min.css">--}}
    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">--}}
     <link rel="stylesheet" href="{{asset("css/cdn/font-awesome.min.css")}}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
  {{--   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.css'>
@@ -230,6 +229,13 @@
         white-space: normal;
         text-align: center;
         font-size: 15px;
+    }
+    a:link {
+        text-decoration: none;
+    }
+
+    a:visited {
+        text-decoration: none;
     }
 </style>
 <body class="homepage-16Q1" data-ga-category="Brooklyn">

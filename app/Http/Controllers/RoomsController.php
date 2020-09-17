@@ -41,7 +41,7 @@ class RoomsController extends Controller
     public function rooms()
     {
         $userRooms = rooms::where('user_id', auth()->user()->id)->latest()->get();
-        return view('main.rooms', compact('userRooms'));
+        return view('rooms.rooms', compact('userRooms'));
     }
 
     public function room($id)
@@ -72,10 +72,11 @@ class RoomsController extends Controller
         if (!is_null($post))
         {
             $postLikes = Like::where('post_id', $post->id)->count();
-            return view('main.room', compact('room', 'post', 'postLikes'));
+            return view('rooms.room', compact('room', 'post', 'postLikes'));
         }
-        return view('main.room', compact('room', 'post'));
+        return view('rooms.room', compact('room', 'post'));
     }
+
 
     public function mbroom($id)
     {
@@ -106,12 +107,12 @@ class RoomsController extends Controller
         if (!is_null($post))
         {
             $postLikes = Like::where('post_id', $post->id)->count();
-            return view('main.mbroom', compact('room', 'post', 'postLikes'));
+            return view('mbRooms.mbroom', compact('room', 'post', 'postLikes'));
         }
-        return view('main.mbroom', compact('room', 'post'));
+        return view('mbRooms.mbroom', compact('room', 'post'));
     }
 
-public function gallery($id)
+    public function gallery($id)
     {
         $room = rooms::where('id', $id)->first();
         $nonUniqueVisitor = $room->non_unique_visitor;
@@ -133,7 +134,7 @@ public function gallery($id)
             'unique_visitor' => $uniqueVisitorCount
         ]);
 
-        return view('main.gallery', compact('room'));
+        return view('rooms.gallery', compact('room'));
     }
 
     public function mbgallery($id)
@@ -158,7 +159,7 @@ public function gallery($id)
             'unique_visitor' => $uniqueVisitorCount
         ]);
 
-        return view('main.mbgallery', compact('room'));
+        return view('mbRooms.mbgallery', compact('room'));
     }
 
 
@@ -212,6 +213,107 @@ public function gallery($id)
         ]);
 
         return $request->all();
+    }
+
+    public function wellWishes($id)
+    {
+        $room = rooms::where('id', $id)->first();
+        $nonUniqueVisitor = $room->non_unique_visitor;
+        $visitor = Visitor::where('ip', request()->ip())->where('room_id', $id)->first();
+
+        if (is_null($visitor))
+        {
+            Visitor::create([
+                'ip' => request()->ip(),
+                'room_id' => $id
+            ]);
+        }
+
+        $uniqueVisitorCount = Visitor::where('room_id', $id)->count();
+
+        $room->update([
+            'non_unique_visitor' => ++$nonUniqueVisitor,
+            'unique_visitor' => $uniqueVisitorCount
+        ]);
+
+        $post = Post::where('room_id', $id)
+            ->withLikes()
+            ->latest()
+            ->first();
+        if (!is_null($post))
+        {
+            $postLikes = Like::where('post_id', $post->id)->count();
+            return view('rooms.wellWishes', compact('room', 'post', 'postLikes'));
+        }
+        return view('rooms.wellWishes', compact('room', 'post'));
+    }
+    public function mbwellWishes($id)
+    {
+        $room = rooms::where('id', $id)->first();
+        $nonUniqueVisitor = $room->non_unique_visitor;
+        $visitor = Visitor::where('ip', request()->ip())->where('room_id', $id)->first();
+
+        if (is_null($visitor))
+        {
+            Visitor::create([
+                'ip' => request()->ip(),
+                'room_id' => $id
+            ]);
+        }
+
+        $uniqueVisitorCount = Visitor::where('room_id', $id)->count();
+
+        $room->update([
+            'non_unique_visitor' => ++$nonUniqueVisitor,
+            'unique_visitor' => $uniqueVisitorCount
+        ]);
+
+        $post = Post::where('room_id', $id)
+            ->withLikes()
+            ->latest()
+            ->first();
+        if (!is_null($post))
+        {
+            $postLikes = Like::where('post_id', $post->id)->count();
+            return view('mbRooms.mbwellWishes', compact('room', 'post', 'postLikes'));
+        }
+        return view('mbRooms.mbwellWishes', compact('room', 'post'));
+    }
+    public function addJournal($id)
+    {
+        $room = rooms::where('id', $id)->first();
+        return view('mbRooms.addJournal', compact('room'));
+    }
+    public function journal($id)
+    {$room = rooms::where('id', $id)->first();
+        $nonUniqueVisitor = $room->non_unique_visitor;
+        $visitor = Visitor::where('ip', request()->ip())->where('room_id', $id)->first();
+
+        if (is_null($visitor))
+        {
+            Visitor::create([
+                'ip' => request()->ip(),
+                'room_id' => $id
+            ]);
+        }
+
+        $uniqueVisitorCount = Visitor::where('room_id', $id)->count();
+
+        $room->update([
+            'non_unique_visitor' => ++$nonUniqueVisitor,
+            'unique_visitor' => $uniqueVisitorCount
+        ]);
+
+        $post = Post::where('room_id', $id)
+            ->withLikes()
+            ->latest()
+            ->first();
+        if (!is_null($post))
+        {
+            $postLikes = Like::where('post_id', $post->id)->count();
+            return view('mbRooms.journal', compact('room', 'post', 'postLikes'));
+        }
+        return view('mbRooms.journal', compact('room', 'post'));
     }
 
 }

@@ -727,7 +727,7 @@
                             <div class="content">
                                 <div>
                                     <ul class="last_list" style="list-style: none">
-                                        <li>
+                                        <li onclick="goToSection('sc-who')">
                                             <div class="last_step_icon" >
                                                 <img src="{{asset('imgs/user_info/1.jpg')}}" style="padding-right: 10px;">
                                             </div>
@@ -738,7 +738,7 @@
                                                 </label>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li onclick="goToSection('sc-patient-name')">
                                             <div class="last_step_icon" >
                                                 <img src="{{asset('imgs/user_info/2.jpg')}}" style="padding-right: 10px;width: 35px">
                                             </div>
@@ -749,7 +749,7 @@
                                                 </label>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li onclick="goToSection('sc-title-and-address')">
                                             <div class="last_step_icon" >
                                                 <img src="{{asset('imgs/user_info/3.jpg')}}" style="padding-right: 10px;width: 35px">
                                             </div>
@@ -760,7 +760,7 @@
                                                 </label>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li onclick="goToSection('sc-title-and-address')">
                                             <div class="last_step_icon" >
                                                 <img src="{{asset('imgs/user_info/4.jpg')}}" style="padding-right: 10px;width: 35px">
                                             </div>
@@ -771,7 +771,7 @@
                                                 </label>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li onclick="goToSection('sc-custom-privacy')">
                                             <div class="last_step_icon" >
                                                 <img src="{{asset('imgs/user_info/5.jpg')}}" style="padding-right: 10px;width: 35px">
                                             </div>
@@ -782,7 +782,7 @@
                                                 </label>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li onclick="goToSection('sc-praivet-cb-search')">
                                             <div class="last_step_icon" >
                                                 <img src="{{asset('imgs/user_info/6.jpg')}}" style="padding-right: 10px;width: 35px">
                                             </div>

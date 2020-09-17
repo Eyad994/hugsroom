@@ -27,7 +27,7 @@
                     </div>
                     <div class="adjoined-bottom">
                         <div class="grid-container">
-                            <div class="grid-width-100">
+                            <div class="">
                                 <textarea name="body" id="editor">
                                 </textarea>
                             </div>
