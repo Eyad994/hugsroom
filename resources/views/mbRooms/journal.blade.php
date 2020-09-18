@@ -36,8 +36,8 @@
 
                 <div class="post_comment_form" style="display: block">
                 <div class="row" style="margin-top: 10px">
-                    <div class="comment_number"> 2 Comments </div>
-                    <div id="comments-data">
+                    <div class="comment_number" id="postCommentsCount"> {{ $post->comments->count() }} Comments </div>
+                    <div id="comments-data" class="comments-data">
                     @foreach($post->comments as $comment)
                         <div class="col-xs-12">
                             <div class="comment-item" style="margin:10px 0px !important;">
@@ -51,9 +51,16 @@
                                          data-qa-id="comment-body-5f5e3001bdc412053a6ee1b8">{{ $comment->body }}</div>
                                 </div>
                                 <div class="comment-footer">
-                                    <form action="{{ route('likeComment', $comment->id) }}" method="POST">
+                                    <form action="{{ route('likeComment', $comment->id) }}" id="{{ $comment->id }}" method="POST" class="like-form">
                                         @csrf
-                                        <button type="submit" class="comment_like"><i class="fa fa-heart"></i></button>
+                                        <div id="comment-likes-data-{{ $comment->id }}" class="comment-likes-data">
+                                            @if($comment->isLikedByComment(auth()->user()))
+                                                <button class="btn like_btn"><i class="fa fa-heart"></i></button>
+                                            @else
+                                                <button class="btn like_btn" style="color: unset"><i class="fa fa-heart"></i></button>
+                                            @endif
+                                                <div class="how_liked">{{ $comment->likesComment->count() }} Hearts</div>
+                                        </div>
                                     </form>
                                     <div class="comment_edit">edit</div>
                                     <div class="comment_delete">delete</div>
@@ -118,8 +125,30 @@
                 cache: false,
                 processData: false,
                 success: function (data) {
-                    console.log(data)
+                    var count = data + " Comments";
+                    $('#postCommentsCount').html(count);
                     $("#comments-data").load(" #comments-data > *");
+
+                }
+            });
+        });
+
+        $('.like-form').on('submit', function (e) {
+
+            e.preventDefault();
+            var form = $(this);
+            var url = form.attr('action');
+            var id = form.attr('id');
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function (data) {
+                    $("#comment-likes-data-"+id).load(" #comment-likes-data-"+id +"> *");
                 }
             });
         });

@@ -20,7 +20,7 @@ class PostController extends Controller
 
         $post->comments()->save($comment);
 
-        return back();
+        return $post->comments->count();
     }
 
     public function replyStore(Request $request)

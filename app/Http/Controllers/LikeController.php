@@ -42,7 +42,7 @@ class LikeController extends Controller
             return back();
         }
 
-        $comment->like(auth()->user());
+        $comment->likeComment(auth()->user());
         $commentLikes = CommentLike::where('comment_id', $comment->id)->count();
 
     }

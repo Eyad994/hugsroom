@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable
 {
-    use Notifiable, Likable;
+    use Notifiable, Likable, LikableComment;
 
     /**
      * The attributes that are mass assignable.
