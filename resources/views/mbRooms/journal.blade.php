@@ -13,7 +13,7 @@
                     <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
                     <div class="post_info">{{ $post->title }} by {{ $room->user->first_name }} {{ $room->user->last_name }}
                         <span class="post_time"> — {{ $post->created_at->diffForHumans() }}</span></div>
-                    <div class="post_text">{!! \Illuminate\Support\Str::limit($post->body, 75, ' Show More')  !!} </div>
+                    <div class="post_text">{!! $post->body  !!} </div>
                     <div class="post_likes">
                         <form action="/post/{{ $post->id }}/like" method="POST" id="likePostForm">
                             @csrf
@@ -128,12 +128,12 @@
                     var count = data + " Comments";
                     $('#postCommentsCount').html(count);
                     $("#comments-data").load(" #comments-data > *");
-
+                    e.preventDefault();
                 }
             });
         });
-
-        $('.like-form').on('submit', function (e) {
+        $(document).on('submit','.like-form',function(e){
+        //$('.like-form').on('submit', function (e) {
 
             e.preventDefault();
             var form = $(this);
@@ -152,5 +152,6 @@
                 }
             });
         });
+
     </script>
 @endsection
