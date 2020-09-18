@@ -67,15 +67,18 @@
                             <span class="post_time"> — {{ $post->created_at->diffForHumans() }}</span></div>
                         <div class="post_text">{!! $post->body !!}</div>
                         <div class="post_likes">
-                            <form action="/post/{{ $post->id }}/like" method="POST">
+                            <form action="/post/{{ $post->id }}/like" method="POST" id="likePostForm" class="likePostForm">
                                 @csrf
-                                @if($post->isLikedBy(auth()->user()))
-                                    <button type="submit" class="btn like_btn"><i class="fa fa-heart"></i></button>
-                                @else
-                                    <button class="btn like_btn" style="color: unset"><i class="fa fa-heart"></i></button>
-                                @endif
+                                <div id="form-data">
+                                    @if($post->isLikedBy(auth()->user()))
+                                        <button class="btn like_btn"><i class="fa fa-heart"></i></button>
+                                    @else
+                                        <button class="btn like_btn" style="color: unset"><i class="fa fa-heart"></i></button>
+                                    @endif
+                                    <div class="how_liked" id="postLikesCount">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>
+                                </div>
                             </form>
-                            <div class="how_liked">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>
+
                             {{--<div class="post_comments" onclick="openCommentsSection()">Post comment</div>--}}
                             <div class="share_post">
                                 share
@@ -130,7 +133,7 @@
             @endif
         </div>
         <div style="padding: 10px;color: #e84b7c;">Latest Site Activity</div>
-        @if(isset($post))
+       {{-- @if(isset($post))
             <a href="{{asset("rooms/journal/1")}}">
                 <div class="posts_section">
                     <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
@@ -147,7 +150,7 @@
                             @endif
                         </form>
                         <div class="how_liked">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>
-                        {{--<div class="post_comments" onclick="openCommentsSection()">Post comment</div>--}}
+                        --}}{{--<div class="post_comments" onclick="openCommentsSection()">Post comment</div>--}}{{--
                         <div class="share_post">
                             share
                             <i class="fa fa-share"></i>
@@ -155,7 +158,7 @@
                     </div>
                 </div>
             </a>
-        @endif
+        @endif--}}
     </div>
 
     <script type="text/javascript">
@@ -165,4 +168,25 @@
     <script src='{{ asset('js/cdn/2.1.3/jquery.min.js') }}'></script>
     <script src='{{asset("js/cdn/owl.carousel.min.js")}}'></script>
     <script  src="{{asset('js/roommbcardSwip.js')}}"></script>
+
+    <script>
+
+        $('#likePostForm').on('submit', function (e) {
+            e.preventDefault();
+            var form = $(this);
+            var url = form.attr('action');
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function (data) {
+                    $("#form-data").load(" #form-data > *");
+                }
+            });
+        });
+    </script>
 @endsection

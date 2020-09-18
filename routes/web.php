@@ -50,6 +50,7 @@ Route::get('/rooms/mbgallery/{id}', 'RoomsController@mbgallery');
 Route::post('storePost', 'RoomsController@storePost')->name('storePost');
 Route::post('storeComment', 'PostController@storeComment')->name('storeComment');
 Route::post('post/{post}/like', 'LikeController@store');
+Route::post('comment/{comment}/like', 'LikeController@storeComment')->name('likeComment');
 Route::post('post/{post}/destroy', 'LikeController@destroy');
 Route::post('/room/{id}/uploadBackgroundImage', 'RoomsController@uploadBackground');
 Route::post('/room/{id}/uploadProfileImage', 'RoomsController@uploadProfileImage');

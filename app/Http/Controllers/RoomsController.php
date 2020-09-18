@@ -50,8 +50,7 @@ class RoomsController extends Controller
         $nonUniqueVisitor = $room->non_unique_visitor;
         $visitor = Visitor::where('ip', request()->ip())->where('room_id', $id)->first();
 
-        if (is_null($visitor))
-        {
+        if (is_null($visitor)) {
             Visitor::create([
                 'ip' => request()->ip(),
                 'room_id' => $id
@@ -69,14 +68,12 @@ class RoomsController extends Controller
             ->withLikes()
             ->latest()
             ->first();
-        if (!is_null($post))
-        {
+        if (!is_null($post)) {
             $postLikes = Like::where('post_id', $post->id)->count();
             return view('rooms.room', compact('room', 'post', 'postLikes'));
         }
         return view('rooms.room', compact('room', 'post'));
     }
-
 
     public function mbroom($id)
     {
@@ -84,8 +81,7 @@ class RoomsController extends Controller
         $nonUniqueVisitor = $room->non_unique_visitor;
         $visitor = Visitor::where('ip', request()->ip())->where('room_id', $id)->first();
 
-        if (is_null($visitor))
-        {
+        if (is_null($visitor)) {
             Visitor::create([
                 'ip' => request()->ip(),
                 'room_id' => $id
@@ -104,8 +100,7 @@ class RoomsController extends Controller
             ->latest()
             ->first();
 
-        if (!is_null($post))
-        {
+        if (!is_null($post)) {
             $postLikes = Like::where('post_id', $post->id)->count();
             return view('mbRooms.mbroom', compact('room', 'post', 'postLikes'));
         }
@@ -118,8 +113,7 @@ class RoomsController extends Controller
         $nonUniqueVisitor = $room->non_unique_visitor;
         $visitor = Visitor::where('ip', request()->ip())->where('room_id', $id)->first();
 
-        if (is_null($visitor))
-        {
+        if (is_null($visitor)) {
             Visitor::create([
                 'ip' => request()->ip(),
                 'room_id' => $id
@@ -144,8 +138,7 @@ class RoomsController extends Controller
         $nonUniqueVisitor = $room->non_unique_visitor;
         $visitor = Visitor::where('ip', request()->ip())->where('room_id', $id)->first();
 
-        if (is_null($visitor))
-        {
+        if (is_null($visitor)) {
             Visitor::create([
                 'ip' => request()->ip(),
                 'room_id' => $id
@@ -221,8 +214,7 @@ class RoomsController extends Controller
         $nonUniqueVisitor = $room->non_unique_visitor;
         $visitor = Visitor::where('ip', request()->ip())->where('room_id', $id)->first();
 
-        if (is_null($visitor))
-        {
+        if (is_null($visitor)) {
             Visitor::create([
                 'ip' => request()->ip(),
                 'room_id' => $id
@@ -240,21 +232,20 @@ class RoomsController extends Controller
             ->withLikes()
             ->latest()
             ->first();
-        if (!is_null($post))
-        {
+        if (!is_null($post)) {
             $postLikes = Like::where('post_id', $post->id)->count();
             return view('rooms.wellWishes', compact('room', 'post', 'postLikes'));
         }
         return view('rooms.wellWishes', compact('room', 'post'));
     }
+
     public function mbwellWishes($id)
     {
         $room = rooms::where('id', $id)->first();
         $nonUniqueVisitor = $room->non_unique_visitor;
         $visitor = Visitor::where('ip', request()->ip())->where('room_id', $id)->first();
 
-        if (is_null($visitor))
-        {
+        if (is_null($visitor)) {
             Visitor::create([
                 'ip' => request()->ip(),
                 'room_id' => $id
@@ -272,25 +263,26 @@ class RoomsController extends Controller
             ->withLikes()
             ->latest()
             ->first();
-        if (!is_null($post))
-        {
+        if (!is_null($post)) {
             $postLikes = Like::where('post_id', $post->id)->count();
             return view('mbRooms.mbwellWishes', compact('room', 'post', 'postLikes'));
         }
         return view('mbRooms.mbwellWishes', compact('room', 'post'));
     }
+
     public function addJournal($id)
     {
         $room = rooms::where('id', $id)->first();
         return view('mbRooms.addJournal', compact('room'));
     }
+
     public function journal($id)
-    {$room = rooms::where('id', $id)->first();
+    {
+        $room = rooms::where('id', $id)->first();
         $nonUniqueVisitor = $room->non_unique_visitor;
         $visitor = Visitor::where('ip', request()->ip())->where('room_id', $id)->first();
 
-        if (is_null($visitor))
-        {
+        if (is_null($visitor)) {
             Visitor::create([
                 'ip' => request()->ip(),
                 'room_id' => $id
@@ -308,8 +300,7 @@ class RoomsController extends Controller
             ->withLikes()
             ->latest()
             ->first();
-        if (!is_null($post))
-        {
+        if (!is_null($post)) {
             $postLikes = Like::where('post_id', $post->id)->count();
             return view('mbRooms.journal', compact('room', 'post', 'postLikes'));
         }

@@ -15,15 +15,17 @@
                         <span class="post_time"> — {{ $post->created_at->diffForHumans() }}</span></div>
                     <div class="post_text">{!! $post->body !!}</div>
                     <div class="post_likes">
-                        <form action="/post/{{ $post->id }}/like" method="POST">
+                        <form action="/post/{{ $post->id }}/like" method="POST" id="likePostForm">
                             @csrf
-                            @if($post->isLikedBy(auth()->user()))
-                                <button type="submit" class="btn like_btn"><i class="fa fa-heart"></i></button>
-                            @else
-                                <button class="btn like_btn" style="color: unset"><i class="fa fa-heart"></i></button>
-                            @endif
+                            <div id="form-data">
+                                @if($post->isLikedBy(auth()->user()))
+                                    <button class="btn like_btn"><i class="fa fa-heart"></i></button>
+                                @else
+                                    <button class="btn like_btn" style="color: unset"><i class="fa fa-heart"></i></button>
+                                @endif
+                                <div class="how_liked">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>
+                            </div>
                         </form>
-                        <div class="how_liked">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>
                         {{--<div class="post_comments" onclick="openCommentsSection()">Post comment</div>--}}
                         <div class="share_post">
                             share
@@ -35,6 +37,7 @@
                 <div class="post_comment_form" style="display: block">
                 <div class="row" style="margin-top: 10px">
                     <div class="comment_number"> 2 Comments </div>
+                    <div id="comments-data">
                     @foreach($post->comments as $comment)
                         <div class="col-xs-12">
                             <div class="comment-item" style="margin:10px 0px !important;">
@@ -47,9 +50,11 @@
                                     <div class="user-generated comment-body"
                                          data-qa-id="comment-body-5f5e3001bdc412053a6ee1b8">{{ $comment->body }}</div>
                                 </div>
-                                <span class="toolbar"><button><i class="cbicon-heart" aria-hidden="true"></i></button></span>
                                 <div class="comment-footer">
-                                    <div class="comment_like"><i class="fa fa-heart"></i></div>
+                                    <form action="{{ route('likeComment', $comment->id) }}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="comment_like"><i class="fa fa-heart"></i></button>
+                                    </form>
                                     <div class="comment_edit">edit</div>
                                     <div class="comment_delete">delete</div>
                                 </div>
@@ -57,6 +62,7 @@
 
                         </div>
                     @endforeach
+                    </div>
                 </div>
             </div>
             @endif
@@ -65,11 +71,57 @@
     </div>
     <div class="mobileFooter" style="display: none;">
         <div class="navbar" style="width: 100%;background: #ffffff;  z-index: 40000;padding-top: 5px;">
-            <input type="text" placeholder="Post a Comment " style="width: 80%;border: 1px solid #e84b7c;border-radius: 10px;height: 35px;padding-left: 10px" >
-            <button class="btn" style="color: #e84b7c;background: #ffffff">POST</button>
+            <form action="{{ route('storeComment') }}" method="POST" id="postCommentForm">
+                @csrf
+                <input type="hidden" name="post_id" value="{{ $post->id }}">
+                <input type="text" name="comment" placeholder="Post a Comment " style="width: 80%;border: 1px solid #e84b7c;border-radius: 10px;height: 35px;padding-left: 10px" >
+                <button type="submit" class="btn" style="color: #e84b7c;background: #ffffff">POST</button>
+            </form>
         </div>
     </div>
     <script src='{{ asset('js/cdn/2.1.3/jquery.min.js') }}'></script>
     <script src='{{asset("js/cdn/owl.carousel.min.js")}}'></script>
     <script  src="{{asset('js/roommbcardSwip.js')}}"></script>
+
+    <script>
+
+        $('#likePostForm').on('submit', function (e) {
+
+            e.preventDefault();
+            var form = $(this);
+            var url = form.attr('action');
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function (data) {
+                    $("#form-data").load(" #form-data > *");
+                }
+            });
+        });
+
+        $('#postCommentForm').on('submit', function (e) {
+
+            e.preventDefault();
+            var form = $(this);
+            var url = form.attr('action');
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function (data) {
+                    console.log(data)
+                    $("#comments-data").load(" #comments-data > *");
+                }
+            });
+        });
+    </script>
 @endsection
