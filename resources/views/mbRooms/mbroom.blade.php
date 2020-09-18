@@ -65,7 +65,8 @@
                         <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
                         <div class="post_info">{{ $post->title }} by {{ $room->user->first_name }} {{ $room->user->last_name }}
                             <span class="post_time"> — {{ $post->created_at->diffForHumans() }}</span></div>
-                        <div class="post_text">{!! $post->body !!}</div>
+                        <div class="post_text">{!! \Illuminate\Support\Str::limit($post->body, 75, ' Show More')  !!}</div>
+
                         <div class="post_likes">
                             <form action="/post/{{ $post->id }}/like" method="POST" id="likePostForm" class="likePostForm">
                                 @csrf
@@ -133,13 +134,13 @@
             @endif
         </div>
         <div style="padding: 10px;color: #e84b7c;">Latest Site Activity</div>
-       {{-- @if(isset($post))
+        @if(isset($post))
             <a href="{{asset("rooms/journal/1")}}">
                 <div class="posts_section">
                     <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
                     <div class="post_info">{{ $post->title }} by {{ $room->user->first_name }} {{ $room->user->last_name }}
                         <span class="post_time"> — {{ $post->created_at->diffForHumans() }}</span></div>
-                    <div class="post_text">{!! $post->body !!}</div>
+                    <div class="post_text">{!! \Illuminate\Support\Str::limit($post->body, 75, ' Show More')  !!}</div>
                     <div class="post_likes">
                         <form action="/post/{{ $post->id }}/like" method="POST">
                             @csrf
@@ -150,7 +151,7 @@
                             @endif
                         </form>
                         <div class="how_liked">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>
-                        --}}{{--<div class="post_comments" onclick="openCommentsSection()">Post comment</div>--}}{{--
+                        <div class="post_comments" onclick="openCommentsSection()">Post comment</div>
                         <div class="share_post">
                             share
                             <i class="fa fa-share"></i>
@@ -158,7 +159,7 @@
                     </div>
                 </div>
             </a>
-        @endif--}}
+        @endif
     </div>
 
     <script type="text/javascript">
