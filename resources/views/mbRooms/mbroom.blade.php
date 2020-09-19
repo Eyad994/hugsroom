@@ -55,7 +55,7 @@
         }
     </style>
 
-    <div class="container section_container" style="margin-top: 0 !important;background: #f5f2ef;display: table;padding-bottom: 100px;padding-top: 0px">
+    <div class="container section_container" style="margin-top: 0 !important;background: #f5f2ef;padding-bottom: 100px;padding-top: 0;height: 100% !important;">
         <div class="container-fluid">
             <a href="{{asset("rooms/addJournal/1")}}" >
                 <div style="width: 100%;height: 80px;background: #ffffff">

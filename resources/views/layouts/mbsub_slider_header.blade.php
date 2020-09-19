@@ -52,7 +52,7 @@
     <div class="col-md-12">
         <div class="owl-carousel">
             <div class="item">
-                <a href="{{asset('/rooms/journal/1')}}">
+                <a href="{{asset('/rooms/mbroom/1')}}">
                 <div class="item" data-toggle="slide1">
                     <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                         <div class="uk-card-box">
