@@ -61,38 +61,47 @@
     <div class="container section_container" style="margin-top: 0 !important;background: #ebe5e0;">
         <div class="container-fluid" style="padding-bottom: 100px;">
             <div class="section_title">Thoughts & Well Wishes</div>
-            @if(isset($post))
-                <div class="posts_section">
-                    <div class="post_info">
-                        <img src="{{asset('imgs/homeGroup2.png')}}" class="comment_img">
-                        <div class="comment-signature comment_name" >{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</div>
-                        <div class="comment-date">{{ $post->created_at->diffForHumans() }}</div>
-                    </div>
-                    <div class="post_text" style="padding-top: 10px">{!! $post->body !!}</div>
-                    <div class="post_likes" style="margin-top: -30px">
-                        <form action="/post/{{ $post->id }}/like" method="POST">
-                            @csrf
-                            @if($post->isLikedBy(auth()->user()))
-                                <button type="submit" class="btn like_btn"><i class="fa fa-heart" style="    font-size: 18px;padding-top: 10px;"></i></button>
-                            @else
-                                <button class="btn like_btn" style="color: unset"><i class="fa fa-heart" style="    font-size: 18px;padding-top: 7px;"></i></button>
-                            @endif
-                        </form>
-                        <div class="how_liked">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>
-                        <div class="well_wishes_actions" ><i class="fa fa-edit"></i></div>
-                        <div class="well_wishes_actions" ><i class="fa fa-trash"></i></div>
-                    </div>
+
+                <div class="wishes-data" id="wishes-data">
+                    @foreach($wishes as $wish)
+                        <div class="posts_section">
+                            <div class="post_info">
+                                <img src="{{asset('imgs/homeGroup2.png')}}" class="comment_img">
+                                <div class="comment-signature comment_name" >{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</div>
+                                <div class="comment-date">{{ $wish->created_at->diffForHumans() }}</div>
+                            </div>
+                            <div class="post_text" style="padding-top: 10px">{!! $wish->body !!}</div>
+                            <div class="post_likes" style="margin-top: -30px">
+                                <form action="/wish/{{ $wish->id }}/like" method="POST" id="{{ $wish->id }}" class="like-form">
+                                    @csrf
+                                    <div id="comment-likes-data-{{ $wish->id }}" class="comment-likes-data">
+                                        @if($wish->isLikedByWish(auth()->user()))
+                                            <button class="btn like_btn" style="float: left"><i class="fa fa-heart"></i></button>
+                                        @else
+                                            <button class="btn like_btn" style="color: unset;float: left"><i class="fa fa-heart"></i></button>
+                                        @endif
+                                        <div class="how_liked">{{ count($wish->likesWishes) }} Hearts</div>
+                                    </div>
+                                </form>
+
+                                <div class="well_wishes_actions" ><i class="fa fa-edit"></i></div>
+                                <div class="well_wishes_actions" ><i class="fa fa-trash"></i></div>
+                            </div>
+                        </div>
+                        <br>
+                    @endforeach
                 </div>
-            @endif
+
 
 
         </div>
     </div>
     <div class="mobileFooter" style="display: none;">
         <div class="navbar" style="width: 100%;background: #ffffff;  z-index: 40000;padding-top: 5px;">
-            <form action="{{ route('storeComment') }}" method="POST" id="postWishForm">
+            <form action="{{ route('storeWish') }}" method="POST" id="postWishForm">
                 @csrf
-            <input type="text" placeholder="Share Thoughts & Well Wishes" style="width: 80%;border: 1px solid #e84b7c;border-radius: 10px;height: 35px;padding-left: 10px" >
+                <input type="hidden" name="room_id" value="{{ $room->id }}">
+            <input type="text" name="comment" placeholder="Share Thoughts & Well Wishes" style="width: 80%;border: 1px solid #e84b7c;border-radius: 10px;height: 35px;padding-left: 10px" >
             <button class="btn" style="color: #e84b7c;background: #ffffff">POST</button>
             </form>
         </div>
@@ -103,28 +112,51 @@
     <script type="text/javascript">
         $(".owl-carousel").trigger("to.owl.carousel", [2, 1]);
     </script>
+
+    <script>
+        $('#postWishForm').on('submit', function (e) {
+
+            e.preventDefault();
+            var form = $(this);
+            var url = form.attr('action');
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function (data) {
+                    $("#wishes-data").load(" #wishes-data > *");
+                    /*var count = data + " Comments";
+                     $('#postCommentsCount').html(count);
+                     $("#comments-data").load(" #comments-data > *");
+                     e.preventDefault();*/
+                }
+            });
+        });
+
+
+        $(document).on('submit','.like-form',function(e){
+
+            e.preventDefault();
+            var form = $(this);
+            var url = form.attr('action');
+            var id = form.attr('id');
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function (data) {
+                    $("#comment-likes-data-"+id).load(" #comment-likes-data-"+id +"> *");
+                }
+            });
+        });
+    </script>
 @endsection
 
-<script>
-    $('#postCommentForm').on('submit', function (e) {
-
-        e.preventDefault();
-        var form = $(this);
-        var url = form.attr('action');
-
-        $.ajax({
-            type: "POST",
-            url: url,
-            data: new FormData(this),
-            contentType: false,
-            cache: false,
-            processData: false,
-            success: function (data) {
-                var count = data + " Comments";
-                $('#postCommentsCount').html(count);
-                $("#comments-data").load(" #comments-data > *");
-                e.preventDefault();
-            }
-        });
-    });
-</script>

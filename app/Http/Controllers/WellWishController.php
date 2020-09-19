@@ -17,11 +17,13 @@ class WellWishController extends Controller
 
         $comment->room_id = $request->room_id;
         $comment->user()->associate($request->user());
+
+        $comment->save();
     }
 
     public function storeLike(WellWish $wish)
     {
-        $likeWish = LikeWish::where('wish_id', $wish->id)->where('user_id', auth()->id())->first();
+        $likeWish = LikeWish::where('well_wish_id', $wish->id)->where('user_id', auth()->id())->first();
 
         if (!is_null($likeWish))
         {
@@ -30,9 +32,8 @@ class WellWishController extends Controller
         }
 
         $wish->likeWish(auth()->user());
-        $wishLikes = LikeWish::where('wish_id', $wish->id)->count();
-        $room = rooms::where('id', $wish->room_id)->first();
-        return view('mbRooms.post', compact('wish', 'wishLikes', 'room'));
+
+        //return view('mbRooms.post', compact('wish', 'room'));
     }
 
     public function destroy(WellWish $wish)

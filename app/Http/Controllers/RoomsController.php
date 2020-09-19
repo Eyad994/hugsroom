@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Comment;
 use App\Like;
+use App\Models\WellWish;
 use App\Post;
 use App\rooms;
 use App\Visitor;
@@ -99,7 +100,7 @@ class RoomsController extends Controller
             ->with('likes')
             ->latest()
             ->get()
-        ->unique('id');
+            ->unique('id');
 
         /*if (!is_null($post)) {
             $postLikes = Like::where('post_id', $post->id)->count();
@@ -226,15 +227,11 @@ class RoomsController extends Controller
     {
         $room = rooms::where('id', $id)->first();
 
-        $post = Post::where('room_id', $id)
-            ->withLikes()
+        $wishes = WellWish::where('room_id', $id)
+            ->with('likesWishes')
             ->latest()
-            ->first();
-        if (!is_null($post)) {
-            $postLikes = Like::where('post_id', $post->id)->count();
-            return view('mbRooms.mbwellWishes', compact('room', 'post', 'postLikes'));
-        }
-        return view('mbRooms.mbwellWishes', compact('room', 'post'));
+            ->get();
+        return view('mbRooms.mbwellWishes', compact('room', 'wishes'));
     }
 
     public function addJournal($id)

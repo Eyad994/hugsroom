@@ -34,21 +34,21 @@ trait LikableWishes
 
     public function isLikedByWish(User $user)
     {
-        return (bool) $user->likesWishes->where('room_id', $this->id)->where('liked', true)->count();
+        return (bool) $user->likesWishes->where('well_wish_id', $this->id)->where('liked', true)->count();
     }
 
     public function isDisLikedByWish(User $user)
     {
-        return (bool) $user->likesWishes->where('room_id', $this->id)->where('liked', false)->count();
+        return (bool) $user->likesWishes->where('well_wish_id', $this->id)->where('liked', false)->count();
     }
 
     public function scopeWithLikesWishes(Builder $query)
     {
         $query->leftjoinSub(
-            'select room_id, sum(liked) likes, sum(!liked) dislikes from like_wishes group by room_id',
+            'select well_wish_id, sum(liked) likes, sum(!liked) dislikes from like_wishes group by well_wish_id',
             'like_wishes',
-            'like_wishes.room_id',
-            'room_id'
+            'like_wishes.well_wish_id',
+            'well_wish_id'
         );
     }
 }
