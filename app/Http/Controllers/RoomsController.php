@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Comment;
 use App\Like;
+use App\Models\Gallery;
 use App\Models\WellWish;
 use App\Post;
 use App\rooms;
@@ -136,24 +137,8 @@ class RoomsController extends Controller
     public function mbgallery($id)
     {
         $room = rooms::where('id', $id)->first();
-        $nonUniqueVisitor = $room->non_unique_visitor;
-        $visitor = Visitor::where('ip', request()->ip())->where('room_id', $id)->first();
-
-        if (is_null($visitor)) {
-            Visitor::create([
-                'ip' => request()->ip(),
-                'room_id' => $id
-            ]);
-        }
-
-        $uniqueVisitorCount = Visitor::where('room_id', $id)->count();
-
-        $room->update([
-            'non_unique_visitor' => ++$nonUniqueVisitor,
-            'unique_visitor' => $uniqueVisitorCount
-        ]);
-
-        return view('mbRooms.mbgallery', compact('room'));
+        $gallery = Gallery::where('room_id', $id)->get();
+        return view('mbRooms.mbgallery', compact('room', 'gallery'));
     }
 
 

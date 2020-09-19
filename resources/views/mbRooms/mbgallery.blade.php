@@ -21,31 +21,22 @@
     <div class="container section_container" style="height: 600px !important;">
         <div class="container-fluid">
             <div class="row" style="padding: 20px;padding-bottom: 80px">
-                <div class="col-6 gallery_photos">
-                    <img src="{{asset('imgs/homeGroup2.png')}}" style="width: 100%;height: 200px; object-fit: cover">
-                </div>
-                <div class="col-6 gallery_photos">
-                    <img src="{{asset('imgs/homeGroup2.png')}}" style="width: 100%;height: 200px; object-fit: cover">
-                </div>
-                <div class="col-md-6 gallery_photos">
-                    <img src="{{asset('imgs/homeGroup2.png')}}" style="width: 100%;height: 200px; object-fit: cover">
-                </div>
-                <div class="col-md-6 gallery_photos">
-                    <img src="{{asset('imgs/homeGroup2.png')}}" style="width: 100%;height: 200px; object-fit: cover">
-                </div>
-                <div class="col-md-6 gallery_photos">
-                    <img src="{{asset('imgs/homeGroup2.png')}}" style="width: 100%;height: 200px; object-fit: cover">
-                </div>
-                <div class="col-md-6 gallery_photos">
-                    <img src="{{asset('imgs/homeGroup2.png')}}" style="width: 100%;height: 200px; object-fit: cover">
-                </div>
+                @foreach($gallery as $item)
+                    <div class="col-6 gallery_photos">
+                        <img src="{{asset('uploads/gallery/'.$room->id.'/'.$item->image)}}" style="width: 100%;height: 200px; object-fit: cover">
+                    </div>
+                    @endforeach
                 <div class="col-md-6 gallery_photos">
                     <label style="width: 100%">
                         <div class="gallery_upload_image">
                             <i class="fa fa-photo"></i>
                             <span style=" font-size: 12px;width: 100%;float: left;"> add more photos</span>
                         </div>
-                        <input type="file" style="visibility: hidden;"/>
+                        <form action="" id="image-form" method="POST">
+                            @csrf
+                            <input type="file" name="image" id="image" style="visibility: hidden;"/>
+                        </form>
+
                     </label>
                 </div>
             </div>
@@ -58,5 +49,25 @@
     <script  src="{{asset('js/roommbcardSwip.js')}}"></script>
     <script type="text/javascript">
         $(".owl-carousel").trigger("to.owl.carousel", [1, 1]);
+    </script>
+
+    <script>
+        $('#image').change(function () {
+            let formData = new FormData($('#image-form')[0]);
+            let file = $('input[name=image]')[0].files[0];
+            formData.append('file', file, file.name);
+            $.ajax({
+                url: '{{ url("/room/$room->id/uploadGallery") }}',
+                headers: {'X-CSRF-TOKEN': "{{ csrf_token() }}"},
+                type: 'POST',
+                contentType: false,
+                processData: false,
+                cache: false,
+                data: formData,
+                success: function(data) {
+                    location.reload();
+                }
+            });
+        });
     </script>
 @endsection

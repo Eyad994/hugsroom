@@ -56,5 +56,6 @@ Route::post('comment/{comment}/like', 'LikeController@storeComment')->name('like
 Route::post('post/{post}/destroy', 'LikeController@destroy');
 Route::post('/room/{id}/uploadBackgroundImage', 'RoomsController@uploadBackground');
 Route::post('/room/{id}/uploadProfileImage', 'RoomsController@uploadProfileImage');
+Route::post('/room/{id}/uploadGallery', 'GalleryController@store');
 
 /*Route::get('/xx', 'HomeController@xx');*/
