@@ -96,9 +96,10 @@ class RoomsController extends Controller
         ]);
 
         $posts = Post::where('room_id', $id)
-            ->withLikes()
+            ->with('likes')
             ->latest()
-            ->get();
+            ->get()
+        ->unique('id');
 
         /*if (!is_null($post)) {
             $postLikes = Like::where('post_id', $post->id)->count();

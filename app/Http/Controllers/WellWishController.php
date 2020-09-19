@@ -29,7 +29,7 @@ class WellWishController extends Controller
             return back();
         }
 
-        $wish->like(auth()->user());
+        $wish->likeWish(auth()->user());
         $wishLikes = LikeWish::where('wish_id', $wish->id)->count();
         $room = rooms::where('id', $wish->room_id)->first();
         return view('mbRooms.post', compact('wish', 'wishLikes', 'room'));
@@ -37,7 +37,7 @@ class WellWishController extends Controller
 
     public function destroy(WellWish $wish)
     {
-        $wish->dislike(auth()->user());
+        $wish->dislikeWish(auth()->user());
         return back();
     }
 

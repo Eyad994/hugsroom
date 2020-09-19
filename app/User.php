@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\LikableWishes;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -9,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable
 {
-    use Notifiable, Likable, LikableComment;
+    use Notifiable, Likable, LikableComment, LikableWishes;
 
     /**
      * The attributes that are mass assignable.

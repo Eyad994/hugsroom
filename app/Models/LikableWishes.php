@@ -14,41 +14,41 @@ use Illuminate\Database\Eloquent\Builder;
 
 trait LikableWishes
 {
-    public function likes()
+    public function likesWishes()
     {
         return $this->hasMany(LikeWish::class);
     }
 
-    public function like($user = null, $liked = true)
+    public function likeWish($user = null, $liked = true)
     {
-        $this->likes()->updateOrCreate([
+        $this->likesWishes()->updateOrCreate([
             'user_id' => $user ? $user->id : auth()->id(),
             'liked' => $liked
         ]);
     }
 
-    public function dislike($user = null)
+    public function dislikeWish($user = null)
     {
-        return $this->like($user, false);
+        return $this->likeWish($user, false);
     }
 
-    public function isLikedBy(User $user)
+    public function isLikedByWish(User $user)
     {
-        return (bool) $user->likes->where('post_id', $this->id)->where('liked', true)->count();
+        return (bool) $user->likesWishes->where('room_id', $this->id)->where('liked', true)->count();
     }
 
-    public function isDisLikedBy(User $user)
+    public function isDisLikedByWish(User $user)
     {
-        return (bool) $user->likes->where('post_id', $this->id)->where('liked', false)->count();
+        return (bool) $user->likesWishes->where('room_id', $this->id)->where('liked', false)->count();
     }
 
-    public function scopeWithLikes(Builder $query)
+    public function scopeWithLikesWishes(Builder $query)
     {
         $query->leftjoinSub(
-            'select post_id, sum(liked) likes, sum(!liked) dislikes from likes group by post_id',
-            'likes',
-            'likes.post_id',
-            'post_id'
+            'select room_id, sum(liked) likes, sum(!liked) dislikes from like_wishes group by room_id',
+            'like_wishes',
+            'like_wishes.room_id',
+            'room_id'
         );
     }
 }

@@ -67,38 +67,40 @@
                 </div>
             </a>
             <div style="padding: 10px;color: #e84b7c;">Latest Journal Entry </div>
-                @foreach($posts as $post)
-                    <a href="{{asset("rooms/journal/$room->id/$post->id")}}">
-                        <div class="posts_section">
-                            <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
-                            <div class="post_info">{{ $room->user->first_name }} {{ $room->user->last_name }}
-                                <span class="post_time"> — {{ $post->created_at->diffForHumans() }}</span></div>
-                            <div class="post_text">{!! \Illuminate\Support\Str::limit($post->body, 75, ' Show More')  !!}</div>
 
-                            <div class="post_likes">
-                                <form action="/post/{{ $post->id }}/like" method="POST" id="{{ $post->id }}" class="likePostForm">
-                                    @csrf
-                                    <div id="form-data-{{ $post->id }}">
-                                        @if($post->isLikedBy(auth()->user()))
-                                            <button class="btn like_btn"><i class="fa fa-heart"></i></button>
-                                        @else
-                                            <button class="btn like_btn" style="color: unset"><i class="fa fa-heart"></i></button>
-                                        @endif
-                                        {{--<div class="how_liked" id="postLikesCount">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>--}}
-                                        <div class="how_liked" id="postLikesCount">{{ $post->likes == null ? 0 : $post->likes }} Hearts</div>
-                                    </div>
-                                </form>
+                @foreach($posts as $key => $post)
+                <a href="{{asset("rooms/journal/$room->id/$post->id")}}">
+                    <div class="posts_section">
+                        <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
+                        <div class="post_info">{{ $room->user->first_name }} {{ $room->user->last_name }}
+                            <span class="post_time"> — {{ $post->created_at->diffForHumans() }}</span></div>
+                        <div class="post_text">{!! \Illuminate\Support\Str::limit($post->body, 75, ' Show More')  !!}</div>
 
-
-                                <div class="share_post">
-                                    share
-                                    <i class="fa fa-share"></i>
+                        <div class="post_likes">
+                            <form action="/post/{{ $post->id }}/like" method="POST" id="{{ $post->id }}" class="likePostForm">
+                                @csrf
+                                <div id="form-data-{{ $post->id }}">
+                                    @if($post->isLikedBy(auth()->user()))
+                                        <button class="btn like_btn"><i class="fa fa-heart"></i></button>
+                                    @else
+                                        <button class="btn like_btn" style="color: unset"><i class="fa fa-heart"></i></button>
+                                    @endif
+                                    {{--<div class="how_liked" id="postLikesCount">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>--}}
+                                    <div class="how_liked" id="postLikesCount">{{ count($post->likes) }} Hearts</div>
                                 </div>
+                            </form>
+
+
+                            <div class="share_post">
+                                share
+                                <i class="fa fa-share"></i>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                </a>
                 <br>
                     @endforeach
+
         </div>
         {{--@if(isset($post))
         <div style="padding: 10px;color: #e84b7c;">Latest Site Activity</div>
@@ -144,6 +146,7 @@
     <script>
 
         $('.likePostForm').on('submit', function (e) {
+
             e.preventDefault();
             var form = $(this);
             var url = form.attr('action');
