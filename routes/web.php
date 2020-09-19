@@ -42,8 +42,8 @@ Route::get('/rooms/room/{id}', 'RoomsController@room');
 Route::get('/rooms/wellWishes/{id}', 'RoomsController@wellWishes');
 Route::get('/rooms/mbwellWishes/{id}', 'RoomsController@mbwellWishes');
 Route::get('/rooms/addJournal/{id}', 'RoomsController@addJournal');
-Route::get('/rooms/journal/{id}', 'RoomsController@journal');
-Route::get('/rooms/mbroom/{id}', 'RoomsController@mbroom');
+Route::get('/rooms/journal/{id}/{postId}', 'RoomsController@journal');
+Route::get('/rooms/mbroom/{id}', 'RoomsController@mbroom')->name('mbRoom');
 Route::get('/rooms/gallery/{id}', 'RoomsController@gallery');
 Route::get('/rooms/mbgallery/{id}', 'RoomsController@mbgallery');
 /*******************************************************************************/
