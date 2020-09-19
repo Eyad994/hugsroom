@@ -56,4 +56,7 @@
     <script src='{{asset("js/cdn/2.1.3/jquery.min.js")}}'></script>
     <script src='{{asset("js/cdn/owl.carousel.min.js")}}'></script>
     <script  src="{{asset('js/roommbcardSwip.js')}}"></script>
+    <script type="text/javascript">
+        $(".owl-carousel").trigger("to.owl.carousel", [1, 1]);
+    </script>
 @endsection

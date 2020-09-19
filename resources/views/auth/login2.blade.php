@@ -121,9 +121,9 @@
                     var email = $('#email').val();
                     if (data > 0)
                     {
-                        window.location = "{{ env('APP_URL') }}/login?email=" + email
+                        window.location = "{{ env('APP_URL') }}login?email=" + email
                     } else  {
-                        window.location = "{{ env('APP_URL') }}/register?email=" + email
+                        window.location = "{{ env('APP_URL') }}register?email=" + email
                     }
                 }
             });

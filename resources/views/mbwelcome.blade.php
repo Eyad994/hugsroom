@@ -52,8 +52,8 @@
              margin-top: -0px !important;
         }
         .card_text{
-            height: 220px;
-            font-size: 13px;
+            height: 80px !important;
+            font-size: 14px;
             overflow: hidden;
             text-align: center;
             color:#000000;
@@ -89,6 +89,9 @@
             margin-top: -10px;
             color: #e84b7c !important;
         }
+        .active .card_text {
+            height: 80px !important;
+        }
     </style>
 <script type="text/javascript">
     $(function () {
@@ -106,7 +109,7 @@
                         <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
-                                    <img src="{{asset("imgs/slider/1.jpg")}}" style=" width: 100%;height: 250px;" onclick="openmodel('1')">
+                                    <img src="{{asset("imgs/slider/1.jpg")}}" style=" width: 100%;height: 300px;" onclick="openmodel('1')">
                                     <div>
                                         <h3 class="h4 pad-top_20-24 slider_title_1">Patients</h3>
                                         <h3 class="h4 pad-top_20-24 slider_title_2 ">Room Online </h3>
@@ -116,13 +119,12 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
+                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 5px 20px 20px 20px" >
                                         <div style="height: 50px">
                                             <a href="{{asset("createwebsite")}}" type="btn"  class="slider_main_btn">
                                                 Open Room
                                             </a>
                                         </div>
-                                        <div style="text-align: center;padding-top: 15px;"><a href="#" style="color: #a3a3a3;font-size: 16px;">More Info</a></div>
                                     </div>
 
                                 </div>
@@ -136,7 +138,7 @@
                             <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                                 <div class="uk-card-box">
                                     <div  class="uk-card-sub-box">
-                                        <img src="{{asset("imgs/slider/2.jpg")}}" style=" width: 100%;height: 250px;" onclick="openmodel('1')">
+                                        <img src="{{asset("imgs/slider/2.jpg")}}" style=" width: 100%;height: 300px;" onclick="openmodel('1')">
                                         <div>
                                             <h3 class="h4 pad-top_20-24 slider_title_1"> Search</h3>
                                             <h3 class="h4 pad-top_20-24 slider_title_2">and Follow</h3>
@@ -146,13 +148,12 @@
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
+                                        <div class="wp-block-button is-style-tertiary-lg" style="padding: 5px 20px 20px 20px">
                                             <div style="height: 50px">
                                                 <a href="{{asset("createwebsite")}}" type="btn"  class="slider_main_btn">
                                                     Search Rooms
                                                 </a>
                                             </div>
-                                            <div style="text-align: center;padding-top: 15px;"><a href="#" style="color: #a3a3a3;font-size: 16px;">More Info</a></div>
                                         </div>
 
                                     </div>
@@ -166,7 +167,7 @@
                         <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
-                                    <img src="{{asset("imgs/slider/3.jpg")}}" style=" width: 100%;height: 250px;" onclick="openmodel('1')">
+                                    <img src="{{asset("imgs/slider/3.jpg")}}" style=" width: 100%;height: 300px;" onclick="openmodel('1')">
                                     <div>
                                         <h3 class="h4 pad-top_20-24 slider_title_1" >Even</h3>
                                         <h3 class="h4 pad-top_20-24 slider_title_2" >as Strangers</h3>
@@ -176,13 +177,12 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
+                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 5px 20px 20px 20px">
                                         <div style="height: 50px">
                                             <a href="{{asset("createwebsite")}}" type="btn"  class="slider_main_btn">
                                                 Unite in Care
                                             </a>
                                         </div>
-                                        <div style="text-align: center;padding-top: 15px;"><a href="#" style="color: #a3a3a3;font-size: 16px;">More Info</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +194,7 @@
                         <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
-                                    <img src="{{asset("imgs/slider/4.jpg")}}" style=" width: 100%;height: 250px;" onclick="openmodel('1')">
+                                    <img src="{{asset("imgs/slider/4.jpg")}}" style=" width: 100%;height: 300px;" onclick="openmodel('1')">
                                     <div>
                                         <h3 class="h4 pad-top_20-24 slider_title_1" >Helping </h3>
                                         <h3 class="h4 pad-top_20-24 slider_title_2" >Hospitals</h3>
@@ -204,13 +204,12 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
+                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 5px 20px 20px 20px">
                                         <div style="height: 50px">
                                             <a href="{{asset("createwebsite")}}" type="btn"  class="slider_main_btn">
                                                 Our Partners
                                             </a>
                                         </div>
-                                        <div style="text-align: center;padding-top: 15px;"><a href="#" style="color: #a3a3a3;font-size: 16px;">More Info</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -222,7 +221,7 @@
                         <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
-                                    <img src="{{asset("imgs/slider/5.jpg")}}" style=" width: 100%;height: 250px;" onclick="openmodel('1')">
+                                    <img src="{{asset("imgs/slider/5.jpg")}}" style=" width: 100%;height: 300px;" onclick="openmodel('1')">
                                     <div>
                                         <h3 class="h4 pad-top_20-24 slider_title_1"> Find more</h3>
                                         <h3 class="h4 pad-top_20-24 slider_title_2">Help</h3>
@@ -232,13 +231,12 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
+                                    <div class="wp-block-button is-style-tertiary-lg" style="padding: 5px 20px 20px 20px">
                                         <div style="height: 50px">
                                             <a href="{{asset("createwebsite")}}" type="btn"  class="slider_main_btn">
                                                 Resources
                                             </a>
                                         </div>
-                                        <div style="text-align: center;padding-top: 15px;"><a href="#" style="color: #a3a3a3;font-size: 16px;">More Info</a></div>
                                     </div>
 
                                 </div>
@@ -249,7 +247,6 @@
             </div>
         </div>
     </div>
-
 
     <script src='{{asset("js/cdn/2.1.3/jquery.min.js")}}'></script>
     <script src='{{asset("js/cdn/owl.carousel.min.js")}}'></script>

@@ -169,7 +169,6 @@
                                                 Open Room
                                             </a>
                                         </div>
-                                        <div style="text-align: center;padding-top: 15px;"><a href="#" style="color: #a3a3a3;font-size: 16px;">More Info</a></div>
                                     </div>
 
                                 </div>
@@ -198,7 +197,6 @@
                                                 Search Rooms
                                             </a>
                                         </div>
-                                        <div style="text-align: center;padding-top: 15px;"><a href="#" style="color: #a3a3a3;font-size: 16px;">More Info</a></div>
                                     </div>
 
 
@@ -228,7 +226,6 @@
                                                 Unite in Care
                                             </a>
                                         </div>
-                                        <div style="text-align: center;padding-top: 15px;"><a href="#" style="color: #a3a3a3;font-size: 16px;">More Info</a></div>
                                     </div>
 
                                 </div>
@@ -257,7 +254,6 @@
                                                 Our Partners
                                             </a>
                                         </div>
-                                        <div style="text-align: center;padding-top: 15px;"><a href="#" style="color: #a3a3a3;font-size: 16px;">More Info</a></div>
                                     </div>
 
                                 </div>
@@ -286,7 +282,6 @@
                                                 Resources
                                             </a>
                                         </div>
-                                        <div style="text-align: center;padding-top: 15px;"><a href="#" style="color: #a3a3a3;font-size: 16px;">More Info</a></div>
                                     </div>
 
                                 </div>

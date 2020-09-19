@@ -52,6 +52,7 @@
     <div class="col-md-12">
         <div class="owl-carousel">
             <div class="item">
+                <a href="{{asset('/rooms/journal/1')}}">
                 <div class="item" data-toggle="slide1">
                     <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                         <div class="uk-card-box">
@@ -64,16 +65,18 @@
                         </div>
                     </div>
                 </div>
+                </a>
             </div>
-            <div class="item black">
-                <a href="#">
-                    <div class="item" data-toggle="slide2">
+            <div class="item black active">
+                <a href="{{asset('/rooms/mbgallery/1')}}">
+                    <div class="item active" data-toggle="slide2">
                         <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
-                                    <div style="height: 200px;">
+                                    <div style="height: 200px; text-align: center">
+                                        <div style="color: #e84b7c;font-size: 80px;padding-top: 30px;"><i class="fa fa-picture-o"></i></div>
+                                        <div style="color: #e84b7c;font-size: 27px;padding-top: 4px;">Gallery</div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -81,16 +84,20 @@
                 </a>
             </div>
             <div class="item">
+                <a href="{{asset('/rooms/mbwellWishes/1')}}">
                 <div class="item" data-toggle="slide3">
                     <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                         <div class="uk-card-box">
                             <div  class="uk-card-sub-box">
-                                <div style="height: 200px;">
+                                <div style="height: 200px; text-align: center">
+                                    <div style="color: #e84b7c;font-size: 80px;padding-top: 30px;"><i class="fa fa-heart"></i></div>
+                                    <div style="color: #e84b7c;font-size: 27px;padding-top: 4px;">Well Wishes</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                </a>
             </div>
             <div class="item black">
                 <div class="item" data-toggle="slide4">

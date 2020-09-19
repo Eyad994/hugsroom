@@ -45,6 +45,14 @@
         a:visited {
             text-decoration: none;
         }
+        .post_likes {
+            width: 100%;
+            padding:30px 0px;
+            margin-top: -45px;
+        }
+        .how_liked {
+            margin-top: 10px;
+        }
     </style>
 
     <div class="container section_container" style="margin-top: 0 !important;background: #f5f2ef;display: table;padding-bottom: 100px;padding-top: 0px">
@@ -63,7 +71,7 @@
                 <a href="{{asset("rooms/journal/1")}}">
                     <div class="posts_section">
                         <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
-                        <div class="post_info">{{ $post->title }} by {{ $room->user->first_name }} {{ $room->user->last_name }}
+                        <div class="post_info">{{ $room->user->first_name }} {{ $room->user->last_name }}
                             <span class="post_time"> — {{ $post->created_at->diffForHumans() }}</span></div>
                         <div class="post_text">{!! \Illuminate\Support\Str::limit($post->body, 75, ' Show More')  !!}</div>
 
@@ -88,49 +96,7 @@
                         </div>
                     </div>
                 </a>
-                {{--<div class="comments_section" onclick="openCommentsSection()">
-                    <span>COMMENTS</span>
-                    <i class="fa fa-angle-down" aria-hidden="true" style="float: right;font-size:30px"></i>
-                </div>
-                <div class="post_comment_form">
-                    <div class="post_comment_title">Post a Comment</div>
-                    <div class="post_comment_name">{{-->{{auth()->user()->name}}{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</div>
-                    <form action="{{ route('storeComment') }}" method="POST">
-                        @csrf
-                        <div class="post_comment_text">
-                            <textarea name="comment" class="form-control"></textarea>
-                        </div>
-                        <input type="hidden" name="post_id" value="{{ $post->id }}">
-                        <div style="padding: 15px 30px">
-                            <button type="submit" class="btn post_comment_submit">Post a Comment</button>
-                        </div>
-                    </form>
-        --}}
-                {{--<div class="row">
-                    @foreach($post->comments as $comment)
-                        <div class="col-xs-12">
-                            <div class="comment-item">
-                                <div class="info-line">
-                                    <img src="{{asset('imgs/homeGroup2.png')}}" class="comment_img">
-                                    <div class="comment-signature comment_name" >{{ $comment->user->first_name }} {{ $comment->user->last_name }}</div>
-                                    <div class="comment-date">{{ $comment->created_at->diffForHumans() }}</div>
-                                </div>
-                                <div class="fade-out fade-out-medium hide-read-more" style="width: 100%">
-                                    <div class="user-generated comment-body"
-                                         data-qa-id="comment-body-5f5e3001bdc412053a6ee1b8">{{ $comment->body }}</div>
-                                </div>
-                                <span class="toolbar">--}}{{--<button><i class="cbicon-heart" aria-hidden="true"></i></button>--}}{{--</span>
-                                <div class="comment-footer">
-                                    <div class="comment_like"><i class="fa fa-heart"></i></div>
-                                    <div class="comment_edit">edit</div>
-                                    <div class="comment_delete">delete</div>
-                                </div>
-                            </div>
 
-                        </div>
-                    @endforeach
-                </div>
-            </div>--}}
             @endif
         </div>
         <div style="padding: 10px;color: #e84b7c;">Latest Site Activity</div>
@@ -138,20 +104,24 @@
             <a href="{{asset("rooms/journal/1")}}">
                 <div class="posts_section">
                     <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
-                    <div class="post_info">{{ $post->title }} by {{ $room->user->first_name }} {{ $room->user->last_name }}
+                    <div class="post_info">{{ $room->user->first_name }} {{ $room->user->last_name }}
                         <span class="post_time"> — {{ $post->created_at->diffForHumans() }}</span></div>
                     <div class="post_text">{!! \Illuminate\Support\Str::limit($post->body, 75, ' Show More')  !!}</div>
+
                     <div class="post_likes">
-                        <form action="/post/{{ $post->id }}/like" method="POST">
+                        <form action="/post/{{ $post->id }}/like" method="POST" id="likePostForm" class="likePostForm">
                             @csrf
-                            @if($post->isLikedBy(auth()->user()))
-                                <button type="submit" class="btn like_btn"><i class="fa fa-heart"></i></button>
-                            @else
-                                <button class="btn like_btn" style="color: unset"><i class="fa fa-heart"></i></button>
-                            @endif
+                            <div id="form-data">
+                                @if($post->isLikedBy(auth()->user()))
+                                    <button class="btn like_btn"><i class="fa fa-heart"></i></button>
+                                @else
+                                    <button class="btn like_btn" style="color: unset"><i class="fa fa-heart"></i></button>
+                                @endif
+                                <div class="how_liked" id="postLikesCount">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>
+                            </div>
                         </form>
-                        <div class="how_liked">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>
-                        <div class="post_comments" onclick="openCommentsSection()">Post comment</div>
+
+                        {{--<div class="post_comments" onclick="openCommentsSection()">Post comment</div>--}}
                         <div class="share_post">
                             share
                             <i class="fa fa-share"></i>
