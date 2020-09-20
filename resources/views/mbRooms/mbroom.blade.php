@@ -67,12 +67,13 @@
             </div>
             <div style="padding: 10px;color: #e84b7c;">Latest Journal Entry </div>
                 @foreach($posts as $key => $post)
-                <div class="posts_section" onclick="redirectTo('journal/{{$room->id.'/'.$post->id}}')" >
+                <div class="posts_section" >
+                    <div onclick="redirectTo('journal/{{$room->id.'/'.$post->id}}')" style="width: 100%">
                     <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
                     <div class="post_info">{{ $room->user->first_name }} {{ $room->user->last_name }}
                         <span class="post_time"> — {{ $post->created_at->diffForHumans() }}</span></div>
                     <div class="post_text">{!! \Illuminate\Support\Str::limit($post->body, 75, ' Show More')  !!}</div>
-
+                    </div>
                     <div class="post_likes">
                         <form action="/post/{{ $post->id }}/like" method="POST" id="{{ $post->id }}" class="likePostForm">
                             @csrf

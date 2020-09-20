@@ -264,6 +264,7 @@
                                         </div>
                                     </div>
                             </div>
+                            </div>
                         @endforeach
                 </section>
             </div>
