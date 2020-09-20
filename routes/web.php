@@ -42,17 +42,20 @@ Route::get('/rooms/room/{id}', 'RoomsController@room');
 Route::get('/rooms/wellWishes/{id}', 'RoomsController@wellWishes');
 Route::get('/rooms/mbwellWishes/{id}', 'RoomsController@mbwellWishes');
 Route::get('/rooms/addJournal/{id}', 'RoomsController@addJournal');
-Route::get('/rooms/journal/{id}', 'RoomsController@journal');
-Route::get('/rooms/mbroom/{id}', 'RoomsController@mbroom');
+Route::get('/rooms/journal/{id}/{postId}', 'RoomsController@journal');
+Route::get('/rooms/mbroom/{id}', 'RoomsController@mbroom')->name('mbRoom');
 Route::get('/rooms/gallery/{id}', 'RoomsController@gallery');
 Route::get('/rooms/mbgallery/{id}', 'RoomsController@mbgallery');
 /*******************************************************************************/
 Route::post('storePost', 'RoomsController@storePost')->name('storePost');
 Route::post('storeComment', 'PostController@storeComment')->name('storeComment');
+Route::post('storeWish', 'WellWishController@storeWish')->name('storeWish');
 Route::post('post/{post}/like', 'LikeController@store');
+Route::post('wish/{wish}/like', 'WellWishController@storeLike');
 Route::post('comment/{comment}/like', 'LikeController@storeComment')->name('likeComment');
 Route::post('post/{post}/destroy', 'LikeController@destroy');
 Route::post('/room/{id}/uploadBackgroundImage', 'RoomsController@uploadBackground');
 Route::post('/room/{id}/uploadProfileImage', 'RoomsController@uploadProfileImage');
+Route::post('/room/{id}/uploadGallery', 'GalleryController@store');
 
 /*Route::get('/xx', 'HomeController@xx');*/

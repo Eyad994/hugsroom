@@ -53,7 +53,7 @@
         <div class="owl-carousel">
             <div class="item">
                 {{--<a href="{{asset('/rooms/mbroom/1')}}">--}}
-                <div class="item" data-toggle="slide1" onclick="redirectTo('mbroom/1')">
+                <div class="item" data-toggle="slide1" onclick="redirectTo('mbroom/{{$room->id}}')">
                     <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                         <div class="uk-card-box">
                             <div  class="uk-card-sub-box">
@@ -68,7 +68,7 @@
                 {{--</a>--}}
             </div>
             <div class="item black active">
-                <div class="item active" data-toggle="slide2" onclick="redirectTo('mbgallery/1')">
+                <div class="item active" data-toggle="slide2" onclick="redirectTo('mbgallery/{{$room->id}}')">
                     <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                         <div class="uk-card-box">
                             <div  class="uk-card-sub-box">
@@ -83,7 +83,7 @@
 
             </div>
             <div class="item">
-                <div class="item" data-toggle="slide3" onclick="redirectTo('mbwellWishes/1')">
+                <div class="item" data-toggle="slide3" onclick="redirectTo('mbwellWishes/{{$room->id}}')">
                     <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                         <div class="uk-card-box">
                             <div  class="uk-card-sub-box">

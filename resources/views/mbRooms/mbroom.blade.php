@@ -57,7 +57,8 @@
 
     <div class="container section_container" style="margin-top: 0 !important;background: #f5f2ef;padding-bottom: 100px;padding-top: 0;height: 100% !important;">
         <div class="container-fluid">
-            <div style="width: 100%;height: 80px;background: #ffffff" onclick="redirectTo('addJournal/1')">
+
+            <div style="width: 100%;height: 80px;background: #ffffff" onclick="redirectTo('addJournal/{{$room->id}}')">
                 <div style="width: 80px;float: left;padding: 17px 15px;">
                     <img src="{{asset('imgs/homeGroup2.png')}}" style="width: 50px;height: 50px;border-radius: 50px;margin-top: -2px;object-fit: cover;}">
                 </div>
@@ -65,17 +66,54 @@
                 <i class="fa fa-angle-right" style="font-size: 40px;color: #797979;width: 20px;float: right;padding-top: 17px;"></i>
             </div>
             <div style="padding: 10px;color: #e84b7c;">Latest Journal Entry </div>
-            @if(isset($post))
-                <div class="posts_section"  onclick="redirectTo('journal/1')">
+                @foreach($posts as $key => $post)
+                <a href="{{asset("rooms/journal/$room->id/$post->id")}}">
+                    <div class="posts_section">
+                        <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
+                        <div class="post_info">{{ $room->user->first_name }} {{ $room->user->last_name }}
+                            <span class="post_time"> — {{ $post->created_at->diffForHumans() }}</span></div>
+                        <div class="post_text">{!! \Illuminate\Support\Str::limit($post->body, 75, ' Show More')  !!}</div>
+
+                        <div class="post_likes">
+                            <form action="/post/{{ $post->id }}/like" method="POST" id="{{ $post->id }}" class="likePostForm">
+                                @csrf
+                                <div id="form-data-{{ $post->id }}">
+                                    @if($post->isLikedBy(auth()->user()))
+                                        <button class="btn like_btn"><i class="fa fa-heart"></i></button>
+                                    @else
+                                        <button class="btn like_btn" style="color: unset"><i class="fa fa-heart"></i></button>
+                                    @endif
+                                    {{--<div class="how_liked" id="postLikesCount">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>--}}
+                                    <div class="how_liked" id="postLikesCount">{{ count($post->likes) }} Hearts</div>
+                                </div>
+                            </form>
+
+
+                            <div class="share_post">
+                                share
+                                <i class="fa fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <br>
+                    @endforeach
+            <div style="height: 70px !important;"></div>
+        </div>
+        {{--@if(isset($post))
+        <div style="padding: 10px;color: #e84b7c;">Latest Site Activity</div>
+            <a href="{{asset("rooms/journal/1")}}">
+                <div class="posts_section">
+>>>>>>> f5981924e4721f4840814b1c54a00940b674b8f0
                     <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
                     <div class="post_info">{{ $room->user->first_name }} {{ $room->user->last_name }}
                         <span class="post_time"> — {{ $post->created_at->diffForHumans() }}</span></div>
                     <div class="post_text">{!! \Illuminate\Support\Str::limit($post->body, 75, ' Show More')  !!}</div>
 
                     <div class="post_likes">
-                        <form action="/post/{{ $post->id }}/like" method="POST" id="likePostForm" class="likePostForm">
+                        <form action="/post/{{ $post->id }}/like" method="POST" id="{{ $post->id }}" class="likePostForm">
                             @csrf
-                            <div id="form-data">
+                            <div id="form-data-{{ $post->id }}">
                                 @if($post->isLikedBy(auth()->user()))
                                     <button class="btn like_btn"><i class="fa fa-heart"></i></button>
                                 @else
@@ -85,13 +123,14 @@
                             </div>
                         </form>
 
-                        {{--<div class="post_comments" onclick="openCommentsSection()">Post comment</div>--}}
+
                         <div class="share_post">
                             share
                             <i class="fa fa-share"></i>
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
 
             @endif
         </div>
@@ -122,9 +161,6 @@
                         <i class="fa fa-share"></i>
                     </div>
                 </div>
-            </div>
-        @endif
-
         <div style="height: 100px">
     </div>
 
@@ -138,10 +174,12 @@
 
     <script>
 
-        $('#likePostForm').on('submit', function (e) {
+        $('.likePostForm').on('submit', function (e) {
+
             e.preventDefault();
             var form = $(this);
             var url = form.attr('action');
+            var id = form.attr('id');
 
             $.ajax({
                 type: "POST",
@@ -151,7 +189,7 @@
                 cache: false,
                 processData: false,
                 success: function (data) {
-                    $("#form-data").load(" #form-data > *");
+                    $("#form-data-"+id).load(" #form-data-"+id+" > *");
                 }
             });
         });

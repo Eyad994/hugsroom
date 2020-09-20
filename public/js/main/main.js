@@ -20,3 +20,13 @@ function openmodel(slide_number) {
 function redirectTo(link) {
     window.location.href = "../"+link;
 }
+
+function redirectToRoom(room_id) {
+    debugger;
+    if(screen.width > "768") {
+        window.location.href = "rooms/room/"+room_id;
+    }else{
+        window.location.href = "rooms/mbroom/"+room_id;
+    }
+
+}
