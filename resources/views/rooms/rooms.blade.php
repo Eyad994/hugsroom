@@ -25,7 +25,7 @@
             bottom: 60px;
             border-radius: 5px;
             right: 25px;
-            padding: 2px 10px;
+            padding: 4px 10px;
             overflow: hidden;
             display: list-item;
         }
@@ -114,7 +114,7 @@
                                     </div>
                                     <div style="width: 100%;height: 200px;">
                                         <a href="/rooms/room/{{ $room->id }}">
-                                            <img src="imgs/homeGroup2.png" style="height: 200px;width: 100%;">
+                                            <img src="imgs/homeGroup3.png" style="height: 200px;width: 100%;">
                                         </a>
                                     </div>
                                     <div style="height: 100px;width: 100%" class="post_footer_icons">
@@ -173,8 +173,8 @@
                                                     </div>
                                                 </div>
                                                 <div style="width: 100%;height: 200px;">
-                                                    <img src="imgs/homeGroup2.png" style="height: 200px;width: 100%;">
-                                                    <div class="room_img_btn" style="color: #e84b7c;">
+                                                    <img src="imgs/homeGroup3.png" style="height: 200px;width: 100%;">
+                                                    <div class="room_img_btn" style="color: #e84b7c;display: flex">
                                                         <i class="fa fa-user"></i>
                                                         <span>Following</span>
                                                     </div>
@@ -235,7 +235,7 @@
                                                     </div>
                                                 </div>
                                                 <div style="width: 100%;height: 200px;">
-                                                    <img src="imgs/homeGroup2.png" style="height: 200px;width: 100%;">
+                                                    <img src="imgs/homeGroup3.png" style="height: 200px;width: 100%;">
                                                     <div class="room_img_btn" style="color: #818080;">
                                                         <img src="imgs/homeGroup2.png" style="width: 17px;height: 17px;border-radius: 20px;margin-top: -2px;object-fit: cover;}">
                                                         <span>{{ $room->user->country }}</span>

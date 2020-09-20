@@ -57,52 +57,16 @@
 
     <div class="container section_container" style="margin-top: 0 !important;background: #f5f2ef;padding-bottom: 100px;padding-top: 0;height: 100% !important;">
         <div class="container-fluid">
-            <a href="{{asset("rooms/addJournal/1")}}" >
-                <div style="width: 100%;height: 80px;background: #ffffff">
-                    <div style="width: 80px;float: left;padding: 17px 15px;">
-                        <img src="{{asset('imgs/homeGroup2.png')}}" style="width: 50px;height: 50px;border-radius: 50px;margin-top: -2px;object-fit: cover;}">
-                    </div>
-                    <div style="width: 240px;color: #797979;float: left;font-size: 20px;padding: 22px 0px;">Post a Journal Entry</div>
-                    <i class="fa fa-angle-right" style="font-size: 40px;color: #797979;width: 20px;float: right;padding-top: 17px;"></i>
+            <div style="width: 100%;height: 80px;background: #ffffff" onclick="redirectTo('addJournal/1')">
+                <div style="width: 80px;float: left;padding: 17px 15px;">
+                    <img src="{{asset('imgs/homeGroup2.png')}}" style="width: 50px;height: 50px;border-radius: 50px;margin-top: -2px;object-fit: cover;}">
                 </div>
-            </a>
+                <div style="width: 240px;color: #797979;float: left;font-size: 20px;padding: 22px 0px;">Post a Journal Entry</div>
+                <i class="fa fa-angle-right" style="font-size: 40px;color: #797979;width: 20px;float: right;padding-top: 17px;"></i>
+            </div>
             <div style="padding: 10px;color: #e84b7c;">Latest Journal Entry </div>
             @if(isset($post))
-                <a href="{{asset("rooms/journal/1")}}">
-                    <div class="posts_section">
-                        <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
-                        <div class="post_info">{{ $room->user->first_name }} {{ $room->user->last_name }}
-                            <span class="post_time"> — {{ $post->created_at->diffForHumans() }}</span></div>
-                        <div class="post_text">{!! \Illuminate\Support\Str::limit($post->body, 75, ' Show More')  !!}</div>
-
-                        <div class="post_likes">
-                            <form action="/post/{{ $post->id }}/like" method="POST" id="likePostForm" class="likePostForm">
-                                @csrf
-                                <div id="form-data">
-                                    @if($post->isLikedBy(auth()->user()))
-                                        <button class="btn like_btn"><i class="fa fa-heart"></i></button>
-                                    @else
-                                        <button class="btn like_btn" style="color: unset"><i class="fa fa-heart"></i></button>
-                                    @endif
-                                    <div class="how_liked" id="postLikesCount">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>
-                                </div>
-                            </form>
-
-                            {{--<div class="post_comments" onclick="openCommentsSection()">Post comment</div>--}}
-                            <div class="share_post">
-                                share
-                                <i class="fa fa-share"></i>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-            @endif
-        </div>
-        <div style="padding: 10px;color: #e84b7c;">Latest Site Activity</div>
-        @if(isset($post))
-            <a href="{{asset("rooms/journal/1")}}">
-                <div class="posts_section">
+                <div class="posts_section"  onclick="redirectTo('journal/1')">
                     <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
                     <div class="post_info">{{ $room->user->first_name }} {{ $room->user->last_name }}
                         <span class="post_time"> — {{ $post->created_at->diffForHumans() }}</span></div>
@@ -128,8 +92,40 @@
                         </div>
                     </div>
                 </div>
-            </a>
+
+            @endif
+        </div>
+        <div style="padding: 10px;color: #e84b7c;">Latest Site Activity</div>
+        @if(isset($post))
+            <div class="posts_section"  onclick="redirectTo('journal/1')">
+                <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
+                <div class="post_info">{{ $room->user->first_name }} {{ $room->user->last_name }}
+                    <span class="post_time"> — {{ $post->created_at->diffForHumans() }}</span></div>
+                <div class="post_text">{!! \Illuminate\Support\Str::limit($post->body, 75, ' Show More')  !!}</div>
+
+                <div class="post_likes">
+                    <form action="/post/{{ $post->id }}/like" method="POST" id="likePostForm" class="likePostForm">
+                        @csrf
+                        <div id="form-data">
+                            @if($post->isLikedBy(auth()->user()))
+                                <button class="btn like_btn"><i class="fa fa-heart"></i></button>
+                            @else
+                                <button class="btn like_btn" style="color: unset"><i class="fa fa-heart"></i></button>
+                            @endif
+                            <div class="how_liked" id="postLikesCount">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>
+                        </div>
+                    </form>
+
+                    {{--<div class="post_comments" onclick="openCommentsSection()">Post comment</div>--}}
+                    <div class="share_post">
+                        share
+                        <i class="fa fa-share"></i>
+                    </div>
+                </div>
+            </div>
         @endif
+
+        <div style="height: 100px">
     </div>
 
     <script type="text/javascript">

@@ -34,6 +34,7 @@
         }
         .site-content{
             padding-top: 50px !important;
+            display: contents;
         }
         .last_list{
             list-style: none;
@@ -67,7 +68,7 @@
                     <input type="hidden" name="csrf" value="">
                     <meta name="csrf-token" content="{{ csrf_token() }}">
                     <!------------------------------------------ section1-------------------------------->
-                    <section class="site-create-step active" id="sc-terms" data-ga-label-prefix="Terms of Use - c - ' : ''; ?>">
+                    <section class="site-create-step active" id="sc-terms" data-ga-label-prefix="Terms of Use - c - ' : ''; ?>" >
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
                                 <div class="text-center"><h1>Open a Room</h1></div>

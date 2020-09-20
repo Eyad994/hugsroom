@@ -64,9 +64,29 @@
 </head>
 <style type="text/css">
 
+    a,
+    a:focus,
+    a:active,
+    a:visited,
+    a:link,
+    button:focus,
+    input:focus,
+    textarea:focus,
+    a.image-link:focus,
+    div:focus{
+        outline: none !important;
+    }
+    *,*:focus,*:hover{
+        outline:none !important;
+    }
+    a, a:hover, a:active, a:focus, a img, object, embed {
+        outline: none !important;
+        ie-dummy: expression(this.hideFocus=true); /* MSIE - Microsoft Internet Explorer 9 remove outline */
+    }
     p{
         color: gray !important;
     }
+
 
     .navbar-nav{
         margin-top: 65px !important;;

@@ -136,7 +136,7 @@
     </div>
     <div class="mobileFooter" style="display: none;">
         <div class="navbar" style="width: 100%;background: #ffffff;  z-index: 40000;padding-top: 5px;">
-            <input type="text" placeholder="Share Thoughts & Well Wishes" style="width: 80%;border: 1px solid #e84b7c;border-radius: 10px;height: 35px;padding-left: 10px" >
+            <input type="text" placeholder="Share Thoughts & Well Wishes" style="width: 78%;border: 1px solid #e84b7c;border-radius: 10px;height: 35px;padding-left: 10px" >
             <button class="btn" style="color: #e84b7c;background: #ffffff">POST</button>
         </div>
     </div>

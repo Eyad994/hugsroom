@@ -19,7 +19,7 @@
             <div class="profile_photo">
                 <img @if($room->profile_image == null) src="{{asset('imgs/homeGroup2.png')}}" @endif style="object-fit: cover; width: 170px;height: 170px; background-size: cover; background-image: url({{ asset("uploads/profile/$room->profile_image") }})">
             </div>
-            <label class="btn change_pic_btn"  style="position: absolute;left: 250px;top: 200px;" >
+            <label class="btn change_pic_btn"  style="position: absolute;left: 56%;top: 200px;" >
                 <div style="padding-top: 7px">
                     <i class="fa fa-camera" aria-hidden="true"></i>
                 </div>
@@ -52,8 +52,8 @@
     <div class="col-md-12">
         <div class="owl-carousel">
             <div class="item">
-                <a href="{{asset('/rooms/mbroom/1')}}">
-                <div class="item" data-toggle="slide1">
+                {{--<a href="{{asset('/rooms/mbroom/1')}}">--}}
+                <div class="item" data-toggle="slide1" onclick="redirectTo('mbroom/1')">
                     <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                         <div class="uk-card-box">
                             <div  class="uk-card-sub-box">
@@ -65,27 +65,25 @@
                         </div>
                     </div>
                 </div>
-                </a>
+                {{--</a>--}}
             </div>
             <div class="item black active">
-                <a href="{{asset('/rooms/mbgallery/1')}}">
-                    <div class="item active" data-toggle="slide2">
-                        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
-                            <div class="uk-card-box">
-                                <div  class="uk-card-sub-box">
-                                    <div style="height: 200px; text-align: center">
-                                        <div style="color: #e84b7c;font-size: 80px;padding-top: 30px;"><i class="fa fa-picture-o"></i></div>
-                                        <div style="color: #e84b7c;font-size: 27px;padding-top: 4px;">Gallery</div>
-                                    </div>
+                <div class="item active" data-toggle="slide2" onclick="redirectTo('mbgallery/1')">
+                    <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
+                        <div class="uk-card-box">
+                            <div  class="uk-card-sub-box">
+                                <div style="height: 200px; text-align: center">
+                                    <div style="color: #e84b7c;font-size: 80px;padding-top: 30px;"><i class="fa fa-picture-o"></i></div>
+                                    <div style="color: #e84b7c;font-size: 27px;padding-top: 4px;">Gallery</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </a>
+                </div>
+
             </div>
             <div class="item">
-                <a href="{{asset('/rooms/mbwellWishes/1')}}">
-                <div class="item" data-toggle="slide3">
+                <div class="item" data-toggle="slide3" onclick="redirectTo('mbwellWishes/1')">
                     <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                         <div class="uk-card-box">
                             <div  class="uk-card-sub-box">
@@ -97,7 +95,6 @@
                         </div>
                     </div>
                 </div>
-                </a>
             </div>
             <div class="item black">
                 <div class="item" data-toggle="slide4">

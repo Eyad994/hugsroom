@@ -15,3 +15,8 @@ function openmodel(slide_number) {
         $('#centralModalSm').modal('toggle');
     }
 }
+
+
+function redirectTo(link) {
+    window.location.href = "../"+link;
+}
