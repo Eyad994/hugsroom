@@ -150,19 +150,20 @@
                     <div class="post_likes" style="margin-top: -30px">
                         <form action="/post/{{ $post->id }}/like" method="POST" id="{{ $post->id }}" class="likePostForm">
                             @csrf
-                            <div id="comment-likes-data-{{ $post->id }}" class="comment-likes-data">
+                            <div id="form-data-{{ $post->id }}">
                                 @if($post->isLikedBy(auth()->user()))
-                                    <button class="btn like_btn" style="float: left"><i class="fa fa-heart"></i></button>
+                                    <button class="btn like_btn"><i class="fa fa-heart"></i></button>
                                 @else
-                                    <button class="btn like_btn" style="color: unset;float: left"><i class="fa fa-heart"></i></button>
+                                    <button class="btn like_btn" style="color: unset"><i class="fa fa-heart"></i></button>
                                 @endif
-                                <div class="how_liked">{{ count($post->likes) }} Hearts</div>
+                                {{--<div class="how_liked" id="postLikesCount">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>--}}
+                                <div class="how_liked" id="postLikesCount">{{ count($post->likes) }} Hearts</div>
                             </div>
                         </form>
 
-                        {{--<div class="well_wishes_actions" ><i class="fa fa-edit"></i></div>
+                       {{-- <div class="well_wishes_actions" ><i class="fa fa-edit"></i></div>
                         <div class="well_wishes_actions" ><i class="fa fa-trash"></i></div>--}}
-                        <div class="share_post" style="padding: 12px 0">share <i class="fa fa-share"></i></div>
+                        <div class="share_post">share <i class="fa fa-share"></i></div>
                     </div>
                 </div>
                 <br>
