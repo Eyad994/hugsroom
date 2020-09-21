@@ -53,6 +53,51 @@
         .how_liked {
             margin-top: 10px;
         }
+        .like_btn {
+            background: #ffffff;
+            font-size: 25px;
+            color: #e84b7c;
+            float: left;
+        }
+        .post_text {
+            padding: 0px;
+        }
+        .well_wishes_heart{
+            width: 100px;
+            font-size: 50px;
+            float: left;
+            height: 70px;
+            color: #e84b7c;
+        }
+        .well_wishes_actions{
+            width: 60px;
+            float: left;
+            padding-top: 16px;
+            font-size: 14px;
+            color: #9e9d9d;
+            cursor: pointer;
+        }
+        .posts_section{
+            margin-top: 20px;
+
+        }
+        .section_container{
+            padding-top: 0px;
+        }
+        .section_title{
+            padding-top: 30px;
+            color: #504a4a;
+        }
+        .post_text {
+            padding: 0px;
+            overflow: hidden;
+            width: 100%;
+        }
+        .well_wishes_actions {
+            width: 25px;
+            float: right;
+        }
+
     </style>
 
     <div class="container section_container" style="margin-top: 0 !important;background: #f5f2ef;padding-bottom: 100px;padding-top: 0;height: 100% !important;">
@@ -67,7 +112,7 @@
             </div>
             <div style="padding: 10px;color: #e84b7c;">Latest Journal Entry </div>
                 @foreach($posts as $key => $post)
-                <div class="posts_section" >
+               {{-- <div class="posts_section" >
                     <div onclick="redirectTo('journal/{{$room->id.'/'.$post->id}}')" style="width: 100%">
                     <div class="post_title"> {{ $post->created_at->format('F d, Y') }}</div>
                     <div class="post_info">{{ $room->user->first_name }} {{ $room->user->last_name }}
@@ -83,7 +128,7 @@
                                 @else
                                     <button class="btn like_btn" style="color: unset"><i class="fa fa-heart"></i></button>
                                 @endif
-                                {{--<div class="how_liked" id="postLikesCount">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>--}}
+                                --}}{{--<div class="how_liked" id="postLikesCount">{{ isset($postLikes) ? $postLikes : 0 }} Hearts</div>--}}{{--
                                 <div class="how_liked" id="postLikesCount">{{ count($post->likes) }} Hearts</div>
                             </div>
                         </form>
@@ -91,6 +136,33 @@
                             share
                             <i class="fa fa-share"></i>
                         </div>
+                    </div>
+                </div>--}}
+                <div class="posts_section">
+                    <div onclick="redirectTo('journal/{{$room->id.'/'.$post->id}}')" style="width: 100%">
+                        <div class="post_info">
+                            <img src="{{asset('imgs/homeGroup2.png')}}" class="comment_img">
+                            <div class="comment-signature comment_name" >{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</div>
+                            <div class="comment-date">{{ $post->created_at->diffForHumans() }}</div>
+                        </div>
+                        <div class="post_text" style="padding-top: 10px">{!! $post->body !!}</div>
+                    </div>
+                    <div class="post_likes" style="margin-top: -30px">
+                        <form action="/post/{{ $post->id }}/like" method="POST" id="{{ $post->id }}" class="likePostForm">
+                            @csrf
+                            <div id="comment-likes-data-{{ $post->id }}" class="comment-likes-data">
+                                @if($post->isLikedBy(auth()->user()))
+                                    <button class="btn like_btn" style="float: left"><i class="fa fa-heart"></i></button>
+                                @else
+                                    <button class="btn like_btn" style="color: unset;float: left"><i class="fa fa-heart"></i></button>
+                                @endif
+                                <div class="how_liked">{{ count($post->likes) }} Hearts</div>
+                            </div>
+                        </form>
+
+                        {{--<div class="well_wishes_actions" ><i class="fa fa-edit"></i></div>
+                        <div class="well_wishes_actions" ><i class="fa fa-trash"></i></div>--}}
+                        <div class="share_post" style="padding: 12px 0">share <i class="fa fa-share"></i></div>
                     </div>
                 </div>
                 <br>

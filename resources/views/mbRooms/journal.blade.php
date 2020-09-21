@@ -147,7 +147,7 @@
     <script>
 
         $('#likePostForm').on('submit', function (e) {
-debugger;
+
             e.stopPropagation();
             e.preventDefault();
             var form = $(this);

@@ -36,7 +36,16 @@
             padding-left: 120px;
             color: #E84B7B;
         }
-
+        .room_profile_photo{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            border-radius: 100px;
+            left: 30px;
+            top:10px;
+            border: 2px solid #ffffff;
+            object-fit: cover
+        }
         @media (max-width: 768px) {
             body {
                 background: #ffffff !important;
@@ -49,11 +58,14 @@
                 width: 280px;
                 overflow: hidden;
                 height: 30px;
+                padding-left: 85px;
+                font-size: 18px;
             }
             .post_time{
                 font-size: 10px;
                 padding-left: 120px;
                 color: #E84B7B;
+                padding-left: 85px;
             }
             .post_likes{
                 width: 60px;
@@ -62,6 +74,10 @@
                 right: 15px;
                 top: 16px;
                 height: 40px;
+            }
+            .room_profile_photo{
+                height: 70px;
+                width: 70px;
             }
 
         }
@@ -103,7 +119,7 @@
                                     <div class="post-header" style="height:60px;">
                                         <div style="padding-top: 12px">
                                             <div onclick="redirectToRoom('{{$room->id}}')">
-                                                <img src="imgs/homeGroup2.png" style="position: absolute;height: 100px;width: 100px;border-radius: 100px;left: 30px;top:10px;border: 2px solid #ffffff;object-fit: cover">
+                                                <img src="imgs/homeGroup2.png" class="room_profile_photo" >
                                             </div>
                                         </div>
                                         <div onclick="redirectToRoom('{{$room->id}}')">
@@ -164,7 +180,7 @@
                                             <div style="width: 100%;height: 310px;border-radius: 20px 20px 0px 0px;box-shadow: 2px 2px 10px 1px #e4e1e1 ">
                                                 <div class="post-header" style="height:60px;">
                                                     <div style="padding-top: 12px">
-                                                        <img src="imgs/homeGroup2.png" style="position: absolute;height: 100px;width: 100px;border-radius: 100px;left: 30px;top:10px;border: 2px solid #ffffff;object-fit: cover">
+                                                        <img src="imgs/homeGroup2.png" class="room_profile_photo">
                                                     </div>
                                                     <div onclick="redirectToRoom('{{$room->id}}')">
                                                         <div class="post_person_name" style="font-size: 20px;color:#E84B7B;padding-left: 120px;font-weight: bold;">{{ $room->title }} </div>
@@ -227,7 +243,7 @@
                                             <div style="width: 100%;height: 310px;border-radius: 20px 20px 0px 0px;box-shadow: 2px 2px 10px 1px #e4e1e1 ">
                                                 <div class="post-header" style="height:60px;">
                                                     <div style="padding-top: 12px">
-                                                        <img src="imgs/homeGroup2.png" style="position: absolute;height: 100px;width: 100px;border-radius: 100px;left: 30px;top:10px;border: 2px solid #ffffff;object-fit: cover">
+                                                        <img src="imgs/homeGroup2.png" class="room_profile_photo">
                                                     </div>
                                                     <div onclick="redirectToRoom('{{$room->id}}')">
                                                         <div class="post_person_name" style="font-size: 20px;color:#E84B7B;padding-left: 120px;font-weight: bold;">{{ $room->title }} </div>
@@ -263,7 +279,6 @@
 
                                         </div>
                                     </div>
-                            </div>
                             </div>
                         @endforeach
                 </section>

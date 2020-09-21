@@ -14,10 +14,9 @@
     <style>
         .like_btn {
             background: #ffffff;
-            font-size: 30px;
+            font-size: 25px;
             color: #e84b7c;
             float: left;
-            margin-left: 5px;
         }
         .post_text {
             padding: 0px;
@@ -56,6 +55,9 @@
         .well_wishes_actions {
             width: 25px;
             float: right;
+        }
+        .how_liked {
+            padding-top: 25px;
         }
     </style>
     <div class="container section_container" style="margin-top: 0 !important;background: #ebe5e0;">
