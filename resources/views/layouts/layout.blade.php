@@ -27,7 +27,8 @@
 {{--    <link rel="stylesheet" href="https://swiperjs.com/package/swiper-bundle.min.css">--}}
    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">--}}
     <link rel="stylesheet" href="{{asset("css/cdn/font-awesome.min.css")}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">--}}
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" ></script>
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
  {{--   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.css'>

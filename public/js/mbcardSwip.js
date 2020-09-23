@@ -42,7 +42,7 @@ $(function () {
 $('.owl-carousel').owlCarousel({
     stagePadding: 30,
     loop:true,
-    margin:0,
+    margin:10,
     nav:false,
     items:1,
     lazyLoad: true,
