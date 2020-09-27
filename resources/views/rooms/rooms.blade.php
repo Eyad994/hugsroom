@@ -137,16 +137,21 @@
                                         </div>
                                     </div>
                                     <div style="height: 100px;width: 100%" class="post_footer_icons">
-                                        <div style="width: 25%;float: left;text-align: center">
+                                        <div style="width: 20%;float: left;text-align: center">
                                             <i class="fa fa-edit" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
                                         </div>
-                                        <div style="width: 25%;float: left;text-align: center">
-                                            <i class="fa fa-bell-o" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
+                                        <div style="width: 20%;float: left;text-align: center">
+                                            <i class="fa fa-bell-o" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px; background-image: url("as");"></i>
                                         </div>
-                                        <div style="width: 25%;float: left;text-align: center">
+                                        <div style="width: 20%;float: left;text-align: center">
                                             <i class="fa fa-picture-o" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
                                         </div>
-                                        <div style="width: 25%;float: left;text-align: center">
+                                        <div style="width: 20%;float: left;text-align: center">
+                                            <i aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;">
+                                                <img style="height: 26px;margin-top: 12px; filter: opacity(0.3) drop-shadow(0 0 0 gray);" src="{{ asset('imgs/image0.png') }}" alt="">
+                                            </i>
+                                        </div>
+                                        <div style="width: 20%;float: left;text-align: center">
                                             <i class="fa fa-heart-o" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
                                         </div>
                                     </div>

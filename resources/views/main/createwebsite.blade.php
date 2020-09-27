@@ -715,7 +715,7 @@
 
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <div class="text-center"><h1>Last Step</h1></div>
+                                <div class="text-center"><h1>Let’s Review</h1></div>
                                 <div class="progress show-when-loaded">
                                     <div class="progress-bar main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                                         <span class="sr-only"><span class="progress-bar-value">0</span>% Complete</span>
@@ -724,7 +724,7 @@
                             </div>
                         </div>
                         <div class="col-sm-10 col-sm-offset-1">
-                            <div class="text-center"><h4 style="padding: 10px">Verify everything looks good, then we'll take you to your site to get settled in </h4></div>
+                            <div class="text-center"><h4 style="padding: 10px">Please confirm all the details are ok before we check you into your Room</h4></div>
                             <div class="content">
                                 <div>
                                     <ul class="last_list" style="list-style: none">
@@ -732,7 +732,7 @@
                                             <div class="last_step_icon" >
                                                 <img src="{{asset('imgs/user_info/1.jpg')}}" style="padding-right: 10px;">
                                             </div>
-                                            <div class="last_step_for">Site For</div>
+                                            <div class="last_step_for">{{--Site For--}} Room Resident</div>
                                             <div >
                                                 <label>
                                                     <label class="last_step_value" id="last_site_for">ME</label>
@@ -765,7 +765,7 @@
                                             <div class="last_step_icon" >
                                                 <img src="{{asset('imgs/user_info/4.jpg')}}" style="padding-right: 10px;width: 35px">
                                             </div>
-                                            <div class="last_step_for">Room Title</div>
+                                            <div class="last_step_for">Room Tag/Title</div>
                                             <div >
                                                 <label>
                                                     <label class="last_step_value" id="last_title">ME</label>
@@ -787,7 +787,7 @@
                                             <div class="last_step_icon" >
                                                 <img src="{{asset('imgs/user_info/6.jpg')}}" style="padding-right: 10px;width: 35px">
                                             </div>
-                                            <div class="last_step_for">Google Search Settings </div>
+                                            <div class="last_step_for">Search Engine Support</div>
                                             <div >
                                                 <label>
                                                     <label class="last_step_privecy" id="last_google">ME</label>
@@ -795,10 +795,10 @@
                                             </div>
                                         </li>
                                     </ul>
-                                    <h4 style="text-align: center;padding: 5px">You can adjust these later under your site settings</h4>
+                                    <h4 style="text-align: center;padding: 5px">You can adjust details later from room settings</h4>
                                     <div class="copy-margin center">
                                         <div class="col-md-8 col-md-offset-2 col-sm-12">
-                                            <button class="btn btn-primary main_background_color btn-lg btn-continue" id="last-step" type="button"  data-qa-id="site-create-flow-forward-sc-terms" onclick="submitCreateRoomForm()"> Get Started</button>
+                                            <button class="btn btn-primary main_background_color btn-lg btn-continue" id="last-step" type="button"  data-qa-id="site-create-flow-forward-sc-terms" onclick="submitCreateRoomForm()">Let’s Go</button>
                                         </div>
                                     </div>
                             </div>
