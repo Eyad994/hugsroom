@@ -20308,10 +20308,6 @@ form .control-group .controls .control-list label, form .control-group .controls
     text-shadow: none
 }
 
-a:link, .link:link {
-    -webkit-tap-highlight-color: #545559
-}
-
 .user-generated {
     word-wrap: break-word;
     text-transform: none

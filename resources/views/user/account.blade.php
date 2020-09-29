@@ -14,7 +14,7 @@
             background: #ffffff;
             text-align: center;
             font-size: 18px;
-            padding-top: 15px;
+            padding-top: 20px;
             color: #000000;
             font-weight: bold;
             box-shadow: 2px 3px 6px #908c8c;
@@ -41,13 +41,30 @@
             margin-top: 30px;
             border-top: 1px solid #cccccc;
         }
+
+
+
+        @media (max-width: 768px) {
+            .container-bloody {
+                background-color: #f9f9fb;
+            }
+            body > .container-fluid {
+                height: 105%;
+            }
+            body {
+                background-color: #f9f9fb;
+            }
+            .site_div_content{
+                background: #f9f9fb;
+            }
+        }
     </style>
 
     <div class="site-content sub_tab_1" >
         <div class="site-create-steps">
             <div class="row">
                 <section class="site-create-step active" id="sc-terms" >
-                    <div class="row" style="padding: 0px 30px">
+                    <div class="row site_div_content" style="padding: 0px 30px">
                         <div class="col-md-12">
                             <div class="profile_title" >Edit Your Profile</div>
                             <div class="profile_content">
@@ -85,10 +102,12 @@
                                         <div class="line_full_width"></div>
                                         <div class="form-group">
                                             <label for="exampleInputGender">Country</label>
-                                            <select class="form-control" id="exampleInputGender" style="border: 1px solid #cccccc;border-radius: 5px;">
+                                            <select class="form-control select2" id="exampleInputGender" style="border: 1px solid #cccccc;border-radius: 5px;">
                                                 <option value="">Choose Country</option>
-                                                <option value="1">Male</option>
-                                                <option value="2">Female</option>
+                                                    @foreach($countries as $k =>$val)
+
+                                                        <option value="{{$val->id}}">{{$val->nicename}}</option>
+                                                    @endforeach
                                             </select>
                                         </div>
                                         <div class="form-group">

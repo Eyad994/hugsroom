@@ -14,7 +14,7 @@
             background: #ffffff;
             text-align: center;
             font-size: 18px;
-            padding-top: 15px;
+            padding-top: 20px;
             color: #000000;
             font-weight: bold;
             box-shadow: 2px 3px 6px #908c8c;
@@ -105,6 +105,11 @@
 
         .slider.round:before {
             border-radius: 50%;
+        }
+        @media (max-width: 768px) {
+            body {
+                background-color: #f9f9fb;;
+            }
         }
     </style>
     <div class="site-content sub_tab_1" >

@@ -44,7 +44,7 @@
             text-align: center;
             font-size: 18px;
             margin-top: -10px;
-            border-radius: 10px 10px 0px 0px;
+            border-radius: 10px;
         }
         .settings_content_box span{
             color: #ffffff;
@@ -70,16 +70,12 @@
             margin-right: auto;
             border-top: 1px solid #ffffff;
         }
+
         @media (max-width: 768px) {
-        /*    body {
-                background: #ffffff !important;
+            body {
+                background-color: #f9f9fb;
+                font-family: 'Quicksand';
             }
-
-            .container-fluid {
-                background: #ffffff !important;
-            }
-         */
-
         }
     </style>
 
@@ -99,7 +95,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="#">
+                            <a href="{{asset("profile/notification/1")}}">
                                 <div class="notify_settings" >
                                     <div class="settings_content_box">
                                         <div class="profile_margin"></div>
@@ -108,13 +104,15 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="#"><div class="additinal_settings" >
+                            <a href="{{asset("profile/additionalInfo/1")}}">
+                                <div class="additinal_settings" >
                                     <div class="settings_content_box">
                                         <div class="profile_margin"></div>
                                         <img src="{{asset("imgs/footer_icons/search.png")}}" />
                                         <span style=""> Additional Information</span>
                                     </div>
-                                </div></a>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </section>

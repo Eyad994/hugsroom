@@ -106,5 +106,8 @@ class HomeController extends Controller
         return view('auth.login')->with('email', '');
     }
 
-
+    public function aboutUs()
+    {
+        return view('additional.aboutUs');
+    }
 }

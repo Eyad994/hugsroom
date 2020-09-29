@@ -50,6 +50,7 @@ Route::get('/profile/{id}', 'UserController@profile');
 Route::get('/profile/account/{id}', 'UserController@account');
 Route::get('/profile/notification/{id}', 'UserController@notification');
 Route::get('/profile/additionalInfo/{id}', 'UserController@additionalInfo');
+Route::get('aboutUs', 'HomeController@aboutUs');
 
 /*******************************************************************************/
 Route::post('storePost', 'RoomsController@storePost')->name('storePost');

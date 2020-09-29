@@ -58,10 +58,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>--}}
     <link rel="stylesheet" href='{{asset("css/cdn/bootstrap.min.css")}}' >
+    <link href="{{asset('css/select2-bootstrap4.css')}}" media="print" rel="stylesheet" type="text/css">
+
     <script src='{{asset("js/cdn/3.5.1/jquery.min.js")}}'></script>
     <script src='{{asset("js/cdn/3.4.1/bootstrap.min.js")}}'></script>
 
     <script src="{{asset('js/main/main.js')}}"></script>
+
+
 </head>
 <style type="text/css">
 

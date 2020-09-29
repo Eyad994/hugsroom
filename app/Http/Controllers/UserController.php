@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Gallery;
+use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -13,7 +14,9 @@ class UserController extends Controller
     }
     public function account()
     {
-        return view('user.account');
+        $user = new User();
+        $countries = $user->getAllCountries();
+        return view('user.account',compact('countries'));
     }
     public function notification()
     {

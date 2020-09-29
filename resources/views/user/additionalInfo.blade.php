@@ -30,7 +30,7 @@
             margin-top: 5px;
             padding: 0 20px;
             background: #ffffff;
-
+            padding-bottom: 20px;
         }
         .profile_form{
             padding-top: 30px;
@@ -40,6 +40,13 @@
             height: 40px;
             margin-top: 30px;
             border-top: 1px solid #cccccc;
+        }
+
+
+        @media (max-width: 768px) {
+            body {
+                background-color: #f9f9fb;;
+            }
         }
     </style>
 
@@ -52,7 +59,7 @@
                             <div class="profile_title" >Additional Settings</div>
                             <div class="profile_content">
                                 <div class="profile_form">
-                                    <a href="#">
+                                    <a href="{{asset("aboutUs")}}">
                                         <div class="form-group">
                                             <label>About Us</label>
                                             <i class="fa fa-angle-right" style="float: right;font-size: 20px;"></i>
