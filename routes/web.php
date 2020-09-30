@@ -69,4 +69,5 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/profile/notification', 'UserController@notification');
     Route::get('/profile/additionalInfo', 'UserController@additionalInfo');
     Route::post('updateProfile', 'ProfileController@updateProfile')->name('updateProfile');
+    Route::get('updateNotification/{notification}/{val}', 'ProfileController@updateNotification')->name('updateNotification');
 });

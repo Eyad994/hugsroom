@@ -9,6 +9,7 @@ class ProfileController extends Controller
 {
     public function updateProfile(Request $request)
     {
+        return $request->all();
         $request->validate([
             'first_name' => 'required',
             'last_name' => 'required',
@@ -27,5 +28,30 @@ class ProfileController extends Controller
 
         return back()->with('msg', 'Updated Successfully');
 
+    }
+
+    public function updateNotification($notification, $val)
+    {
+        $user = auth()->user();
+        switch ($notification)
+        {
+            case 'journal':
+                $user->update(['journal_notification' => $val]);
+                $user->save();
+                break;
+            case 'wishes':
+                $user->update(['wishes_notification' => $val]);
+                $user->save();
+                break;
+            case 'photos':
+                $user->update(['photos_notification' => $val]);
+                $user->save();
+                break;
+            case 'gifts':
+                $user->update(['gifts_notification' => $val]);
+                $user->save();
+                break;
+        }
+        return $user;
     }
 }

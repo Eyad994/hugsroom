@@ -555,7 +555,7 @@
         <a href="#contact" style="width: 25%">
             <img src="{{asset("imgs/footer_icons/notifications.png")}}" />
             <br>Notifications</a>
-        <a href="#contact" style="width: 25%">
+        <a href="/profile" style="width: 25%">
             <img src="{{asset("imgs/footer_icons/user.png")}}" /><br />Profile</a>
     </div>
 </div>
