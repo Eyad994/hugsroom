@@ -27,8 +27,7 @@
 {{--    <link rel="stylesheet" href="https://swiperjs.com/package/swiper-bundle.min.css">--}}
    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">--}}
     <link rel="stylesheet" href="{{asset("css/cdn/font-awesome.min.css")}}">
-    {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">--}}
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
  {{--   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.css'>
@@ -58,7 +57,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>--}}
     <link rel="stylesheet" href='{{asset("css/cdn/bootstrap.min.css")}}' >
-    <link href="{{asset('css/select2-bootstrap4.css')}}" media="print" rel="stylesheet" type="text/css">
 
     <script src='{{asset("js/cdn/3.5.1/jquery.min.js")}}'></script>
     <script src='{{asset("js/cdn/3.4.1/bootstrap.min.js")}}'></script>
@@ -294,13 +292,13 @@
                 @if (Auth::check())
                     <li role="menuitem">
                         <div class="" style="color:#ffffff;float: left;">
-                            <i class="fa fa-user-circle" aria-hidden="true" style="font-size:30px;"></i>
+                            <i class="fa fa-user-circle" aria-hidden="true" style="font-size: 23px;margin-top: 5px"></i>
                         </div>
                         <i class="fa fa-angle-down" aria-hidden="true" style="color: #ffffff;padding-top:10px;margin-left: 2px;" data-toggle="account" onclick="open_sub_menu(this)"></i>
                         <ul class="header_sub_menu" id="account" style="display: none">
 
 
-                            <li>Profile</li>
+                            <li><a href="{{asset('profile')}}" style="color: #000000" >Profile</a></li>
                             <li>
                                 <form method="POST" action="{{ route('logout') }}" style="margin: 0px;">
                                     @csrf

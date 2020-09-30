@@ -43,7 +43,21 @@
         }
 
 
+        .change_pic_btn {
+            border-radius: 100px;
+            padding: 0px;
+            float: left;
+            margin-left: 20px;
+            color: #ffffff;
+            background: #8e8e8e;
+            position: ABSOLUTE;
+            left: 60px;
+            top: 160px;
+            width: 23px;
+            height: 23px;
+            font-size: 10px;
 
+        }
         @media (max-width: 768px) {
             .container-bloody {
                 background-color: #f9f9fb;
@@ -70,6 +84,15 @@
                                 <div class="profile_title" >Edit Your Profile</div>
                                 <div class="profile_content">
                                     <img src="{{asset('imgs/homeGroup2.png')}}" class="room_profile_photo" >
+                                    <label class="btn change_pic_btn" >
+                                        <div style="padding-top: 6px">
+                                            <i class="fa fa-camera" aria-hidden="true"></i>
+                                        </div>
+                                        <form action="" id="background-image-form" method="POST">
+                                            @csrf
+                                            <input type="file" name="background-image" id="background-image" style="visibility: hidden;"/>
+                                        </form>
+                                    </label>
                                     <div class="profile_form">
                                         @if(session()->has('msg'))
                                             <div class="alert alert-success">
