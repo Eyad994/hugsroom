@@ -86,7 +86,7 @@
                     <div class="row" style="padding: 30px 30px">
                         <div class="col-md-12">
                             <div class="profile_title" >Profile</div>
-                            <a href="{{asset("profile/account/1")}}">
+                            <a href="{{asset("profile/account")}}">
                                 <div class="account_settings" >
                                     <div class="settings_content_box">
                                         <div class="profile_margin"></div>
@@ -95,7 +95,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="{{asset("profile/notification/1")}}">
+                            <a href="{{asset("profile/notification")}}">
                                 <div class="notify_settings" >
                                     <div class="settings_content_box">
                                         <div class="profile_margin"></div>
@@ -104,7 +104,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="{{asset("profile/additionalInfo/1")}}">
+                            <a href="{{asset("profile/additionalInfo")}}">
                                 <div class="additinal_settings" >
                                     <div class="settings_content_box">
                                         <div class="profile_margin"></div>

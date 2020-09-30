@@ -46,10 +46,6 @@ Route::get('/rooms/journal/{id}/{postId}', 'RoomsController@journal');
 Route::get('/rooms/mbroom/{id}', 'RoomsController@mbroom')->name('mbRoom');
 Route::get('/rooms/gallery/{id}', 'RoomsController@gallery');
 Route::get('/rooms/mbgallery/{id}', 'RoomsController@mbgallery');
-Route::get('/profile/{id}', 'UserController@profile');
-Route::get('/profile/account/{id}', 'UserController@account');
-Route::get('/profile/notification/{id}', 'UserController@notification');
-Route::get('/profile/additionalInfo/{id}', 'UserController@additionalInfo');
 Route::get('aboutUs', 'HomeController@aboutUs');
 
 /*******************************************************************************/
@@ -65,3 +61,12 @@ Route::post('/room/{id}/uploadProfileImage', 'RoomsController@uploadProfileImage
 Route::post('/room/{id}/uploadGallery', 'GalleryController@store');
 
 /*Route::get('/xx', 'HomeController@xx');*/
+
+Route::group(['middleware' => 'auth'], function (){
+    /*****************************Update Profile**************************************/
+    Route::get('/profile', 'UserController@profile');
+    Route::get('/profile/account', 'UserController@account');
+    Route::get('/profile/notification', 'UserController@notification');
+    Route::get('/profile/additionalInfo', 'UserController@additionalInfo');
+    Route::post('updateProfile', 'ProfileController@updateProfile')->name('updateProfile');
+});
