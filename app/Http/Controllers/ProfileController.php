@@ -9,7 +9,6 @@ class ProfileController extends Controller
 {
     public function updateProfile(Request $request)
     {
-        return $request->all();
         $request->validate([
             'first_name' => 'required',
             'last_name' => 'required',
@@ -25,6 +24,11 @@ class ProfileController extends Controller
             'timezone' => $request->timezone,
             'lang' => $request->language,
         ]);
+
+        if (isset($request->country) && $request->country != null && $request->country != '' )
+        {
+            User::where('id', auth()->id())->update(['country' => $request->country]);
+        }
 
         return back()->with('msg', 'Updated Successfully');
 
