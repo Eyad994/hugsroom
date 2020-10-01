@@ -60,6 +60,11 @@ Route::post('/room/{id}/uploadBackgroundImage', 'RoomsController@uploadBackgroun
 Route::post('/room/{id}/uploadProfileImage', 'RoomsController@uploadProfileImage');
 Route::post('/room/{id}/uploadGallery', 'GalleryController@store');
 
+/*****************************************************************************/
+Route::get('/resources', 'ResourcesController@index');
+Route::get('/resources/stories/{id}', 'ResourcesController@stories');
+Route::get('/resources/vendors/{id}', 'ResourcesController@vendors');
+
 /*Route::get('/xx', 'HomeController@xx');*/
 
 Route::group(['middleware' => 'auth'], function (){
