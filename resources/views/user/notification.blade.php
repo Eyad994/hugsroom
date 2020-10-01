@@ -1,13 +1,15 @@
 @extends('layouts.layout')
 @section('content')
     <style>
-        .site-content{
+        .site-content {
             background: #f9f9fb;
             padding-bottom: 100px;
         }
-        .main_content{
+
+        .main_content {
             background: #f9f9fb;
         }
+
         .profile_title {
             width: 100%;
             height: 60px;
@@ -19,28 +21,33 @@
             font-weight: bold;
             box-shadow: 2px 3px 6px #908c8c;
         }
-        .room_profile_photo{
+
+        .room_profile_photo {
             height: 70px;
             width: 70px;
             border-radius: 100px;
             border: 2px solid #ffffff;
             object-fit: cover
         }
-        .profile_content{
+
+        .profile_content {
             margin-top: 5px;
             padding: 20px 20px;
             background: #ffffff;
 
         }
-        .profile_form{
+
+        .profile_form {
             padding-top: 30px;
         }
-        .line_full_width{
+
+        .line_full_width {
             width: 100%;
             height: 40px;
             margin-top: 30px;
             border-top: 1px solid #cccccc;
         }
+
         /* The switch - the box around the slider */
         .switch {
             position: relative;
@@ -106,47 +113,48 @@
         .slider.round:before {
             border-radius: 50%;
         }
+
         @media (max-width: 768px) {
             body {
                 background-color: #f9f9fb;;
             }
         }
     </style>
-    <div class="site-content sub_tab_1" >
+    <div class="site-content sub_tab_1">
         <div class="site-create-steps">
             <div class="row">
-                <section class="site-create-step active" id="sc-terms" >
+                <section class="site-create-step active" id="sc-terms">
                     <div class="row" style="padding: 0px 30px">
                         <div class="col-md-12">
-                            <div class="profile_title" >Notification Settings</div>
+                            <div class="profile_title">Notification Settings</div>
                             <div class="profile_content">
                                 <div class="profile_form">
                                     <!-- Rounded switch -->
                                     <div class="form-group" style="height: 30px;">
                                         <label>New Journal updates</label>
                                         <label class="switch">
-                                            <input type="checkbox">
+                                            <input {{ auth()->user()->journal_notification == 1 ? 'checked' : '' }} name="journal_checkbox" id="journal_checkbox" type="checkbox">
                                             <span class="slider round" style="width: 55px"></span>
                                         </label>
                                     </div>
                                     <div class="form-group" style="height: 30px;">
                                         <label>New Well Wishes</label>
                                         <label class="switch">
-                                            <input type="checkbox">
+                                            <input {{ auth()->user()->wishes_notification == 1 ? 'checked' : '' }} name="wishes_checkbox" id="wishes_checkbox" type="checkbox">
                                             <span class="slider round" style="width: 55px"></span>
                                         </label>
                                     </div>
                                     <div class="form-group" style="height: 30px;">
                                         <label>New Photos</label>
                                         <label class="switch">
-                                            <input type="checkbox">
+                                            <input {{ auth()->user()->photos_notification == 1 ? 'checked' : '' }} name="photos_checkbox" id="photos_checkbox" type="checkbox">
                                             <span class="slider round" style="width: 55px"></span>
                                         </label>
                                     </div>
                                     <div class="form-group" style="height: 30px;">
                                         <label>New Gifts</label>
                                         <label class="switch">
-                                            <input type="checkbox">
+                                            <input {{ auth()->user()->gifts_notification == 1 ? 'checked' : '' }} name="gifts_checkbox" id="gifts_checkbox" type="checkbox">
                                             <span class="slider round" style="width: 55px"></span>
                                         </label>
                                     </div>
@@ -159,4 +167,81 @@
             </div>
         </div>
     </div>
+
+    <script>
+
+        $('#journal_checkbox').change(function () {
+            var id = 'journal';
+            if (this.checked) {
+                $.ajax({
+                    url: '/updateNotification/'+id+'/'+1,
+                    success: function (data) {
+
+                    }
+                })
+            } else {
+                $.ajax({
+                    url: '/updateNotification/'+id+'/'+0,
+                    success: function (data) {
+
+                    }
+                })
+            }
+        });
+
+        $('#wishes_checkbox').change(function () {
+            var id = 'wishes';
+            if (this.checked) {
+                $.ajax({
+                    url: '/updateNotification/'+id+'/'+1,
+                    success: function (data) {
+
+                    }
+                })
+            } else {
+                $.ajax({
+                    url: '/updateNotification/'+id+'/'+0,
+                    success: function (data) {
+
+                    }
+                })
+            }
+        });
+        $('#photos_checkbox').change(function () {
+            var id = 'photos';
+            if (this.checked) {
+                $.ajax({
+                    url: '/updateNotification/'+id+'/'+1,
+                    success: function (data) {
+
+                    }
+                })
+            } else {
+                $.ajax({
+                    url: '/updateNotification/'+id+'/'+0,
+                    success: function (data) {
+
+                    }
+                })
+            }
+        });
+        $('#gifts_checkbox').change(function () {
+            var id = 'gifts';
+            if (this.checked) {
+                $.ajax({
+                    url: '/updateNotification/'+id+'/'+1,
+                    success: function (data) {
+
+                    }
+                })
+            } else {
+                $.ajax({
+                    url: '/updateNotification/'+id+'/'+0,
+                    success: function (data) {
+
+                    }
+                })
+            }
+        });
+    </script>
 @endsection

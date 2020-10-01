@@ -25,7 +25,37 @@ class ProfileController extends Controller
             'lang' => $request->language,
         ]);
 
+        if (isset($request->country) && $request->country != null && $request->country != '' )
+        {
+            User::where('id', auth()->id())->update(['country' => $request->country]);
+        }
+
         return back()->with('msg', 'Updated Successfully');
 
+    }
+
+    public function updateNotification($notification, $val)
+    {
+        $user = auth()->user();
+        switch ($notification)
+        {
+            case 'journal':
+                $user->update(['journal_notification' => $val]);
+                $user->save();
+                break;
+            case 'wishes':
+                $user->update(['wishes_notification' => $val]);
+                $user->save();
+                break;
+            case 'photos':
+                $user->update(['photos_notification' => $val]);
+                $user->save();
+                break;
+            case 'gifts':
+                $user->update(['gifts_notification' => $val]);
+                $user->save();
+                break;
+        }
+        return $user;
     }
 }

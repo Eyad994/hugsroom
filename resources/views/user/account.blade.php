@@ -151,7 +151,7 @@
                                                 <select name="country" class="form-control select2" id="exampleInputGender" style="border: 1px solid #cccccc;border-radius: 5px;">
                                                     <option value="">Choose Country</option>
                                                     @foreach($countries as $k =>$val)
-                                                        <option value="{{$val->nicename}}">{{$val->nicename}}</option>
+                                                        <option value="{{$val->nicename}}" {{ auth()->user()->country == $val->nicename ? 'selected' : ''}}>{{$val->nicename}}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
