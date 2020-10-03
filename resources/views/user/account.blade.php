@@ -58,6 +58,13 @@
             font-size: 10px;
 
         }
+        .fa-google {
+            background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
         @media (max-width: 768px) {
             .container-bloody {
                 background-color: #f9f9fb;
@@ -144,6 +151,16 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputPassword1">Connected Social Media</label>
+                                                <div style=" padding: 15px 25px;box-shadow: 3px 2px 6px 3px #BCBCBC;border-radius: 5px;cursor: pointer">
+                                                    <i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 20px;color: blue"></i>
+                                                    <span style="padding-left: 10px">Conected</span>
+                                                    <i class="fa fa-check" aria-hidden="true" style="color: green"></i>
+                                                </div>
+                                                <div style=" padding: 15px 25px;box-shadow: 3px 2px 6px 3px #BCBCBC;border-radius: 5px;margin-top: 20px;cursor: pointer">
+                                                    <i class="fa fa-google" aria-hidden="true" style="font-size: 20px;"></i>
+                                                    <span style="padding-left: 10px">Not Conected</span>
+                                                    <i class="fa fa-times" aria-hidden="true" style="color: red"></i>
+                                                </div>
                                             </div>
                                             <div class="line_full_width"></div>
                                             <div class="form-group">

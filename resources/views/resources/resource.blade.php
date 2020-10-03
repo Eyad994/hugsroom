@@ -247,7 +247,7 @@
                                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                                             </div>
                                             <div style="padding: 0 20px">
-                                                <input type="button" class="btn form-control" style="background: #E84B7B;color:#ffffff;height: 50px" value="View More" >
+                                                <a type="button" href="{{asset("resources/vendors/1")}}" class="btn form-control" style="background: #E84B7B;color: #ffffff;height: 50px;padding-top: 13px;font-size: 16px;" value="" >View More</a>
                                             </div>
                                         </div>
                                     </div>

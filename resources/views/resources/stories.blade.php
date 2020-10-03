@@ -105,11 +105,11 @@
                 </div>
             </div>
             <div style="width: 100%;padding: 0px 20px;">
-                <div style="padding: 10px 0px;font-size: 20px;font-weight: bold;color: #e84b7c;">Your Title Here</div>
+                <div style="padding: 10px 15px;font-size: 20px;font-weight: bold;color: #e84b7c;">Your Title Here</div>
             </div>
             <div>
                 <div class="pad-top_12" style="padding: 0px 20px">
-                    <p style="font-size: 16px;overflow: hidden;text-align: left">
+                    <p style="font-size: 16px;overflow: hidden;text-align: left;padding-left: 15px">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem <Ipsum class=""></Ipsum>
                     </p>

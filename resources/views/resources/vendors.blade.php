@@ -46,6 +46,12 @@
             border: 2px solid #ffffff;
             object-fit: cover
         }
+        .post_footer_icons_section{
+            width: 25%;
+            float: left;
+            text-align: center;
+            padding-top: 13px;
+        }
         @media (max-width: 768px) {
             body {
                 background: #ffffff !important;
@@ -79,7 +85,9 @@
                 height: 70px;
                 width: 70px;
             }
-
+            .main_content {
+                padding-bottom: 100px !important;
+            }
         }
     </style>
     <div class="room_header" style="height: 80px;background: #E84B7B;margin-top: -5px">
@@ -113,22 +121,54 @@
                                     <img src="{{asset('imgs/rectangle.png')}}" style="height: 200px;width: 100%;">
                                 </div>
                                 <div style="height: 100px;width: 100%" class="post_footer_icons">
-                                    <div style="width: 20%;float: left;text-align: center">
-                                        <i class="fa fa-edit" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
+                                    <div class="post_footer_icons_section">
+                                        <img src="{{asset('imgs/icons/global.png')}}" style="height: 30px;width: 30px;">
                                     </div>
-                                    <div style="width: 20%;float: left;text-align: center">
-                                        <i class="fa fa-bell-o" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
+                                    <div class="post_footer_icons_section">
+                                        <img src="{{asset('imgs/icons/phone.png')}}" style="height: 30px;width: 30px;">
                                     </div>
-                                    <div style="width: 20%;float: left;text-align: center">
-                                        <i class="fa fa-picture-o" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
+                                    <div class="post_footer_icons_section">
+                                        <img src="{{asset('imgs/icons/facebook.png')}}" style="height: 30px;width: 30px;">
                                     </div>
-                                    <div style="width: 20%;float: left;text-align: center">
-                                        <i aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;">
-                                            <img style="height: 26px;margin-top: 12px; filter: opacity(0.3) drop-shadow(0 0 0 gray);" src="{{ asset('imgs/image0.png') }}" alt="">
-                                        </i>
+                                    <div class="post_footer_icons_section">
+                                        <img src="{{asset('imgs/icons/whatsapp.png')}}" style="height: 30px;width: 30px;">
                                     </div>
-                                    <div style="width: 20%;float: left;text-align: center">
-                                        <i class="fa fa-heart-o" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 30px">
+                        <div class="col-md-12">
+                            <div style="width: 100%;height: 470px;border-radius: 20px 20px 0px 0px;box-shadow: 2px 2px 10px 1px #e4e1e1;padding: 20px; ">
+                                <div class="post-header" style="height:60px;">
+                                    <div style="padding-top: 12px">
+                                        <img src="{{asset("imgs/homeGroup2.png")}}" class="room_profile_photo" >
+                                    </div>
+                                    <div class="post_person_name" >Company Name </div>
+                                </div>
+                                <div style="padding-top: 30px;height: 135px;overflow: hidden;">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                                </div>
+                                <div style="width: 100%;height: 200px;">
+                                    <img src="{{asset('imgs/rectangle.png')}}" style="height: 200px;width: 100%;">
+
+                                </div>
+                                <div style="height: 100px;width: 100%" class="post_footer_icons">
+                                    <div class="post_footer_icons_section">
+                                        <img src="{{asset('imgs/icons/global.png')}}" style="height: 30px;width: 30px;">
+                                    </div>
+                                    <div class="post_footer_icons_section">
+                                        <img src="{{asset('imgs/icons/phone.png')}}" style="height: 30px;width: 30px;">
+                                    </div>
+                                    <div class="post_footer_icons_section">
+                                         <img src="{{asset('imgs/icons/facebook.png')}}" style="height: 30px;width: 30px;">
+                                    </div>
+                                    <div class="post_footer_icons_section">
+                                        <img src="{{asset('imgs/icons/whatsapp.png')}}" style="height: 30px;width: 30px;">
                                     </div>
                                 </div>
                             </div>
@@ -154,67 +194,20 @@
                                     <img src="{{asset('imgs/rectangle.png')}}" style="height: 200px;width: 100%;">
                                 </div>
                                 <div style="height: 100px;width: 100%" class="post_footer_icons">
-                                    <div style="width: 20%;float: left;text-align: center">
-                                        <i class="fa fa-edit" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
+                                    <div class="post_footer_icons_section">
+                                        <img src="{{asset('imgs/icons/global.png')}}" style="height: 30px;width: 30px;">
                                     </div>
-                                    <div style="width: 20%;float: left;text-align: center">
-                                        <i class="fa fa-bell-o" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
+                                    <div class="post_footer_icons_section">
+                                        <img src="{{asset('imgs/icons/phone.png')}}" style="height: 30px;width: 30px;">
                                     </div>
-                                    <div style="width: 20%;float: left;text-align: center">
-                                        <i class="fa fa-picture-o" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
+                                    <div class="post_footer_icons_section">
+                                        <img src="{{asset('imgs/icons/facebook.png')}}" style="height: 30px;width: 30px;">
                                     </div>
-                                    <div style="width: 20%;float: left;text-align: center">
-                                        <i aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;">
-                                            <img style="height: 26px;margin-top: 12px; filter: opacity(0.3) drop-shadow(0 0 0 gray);" src="{{ asset('imgs/image0.png') }}" alt="">
-                                        </i>
-                                    </div>
-                                    <div style="width: 20%;float: left;text-align: center">
-                                        <i class="fa fa-heart-o" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
+                                    <div class="post_footer_icons_section">
+                                        <img src="{{asset('imgs/icons/whatsapp.png')}}" style="height: 30px;width: 30px;">
                                     </div>
                                 </div>
                             </div>
-
-                        </div>
-                    </div>
-                    <div class="row" style="padding-top: 30px">
-                        <div class="col-md-12">
-                            <div style="width: 100%;height: 470px;border-radius: 20px 20px 0px 0px;box-shadow: 2px 2px 10px 1px #e4e1e1;padding: 20px; ">
-                                <div class="post-header" style="height:60px;">
-                                    <div style="padding-top: 12px">
-                                        <img src="{{asset("imgs/homeGroup2.png")}}" class="room_profile_photo" >
-                                    </div>
-                                    <div class="post_person_name" >Company Name </div>
-                                </div>
-                                <div style="padding-top: 30px;height: 135px;overflow: hidden;">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-                                </div>
-                                <div style="width: 100%;height: 200px;">
-                                    <img src="{{asset('imgs/rectangle.png')}}" style="height: 200px;width: 100%;">
-                                </div>
-                                <div style="height: 100px;width: 100%" class="post_footer_icons">
-                                    <div style="width: 20%;float: left;text-align: center">
-                                        <i class="fa fa-edit" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
-                                    </div>
-                                    <div style="width: 20%;float: left;text-align: center">
-                                        <i class="fa fa-bell-o" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
-                                    </div>
-                                    <div style="width: 20%;float: left;text-align: center">
-                                        <i class="fa fa-picture-o" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
-                                    </div>
-                                    <div style="width: 20%;float: left;text-align: center">
-                                        <i aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;">
-                                            <img style="height: 26px;margin-top: 12px; filter: opacity(0.3) drop-shadow(0 0 0 gray);" src="{{ asset('imgs/image0.png') }}" alt="">
-                                        </i>
-                                    </div>
-                                    <div style="width: 20%;float: left;text-align: center">
-                                        <i class="fa fa-heart-o" aria-hidden="true" style="color: #99a6ad;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </section>
