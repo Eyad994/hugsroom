@@ -24,4 +24,8 @@ class ResourcesController extends Controller
     {
         return view('resources.vendors');
     }
+    public function addStory(Request $request)
+    {
+        return view('resources.addStory');
+    }
 }

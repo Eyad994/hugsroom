@@ -1,8 +1,5 @@
 @extends('layouts.layout')
 @section('content')
-    <script type="text/javascript">
-
-    </script>
     <style>
 
         .post_person_name{
@@ -104,7 +101,7 @@
                 <section class="site-create-step active" id="sc-terms" >
                     <div class="row" style="padding: 30px 0px">
                         <div class="col-md-3"></div>
-                        <div class="col-md-6"><input type="button" class="btn form-control" style="background: #FEB25D;color:#ffffff;height: 50px" value="+ Add Vendor Details" ></div>
+                        <div class="col-md-6"><a href="{{asset('resources/addStory')}}" class="btn form-control" style="padding: 15px;font-size: 15px;background: #FEB25D;color:#ffffff;height: 50px"  >+ Add Story</a></div>
                         <div class="col-md-3"></div>
                     </div>
                     <?php $i=0; ?>
@@ -135,11 +132,11 @@
                                     </div>
                                     <div style="height: 100px;width: 100%" class="post_footer_icons">
                                         <div style="width: 100px;float: left;text-align: left;padding-left: 5px;">
-                                            <i class="fa fa-heart-o" aria-hidden="true" style="padding-top:15px;margin-left: 15px;font-size: 22px;color: #e84b7c;"></i>
+                                            <i class="fa fa-heart-o" aria-hidden="true" style="padding-top:15px;margin-left: 15px;font-size: 22px;color: #e84b7c;" onclick="storyLove()"></i>
                                             <span>120</span>
                                         </div>
                                         <div style="width: 20%;float: left;text-align: left">
-                                            <i class="fa fa-thumbs-o-up" aria-hidden="true" style="color: #e84b7c;padding-top:15px;margin-left: 15px;font-size: 22px;"></i>
+                                            <i class="fa fa-thumbs-o-up" aria-hidden="true" style="color: #e84b7c;padding-top:15px;margin-left: 15px;font-size: 22px;"  onclick="storyLike()"></i>
                                             <span>200</span>
                                         </div>
                                     </div>
@@ -259,5 +256,6 @@
         </div>
     </div>
     <script  src="{{asset('js/rooms/main.js')}}"></script>
+    <script  src="{{asset('js/resources/main.js')}}"></script>
 
 @endsection

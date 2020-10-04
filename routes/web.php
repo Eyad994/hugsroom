@@ -64,6 +64,7 @@ Route::post('/room/{id}/uploadGallery', 'GalleryController@store');
 Route::get('/resources', 'ResourcesController@index');
 Route::get('/resources/stories/{id}', 'ResourcesController@stories');
 Route::get('/resources/vendors/{id}', 'ResourcesController@vendors');
+Route::get('/resources/addStory', 'ResourcesController@addStory');
 
 /*Route::get('/xx', 'HomeController@xx');*/
 

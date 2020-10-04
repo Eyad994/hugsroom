@@ -121,17 +121,17 @@
                                     <img src="{{asset('imgs/rectangle.png')}}" style="height: 200px;width: 100%;">
                                 </div>
                                 <div style="height: 100px;width: 100%" class="post_footer_icons">
-                                    <div class="post_footer_icons_section">
-                                        <img src="{{asset('imgs/icons/global.png')}}" style="height: 30px;width: 30px;">
+                                    <div class="post_footer_icons_section" onclick="vindor_global()">
+                                        <img src="{{asset('imgs/icons/global.png')}}" style="height: 30px;width: 30px;cursor: pointer">
                                     </div>
-                                    <div class="post_footer_icons_section">
-                                        <img src="{{asset('imgs/icons/phone.png')}}" style="height: 30px;width: 30px;">
+                                    <div class="post_footer_icons_section" onclick="vindor_phone()">
+                                        <img src="{{asset('imgs/icons/phone.png')}}" style="height: 30px;width: 30px;cursor: pointer">
                                     </div>
-                                    <div class="post_footer_icons_section">
-                                        <img src="{{asset('imgs/icons/facebook.png')}}" style="height: 30px;width: 30px;">
+                                    <div class="post_footer_icons_section" onclick="vindor_facebook()">
+                                        <img src="{{asset('imgs/icons/facebook.png')}}" style="height: 30px;width: 30px;cursor: pointer">
                                     </div>
-                                    <div class="post_footer_icons_section">
-                                        <img src="{{asset('imgs/icons/whatsapp.png')}}" style="height: 30px;width: 30px;">
+                                    <div class="post_footer_icons_section" onclick="vindor_whatsapp()">
+                                        <img src="{{asset('imgs/icons/whatsapp.png')}}" style="height: 30px;width: 30px;cursor: pointer">
                                     </div>
                                 </div>
                             </div>
@@ -158,17 +158,17 @@
 
                                 </div>
                                 <div style="height: 100px;width: 100%" class="post_footer_icons">
-                                    <div class="post_footer_icons_section">
-                                        <img src="{{asset('imgs/icons/global.png')}}" style="height: 30px;width: 30px;">
+                                    <div class="post_footer_icons_section" onclick="vindor_global()">
+                                        <img src="{{asset('imgs/icons/global.png')}}" style="height: 30px;width: 30px;cursor: pointer">
                                     </div>
-                                    <div class="post_footer_icons_section">
-                                        <img src="{{asset('imgs/icons/phone.png')}}" style="height: 30px;width: 30px;">
+                                    <div class="post_footer_icons_section" onclick="vindor_phone()">
+                                        <img src="{{asset('imgs/icons/phone.png')}}" style="height: 30px;width: 30px;cursor: pointer">
                                     </div>
-                                    <div class="post_footer_icons_section">
-                                         <img src="{{asset('imgs/icons/facebook.png')}}" style="height: 30px;width: 30px;">
+                                    <div class="post_footer_icons_section" onclick="vindor_facebook()">
+                                        <img src="{{asset('imgs/icons/facebook.png')}}" style="height: 30px;width: 30px;cursor: pointer">
                                     </div>
-                                    <div class="post_footer_icons_section">
-                                        <img src="{{asset('imgs/icons/whatsapp.png')}}" style="height: 30px;width: 30px;">
+                                    <div class="post_footer_icons_section" onclick="vindor_whatsapp()">
+                                        <img src="{{asset('imgs/icons/whatsapp.png')}}" style="height: 30px;width: 30px;cursor: pointer">
                                     </div>
                                 </div>
                             </div>
@@ -194,17 +194,17 @@
                                     <img src="{{asset('imgs/rectangle.png')}}" style="height: 200px;width: 100%;">
                                 </div>
                                 <div style="height: 100px;width: 100%" class="post_footer_icons">
-                                    <div class="post_footer_icons_section">
-                                        <img src="{{asset('imgs/icons/global.png')}}" style="height: 30px;width: 30px;">
+                                    <div class="post_footer_icons_section" onclick="vindor_global()">
+                                        <img src="{{asset('imgs/icons/global.png')}}" style="height: 30px;width: 30px;cursor: pointer">
                                     </div>
-                                    <div class="post_footer_icons_section">
-                                        <img src="{{asset('imgs/icons/phone.png')}}" style="height: 30px;width: 30px;">
+                                    <div class="post_footer_icons_section" onclick="vindor_phone()">
+                                        <img src="{{asset('imgs/icons/phone.png')}}" style="height: 30px;width: 30px;cursor: pointer">
                                     </div>
-                                    <div class="post_footer_icons_section">
-                                        <img src="{{asset('imgs/icons/facebook.png')}}" style="height: 30px;width: 30px;">
+                                    <div class="post_footer_icons_section" onclick="vindor_facebook()">
+                                        <img src="{{asset('imgs/icons/facebook.png')}}" style="height: 30px;width: 30px;cursor: pointer">
                                     </div>
-                                    <div class="post_footer_icons_section">
-                                        <img src="{{asset('imgs/icons/whatsapp.png')}}" style="height: 30px;width: 30px;">
+                                    <div class="post_footer_icons_section" onclick="vindor_whatsapp()">
+                                        <img src="{{asset('imgs/icons/whatsapp.png')}}" style="height: 30px;width: 30px;cursor: pointer">
                                     </div>
                                 </div>
                             </div>
@@ -214,4 +214,5 @@
             </div>
         </div>
     </div>
+    <script  src="{{asset('js/resources/main.js')}}"></script>
 @endsection
