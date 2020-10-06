@@ -20,24 +20,32 @@
 
     <div class="container section_container" style="height: 600px !important;">
         <div class="container-fluid">
-            <form action="#" method="POST" enctype="multipart/form-dataresources">
+            <form action="{{ route('storeStory') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="post_form">
                     <div style="font-size: 17px;font-weight: bold">Title</div>
                     <div style="padding-bottom: 20px">
                         <input type="text" name="title" class="form-control" value="">
+                        @if($errors->has('title'))
+                            <div class="error" style="color: red">{{ $errors->first('title') }}</div>
+                        @endif
                     </div>
                     <div class="adjoined-bottom">
                         <div class="grid-container">
                             <div>
-                                <textarea name="body" id="editor">
+                                <textarea name="description" id="editor">
                                 </textarea>
                             </div>
                         </div>
                     </div>
+                    @if($errors->has('description'))
+                        <div class="error" style="color: red">{{ $errors->first('description') }}</div>
+                    @endif
                     <div style="padding: 20px 0px">
-                        <button class="btn upload_post_photo_btn"><i class="fa fa-image"></i> Upload Photos</button>
-                        <button class="btn upload_post_photo_btn"><i class="fa fa-film"></i></button>
+                        <input type="file" name="image" class="btn upload_post_photo_btn">
+                        @if($errors->has('image'))
+                            <div class="error" style="color: red">{{ $errors->first('image') }}</div>
+                        @endif
                     </div>
                     <div style="width: 100%;text-align: center">
                         <button class="btn" type="submit" style="background:#e84b7c;width: 35%;font-size: 17px;padding: 7px 20px;color:#ffffff">

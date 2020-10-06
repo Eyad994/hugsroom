@@ -105,7 +105,7 @@
                         <div class="col-md-3"></div>
                     </div>
                     <?php $i=0; ?>
-                    @foreach($userRooms as $room)
+                    @foreach($resources as $resource)
                         @if($i == 0)
                             <div class="row">
                         @else
@@ -118,16 +118,16 @@
                                         <div style="padding-top: 12px">
                                             <img src="{{asset('imgs/homeGroup2.png')}}" class="room_profile_photo" >
                                         </div>
-                                        <div class="post_person_name" >{{ $room->title }} </div>
-                                        <div class="post_time" >{{ $room->created_at->diffForHumans() }}</div>
+                                        <div class="post_person_name" >{{ $resource->user->first_name }} {{ $resource->user->last_name }} </div>
+                                        <div class="post_time" >{{ $resource->created_at->diffForHumans() }}</div>
                                         <div class="post_likes" style="width: 50px;float: right;position: absolute;right: 15px;top: 16px;height: 40px;font-size: 20px;color: #717171;">
                                             &nbsp; <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                     <div style="width: 100%;height: 350px;padding: 0px 20px;">
-                                        <div style="padding: 10px 0px;font-size: 20px;font-weight: bold;color: #e84b7c;">Your Title Here</div>
-                                        <a href="{{asset("resources/stories/1")}}">
-                                            <img src="{{asset('imgs/hospital.png')}}" style="height: 300px;width: 100%;">
+                                        <div style="padding: 10px 0px;font-size: 20px;font-weight: bold;color: #e84b7c;">{{ $resource->title }}</div>
+                                        <a href="{{asset("resources/stories/$resource->id")}}">
+                                            <img src="{{asset("uploads/resources/$resource->image")}}" style="height: 300px;width: 100%;">
                                         </a>
                                     </div>
                                     <div style="height: 100px;width: 100%" class="post_footer_icons">
