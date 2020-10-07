@@ -240,4 +240,8 @@ class RoomsController extends Controller
         return view('mbRooms.journal', compact('room', 'post'));
     }
 
+    public function settings(){
+        return view('settings.general');
+    }
+
 }

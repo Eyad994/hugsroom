@@ -61,6 +61,12 @@ Route::post('/room/{id}/uploadProfileImage', 'RoomsController@uploadProfileImage
 Route::post('/room/{id}/uploadGallery', 'GalleryController@store');
 
 /*****************************************************************************/
+
+Route::get('/room/settings', 'RoomsController@settings');
+
+
+
+/*****************************************************************************/
 Route::get('/resources', 'ResourcesController@index');
 Route::get('/resources/stories/{id}', 'ResourcesController@stories');
 Route::get('/resources/vendors/{id}', 'ResourcesController@vendors');
