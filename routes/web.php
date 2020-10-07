@@ -62,15 +62,11 @@ Route::post('/room/{id}/uploadGallery', 'GalleryController@store');
 
 /*****************************************************************************/
 
-Route::get('/room/settings', 'RoomsController@settings');
-
-
-
-/*****************************************************************************/
-Route::get('/resources', 'ResourcesController@index');
-Route::get('/resources/stories/{id}', 'ResourcesController@stories');
-Route::get('/resources/vendors/{id}', 'ResourcesController@vendors');
-Route::get('/resources/addStory', 'ResourcesController@addStory');
+Route::get('/resources', 'ResourceController@index');
+Route::get('/resources/stories/{id}', 'ResourceController@stories');
+Route::get('/resources/vendors/{id}', 'ResourceController@vendors');
+Route::get('/resources/addStory', 'ResourceController@addStory');
+Route::post('/resources/addStory', 'ResourceController@storeStory')->name('storeStory');
 
 /*Route::get('/xx', 'HomeController@xx');*/
 

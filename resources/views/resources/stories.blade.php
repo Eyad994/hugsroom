@@ -84,15 +84,16 @@
 
         }
     </style>
+
     <div class="row">
         <div class="col-md-12" style="height:700px;float: left;padding: 0">
-            <img src="{{asset("imgs/hospital.png")}}" class="page2_main_img">
+            <img src="{{asset("uploads/resources/$resource->image")}}" class="page2_main_img">
             <div class="post-header">
                 <div style="padding-top: 12px">
                     <img src="{{asset('imgs/homeGroup2.png')}}" class="room_profile_photo" >
                 </div>
-                <div class="post_person_name" >Mira Salem </div>
-                <div class="post_time" >2 hours ago</div>
+                <div class="post_person_name" >{{ $resource->user->first_name }} {{ $resource->user->last_name }}</div>
+                <div class="post_time">{{ $resource->created_at->diffForHumans() }}</div>
                 <div class="post_likes" style="width: 150px;float: right;position: absolute;right: 15px;top: 22px;height: 40px;font-size: 20px;color: #717171;">
                     <div style="width: 70px;float: left;text-align: left;padding-left: 5px;font-size: 12px">
                         <i class="fa fa-heart-o" aria-hidden="true" style="padding-top:15px;margin-left: 15px;font-size: 22px;color: #e84b7c;"></i>
@@ -105,13 +106,12 @@
                 </div>
             </div>
             <div style="width: 100%;padding: 0px 20px;">
-                <div style="padding: 10px 15px;font-size: 20px;font-weight: bold;color: #e84b7c;">Your Title Here</div>
+                <div style="padding: 10px 15px;font-size: 20px;font-weight: bold;color: #e84b7c;">{{ $resource->title }}</div>
             </div>
             <div>
-                <div class="pad-top_12" style="padding: 0px 20px">
+                <div class="pad-top_12" style="padding: 0px 35px">
                     <p style="font-size: 16px;overflow: hidden;text-align: left;padding-left: 15px">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem <Ipsum class=""></Ipsum>
+                        {!! $resource->description !!}
                     </p>
                 </div>
             </div>
