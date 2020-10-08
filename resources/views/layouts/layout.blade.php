@@ -266,6 +266,10 @@
     .mobileFooter a:hover{
         background: none !important;
     }
+    .uk-card-primary.uk-card-body, .uk-card-primary>:not([class*=uk-card-media]), .uk-card-secondary.uk-card-body, .uk-card-secondary>:not([class*=uk-card-media]), .uk-light, .uk-offcanvas-bar, .uk-overlay-primary, .uk-section-primary:not(.uk-preserve-color), .uk-section-secondary:not(.uk-preserve-color), .uk-tile-primary:not(.uk-preserve-color), .uk-tile-secondary:not(.uk-preserve-color)
+    {
+        padding-top: 10px !important;
+    }
 </style>
 <body class="homepage-16Q1" data-ga-category="Brooklyn">
 <div class="container-bloody">
