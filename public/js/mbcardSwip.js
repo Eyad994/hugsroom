@@ -11,9 +11,9 @@ $(function () {
             $("body").css("background", "#fdccd1");
         }
         if (active == "slide2") {
-            $(".owl-stage-outer").css("background", "#ff5686")
-            $(".xxx").css("background", "#ff5686");
-            $("body").css("background", "#ff5686");
+            $(".owl-stage-outer").css("background", "#fdccd1")
+            $(".xxx").css("background", "#fdccd1");
+            $("body").css("background", "#fdccd1");
         }
         if (active == "slide3") {
             $(".owl-stage-outer").css("background", "#fed155")
@@ -83,20 +83,18 @@ $('.owl-carousel').owlCarousel({
 $('.owl-carousel').on('changed.owl.carousel', function (e) {
 
     if(screen.width < "768") {
-
-        //  debugger;
         var active = $(".owl-stage .active .item .item").data().toggle;
-        if (active == "slide1") {
+        if (active == "slide2") {
             $(".owl-stage-outer").css("background", "#fdccd1");
             $(".xxx").css("background", "#fdccd1");
             $("body").css("background", "#fdccd1");
         }
-        if (active == "slide2") {
-            $(".owl-stage-outer").css("background", "#ff5686")
-            $(".xxx").css("background", "#ff5686");
-            $("body").css("background", "#ff5686");
-        }
         if (active == "slide3") {
+            $(".owl-stage-outer").css("background", "#fdccd1")
+            $(".xxx").css("background", "#fdccd1");
+            $("body").css("background", "#fdccd1");
+        }
+        if (active == "slide1") {
             $(".owl-stage-outer").css("background", "#fed155")
             $(".xxx").css("background", "#fed155");
             $("body").css("background", "#fed155");

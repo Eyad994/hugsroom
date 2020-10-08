@@ -1,6 +1,6 @@
 $(function(){
     window.onbeforeunload = function(e) {
-        return 'Please press the Logout button to logout.';
+        return 'Changes you made may not be saved.';
     };
 });
 
@@ -164,7 +164,7 @@ function goNext(prev,next) {
     }
 
     if(next == "last_step"){
-
+debugger;
         var checkmeorelse = $("#me-or-else").val();
         if(checkmeorelse == 1)
         {
@@ -180,20 +180,38 @@ function goNext(prev,next) {
 
         var privecy = $("#howCanSeeYourRoomStatus").val();
         if(privecy == 3){
+            $("#issearchable").val("0");
             $("#last_Privacy").text("Private");
         }else if(privecy == 2){
             $("#last_Privacy").text("Limited");
         }else{
+            $("#issearchable").val("0");
             $("#last_Privacy").text("Public");
         }
 
         var searchable = $("#issearchable").val();
-        if(searchable == 0){
-            $("#last_google").text("Not Searchable");
+        if($("#pubic_help").val() == "1"){
+            $("#last_public").text("Yes");
+            $(".review_privacy").hide();
+            $(".review_google").hide();
         }else{
-            $("#last_google").text("Searchable on Google");
-        }
+            $(".review_privacy").show();
+            $("#last_public").text("No");
 
+            if(searchable == "0"){
+                $("#last_google").text("Not Searchable");
+                if(privecy == 1) {
+                    $(".review_google").hide();
+                }else if(privecy == 2) {
+                    $(".review_google").show();
+                }else if(privecy == 3) {
+                    $(".review_google").hide();
+                }
+            }else{
+                $("#last_google").text("Searchable on Google");
+                $(".review_google").show();
+            }
+        }
     }
 
 

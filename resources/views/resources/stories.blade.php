@@ -1,7 +1,6 @@
 @extends('layouts.layout')
 @section('content')
     <style>
-
         .post_person_name{
             font-size: 20px;
             color: #E84B7B;

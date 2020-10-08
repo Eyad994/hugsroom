@@ -9,11 +9,7 @@ function open_sub_menu(field) {
 }
 
 function openmodel(slide_number) {
-    if(screen.width < "640") {
-        window.location.href = "./page2";
-    }else{
-        $('#centralModalSm').modal('toggle');
-    }
+        window.location.href = "./page2/"+slide_number;
 }
 
 

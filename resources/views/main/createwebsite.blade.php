@@ -15,7 +15,7 @@
     }
     @media (max-width: 768px) {
         .container-bloody {
-            background: #f5f2ef !important;
+            background: #ffffff !important;
         }
         .h-200{
             height: 0px !important;
@@ -24,10 +24,10 @@
             float: left !important;
         }
         .create-box{
-            background: #f5f2ef;
+            background: #ffffff;
         }
         body {
-            background-color: #f5f2ef !important;
+            background-color: #ffffff !important;
         }
         .container-bloody > *:not(.prevent-bleed){
             height: 650px !important;
@@ -58,7 +58,14 @@
         overflow: hidden;
     }
     .main_content, .site-content{
-        background: #f7f7f7;
+        background: #ffffff;
+    }
+
+    .start-a-site-box {
+        background-color: #ffffff;
+    }
+    .js .site-create-steps .site-create-step .start-a-site-box{
+        background-color: #ffffff !important;
     }
 </style>
     <div class="site-content">
@@ -163,19 +170,19 @@
                                     <div class="row site-create-flex-container">
                                         <div class="site-create-flex-item site-create-2-cols-flex-item">
                                             <div style="display: none !important;">
+                                                <input data-ga-action="Click - radio" data-ga-label="Me" id="is-for-self-myself" name="isForSelf" type="radio" value="1" required="required">
+                                            </div>
+                                            <button class="btn btn-block btn-primary btn-lg main_background_color" data-activate="#is-for-self-myself" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Me" data-qa-id="site-create-flow-for-me" type="button" onclick="goNext('sc-who','sc-patient-name-me')">{{----}}
+                                                <span class="sr-only">This site is for </span>Me
+                                            </button>
+                                        </div>
+                                        <div class="site-create-flex-item site-create-2-cols-flex-item">
+                                            <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="Someone else" id="is-for-self-someone-else" name="isForSelf" type="radio" value="0" required="required" checked="checked">    </div>
 
                                             <button class="btn btn-block btn-primary btn-lg main_background_color" data-activate="#is-for-self-someone-else" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Someone else" data-qa-id="site-create-flow-for-someone-else" type="button" onclick="goNext('sc-who','sc-patient-name-else')" >
                                                 <span class="sr-only">This site is for </span>
                                                 Someone Else
-                                            </button>
-                                        </div>
-                                        <div class="site-create-flex-item site-create-2-cols-flex-item">
-                                            <div style="display: none !important;">
-                                                <input data-ga-action="Click - radio" data-ga-label="Me" id="is-for-self-myself" name="isForSelf" type="radio" value="1" required="required">
-                                            </div>
-                                            <button class="btn btn-block btn-primary btn-lg main_background_color" data-activate="#is-for-self-myself" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Me" data-qa-id="site-create-flow-for-me" type="button" onclick="goNext('sc-who','sc-patient-name-me')">{{----}}
-                                                <span class="sr-only">This site is for </span>Me
                                             </button>
                                         </div>
                                     </div>
@@ -288,7 +295,7 @@
                             <div class="start-a-site-box">
                                 <p class="center medium-text">
                                     <strong>
-                                        <span class="create-other">What is their name?</span>
+                                        <span class="create-other">What is your name?</span>
                                         <span class="create-self" style="display: none;">What is your name?</span>
                                     </strong>
                                 </p>
@@ -304,11 +311,11 @@
                                 <div class="content">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <div class="form-group "><label for="firstName"><span class="required"><span aria-hidden="true" role="presentation" title="Required">*</span><span class="sr-only">Required</span></span> <span class="create-other">Person’s</span> First Name</label>
+                                            <div class="form-group "><label for="firstName"><span class="required"><span aria-hidden="true" role="presentation" title="Required">*</span><span class="sr-only">Required</span></span> First Name</label>
                                                 <input type="text" name="firstName" class="input-block-level form-control" data-ga-action="Click - field" data-ga-label="First Name" data-qa-id="site-create-flow-site-first-name" id="firstName-me" maxlength="50" required="required" value="{{$first_name}}"></div>
                                         </div>
                                         <div class="col-sm-6">
-                                            <div class="form-group "><label for="lastName"><span class="required"><span aria-hidden="true" role="presentation" title="Required">*</span><span class="sr-only">Required</span></span> <span class="create-other">Person’s</span> Last Name</label>
+                                            <div class="form-group "><label for="lastName"><span class="required"><span aria-hidden="true" role="presentation" title="Required">*</span><span class="sr-only">Required</span></span> Last Name</label>
                                                 <input type="text" name="lastName" class="input-block-level form-control" data-ga-action="Click - field" data-ga-label="Last Name" data-qa-id="site-create-flow-site-last-name" id="lastName-me" maxlength="50" required="required"  value="{{$last_name}}"></div>
                                         </div>
                                     </div>
@@ -459,7 +466,7 @@
                                             <div style="display: none !important;">
                                                 <input id="privacy-medium" name="privacy" type="radio" value="medium" checked="checked">    </div>
 
-                                                <button style="background-color: transparent;border-color: #555;" class="btn btn-block btn-tertiary btn-lg btn-privacy" data-activate="#privacy-medium" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Medium Privacy" data-qa-id="site-create-flow-privacy-medium" type="button"  onclick="goNext('sc-custom-privacy','last_step_public')">
+                                                <button style="background-color: #e84b7c;box-shadow: 5px 5px 5px #bcbcbc;color: #fff;border:0px" class="btn btn-block btn-tertiary btn-lg btn-privacy" data-activate="#privacy-medium" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Medium Privacy" data-qa-id="site-create-flow-privacy-medium" type="button"  onclick="goNext('sc-custom-privacy','last_step_public')">
                                                     <div class="privacy-block">
                                                         <div class="privacy-title">PUBLIC USERS</div>
                                                         <div class="privecy_text">
@@ -486,7 +493,7 @@
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="Low Privacy" id="privacy-low" default-class="btn-tertiary" additional-class="btn-privacy not-recommended" name="privacy" type="radio" value="low">    </div>
 
-                                            <button class="btn btn-block btn-tertiary btn-lg btn-privacy not-recommended" data-activate="#privacy-low" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Low Privacy" data-qa-id="site-create-flow-privacy-low" type="button" onclick="goNext('sc-custom-privacy','sc-public-search-listing')">
+                                            <button class="btn btn-block btn-tertiary btn-lg btn-privacy not-recommended" style="background-color: #e84b7c;box-shadow: 5px 5px 5px #bcbcbc;color: #fff;border:0px" data-activate="#privacy-low" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate Low Privacy" data-qa-id="site-create-flow-privacy-low" type="button" onclick="goNext('sc-custom-privacy','sc-public-search-listing')">
                                                 <div class="privacy-block"><div class="privacy-title">LIMITED</div>
                                                     <div class="privecy_text">
                                                         Anyone can Search your Room. But they need to first Register to View the Room. They also need to request to Follow you before they can Interact
@@ -498,7 +505,7 @@
                                             <div style="display: none !important;">
                                                 <input data-ga-action="Click - radio" data-ga-label="High Privacy" id="privacy-high" default-class="btn-tertiary" additional-class="btn-privacy not-recommended" name="privacy" type="radio" value="high">    </div>
 
-                                            <button class="btn btn-block btn-tertiary btn-lg btn-privacy not-recommended" data-activate="#privacy-high" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate High Privacy" data-qa-id="site-create-flow-privacy-high" type="button"  onclick="goNext('sc-custom-privacy','last_step_praivet')">
+                                            <button class="btn btn-block btn-tertiary btn-lg btn-privacy not-recommended" style="background-color: #e84b7c;box-shadow: 5px 5px 5px #bcbcbc;color: #fff;border:0px" data-activate="#privacy-high" data-advance-steps="true" data-ga-action="Click - button" data-ga-label="Activate High Privacy" data-qa-id="site-create-flow-privacy-high" type="button"  onclick="goNext('sc-custom-privacy','last_step_praivet')">
                                                 <div class="privacy-block"><div class="privacy-title">PRIVATE</div>
                                                     <div class="privecy_text">
                                                         Nobody can Search your Room. Your Room is only accessible by sharing a direct link. Everyone need to Register & request to Follow you before they can View or Interact.
@@ -587,7 +594,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <div class="text-center"><h1>Start a Room</h1></div>
+                                <div class="text-center"><h1>Room on Google</h1></div>
                                 <div class="progress show-when-loaded">
                                     <div class="progress-bar main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
                                         <span class="sr-only"><span class="progress-bar-value">0</span>% Complete</span>
@@ -652,7 +659,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <div class="text-center"><h1>Start a Room</h1></div>
+                                <div class="text-center"><h1>Room on Google</h1></div>
                                 <div class="progress show-when-loaded">
                                     <div class="progress-bar main_background_color" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
                                         <span class="sr-only"><span class="progress-bar-value">0</span>% Complete</span>
@@ -728,7 +735,7 @@
                             <div class="content">
                                 <div>
                                     <ul class="last_list" style="list-style: none">
-                                        <li onclick="goToSection('sc-who')">
+                                        <li onclick="goToSection('sc-who')" style="cursor: pointer">
                                             <div class="last_step_icon" >
                                                 <img src="{{asset('imgs/user_info/1.jpg')}}" style="padding-right: 10px;">
                                             </div>
@@ -739,7 +746,7 @@
                                                 </label>
                                             </div>
                                         </li>
-                                        <li onclick="goToSection('sc-patient-name')">
+                                        <li onclick="goToSection('sc-patient-name')" style="cursor: pointer">
                                             <div class="last_step_icon" >
                                                 <img src="{{asset('imgs/user_info/2.jpg')}}" style="padding-right: 10px;width: 35px">
                                             </div>
@@ -750,7 +757,18 @@
                                                 </label>
                                             </div>
                                         </li>
-                                        <li onclick="goToSection('sc-title-and-address')">
+                                        <li onclick="goToSection('sc-public-help')" style="cursor: pointer">
+                                            <div class="last_step_icon" >
+                                                <img src="{{asset('imgs/user_info/7.jpg')}}" style="padding-right: 10px;width: 35px">
+                                            </div>
+                                            <div class="last_step_for">Public health</div>
+                                            <div >
+                                                <label>
+                                                    <label class="last_step_value" id="last_public">Yes</label>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li onclick="goToSection('sc-title-and-address')" style="cursor: pointer">
                                             <div class="last_step_icon" >
                                                 <img src="{{asset('imgs/user_info/3.jpg')}}" style="padding-right: 10px;width: 35px">
                                             </div>
@@ -761,7 +779,7 @@
                                                 </label>
                                             </div>
                                         </li>
-                                        <li onclick="goToSection('sc-title-and-address')">
+                                        <li onclick="goToSection('sc-title-and-address')" style="cursor: pointer">
                                             <div class="last_step_icon" >
                                                 <img src="{{asset('imgs/user_info/4.jpg')}}" style="padding-right: 10px;width: 35px">
                                             </div>
@@ -772,7 +790,7 @@
                                                 </label>
                                             </div>
                                         </li>
-                                        <li onclick="goToSection('sc-custom-privacy')">
+                                        <li class="review_privacy" onclick="goToSection('sc-custom-privacy')" style="cursor: pointer">
                                             <div class="last_step_icon" >
                                                 <img src="{{asset('imgs/user_info/5.jpg')}}" style="padding-right: 10px;width: 35px">
                                             </div>
@@ -783,7 +801,7 @@
                                                 </label>
                                             </div>
                                         </li>
-                                        <li onclick="goToSection('sc-praivet-cb-search')">
+                                        <li class="review_google" onclick="goToSection('sc-praivet-cb-search')" style="cursor: pointer">
                                             <div class="last_step_icon" >
                                                 <img src="{{asset('imgs/user_info/6.jpg')}}" style="padding-right: 10px;width: 35px">
                                             </div>

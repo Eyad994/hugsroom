@@ -59,9 +59,10 @@ class HomeController extends Controller
         return view('main.rooms', compact('userRooms'));
     }
 
-    public function page2()
+    public function page2(Request $request)
     {
-        return view('page2');
+        $id = $request->id;
+        return view('page2',compact('id'));
     }
     public function register2(Request $request)
     {

@@ -99,7 +99,7 @@
         </div>
     </div>
     <div class="mobileFooter" style="display: none;">
-        <div class="navbar" style="width: 100%;background: #ffffff;  z-index: 40000;padding-top: 5px;">
+        <div class="navbar" style="width: 100%;background: #ffffff;  z-index: 40000;padding-top: 5px;margin-bottom: 50px;left: 0px;padding-left: 20px;">
             <form action="{{ route('storeWish') }}" method="POST" id="postWishForm">
                 @csrf
                 <input type="hidden" name="room_id" value="{{ $room->id }}">

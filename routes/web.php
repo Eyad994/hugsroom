@@ -34,7 +34,7 @@ Route::post('register', 'Auth\RegisterController@register')->name('register');
 Route::post('/addUser', 'HomeController@addUser');
 Route::get('/login2', 'HomeController@login2')->name('login2');
 Route::get('/home2', 'HomeController@home2');
-Route::get('/page2', 'HomeController@page2');
+Route::get('/page2/{id}', 'HomeController@page2');
 Route::get('/mbhome', 'HomeController@mbhome');
 Route::post('/addNewRoom', 'RoomsController@addNewRoom');
 Route::get('/rooms', 'RoomsController@rooms');
@@ -61,6 +61,12 @@ Route::post('/room/{id}/uploadProfileImage', 'RoomsController@uploadProfileImage
 Route::post('/room/{id}/uploadGallery', 'GalleryController@store');
 
 /*****************************************************************************/
+Route::get('/room/settings', 'RoomsController@settings');
+
+
+
+
+/*****************************************************************************/
 
 Route::get('/resources', 'ResourceController@index');
 Route::get('/resources/stories/{id}', 'ResourceController@stories');
@@ -68,7 +74,8 @@ Route::get('/resources/vendors/{id}', 'ResourceController@vendors');
 Route::get('/resources/addStory', 'ResourceController@addStory');
 Route::post('/resources/addStory', 'ResourceController@storeStory')->name('storeStory');
 
-/*Route::get('/xx', 'HomeController@xx');*/
+
+
 
 Route::group(['middleware' => 'auth'], function (){
     /*****************************Update Profile**************************************/

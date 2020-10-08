@@ -138,7 +138,7 @@
                             <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                                 <div class="uk-card-box">
                                     <div  class="uk-card-sub-box">
-                                        <img src="{{asset("imgs/slider/2.jpg")}}" style=" width: 100%;height: 300px;" onclick="openmodel('1')">
+                                        <img src="{{asset("imgs/slider/2.jpg")}}" style=" width: 100%;height: 300px;" onclick="openmodel('5')">
                                         <div>
                                             <h3 class="h4 pad-top_20-24 slider_title_1"> Search</h3>
                                             <h3 class="h4 pad-top_20-24 slider_title_2">and Follow</h3>
@@ -167,7 +167,7 @@
                         <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
-                                    <img src="{{asset("imgs/slider/3.jpg")}}" style=" width: 100%;height: 300px;" onclick="openmodel('1')">
+                                    <img src="{{asset("imgs/slider/3.jpg")}}" style=" width: 100%;height: 300px;" onclick="openmodel('4')">
                                     <div>
                                         <h3 class="h4 pad-top_20-24 slider_title_1" >Even</h3>
                                         <h3 class="h4 pad-top_20-24 slider_title_2" >as Strangers</h3>
@@ -194,7 +194,7 @@
                         <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
-                                    <img src="{{asset("imgs/slider/4.jpg")}}" style=" width: 100%;height: 300px;" onclick="openmodel('1')">
+                                    <img src="{{asset("imgs/slider/4.jpg")}}" style=" width: 100%;height: 300px;" onclick="openmodel('3')">
                                     <div>
                                         <h3 class="h4 pad-top_20-24 slider_title_1" >Helping </h3>
                                         <h3 class="h4 pad-top_20-24 slider_title_2" >Hospitals</h3>
@@ -221,7 +221,7 @@
                         <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
-                                    <img src="{{asset("imgs/slider/5.jpg")}}" style=" width: 100%;height: 300px;" onclick="openmodel('1')">
+                                    <img src="{{asset("imgs/slider/5.jpg")}}" style=" width: 100%;height: 300px;" onclick="openmodel('2')">
                                     <div>
                                         <h3 class="h4 pad-top_20-24 slider_title_1"> Find more</h3>
                                         <h3 class="h4 pad-top_20-24 slider_title_2">Help</h3>

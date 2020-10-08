@@ -12,6 +12,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
+    <meta name="viewport" content="width=device-width, minimal-ui">
+
+
     <title>Hugs Room</title>
     <link href="{{asset('imgs/favicon.ico')}}" rel="icon" type="image/x-icon">
     <link href="{{asset('imgs/favicon.ico')}}" rel="shortcut icon" type="image/x-icon">
@@ -131,10 +134,10 @@
             font-size: 14px;
         }
 
-        .mobileFooter .navbar a:hover {
+        /*.mobileFooter .navbar a:hover {
             background: #f1f1f1;
             color: #e64d7b;
-        }
+        }*/
 
         .mobileFooter .navbar a.active {
             background-color: #ffffff;
@@ -259,6 +262,9 @@
 
     a:visited {
         text-decoration: none;
+    }
+    .mobileFooter a:hover{
+        background: none !important;
     }
 </style>
 <body class="homepage-16Q1" data-ga-category="Brooklyn">

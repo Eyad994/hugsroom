@@ -160,7 +160,7 @@ function goNext(prev,next) {
 }
 
 function submitCreateRoomForm(searchable) {
-debugger;
+
     var meOrSomeoneElse = $("#me-or-else").val();
     var roomForMe = 1;
     var firstName = $("#firstName-me").val();

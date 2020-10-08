@@ -7,6 +7,7 @@
         }
         .main_content{
             background: #f9f9fb;
+            height: 100%;
         }
         .profile_title{
             width: 100%;
@@ -15,13 +16,13 @@
             text-align: center;
             font-size: 18px;
             border-radius: 10px 10px 0px 0px;
-            padding-top: 20px;
+            padding-top: 15px;
             color: #000000;
             font-weight: bold;
         }
         .account_settings{
             width: 100%;
-            height: 150px;
+            height: 170px;
             background: #feb25e;
             text-align: center;
             font-size: 18px;
@@ -30,7 +31,7 @@
         }
         .notify_settings{
             width: 100%;
-            height: 150px;
+            height: 170px;
             background: #fe5686;
             text-align: center;
             font-size: 18px;
@@ -39,7 +40,7 @@
         }
         .additinal_settings{
             width: 100%;
-            height: 150px;
+            height: 170px;
             background: #6ac7e8;
             text-align: center;
             font-size: 18px;
@@ -76,6 +77,9 @@
                 background-color: #f9f9fb;
                 font-family: 'Quicksand';
             }
+            .container-bloody > *:not(.prevent-bleed){
+                height: 580px;
+            }
         }
     </style>
 
@@ -83,14 +87,14 @@
         <div class="site-create-steps">
             <div class="row">
                 <section class="site-create-step active" id="sc-terms" >
-                    <div class="row" style="padding: 30px 30px">
+                    <div class="row" style="padding: 15px 15px">
                         <div class="col-md-12">
-                            <div class="profile_title" >Profile</div>
+                            <div class="profile_title" style="color:#707070">My Profile</div>
                             <a href="{{asset("profile/account")}}">
                                 <div class="account_settings" >
                                     <div class="settings_content_box">
                                         <div class="profile_margin"></div>
-                                        <img src="{{asset("imgs/footer_icons/search.png")}}" />
+                                        <img src="{{asset("imgs/icons/user.png")}}" style="filter: sepia(1);" />
                                         <span style="">Account settings</span>
                                     </div>
                                 </div>
@@ -99,7 +103,7 @@
                                 <div class="notify_settings" >
                                     <div class="settings_content_box">
                                         <div class="profile_margin"></div>
-                                        <img src="{{asset("imgs/footer_icons/search.png")}}" />
+                                        <img src="{{asset("imgs/icons/notifications.png")}}" style="filter: sepia(1);"  />
                                         <span style="">Notification settings</span>
                                     </div>
                                 </div>
@@ -108,7 +112,7 @@
                                 <div class="additinal_settings" >
                                     <div class="settings_content_box">
                                         <div class="profile_margin"></div>
-                                        <img src="{{asset("imgs/footer_icons/search.png")}}" />
+                                        <img src="{{asset("imgs/icons/more_info.png")}}" style="filter: sepia(1);width: 20px"  />
                                         <span style=""> Additional Information</span>
                                     </div>
                                 </div>
