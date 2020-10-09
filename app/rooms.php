@@ -9,7 +9,7 @@ class rooms extends Model
 {
     protected $guarded = [];
     public function addRome($data){
-        DB::table('rooms')->insert(
+         DB::table('rooms')->insert(
             [
                 'title'         => $data['roomTitle'],
                 'privacy_id'    => $data['howSeeMyRoom'],
@@ -21,7 +21,7 @@ class rooms extends Model
                 'created_at' => now()
             ]
         );
-        return;
+        return rooms::latest()->first();
     }
 
     public function user()

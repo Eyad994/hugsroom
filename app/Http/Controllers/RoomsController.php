@@ -35,9 +35,8 @@ class RoomsController extends Controller
         $data["searchable"] = $request->searchable;//1-yes 0-no*/
 
         $room = new rooms();
-        $room->addRome($data);
-        die();
 
+        return $room->addRome($data);
     }
 
     public function rooms()
@@ -125,7 +124,6 @@ class RoomsController extends Controller
 
         $uniqueVisitorCount = Visitor::where('room_id', $id)->count();
 
-
         $room->update([
             'non_unique_visitor' => ++$nonUniqueVisitor,
             'unique_visitor' => $uniqueVisitorCount
@@ -140,7 +138,6 @@ class RoomsController extends Controller
         $gallery = Gallery::where('room_id', $id)->get();
         return view('mbRooms.mbgallery', compact('room', 'gallery'));
     }
-
 
     public function storePost(Request $request)
     {

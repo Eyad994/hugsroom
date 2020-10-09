@@ -260,8 +260,10 @@ function submitCreateRoomForm() {
             'searchable': searchable
         },
         success: function (result) {
+            var id = result.id;
             window.onbeforeunload = null;
-            window.location.href = "./rooms";
+            //window.location.href = "./rooms";
+            window.location.href = "./rooms/mbroom/"+id;
         }
     });
 
