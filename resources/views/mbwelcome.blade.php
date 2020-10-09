@@ -101,7 +101,7 @@
     });
 </script>
 
-    <div class="row xxx" style="height: 650px !important;">
+    <div class="row xxx" style="height: 620px !important;">
         <div class="col-md-12">
             <div class="owl-carousel">
                 <div class="item">
@@ -234,7 +234,7 @@
                                     <div class="wp-block-button is-style-tertiary-lg" style="padding: 5px 20px 20px 20px">
                                         <div style="height: 50px">
                                             <a href="{{asset("createwebsite")}}" type="btn"  class="slider_main_btn">
-                                                Resources
+                                                Insights
                                             </a>
                                         </div>
                                     </div>

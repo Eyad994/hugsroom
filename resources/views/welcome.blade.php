@@ -279,7 +279,7 @@
                                     <div class="wp-block-button is-style-tertiary-lg" style="padding: 20px 20px">
                                         <div style="height: 50px">
                                             <a href="{{asset("createwebsite")}}" type="btn"  class="slider_main_btn">
-                                                Resources
+                                                Insights
                                             </a>
                                         </div>
                                     </div>
