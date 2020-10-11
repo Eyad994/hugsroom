@@ -1,5 +1,7 @@
 $(function(){
-
+    $("#lang_list").select(function () {
+        $("#lang_list").attr('size',1);
+    })
 });
 
 function open_sub_menu(field) {
@@ -25,3 +27,9 @@ function redirectToRoom(room_id) {
     }
 
 }
+/*
+function open_lang_list(){
+    debugger;
+    $("#lang_list").focus().click();
+}*/
+

@@ -16,6 +16,7 @@
         }
         body {
             background-color: #ffffff !important;
+            padding-bottom:0px;
         }
         body > .container-fluid {
             background-color: #ffffff;
@@ -39,50 +40,80 @@
         .page2_mobileFooter{
             display: none;
         }
-       /* @media (max-width: 768px)
-        {*/
-           /* .mobileFooter .navbar a {
-                display: none;
-            }*/
-        /*}*/
-        .page2_mobileFooter .navbar {
-            overflow: hidden;
-            background-color: #333;
-            position: fixed;
-            bottom: -2;
-            width: 100%;
-            margin-bottom: 0px;
+        .back_btn{
+          display: none;
+
+        }
+        @media (max-width: 768px)
+        {
+            .page2_mobileFooter .navbar {
+                overflow: hidden;
+                background-color: #333;
+                position: fixed;
+                bottom: -2;
+                width: 100%;
+                margin-bottom: 0px;
+            }
+
+            .page2_mobileFooter .navbar a {
+                float: left;
+                display: block;
+                color: #a2a2a2;
+                text-align: center;
+                padding: 5px 0px;
+                text-decoration: none;
+                font-size: 14px;
+            }
+            .page2_mobileFooter .navbar a.active {
+                background-color: #ffffff;
+                color: #e64d7b;
+            }
+
+            .page2_mobileFooter .main {
+                padding: 16px;
+                margin-bottom: 30px;
+            }
+            .back_btn{
+                position: absolute;
+                top: 16px;
+                width: 25px;
+                height: 25px;
+                background: #777575;
+                color: #ffffff;
+                border-radius: 20px;
+                padding: 2px 8px;
+                font-size: 20px;
+                left: 15px;
+                display: block;
+                z-index: 11111;
+            }
+            .back_btn:focus , .back_btn:hover{
+                position: absolute;
+                top: 16px;
+                width: 25px;
+                height: 25px;
+                background: #777575;
+                color: #ffffff;
+                border-radius: 20px;
+                padding: 2px 8px;
+                font-size: 20px;
+                left: 15px;
+                display: block;
+                z-index: 11111;
+            }
         }
 
-        .page2_mobileFooter .navbar a {
-            float: left;
-            display: block;
-            color: #a2a2a2;
-            text-align: center;
-            padding: 5px 0px;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        .page2_mobileFooter .navbar a.active {
-            background-color: #ffffff;
-            color: #e64d7b;
-        }
-
-        .page2_mobileFooter .main {
-            padding: 16px;
-            margin-bottom: 30px;
-        }
         .page2_mobileFooter{
             display: none;
         }
-        .nav li{
-            width: 100%;
-            text-align: end;
-        }
+
     </style>
 
     <div class="row">
         <div class="col-md-12" style="float: left;padding: 0px">
+            <a href="{{asset('/mbhome')}}" class="back_btn">
+                <i class="fa fa-angle-left"></i>
+            </a>
             <img src="{{asset("imgs/thumbnail/1.jpeg")}}" class="page2_main_img" {{$id == 1?'style=display:block !important':''}}>
             <img src="{{asset("imgs/thumbnail/2.jpeg")}}" class="page2_main_img" {{$id == 2?'style=display:block !important':''}}>
             <img src="{{asset("imgs/thumbnail/3.jpeg")}}" class="page2_main_img" {{$id == 3?'style=display:block !important':''}}>

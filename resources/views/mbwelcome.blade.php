@@ -92,6 +92,33 @@
         .active .card_text {
             height: 80px !important;
         }
+        .go_to_page2_btn{
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: #5e5e5e;
+            border-radius: 20px;
+            top: 25px;
+            left: 10px;
+            padding: 6px 10px;
+        }
+        .dropdown-item{
+            width: 100%;
+            display: block;
+        }
+        .dropdown-menu{
+            left: unset;
+            top: 30px;
+            right: 0px;
+            background: #929292;
+            text-align: right;
+
+        }
+        .dropdown{
+            right: 0px;
+            left: unset;
+            direction: rtl;
+        }
     </style>
 <script type="text/javascript">
     $(function () {
@@ -109,7 +136,22 @@
                         <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
                             <div class="uk-card-box">
                                 <div  class="uk-card-sub-box">
-                                    <img src="{{asset("imgs/slider/1.jpg")}}" style=" width: 100%;height: 300px;" onclick="openmodel('1')">
+                                    <div class="go_to_page2_btn" onclick="openmodel('1')">
+                                        <i class="fa fa-info"></i>
+                                    </div>
+                                    <div class="change_lang_btn" >
+                                        <div class="dropdown" style="">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="position: absolute">
+                                                Dropdown button
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="{{asset("imgs/slider/1.jpg")}}" style=" width: 100%;height: 300px;">
                                     <div>
                                         <h3 class="h4 pad-top_20-24 slider_title_1">Patients</h3>
                                         <h3 class="h4 pad-top_20-24 slider_title_2 ">Room Online </h3>
