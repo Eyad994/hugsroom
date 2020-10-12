@@ -105,14 +105,18 @@
         .dropdown-item{
             width: 100%;
             display: block;
+            padding-top: 5px;
+            height: 30px;
+            color: #000000 !important;
         }
         .dropdown-menu{
             left: unset;
-            top: 30px;
-            right: 0px;
-            background: #929292;
+            top: 32px;
+            right: 10px;
+            background: #ffffff;
             text-align: right;
-
+            width: 50px;
+            padding-top:12px ;
         }
         .dropdown{
             right: 0px;
@@ -141,13 +145,12 @@
                                     </div>
                                     <div class="change_lang_btn" >
                                         <div class="dropdown" style="">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="position: absolute">
-                                                Dropdown button
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="position: absolute;background: none;padding: 10px">
+                                                <img src="{{asset("imgs/flags/united-kingdom.png")}}" style="width: 23px" >
                                             </button>
                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                <a class="dropdown-item" href="#" >English <img src="{{asset("imgs/flags/united-kingdom.png")}}" style="width: 23px;display: inline;float: right;margin: -2px 10px;" > </a>
+                                                <a class="dropdown-item" href="#" >Arabic <img src="{{asset("imgs/flags/jordan.png")}}" style="width: 23px;display: inline;;float: right;margin: -2px 10px;" > </a>
                                             </div>
                                         </div>
                                     </div>

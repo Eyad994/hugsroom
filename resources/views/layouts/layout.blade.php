@@ -203,6 +203,7 @@
     body{
         background-color: #ebe5e0;
         font-family: 'Quicksand';;
+
     }
 
     h3{
@@ -269,6 +270,14 @@
     .uk-card-primary.uk-card-body, .uk-card-primary>:not([class*=uk-card-media]), .uk-card-secondary.uk-card-body, .uk-card-secondary>:not([class*=uk-card-media]), .uk-light, .uk-offcanvas-bar, .uk-overlay-primary, .uk-section-primary:not(.uk-preserve-color), .uk-section-secondary:not(.uk-preserve-color), .uk-tile-primary:not(.uk-preserve-color), .uk-tile-secondary:not(.uk-preserve-color)
     {
         padding-top: 10px !important;
+    }
+    .container-bloody{
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
     }
 </style>
 <body class="homepage-16Q1" data-ga-category="Brooklyn">
